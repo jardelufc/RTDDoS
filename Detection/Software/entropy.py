@@ -10,7 +10,7 @@ sample_ips = [
 ]
 
 C = collections.Counter(sample_ips)
-counts  = np.array(C.values(),dtype=float)
+counts = np.array(list(C.values()),dtype=float)
 prob    = counts/counts.sum()
 shannon_entropy = (-prob*np.log2(prob)).sum()
 print (shannon_entropy)
