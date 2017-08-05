@@ -1,0 +1,268 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Sun Jul 16 20:26:04 2017
+# Process ID: 4692
+# Current directory: C:/Users/pedro/Documents/tcc-arm7
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5100 C:\Users\pedro\Documents\tcc-arm7\tcc-arm7.xpr
+# Log file: C:/Users/pedro/Documents/tcc-arm7/vivado.log
+# Journal file: C:/Users/pedro/Documents/tcc-arm7\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'.
+open_project: Time (s): cpu = 00:00:27 ; elapsed = 00:00:19 . Memory (MB): peak = 981.875 ; gain = 235.863
+file mkdir C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.srcs/sources_1/new
+close [ open C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.srcs/sources_1/new/Datapath.sv w ]
+add_files C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.srcs/sources_1/new/Datapath.sv
+update_compile_order -fileset sources_1
+close [ open C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv w ]
+add_files C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv
+update_compile_order -fileset sources_1
+set_property top multiplex [current_fileset]
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv w ]
+add_files -fileset sim_1 C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'multiplex_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.sim/sim_1/behav'
+"xvlog -m64 --relax -L xil_defaultlib -prj multiplex_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 13c7beef8cba47ffa90589701ec6fe4f --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot multiplex_tb_behav xil_defaultlib.multiplex_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.multiplex
+Compiling module xil_defaultlib.multiplex_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot multiplex_tb_behav
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.sim/sim_1/behav/xsim.dir/multiplex_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.sim/sim_1/behav/xsim.dir/multiplex_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sun Jul 16 21:07:52 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Sun Jul 16 21:07:52 2017...
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "multiplex_tb_behav -key {Behavioral:sim_1:Functional:multiplex_tb} -tclbatch {multiplex_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source multiplex_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'multiplex_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 981.875 ; gain = 0.000
+relaunch_sim
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'multiplex_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.sim/sim_1/behav'
+"xvlog -m64 --relax -L xil_defaultlib -prj multiplex_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 13c7beef8cba47ffa90589701ec6fe4f --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot multiplex_tb_behav xil_defaultlib.multiplex_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.multiplex
+Compiling module xil_defaultlib.multiplex_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot multiplex_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 981.875 ; gain = 0.000
+relaunch_sim
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'multiplex_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.sim/sim_1/behav'
+"xvlog -m64 --relax -L xil_defaultlib -prj multiplex_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 13c7beef8cba47ffa90589701ec6fe4f --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot multiplex_tb_behav xil_defaultlib.multiplex_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.multiplex
+Compiling module xil_defaultlib.multiplex_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot multiplex_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+relaunch_sim
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'multiplex_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.sim/sim_1/behav'
+"xvlog -m64 --relax -L xil_defaultlib -prj multiplex_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex_tb
+ERROR: [VRFC 10-128] break statement is illegal here [C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv:44]
+ERROR: [VRFC 10-1040] module multiplex_tb ignored due to previous errors [C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv:23]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.sim/sim_1/behav/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.sim/sim_1/behav/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+close [ open C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.srcs/sources_1/new/adder.sv w ]
+add_files C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.srcs/sources_1/new/adder.sv
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.srcs/sim_1/new/adder_tb.v w ]
+add_files -fileset sim_1 C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.srcs/sim_1/new/adder_tb.v
+update_compile_order -fileset sim_1
+set_property top adder_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+set_property top adder [current_fileset]
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'adder_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.sim/sim_1/behav'
+"xvlog -m64 --relax -L xil_defaultlib -prj adder_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.srcs/sim_1/new/adder_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 13c7beef8cba47ffa90589701ec6fe4f --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot adder_tb_behav xil_defaultlib.adder_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.adder
+Compiling module xil_defaultlib.adder_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot adder_tb_behav
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.sim/sim_1/behav/xsim.dir/adder_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.sim/sim_1/behav/xsim.dir/adder_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sun Jul 16 22:24:55 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Sun Jul 16 22:24:55 2017...
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "adder_tb_behav -key {Behavioral:sim_1:Functional:adder_tb} -tclbatch {adder_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source adder_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'adder_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 981.875 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close [ open C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.srcs/sources_1/new/register.sv w ]
+add_files C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.srcs/sources_1/new/register.sv
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.srcs/sim_1/new/register_tb.v w ]
+add_files -fileset sim_1 C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.srcs/sim_1/new/register_tb.v
+update_compile_order -fileset sim_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Jul 17 00:31:20 2017...

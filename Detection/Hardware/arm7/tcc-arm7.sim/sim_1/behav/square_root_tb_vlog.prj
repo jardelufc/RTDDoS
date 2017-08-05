@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  "../../../tcc-arm7.srcs/sources_1/new/square_root.sv"
+sv xil_defaultlib  "../../../tcc-arm7.srcs/sim_1/new/square_root_tb.sv"
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

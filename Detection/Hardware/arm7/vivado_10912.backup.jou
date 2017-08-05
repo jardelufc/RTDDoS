@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Sun Jul 16 20:21:26 2017
+# Process ID: 10912
+# Current directory: C:/Users/pedro/Documents/tcc-arm7
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8548 C:\Users\pedro\Documents\tcc-arm7\tcc-arm7.xpr
+# Log file: C:/Users/pedro/Documents/tcc-arm7/vivado.log
+# Journal file: C:/Users/pedro/Documents/tcc-arm7\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.xpr
+file mkdir C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.srcs/constrs_1
+file mkdir C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.srcs/sim_1/new/Datapath.sv w ]
+add_files -fileset sim_1 C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.srcs/sim_1/new/Datapath.sv
+remove_files  -fileset sim_1 C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.srcs/sim_1/new/Datapath.sv
+close_project
+open_project C:/Users/pedro/Downloads/pedro_labsingle/pedro_labs.xpr
+update_compile_order -fileset sources_1
