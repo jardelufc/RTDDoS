@@ -9,17 +9,11 @@ correlation = zeros(1,nx);
     if nx == ny
 % Calculates the correlation between the corresponding vector elements
         for i = 1:nx
-            if(i == 3)
-                keyboard
-            end
-            
-            correlation(i) = (1 - 1/nx) * ((abs(X(i) - Y(i)))/... 
+            correlation(i) =  ((abs(X(i) - Y(i)))/... 
             (abs(abs(mean(X) - std(X)) - X(i)) + abs(abs(mean(Y) - std(Y)) - Y(i)))); 
         end
-%Mean of all correlations         
-        correlation = mean(correlation);
+        correlation = 1 - (1/nx)*sum(correlation);
     else
         disp('Object dimensions must agree');
     end
 end
-% TODO: check bugs and formulation
