@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="statemachine_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="statemachine_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="58350001fs"></ZoomEndTime>
+      <Cursor1Time time="59468000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="59"></NameColumnWidth>
+      <ValueColumnWidth column_width="51"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="53" />
+   <wave_markers>
+      <marker time="7000000" label="" />
+      <marker time="9000000" label="" />
+      <marker time="11000000" label="" />
+      <marker time="13000000" label="" />
+      <marker time="15000000" label="" />
+      <marker time="17000000" label="" />
+      <marker time="19000000" label="" />
+      <marker time="21000000" label="" />
+      <marker time="23000000" label="" />
+      <marker time="27000000" label="" />
+      <marker time="5000000" label="" />
+      <marker time="3000000" label="" />
+      <marker time="1000000" label="" />
+   </wave_markers>
+   <wvobject fp_name="/statemachine_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/cycle" type="array">
+      <obj_property name="ElementShortName">cycle[4:0]</obj_property>
+      <obj_property name="ObjectShortName">cycle[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/cycle" type="array">
+      <obj_property name="ElementShortName">cycle[4:0]</obj_property>
+      <obj_property name="ObjectShortName">cycle[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/selmul3_1" type="logic">
+      <obj_property name="ElementShortName">selmul3_1</obj_property>
+      <obj_property name="ObjectShortName">selmul3_1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/selmul3_2" type="logic">
+      <obj_property name="ElementShortName">selmul3_2</obj_property>
+      <obj_property name="ObjectShortName">selmul3_2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/seladd5_2" type="logic">
+      <obj_property name="ElementShortName">seladd5_2</obj_property>
+      <obj_property name="ObjectShortName">seladd5_2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/seladd5_1" type="logic">
+      <obj_property name="ElementShortName">seladd5_1</obj_property>
+      <obj_property name="ObjectShortName">seladd5_1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/selr7" type="logic">
+      <obj_property name="ElementShortName">selr7</obj_property>
+      <obj_property name="ObjectShortName">selr7</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/selsqrt" type="logic">
+      <obj_property name="ElementShortName">selsqrt</obj_property>
+      <obj_property name="ObjectShortName">selsqrt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/clr" type="logic">
+      <obj_property name="ElementShortName">clr</obj_property>
+      <obj_property name="ObjectShortName">clr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/enable" type="logic">
+      <obj_property name="ElementShortName">enable</obj_property>
+      <obj_property name="ObjectShortName">enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/datasqrt" type="logic">
+      <obj_property name="ElementShortName">datasqrt</obj_property>
+      <obj_property name="ObjectShortName">datasqrt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/datadiv" type="logic">
+      <obj_property name="ElementShortName">datadiv</obj_property>
+      <obj_property name="ObjectShortName">datadiv</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/datar11" type="logic">
+      <obj_property name="ElementShortName">datar11</obj_property>
+      <obj_property name="ObjectShortName">datar11</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/datar10" type="logic">
+      <obj_property name="ElementShortName">datar10</obj_property>
+      <obj_property name="ObjectShortName">datar10</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/datar9" type="logic">
+      <obj_property name="ElementShortName">datar9</obj_property>
+      <obj_property name="ObjectShortName">datar9</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/datar8" type="logic">
+      <obj_property name="ElementShortName">datar8</obj_property>
+      <obj_property name="ObjectShortName">datar8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/datar7" type="logic">
+      <obj_property name="ElementShortName">datar7</obj_property>
+      <obj_property name="ObjectShortName">datar7</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/datar6" type="logic">
+      <obj_property name="ElementShortName">datar6</obj_property>
+      <obj_property name="ObjectShortName">datar6</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/datar5" type="logic">
+      <obj_property name="ElementShortName">datar5</obj_property>
+      <obj_property name="ObjectShortName">datar5</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/datar4" type="logic">
+      <obj_property name="ElementShortName">datar4</obj_property>
+      <obj_property name="ObjectShortName">datar4</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/datar3" type="logic">
+      <obj_property name="ElementShortName">datar3</obj_property>
+      <obj_property name="ObjectShortName">datar3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/datar2" type="logic">
+      <obj_property name="ElementShortName">datar2</obj_property>
+      <obj_property name="ObjectShortName">datar2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/datar1" type="logic">
+      <obj_property name="ElementShortName">datar1</obj_property>
+      <obj_property name="ObjectShortName">datar1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/opadd1" type="logic">
+      <obj_property name="ElementShortName">opadd1</obj_property>
+      <obj_property name="ObjectShortName">opadd1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/opadd2" type="logic">
+      <obj_property name="ElementShortName">opadd2</obj_property>
+      <obj_property name="ObjectShortName">opadd2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/opadd3" type="logic">
+      <obj_property name="ElementShortName">opadd3</obj_property>
+      <obj_property name="ObjectShortName">opadd3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/opadd4" type="logic">
+      <obj_property name="ElementShortName">opadd4</obj_property>
+      <obj_property name="ObjectShortName">opadd4</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/opadd5" type="logic">
+      <obj_property name="ElementShortName">opadd5</obj_property>
+      <obj_property name="ObjectShortName">opadd5</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/selmul2_2" type="array">
+      <obj_property name="ElementShortName">selmul2_2[1:0]</obj_property>
+      <obj_property name="ObjectShortName">selmul2_2[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/selmul2_1" type="array">
+      <obj_property name="ElementShortName">selmul2_1[1:0]</obj_property>
+      <obj_property name="ObjectShortName">selmul2_1[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/selmul1_2" type="array">
+      <obj_property name="ElementShortName">selmul1_2[1:0]</obj_property>
+      <obj_property name="ObjectShortName">selmul1_2[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/selmul1_1" type="array">
+      <obj_property name="ElementShortName">selmul1_1[1:0]</obj_property>
+      <obj_property name="ObjectShortName">selmul1_1[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/seladd2_2" type="array">
+      <obj_property name="ElementShortName">seladd2_2[1:0]</obj_property>
+      <obj_property name="ObjectShortName">seladd2_2[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/seladd1_1" type="array">
+      <obj_property name="ElementShortName">seladd1_1[1:0]</obj_property>
+      <obj_property name="ObjectShortName">seladd1_1[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/seldiv_2" type="array">
+      <obj_property name="ElementShortName">seldiv_2[1:0]</obj_property>
+      <obj_property name="ObjectShortName">seldiv_2[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/seldiv_1" type="array">
+      <obj_property name="ElementShortName">seldiv_1[1:0]</obj_property>
+      <obj_property name="ObjectShortName">seldiv_1[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/selr11" type="array">
+      <obj_property name="ElementShortName">selr11[1:0]</obj_property>
+      <obj_property name="ObjectShortName">selr11[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/selr10" type="array">
+      <obj_property name="ElementShortName">selr10[1:0]</obj_property>
+      <obj_property name="ObjectShortName">selr10[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/selr9" type="array">
+      <obj_property name="ElementShortName">selr9[1:0]</obj_property>
+      <obj_property name="ObjectShortName">selr9[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/selr8" type="array">
+      <obj_property name="ElementShortName">selr8[1:0]</obj_property>
+      <obj_property name="ObjectShortName">selr8[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/selr6" type="array">
+      <obj_property name="ElementShortName">selr6[1:0]</obj_property>
+      <obj_property name="ObjectShortName">selr6[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/selr4" type="array">
+      <obj_property name="ElementShortName">selr4[1:0]</obj_property>
+      <obj_property name="ObjectShortName">selr4[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/selr3" type="array">
+      <obj_property name="ElementShortName">selr3[1:0]</obj_property>
+      <obj_property name="ObjectShortName">selr3[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/selr2" type="array">
+      <obj_property name="ElementShortName">selr2[1:0]</obj_property>
+      <obj_property name="ObjectShortName">selr2[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/selr1" type="array">
+      <obj_property name="ElementShortName">selr1[1:0]</obj_property>
+      <obj_property name="ObjectShortName">selr1[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/seladd4_2" type="array">
+      <obj_property name="ElementShortName">seladd4_2[2:0]</obj_property>
+      <obj_property name="ObjectShortName">seladd4_2[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/seladd4_1" type="array">
+      <obj_property name="ElementShortName">seladd4_1[2:0]</obj_property>
+      <obj_property name="ObjectShortName">seladd4_1[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/seladd3_2" type="array">
+      <obj_property name="ElementShortName">seladd3_2[2:0]</obj_property>
+      <obj_property name="ObjectShortName">seladd3_2[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/seladd3_1" type="array">
+      <obj_property name="ElementShortName">seladd3_1[2:0]</obj_property>
+      <obj_property name="ObjectShortName">seladd3_1[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/seladd2_1" type="array">
+      <obj_property name="ElementShortName">seladd2_1[2:0]</obj_property>
+      <obj_property name="ObjectShortName">seladd2_1[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/statemachine_tb/state/seladd1_2" type="array">
+      <obj_property name="ElementShortName">seladd1_2[2:0]</obj_property>
+      <obj_property name="ObjectShortName">seladd1_2[2:0]</obj_property>
+   </wvobject>
+</wave_config>

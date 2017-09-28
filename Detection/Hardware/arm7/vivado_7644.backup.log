@@ -1,0 +1,1939 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Aug 31 17:11:22 2017
+# Process ID: 7644
+# Current directory: C:/Users/pedro/Documents/arm7
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10412 C:\Users\pedro\Documents\arm7\tcc-arm7.xpr
+# Log file: C:/Users/pedro/Documents/arm7/vivado.log
+# Journal file: C:/Users/pedro/Documents/arm7\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/pedro/Documents/arm7/tcc-arm7.xpr
+Scanning sources...
+FFinished scanning sourcesINFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'.
+open_project: Time (s): cpu = 00:00:32 ; elapsed = 00:00:45 . Memory (MB): peak = 914.125 ; gain = 253.520
+lexit
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 31 20:02:28 2017...
+[SIM-utils-54] Inspecting design source files for 'subtration_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+"xvlog -m64 --relax -L xil_defaultlib -prj subtration_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/sqrt.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/Datapath.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-311] analyzing module multiplex
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/square_root.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/div.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/subtration.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module subtration
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/adder_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/register_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/sqrt_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/square_root_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/div_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/mul_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex
+WARNING: [VRFC 10-1195] overwriting previous definition of module multiplex [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv:23]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/subtration_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module subtration_tb
+ERROR: [VRFC 10-395] cannot assign a packed type to an unpacked type [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/subtration_tb.sv:31]
+ERROR: [VRFC 10-395] cannot assign a packed type to an unpacked type [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/subtration_tb.sv:34]
+ERROR: [VRFC 10-395] cannot assign a packed type to an unpacked type [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/subtration_tb.sv:37]
+ERROR: [VRFC 10-395] cannot assign a packed type to an unpacked type [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/subtration_tb.sv:40]
+ERROR: [VRFC 10-395] cannot assign a packed type to an unpacked type [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/subtration_tb.sv:43]
+ERROR: [VRFC 10-395] cannot assign a packed type to an unpacked type [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/subtration_tb.sv:46]
+ERROR: [VRFC 10-395] cannot assign a packed type to an unpacked type [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/subtration_tb.sv:49]
+ERROR: [VRFC 10-395] cannot assign a packed type to an unpacked type [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/subtration_tb.sv:51]
+ERROR: [VRFC 10-395] cannot assign a packed type to an unpacked type [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/subtration_tb.sv:52]
+ERROR: [VRFC 10-395] cannot assign a packed type to an unpacked type [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/subtration_tb.sv:55]
+ERROR: [VRFC 10-1040] module subtration_tb ignored due to previous errors [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/subtration_tb.sv:23]
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'subtration_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+"xvlog -m64 --relax -L xil_defaultlib -prj subtration_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/sqrt.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/Datapath.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-311] analyzing module multiplex
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/square_root.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/div.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/subtration.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module subtration
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/adder_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/register_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/sqrt_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/square_root_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/div_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/mul_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex
+WARNING: [VRFC 10-1195] overwriting previous definition of module multiplex [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv:23]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/subtration_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module subtration_tb
+ERROR: [VRFC 10-395] cannot assign a packed type to an unpacked type [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/subtration_tb.sv:31]
+ERROR: [VRFC 10-1040] module subtration_tb ignored due to previous errors [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/subtration_tb.sv:23]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'subtration_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+"xvlog -m64 --relax -L xil_defaultlib -prj subtration_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/sqrt.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/Datapath.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-311] analyzing module multiplex
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/square_root.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/div.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/subtration.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module subtration
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/adder_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/register_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/sqrt_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/square_root_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/div_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/mul_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex
+WARNING: [VRFC 10-1195] overwriting previous definition of module multiplex [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv:23]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/subtration_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module subtration_tb
+ERROR: [VRFC 10-395] cannot assign a packed type to an unpacked type [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/subtration_tb.sv:29]
+ERROR: [VRFC 10-1040] module subtration_tb ignored due to previous errors [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/subtration_tb.sv:21]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'subtration_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+"xvlog -m64 --relax -L xil_defaultlib -prj subtration_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/sqrt.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/Datapath.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-311] analyzing module multiplex
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/square_root.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/div.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/subtration.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module subtration
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/adder_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/register_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/sqrt_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/square_root_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/div_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/mul_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex
+WARNING: [VRFC 10-1195] overwriting previous definition of module multiplex [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv:23]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/subtration_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module subtration_tb
+ERROR: [VRFC 10-395] cannot assign a packed type to an unpacked type [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/subtration_tb.sv:29]
+ERROR: [VRFC 10-1040] module subtration_tb ignored due to previous errors [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/subtration_tb.sv:21]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'subtration_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+"xvlog -m64 --relax -L xil_defaultlib -prj subtration_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/sqrt.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/Datapath.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-311] analyzing module multiplex
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/square_root.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/div.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/subtration.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module subtration
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/adder_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/register_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/sqrt_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/square_root_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/div_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/mul_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex
+WARNING: [VRFC 10-1195] overwriting previous definition of module multiplex [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv:23]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/subtration_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module subtration_tb
+ERROR: [VRFC 10-395] cannot assign a packed type to an unpacked type [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/subtration_tb.sv:29]
+ERROR: [VRFC 10-1040] module subtration_tb ignored due to previous errors [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/subtration_tb.sv:21]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+remove_files  -fileset sim_1 C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/subtration_tb.sv
+remove_files  C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/subtration.sv
+set_property top mul [current_fileset]
+set_property top mul_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'mul_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+"xvlog -m64 --relax -L xil_defaultlib -prj mul_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/sqrt.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/Datapath.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-311] analyzing module multiplex
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/square_root.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/div.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/adder_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/register_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/sqrt_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/square_root_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/div_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/mul_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex
+WARNING: [VRFC 10-1195] overwriting previous definition of module multiplex [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv:23]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 13c7beef8cba47ffa90589701ec6fe4f --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot mul_tb_behav xil_defaultlib.mul_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mul
+Compiling module xil_defaultlib.mul_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot mul_tb_behav
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xsim.dir/mul_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xsim.dir/mul_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Aug 31 17:28:29 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Thu Aug 31 17:28:29 2017...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:15 . Memory (MB): peak = 914.125 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '15' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "mul_tb_behav -key {Behavioral:sim_1:Functional:mul_tb} -tclbatch {mul_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source mul_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'mul_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:20 . Memory (MB): peak = 914.125 ; gain = 0.000
+close [ open C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/abs.sv w ]
+add_files C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/abs.sv
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv w ]
+add_files -fileset sim_1 C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv
+set_property top abs_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+set_property top abs [current_fileset]
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/mul_tb_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xelab.pb
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'abs_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+"xvlog -m64 --relax -L xil_defaultlib -prj abs_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/sqrt.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/Datapath.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-311] analyzing module multiplex
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/square_root.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/div.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/abs.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/adder_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/register_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/sqrt_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/square_root_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/div_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/mul_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex
+WARNING: [VRFC 10-1195] overwriting previous definition of module multiplex [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv:23]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 13c7beef8cba47ffa90589701ec6fe4f --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot abs_tb_behav xil_defaultlib.abs_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+ERROR: [XSIM 43-4286] "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/abs.sv" Line 26. Undefined system function '$abs'
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/mul_tb_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xelab.pb
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'abs_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+"xvlog -m64 --relax -L xil_defaultlib -prj abs_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/sqrt.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/Datapath.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-311] analyzing module multiplex
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/square_root.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/div.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/abs.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/adder_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/register_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/sqrt_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/square_root_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/div_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/mul_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex
+WARNING: [VRFC 10-1195] overwriting previous definition of module multiplex [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv:23]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 13c7beef8cba47ffa90589701ec6fe4f --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot abs_tb_behav xil_defaultlib.abs_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+ERROR: [XSIM 43-4286] "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/abs.sv" Line 26. Undefined system function '$abs'
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/mul_tb_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xelab.pb
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'abs_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+"xvlog -m64 --relax -L xil_defaultlib -prj abs_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/sqrt.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/Datapath.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-311] analyzing module multiplex
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/square_root.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/div.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/abs.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/adder_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/register_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/sqrt_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/square_root_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/div_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/mul_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex
+WARNING: [VRFC 10-1195] overwriting previous definition of module multiplex [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv:23]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 13c7beef8cba47ffa90589701ec6fe4f --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot abs_tb_behav xil_defaultlib.abs_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.abs
+Compiling module xil_defaultlib.abs_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot abs_tb_behav
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xsim.dir/abs_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xsim.dir/abs_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Aug 31 20:06:44 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Thu Aug 31 20:06:44 2017...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 914.125 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "abs_tb_behav -key {Behavioral:sim_1:Functional:abs_tb} -tclbatch {abs_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source abs_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'abs_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 914.125 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 914.125 ; gain = 0.000
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/mul_tb_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xelab.pb
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'abs_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+"xvlog -m64 --relax -L xil_defaultlib -prj abs_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/sqrt.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/Datapath.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-311] analyzing module multiplex
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/square_root.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/div.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/abs.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/adder_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/register_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/sqrt_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/square_root_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/div_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/mul_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex
+WARNING: [VRFC 10-1195] overwriting previous definition of module multiplex [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv:23]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 13c7beef8cba47ffa90589701ec6fe4f --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot abs_tb_behav xil_defaultlib.abs_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.abs
+Compiling module xil_defaultlib.abs_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot abs_tb_behav
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xsim.dir/abs_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xsim.dir/abs_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Aug 31 20:09:26 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Thu Aug 31 20:09:26 2017...
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "abs_tb_behav -key {Behavioral:sim_1:Functional:abs_tb} -tclbatch {abs_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source abs_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'abs_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 914.125 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/mul_tb_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xelab.pb
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'abs_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+"xvlog -m64 --relax -L xil_defaultlib -prj abs_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/sqrt.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/Datapath.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-311] analyzing module multiplex
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/square_root.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/div.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/abs.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/adder_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/register_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/sqrt_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/square_root_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/div_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/mul_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex
+WARNING: [VRFC 10-1195] overwriting previous definition of module multiplex [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv:23]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 13c7beef8cba47ffa90589701ec6fe4f --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot abs_tb_behav xil_defaultlib.abs_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.abs
+Compiling module xil_defaultlib.abs_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot abs_tb_behav
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xsim.dir/abs_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xsim.dir/abs_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Aug 31 20:11:59 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Thu Aug 31 20:11:59 2017...
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "abs_tb_behav -key {Behavioral:sim_1:Functional:abs_tb} -tclbatch {abs_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source abs_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'abs_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 914.125 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/mul_tb_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xelab.pb
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'abs_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+"xvlog -m64 --relax -L xil_defaultlib -prj abs_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/sqrt.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/Datapath.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-311] analyzing module multiplex
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/square_root.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/div.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/abs.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/adder_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/register_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/sqrt_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/square_root_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/div_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/mul_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex
+WARNING: [VRFC 10-1195] overwriting previous definition of module multiplex [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv:23]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 13c7beef8cba47ffa90589701ec6fe4f --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot abs_tb_behav xil_defaultlib.abs_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.abs
+Compiling module xil_defaultlib.abs_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot abs_tb_behav
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xsim.dir/abs_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xsim.dir/abs_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Aug 31 20:13:29 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Thu Aug 31 20:13:29 2017...
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "abs_tb_behav -key {Behavioral:sim_1:Functional:abs_tb} -tclbatch {abs_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source abs_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'abs_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 914.125 ; gain = 0.000
+current_sim simulation_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'abs_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+"xvlog -m64 --relax -L xil_defaultlib -prj abs_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/sqrt.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/Datapath.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-311] analyzing module multiplex
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/square_root.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/div.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/abs.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/adder_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/register_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/sqrt_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/square_root_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/div_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/mul_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex
+WARNING: [VRFC 10-1195] overwriting previous definition of module multiplex [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv:23]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs_tb
+ERROR: [VRFC 10-1412] syntax error near # [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv:32]
+ERROR: [VRFC 10-1412] syntax error near - [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv:33]
+ERROR: [VRFC 10-1040] module abs_tb ignored due to previous errors [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv:23]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'abs_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+"xvlog -m64 --relax -L xil_defaultlib -prj abs_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/sqrt.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/Datapath.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-311] analyzing module multiplex
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/square_root.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/div.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/abs.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/adder_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/register_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/sqrt_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/square_root_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/div_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/mul_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex
+WARNING: [VRFC 10-1195] overwriting previous definition of module multiplex [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv:23]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs_tb
+ERROR: [VRFC 10-1412] syntax error near - [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv:33]
+ERROR: [VRFC 10-1040] module abs_tb ignored due to previous errors [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv:23]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'abs_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+"xvlog -m64 --relax -L xil_defaultlib -prj abs_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/sqrt.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/Datapath.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-311] analyzing module multiplex
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/square_root.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/div.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/abs.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/adder_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/register_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/sqrt_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/square_root_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/div_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/mul_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex
+WARNING: [VRFC 10-1195] overwriting previous definition of module multiplex [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv:23]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 13c7beef8cba47ffa90589701ec6fe4f --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot abs_tb_behav xil_defaultlib.abs_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.abs
+Compiling module xil_defaultlib.abs_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot abs_tb_behav
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xsim.dir/abs_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xsim.dir/abs_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Aug 31 20:18:14 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Thu Aug 31 20:18:14 2017...
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "abs_tb_behav -key {Behavioral:sim_1:Functional:abs_tb} -tclbatch {abs_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source abs_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'abs_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 914.125 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'abs_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+"xvlog -m64 --relax -L xil_defaultlib -prj abs_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/sqrt.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/Datapath.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-311] analyzing module multiplex
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/square_root.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/div.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/abs.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/adder_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/register_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/sqrt_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/square_root_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/div_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/mul_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex
+WARNING: [VRFC 10-1195] overwriting previous definition of module multiplex [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv:23]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 13c7beef8cba47ffa90589701ec6fe4f --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot abs_tb_behav xil_defaultlib.abs_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+ERROR: [XSIM 43-4286] "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/abs.sv" Line 26. Undefined system function '$abs'
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'abs_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+"xvlog -m64 --relax -L xil_defaultlib -prj abs_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/sqrt.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/Datapath.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-311] analyzing module multiplex
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/square_root.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/div.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/abs.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/adder_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/register_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/sqrt_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/square_root_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/div_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/mul_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex
+WARNING: [VRFC 10-1195] overwriting previous definition of module multiplex [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv:23]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 13c7beef8cba47ffa90589701ec6fe4f --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot abs_tb_behav xil_defaultlib.abs_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.abs
+Compiling module xil_defaultlib.abs_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot abs_tb_behav
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xsim.dir/abs_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xsim.dir/abs_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Aug 31 20:19:39 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Thu Aug 31 20:19:39 2017...
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "abs_tb_behav -key {Behavioral:sim_1:Functional:abs_tb} -tclbatch {abs_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source abs_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'abs_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 914.125 ; gain = 0.000
+add_bp {C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv} 31
+remove_bps -file {C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv} -line 31
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'abs_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+"xvlog -m64 --relax -L xil_defaultlib -prj abs_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/sqrt.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/Datapath.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-311] analyzing module multiplex
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/square_root.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/div.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/abs.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/adder_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/register_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/sqrt_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/square_root_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/div_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/mul_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex
+WARNING: [VRFC 10-1195] overwriting previous definition of module multiplex [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv:23]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs_tb
+ERROR: [VRFC 10-395] cannot assign a packed type to an unpacked type [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv:31]
+ERROR: [VRFC 10-395] cannot assign a packed type to an unpacked type [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv:33]
+ERROR: [VRFC 10-395] cannot assign a packed type to an unpacked type [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv:35]
+ERROR: [VRFC 10-395] cannot assign a packed type to an unpacked type [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv:37]
+ERROR: [VRFC 10-395] cannot assign a packed type to an unpacked type [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv:39]
+ERROR: [VRFC 10-1040] module abs_tb ignored due to previous errors [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv:23]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'abs_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+"xvlog -m64 --relax -L xil_defaultlib -prj abs_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/sqrt.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/Datapath.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-311] analyzing module multiplex
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/square_root.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/div.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/abs.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/adder_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/register_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/sqrt_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/square_root_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/div_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/mul_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex
+WARNING: [VRFC 10-1195] overwriting previous definition of module multiplex [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv:23]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs_tb
+ERROR: [VRFC 10-395] cannot assign a packed type to an unpacked type [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv:31]
+ERROR: [VRFC 10-395] cannot assign a packed type to an unpacked type [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv:33]
+ERROR: [VRFC 10-395] cannot assign a packed type to an unpacked type [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv:35]
+ERROR: [VRFC 10-395] cannot assign a packed type to an unpacked type [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv:37]
+ERROR: [VRFC 10-395] cannot assign a packed type to an unpacked type [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv:39]
+ERROR: [VRFC 10-1040] module abs_tb ignored due to previous errors [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv:23]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'abs_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+"xvlog -m64 --relax -L xil_defaultlib -prj abs_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/sqrt.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/Datapath.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-311] analyzing module multiplex
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/square_root.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/div.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/abs.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/adder_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/register_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/sqrt_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/square_root_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/div_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/mul_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex
+WARNING: [VRFC 10-1195] overwriting previous definition of module multiplex [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv:23]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 13c7beef8cba47ffa90589701ec6fe4f --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot abs_tb_behav xil_defaultlib.abs_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-395] cannot assign a packed type to an unpacked type [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv:27]
+ERROR: [VRFC 10-395] cannot assign an unpacked type to a packed type [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/abs.sv:25]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'abs_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+"xvlog -m64 --relax -L xil_defaultlib -prj abs_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/sqrt.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/Datapath.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-311] analyzing module multiplex
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/square_root.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/div.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/abs.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/adder_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/register_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/sqrt_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/square_root_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/div_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/mul_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex
+WARNING: [VRFC 10-1195] overwriting previous definition of module multiplex [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv:23]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 13c7beef8cba47ffa90589701ec6fe4f --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot abs_tb_behav xil_defaultlib.abs_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-395] cannot assign a packed type to an unpacked type [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv:27]
+ERROR: [VRFC 10-395] cannot assign an unpacked type to a packed type [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/abs.sv:25]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'abs_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+"xvlog -m64 --relax -L xil_defaultlib -prj abs_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/sqrt.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/Datapath.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-311] analyzing module multiplex
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/square_root.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/div.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/abs.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/adder_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/register_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/sqrt_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/square_root_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/div_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/mul_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex
+WARNING: [VRFC 10-1195] overwriting previous definition of module multiplex [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv:23]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 13c7beef8cba47ffa90589701ec6fe4f --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot abs_tb_behav xil_defaultlib.abs_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.abs
+Compiling module xil_defaultlib.abs_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot abs_tb_behav
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xsim.dir/abs_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xsim.dir/abs_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Aug 31 20:29:01 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Thu Aug 31 20:29:01 2017...
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "abs_tb_behav -key {Behavioral:sim_1:Functional:abs_tb} -tclbatch {abs_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source abs_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'abs_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 914.125 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'abs_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+"xvlog -m64 --relax -L xil_defaultlib -prj abs_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/sqrt.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/Datapath.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-311] analyzing module multiplex
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/square_root.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/div.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/abs.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/adder_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/register_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/sqrt_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/square_root_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/div_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/mul_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex
+WARNING: [VRFC 10-1195] overwriting previous definition of module multiplex [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv:23]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 13c7beef8cba47ffa90589701ec6fe4f --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot abs_tb_behav xil_defaultlib.abs_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+ERROR: [XSIM 43-4286] "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/abs.sv" Line 26. Undefined system function '$abs'
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'abs_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+"xvlog -m64 --relax -L xil_defaultlib -prj abs_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/sqrt.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/Datapath.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-311] analyzing module multiplex
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/square_root.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/div.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/abs.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/adder_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/register_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/sqrt_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/square_root_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/div_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/mul_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex
+WARNING: [VRFC 10-1195] overwriting previous definition of module multiplex [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv:23]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 13c7beef8cba47ffa90589701ec6fe4f --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot abs_tb_behav xil_defaultlib.abs_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+ERROR: [XSIM 43-4286] "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/abs.sv" Line 26. Undefined system function '$abs'
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'abs_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+"xvlog -m64 --relax -L xil_defaultlib -prj abs_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/sqrt.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/Datapath.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-311] analyzing module multiplex
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/square_root.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/div.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/abs.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/adder_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/register_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/sqrt_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/square_root_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/div_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/mul_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex
+WARNING: [VRFC 10-1195] overwriting previous definition of module multiplex [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv:23]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 13c7beef8cba47ffa90589701ec6fe4f --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot abs_tb_behav xil_defaultlib.abs_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.abs
+Compiling module xil_defaultlib.abs_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot abs_tb_behav
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xsim.dir/abs_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xsim.dir/abs_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Aug 31 20:45:35 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Thu Aug 31 20:45:35 2017...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 914.125 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "abs_tb_behav -key {Behavioral:sim_1:Functional:abs_tb} -tclbatch {abs_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source abs_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'abs_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 914.125 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 914.125 ; gain = 0.000
+launch_simulation
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'abs_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+"xvlog -m64 --relax -L xil_defaultlib -prj abs_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/sqrt.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/Datapath.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-311] analyzing module multiplex
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/square_root.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/div.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/abs.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/adder_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/multiplex_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/register_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/sqrt_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/square_root_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module square_root_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/div_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/mul_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplex
+WARNING: [VRFC 10-1195] overwriting previous definition of module multiplex [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv:23]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/abs_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abs_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 13c7beef8cba47ffa90589701ec6fe4f --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot abs_tb_behav xil_defaultlib.abs_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.abs
+Compiling module xil_defaultlib.abs_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot abs_tb_behav
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xsim.dir/abs_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 60.883 ; gain = 0.199
+INFO: [Common 17-206] Exiting Webtalk at Thu Aug 31 20:48:15 2017...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 914.125 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "abs_tb_behav -key {Behavioral:sim_1:Functional:abs_tb} -tclbatch {abs_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source abs_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'abs_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 914.125 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 914.125 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 31 22:45:33 2017...

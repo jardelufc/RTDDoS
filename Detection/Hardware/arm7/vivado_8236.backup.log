@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Fri Aug 18 16:33:08 2017
+# Process ID: 8236
+# Current directory: C:/Users/pedro/Documents/arm7
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15280 C:\Users\pedro\Documents\arm7\tcc-arm7.xpr
+# Log file: C:/Users/pedro/Documents/arm7/vivado.log
+# Journal file: C:/Users/pedro/Documents/arm7\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/pedro/Documents/arm7/tcc-arm7.xpr
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'open_project' was cancelled
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 18 16:34:29 2017...

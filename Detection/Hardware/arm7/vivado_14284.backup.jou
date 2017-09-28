@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Mon Aug 14 15:51:22 2017
+# Process ID: 14284
+# Current directory: C:/Users/pedro/Documents/arm7
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6088 C:\Users\pedro\Documents\arm7\tcc-arm7.xpr
+# Log file: C:/Users/pedro/Documents/arm7/vivado.log
+# Journal file: C:/Users/pedro/Documents/arm7\vivado.jou
+#-----------------------------------------------------------
+sstart_guiopen_project C:/Users/pedro/Documents/arm7/tcc-arm7.xpr
+launch_simulation
+close_project
+open_project C:/Users/pedro/Documents/arm7/tcc-arm7.xpr
+add_files -norecurse {C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/multiplex.sv C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/sqrt.sv C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/division.sv C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/Datapath.sv C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/adder.sv C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/square_root.sv C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/div.sv}
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top div_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+source div_tb.tcl
+remove_files  C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/division.sv
+close_sim
