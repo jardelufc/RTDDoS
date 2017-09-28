@@ -33,7 +33,7 @@ datasetMtx = weka2matlab(wekaOBJ);
 % pktReservedTIME = datasetMtx(:,25);
 % firstPktSENT = datasetMtx(:,26);
 % lastPktRESERVED = datasetMtx(:,27);
- save dataset.mat
+ save /home/riccelli/RTDDoS/Detection/Software/dataset.mat
 
 
 end

@@ -1,10 +1,10 @@
-<<<<<<< HEAD
+%To use the simulator, first unzip and rename to finaldataset.arff file
+% in RTDDoS/matlabArff folder
+% After, execute getDatasetScript to generate the dataset.mat file
+
 % Enable Debug mode
 debug = 1;
-DestIP = 24;
-=======
 DestIP = 3;
->>>>>>> 945c18613071dfe0fbd79c591b81f903cbcd4d40
 % windownSize = 5;
 threshold = 0.81;
 % [PktRate VarSourceIP EntropySourceIP]
@@ -21,32 +21,21 @@ datasetMtxDestIP = datasetMtx(idxDestIP,:);
 % step to divide window time
 step = 1;
 time = 0;
-<<<<<<< HEAD
 win = 0;
 % keyboard;
 for i = 1:length(idxDestIP)
     %     Getting send time of pkt
-=======
-for i = 1:length(idxDestIP)
-%     Getting send time of pkt
->>>>>>> 945c18613071dfe0fbd79c591b81f903cbcd4d40
     pktSendTIME = datasetMtxDestIP(i,24);
     pktDelayNODE = datasetMtxDestIP(i,18);
     pktDELAY = datasetMtxDestIP(i,23);
     pktReservedTIME = datasetMtxDestIP(i,25);
-<<<<<<< HEAD
+    %     time is the sum of all delays
+    time = time + pktSendTIME + pktDelayNODE + pktDELAY + pktReservedTIME;
     %     time is the sum of all delays
     time = time + pktSendTIME + pktDelayNODE + pktDELAY + pktReservedTIME;
     %
     if time >= 1000
-        %         keyboard
         win = win + 1;
-=======
-%     time is the sum of all delays
-    time = time + pktSendTIME + pktDelayNODE + pktDELAY + pktReservedTIME;
-%     
-    if time >= 1000
->>>>>>> 945c18613071dfe0fbd79c591b81f903cbcd4d40
         trafficPktRate = mean(datasetMtxDestIP(step:i,19));
         sourceIPs = datasetMtxDestIP(step:i,1);
         %         VarSourceIPs = 0;
@@ -56,8 +45,6 @@ for i = 1:length(idxDestIP)
                 aux = aux + 1;
             end
         end
-<<<<<<< HEAD
-        
         if debug == 1
             trafficPktRate(win,1) = mean(datasetMtxDestIP(step:i,19));
             VarSourceIPs(win,1) = aux/length(sourceIPs);
@@ -99,26 +86,6 @@ for i = 1:length(idxDestIP)
     end
     
 end
-=======
-        VarSourceIPs = aux/length(sourceIPs);
-        entropySourceIPs = entropy(sourceIPs);
-        NaHidModule = NaHid([trafficPktRate VarSourceIPs entropySourceIPs],normalTraffic1);
-        if(NaHidModule < 0.81)
-            disp('traffic');
-            disp(i);
-            disp('atack');
-        else
-            disp('traffic');
-            disp(i);
-            disp('normal');
-            keyboard
-            step = step + i;
-        end
-        time = 0;
-    end
-    
-end
-
 % step = 1;
 % for i = 1:length(idxDestIP)
 %
@@ -134,4 +101,3 @@ end
 %         step = step + windownSize;
 %     end
 % end
->>>>>>> 945c18613071dfe0fbd79c591b81f903cbcd4d40
