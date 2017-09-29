@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Sat Aug 12 16:49:21 2017
+# Process ID: 7484
+# Current directory: C:/Users/pedro/Documents/arm7
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4856 C:\Users\pedro\Documents\arm7\tcc-arm7.xpr
+# Log file: C:/Users/pedro/Documents/arm7/vivado.log
+# Journal file: C:/Users/pedro/Documents/arm7\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/pedro/Documents/arm7/tcc-arm7.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'.
+open_project: Time (s): cpu = 00:00:26 ; elapsed = 00:00:20 . Memory (MB): peak = 981.855 ; gain = 201.426
+update_compile_order -fileset sources_1
+close [ open C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/div.sv w ]
+add_files C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/div.sv
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/div_tb.v w ]
+add_files -fileset sim_1 C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sim_1/new/div_tb.v
+update_compile_order -fileset sim_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Aug 13 00:14:12 2017...
