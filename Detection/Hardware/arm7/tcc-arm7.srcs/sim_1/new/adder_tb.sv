@@ -21,8 +21,8 @@
 
 
 module adder_tb( );
- reg [22:0] anew,bnew;
-   wire [22:0] onew;
+ reg [11:0] anew,bnew;
+   wire [12:0] onew;
 
         
    adder a(.a(anew),.b(bnew),.o(onew));

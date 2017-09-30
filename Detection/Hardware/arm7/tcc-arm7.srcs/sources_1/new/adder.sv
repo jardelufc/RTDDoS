@@ -20,8 +20,16 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module adder #(parameter WIDTH=23)
- (input [WIDTH-1:0] a,b,output  [WIDTH-1:0] o);
-    assign o = a+b;
+ (input  [WIDTH-1:0] a,b,c,
+ input op,
+  output  reg [WIDTH:0] o);
+ always@(a or b)begin
+ 
+  case (op)
+   0:o = a+b;
+   1:o=$unsigned(a-b);   
+  endcase
+    end
 endmodule
 
 

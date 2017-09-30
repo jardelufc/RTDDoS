@@ -20,9 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module multiplex(input [3:0]a,b,
-                   input sel,
-                   output reg [3:0] y );
+module multiplex(input [10:0]a,b,
+                   input sel[1:0],
+                   output reg [10:0] y );
 
 always@(*)  begin                 
      if (sel==0) 

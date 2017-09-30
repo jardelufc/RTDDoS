@@ -2,13 +2,13 @@
 # Webtalk v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Sat Jul 29 19:24:05 2017
-# Process ID: 1320
-# Current directory: C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.sim/sim_1/behav
-# Command line: wbtcv.exe -mode batch -source C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.sim/sim_1/behav/xsim.dir/square_root_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-# Log file: C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.sim/sim_1/behav/webtalk.log
-# Journal file: C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.sim/sim_1/behav\webtalk.jou
+# Start of session at: Thu Sep 28 11:59:20 2017
+# Process ID: 5856
+# Current directory: C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav
+# Command line: wbtcv.exe -mode batch -source C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xsim.dir/statemachine_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/webtalk.log
+# Journal file: C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav\webtalk.jou
 #-----------------------------------------------------------
-source C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.sim/sim_1/behav/xsim.dir/square_root_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] 'C:/Users/pedro/Documents/tcc-arm7/tcc-arm7.sim/sim_1/behav/xsim.dir/square_root_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sat Jul 29 19:24:08 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.2/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Sat Jul 29 19:24:08 2017...
+source C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xsim.dir/statemachine_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/pedro/Documents/arm7/tcc-arm7.sim/sim_1/behav/xsim.dir/statemachine_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Sep 28 11:59:23 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Thu Sep 28 11:59:23 2017...

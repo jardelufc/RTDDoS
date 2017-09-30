@@ -20,14 +20,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module multiplex_tb( );
+module mux_tb( );
 
   reg [3:0] anew,bnew;
      reg selnew;
      wire [3:0] ynew;
 
     
-    multiplex m(.a(anew), .b(bnew), .sel(selnew), .y(ynew));
+    mux m(.a(anew), .b(bnew), .sel(selnew), .y(ynew));
     
     initial begin
     selnew=0;
