@@ -21,10 +21,10 @@
 
 
 module mux2r(input [23:0] a,b,
-               input  sel, data,
+               input  sel,
                    output reg [23:0] y );
 
-always@(*)  begin                 
+always_comb  begin                 
      case(sel)
      
      0: y = a;
@@ -32,11 +32,5 @@ always@(*)  begin
      default: y=24'bx;
      endcase
   end
-  always@(*)  begin                 
-         case(data)       
-        0: y = y;
-        1: y =y>>2;
-         default: y=24'bx;
-         endcase
-      end  
+  
 endmodule

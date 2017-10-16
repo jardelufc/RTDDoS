@@ -22,32 +22,34 @@
 
 module register_tb( );
 reg [15:0] innew;
-reg clknew,clrnew;
+reg clknew,clrnew,enable;
 wire [15:0] onew;
-register r(.in(innew), .clk(clknew),.clr(clrnew), .o(onew));
+register r(.in(innew), .clk(clknew),.clr(clrnew),.enable(enable), .o(onew));
 initial begin
 clknew=1'b0;
+
+
 end
 
-
-always 
-#5 clknew=~clknew;
 initial begin
 
 innew=16'd5;
 clrnew=0;
-
-#10
+enable=1;
+#5
 innew=12'd3;
 clrnew=0;
-
-#10
+enable=1;
+#5
 innew=14'd4;
 clrnew=0;
-#10
-$finish;
+enable=0;
+
+
 end
 
-   
+always begin
+    #1 clknew=~clknew;   
+end 
    
 endmodule

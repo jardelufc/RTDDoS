@@ -19,16 +19,15 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module mux2(input [10:0] a,b,
+module mux2(input [22:0] a,b,
                input  sel, 
-                   output reg [23:0] y );
+                   output reg [22:0] y );
 
-always@(*)  begin                 
-     case(sel)
-     
-     0: y ={13'b0,a};
-     1: y ={13'b0,b};
-     default: y=11'bx;
+always_comb  begin                 
+     case(sel)    
+     0: y =a;
+     1: y =b;
+     default: y=23'bx;
      endcase
   end
   

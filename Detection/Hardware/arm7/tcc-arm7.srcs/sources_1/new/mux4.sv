@@ -20,18 +20,19 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module mux4(input [10:0] a,b,c,d,
-               input [1:0] sel, 
-                   output reg [23:0] y );
+module mux4(input [22:0] a,b,c,d,
+               input [1:0] sel,
+               input clk,
+                   output reg [22:0] y );
 
-always@(*)  begin                 
+always_comb  begin                 
      case(sel)
      
-     2'b00: y = {13'b0,a};
-     2'b01: y ={13'b0,b};
-     2'b10: y = {13'b0,c};
-     2'b11: y = {13'b0,d};
-     default: y=24'bx;
+     2'b00: y = a;
+     2'b01: y = b;
+     2'b10: y = c;
+     2'b11: y = d;
+     default: y=23'bx;
      endcase
   end
   

@@ -22,10 +22,12 @@
 
 module register #(parameter WIDTH=24) (input [WIDTH-1:0] in, input clk,clr,enable, output reg [WIDTH-1:0] o);
 
-always@ (in)
+always@(posedge clk)
+begin
+if(enable)
           if(clr)
            o=0;
           else 
           o=in;
-      
+     end 
 endmodule

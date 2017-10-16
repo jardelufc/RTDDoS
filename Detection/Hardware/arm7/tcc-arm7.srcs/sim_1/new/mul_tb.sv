@@ -22,7 +22,7 @@
 
 module mul_tb();
     reg [10:0]a,b;
-    wire [21:0] mul;
+    wire [23:0] mul;
     
       mul mul1(.a(a),.b(b),.mul(mul));
       initial

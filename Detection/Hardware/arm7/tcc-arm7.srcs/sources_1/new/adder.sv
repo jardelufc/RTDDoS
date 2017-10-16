@@ -20,14 +20,17 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module adder #(parameter WIDTH=23)
- (input  [WIDTH-1:0] a,b,c,
- input op,
+ (input  [WIDTH-1:0] a,b,
+ input [1:0]op,
   output  reg [WIDTH:0] o);
- always@(a or b)begin
- 
+ always_comb
+  begin
   case (op)
-   0:o = a+b;
-   1:o=$unsigned(a-b);   
+   2'b00:o = a+b;
+   2'b01:o = (a+b)>>2;
+   2'b10:o=$unsigned(a-b);
+   2'b11:o=$unsigned(a-b)>>2;
+   default:o=24'bx;
   endcase
     end
 endmodule

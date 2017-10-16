@@ -20,20 +20,23 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module mux6(input [10:0] a,b,c,d,e,f,
+module mux6(input [22:0] a,b,c,d,e,f,g,h,
                input [2:0] sel, 
-                   output reg [23:0] y );
+               input clk,
+                   output reg [22:0] y );
 
-always@(*)  begin                 
+always_comb  begin                 
      case(sel)
      
-     3'b000: y = {13'b0,a};
-     3'b001: y =  {13'b0,b};
-     3'b010: y =  {13'b0,c};
-     3'b011: y =  {13'b0,d};
-     3'b100: y =  {13'b0,e};
-     3'b101: y =  {13'b0,f};
-          default: y=24'bx;
+     3'b000: y = a;
+     3'b001: y =  b;
+     3'b010: y =  c;
+     3'b011: y =  d;
+     3'b100: y =  e;
+     3'b101: y =  f;
+     3'b110: y =  g;
+      3'b111: y =  h;
+          default: y=23'bx;
 
      endcase
   end

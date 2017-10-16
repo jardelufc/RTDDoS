@@ -22,24 +22,24 @@
 
 module mux_tb( );
 
-  reg [3:0] anew,bnew;
+  reg [10:0] anew,bnew;
      reg selnew;
-     wire [3:0] ynew;
+     wire [22:0] ynew;
 
     
-    mux m(.a(anew), .b(bnew), .sel(selnew), .y(ynew));
+    mux2 m(.a(anew), .b(bnew), .sel(selnew), .y(ynew));
     
     initial begin
     selnew=0;
     anew=4'b0010;
     bnew=4'b0110;
-    #50
+    #10
      selnew=~selnew;
-    #50
+    #10
     selnew=~selnew;
-    #50
+    #10
     selnew=~selnew;
-    #50
+    #10
     selnew=~selnew;
   
     end
