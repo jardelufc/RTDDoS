@@ -21,35 +21,37 @@
 
 module Datapath(Rx1,Rx2,Rx3,Ry1,Ry2,Ry3,
 selmul3_1,selmul3_2,seladd5_2,seladd5_1,selr7,selsqrt,selmul2_2,selmul2_1,selmul1_2,selmul1_1,seladd2_2,seladd1_1,seldiv_2,seldiv_1,selr11,selr10,selr9,selr8,selr6,selr4,selr3,selr2,selr1,seladd4_2,seladd4_1,seladd3_2,seladd3_1,seladd2_1,seladd1_2,
-clk,clr,enable,datasqrt,datadiv,datar11,datar10,datar9,datar8,datar7,datar6,datar5,datar4,datar3,datar2,datar1,opadd1,opadd2,opadd3,opadd4,opadd5);
+clk,clr1,clr2,clr3,clr4,clr5,clr6,clr7,clr8,clr9,clr10,clr11,clrx1,clrx2,clrx3,clry1,clry2,clry3,enable1,enable2,enable3,enable4,enable5,enable6,enable7,enable8,enable9,enable10,enable11,enablex1,enablex2,enablex3,enabley1,enabley2,enabley3,datasqrt,datadiv,datar11,datar10,datar9,datar8,datar7,datar6,datar5,datar4,datar3,datar2,datar1,opadd1,opadd2,opadd3,opadd4,opadd5,R11resul,
+start);
 input [10:0] Rx1,Rx2,Rx3,Ry1,Ry2,Ry3;
 //Seletores
-input  selmul3_1,selmul3_2,seladd5_2,seladd5_1,selr7,selsqrt,clk,clr,enable,datasqrt,datadiv,datar11,datar10,datar9,datar8,datar7,datar6,datar5,datar4,datar3,datar2,datar1;
-input [1:0] selmul2_2,seladd4_1,selmul2_1,selmul1_2,selmul1_1,seladd2_2,seladd1_1,seldiv_2,seldiv_1,selr11,selr10,selr9,selr8,selr6,selr4,selr3,selr2,selr1;
-input [2:0] seladd4_2,seladd3_2,seladd3_1,seladd2_1,seladd1_2,opadd1,opadd2,opadd3,opadd4,opadd5; 
-
+input  selmul3_1,selmul3_2,seladd5_2,seladd5_1,selr7,selsqrt,clk,clr1,clr2,clr3,clr4,clr5,clr6,clr7,clr8,clr9,clr10,clr11,clrx1,clrx2,clrx3,clry1,clry2,clry3,enable1,enable2,enable3,enable4,enable5,enable6,enable7,enable8,enable9,enable10,enable11,enablex1,enablex2,enablex3,enabley1,enabley2,enabley3,datasqrt,datadiv,datar11,datar10,datar9,datar8,datar7,datar6,datar5,datar4,datar3,datar2,datar1,start;
+input [1:0] selmul2_2,seladd4_1,selmul2_1,selmul1_2,selmul1_1,seladd2_2,seladd1_1,seldiv_2,seldiv_1,selr11,selr10,selr9,selr8,selr6,selr4,selr3,selr2,selr1,opadd1,opadd2,opadd3,opadd4,opadd5;
+input [2:0] seladd4_2,seladd3_2,seladd3_1,seladd2_1,seladd1_2; 
+output R11resul;
+wire  clrx1,clrx2,clrx3,clry1,clry2,clry3,enablex1,enablex2,enablex3,enabley1,enabley2,enabley3;
 wire [23:0] op2add5,op1add5,op2add4,op1add4,op2add3,op1add3,op2add2,op1add2,op2add1,op1add1;
 wire [23:0] add5resul,add4resul,add3resul,add2resul,add1resul,add5shifted,add4shifted,add3shifted,add2shifted,add1shifted;
 wire [23:0] mul3resul,mul2resul,mul1resul,
 op2div,op1div,sqrtresul,
 div;
-wire [10:0] op2mul3,op1mul3,op2mul2,op1mul2,op2mul1,op1mul1;
+wire [10:0] op2mul3,op1mul3,op2mul2,op1mul2,op2mul1,op1mul1,x1r,x2r,x3r,y1r,y2r,y3r;
 wire [21:0] opsqrt;
 wire[22:0] Rx1new,Rx2new,Rx3new,Ry1new,Ry2new,Ry3new;
 wire [19:0] divresul;
 wire [23:0] opR1,opR2,opR3,opR4,opR5,opR6,opR7,opR8,opR9,opR10,opR11;
-wire [23:0] R11resul,R10resul,R9resul,R8resul,R7resul,R6resul,R5resul,R4resul,R3resul,R2resul,R1resul;
+wire [23:0] R10resul,R9resul,R8resul,R7resul,R6resul,R5resul,R4resul,R3resul,R2resul,R1resul;
 wire [10:0] R7resulnew,R1resulnew;
 wire [11:0] op1divnew,op2divnew;
 
 
 //extends (Módulo para ajustar entradas de 11 para 23 bits)
-extend ex1 (.a(Rx1),.y(Rx1new));
-extend ex2 (.a(Rx2),.y(Rx2new));
-extend ex3 (.a(Rx3),.y(Rx3new));
-extend ey1 (.a(Ry1),.y(Ry1new));
-extend ey2 (.a(Ry2),.y(Ry2new));
-extend ey3 (.a(Ry3),.y(Ry3new));
+extend ex1 (.a(x1r),.y(Rx1new));
+extend ex2 (.a(x2r),.y(Rx2new));
+extend ex3 (.a(x3r),.y(Rx3new));
+extend ey1 (.a(y1r),.y(Ry1new));
+extend ey2 (.a(y2r),.y(Ry2new));
+extend ey3 (.a(y3r),.y(Ry3new));
 //Reduce( Módulo para ajustar Saídas de 24 para 12 bits)
 
 reduce rr7 (.a(R7resul),.y(R7resulnew));
@@ -66,34 +68,34 @@ Entradas dos dados e a realimentação de registradores e variáveis, além disso co
 
 //Mux dos multiplicadores 
 //Multiplexadores do Multiplicador 3 
-mux2 mux2mul3(.a(Ry3),.b(Rx3),.sel(selmul3_2),.y(op2mul3));
-mux2 mux1mul3(.a(Ry3),.b(Rx3),.sel(selmul3_1),.y(op1mul3));
+mux2 mux2mul3(.a(y3r),.b(x3r),.sel(selmul3_2),.y(op2mul3));
+mux2 mux1mul3(.a(y3r),.b(x3r),.sel(selmul3_1),.y(op1mul3));
 //Multiplexadores do Multiplicador 2
-mux4 mux2mul2(.a(R7resulnew),.b(Ry2),.c(Rx2),.d(0),.sel(selmul2_2),.y(op2mul2));
-mux4 mux1mul2(.a(R7resulnew),.b(Ry2),.c(Rx2),.d(0),.sel(selmul2_1),.y(op1mul2));
+mux4 mux2mul2(.a(R7resulnew),.b(y2r),.c(x2r),.d(0),.sel(selmul2_2),.y(op2mul2));
+mux4 mux1mul2(.a(R7resulnew),.b(y2r),.c(x2r),.d(0),.sel(selmul2_1),.y(op1mul2));
 //Multiplexadores do Multiplicador 1
-mux4 mux2mul1(.a(R1resulnew),.b(Ry1),.c(Rx1),.d(0),.sel(selmul1_2),.y(op2mul1));
-mux4 mux1mul1(.a(R1resulnew),.b(Ry1),.c(Rx1),.d(0),.sel(selmul1_1),.y(op1mul1));
+mux4 mux2mul1(.a(R1resulnew),.b(y1r),.c(x1r),.d(0),.sel(selmul1_2),.y(op2mul1));
+mux4 mux1mul1(.a(R1resulnew),.b(y1r),.c(x1r),.d(0),.sel(selmul1_1),.y(op1mul1));
 
 
 
 //Mux dos Somadores 
 
 //Multiplexadores do Somador 5
-mux2 mux2add5(.a(R11resul),.b(div),.sel(seladd5_2),.y(op2add5));
+mux2 mux2add5(.a(R11resul),.b(divresul),.sel(seladd5_2),.y(op2add5));
 mux2 mux1add5(.a(3'b100),.b(R11resul),.sel(seladd5_1),.y(op1add5));
 //Multiplexadores do Somador 4
-mux6 mux2add4(.a(R1resul),.b(R2resul),.c(Ry3),.d(Ry2),.e(Ry1),.f(0),.g(0),.h(0),.sel(seladd4_2),.y(op2add4));
-mux4 mux1add4(.a(R8resul),.b(Rx3),.c(Rx2),.d(Rx1),.sel(seladd4_1),.y(op1add4));
+mux6 mux2add4(.a(R1resul),.b(R2resul),.c(Ry3new),.d(Ry2new),.e(Ry1new),.f(0),.g(0),.h(0),.sel(seladd4_2),.y(op2add4));
+mux4 mux1add4(.a(R8resul),.b(Rx3new),.c(Rx2new),.d(Rx1new),.sel(seladd4_1),.y(op1add4));
 //Multiplexadores do Somador 3
-mux6 mux2add3(.a(R10resul),.b(Ry2),.c(Rx2),.d(R9resul),.e(R4resul),.f(R7resul),.g(0),.h(0),.sel(seladd3_2),.y(op2add3));
-mux6 mux1add3(.a(R8resul),.b(R2resul),.c(R10resul),.d(R6resul),.e(Ry3),.f(0),.g(0),.h(0),.sel(seladd3_1),.y(op1add3));
+mux6 mux2add3(.a(R10resul),.b(Ry2new),.c(Rx2new),.d(R9resul),.e(R4resul),.f(R7resul),.g(0),.h(0),.sel(seladd3_2),.y(op2add3));
+mux6 mux1add3(.a(R8resul),.b(R2resul),.c(R10resul),.d(R6resul),.e(Ry3new),.f(0),.g(0),.h(0),.sel(seladd3_1),.y(op1add3));
 //Multiplexadores do Somador 2
-mux4 mux2add2(.a(R6resul),.b(R9resul),.c(R3resul),.d(Ry2),.sel(seladd2_2),.y(op2add2));
-mux6 mux1add2(.a(R7resul),.b(R1resul),.c(R8resul),.d(R2resul),.e(Ry1),.f(0),.g(0),.h(0),.sel(seladd2_1),.y(op1add2));
+mux4 mux2add2(.a(R6resul),.b(R9resul),.c(R3resul),.d(Ry2new),.sel(seladd2_2),.y(op2add2));
+mux6 mux1add2(.a(R7resul),.b(R1resul),.c(R8resul),.d(R2resul),.e(Ry1new),.f(0),.g(0),.h(0),.sel(seladd2_1),.y(op1add2));
 //Multiplexadores do Somador 1
-mux6 mux2add1(.a(Ry1),.b(R10resul),.c(R4resul),.d(Rx3),.e(Rx1),.f(0),.g(0),.h(0),.sel(seladd1_2),.y(op2add1));
-mux4 mux1add1(.a(R8resul),.b(R2resul),.c(R1resul),.d(Rx2),.sel(seladd1_1),.y(op1add1));
+mux6 mux2add1(.a(Ry1new),.b(R10resul),.c(R4resul),.d(Rx3new),.e(Rx1new),.f(0),.g(0),.h(0),.sel(seladd1_2),.y(op2add1));
+mux4 mux1add1(.a(R8resul),.b(R2resul),.c(R1resul),.d(Rx2new),.sel(seladd1_1),.y(op1add1));
 
 /*Multiplicadores e Somadores
 segunda coluna da arquitetura
@@ -156,18 +158,24 @@ div_gen_0 divider (clk,1,op1divnew,1,op2divnew,,divresul);
 cordic_0 sqrtcalc (clk,1,opsqrt,,sqrtresul);
 
 
-register r1 (.in(opR1),.clk(clk),.clr(clr),.enable(enable),.o(R1resul));
-register r2 (.in(opR2),.clk(clk),.clr(clr),.enable(enable),.o(R2resul));
-register r3 (.in(opR3),.clk(clk),.clr(clr),.enable(enable),.o(R3resul));
-register r4 (.in(opR4),.clk(clk),.clr(clr),.enable(enable),.o(R4resul));
-register #(11) r5  (.in(add4resul),.clk(clk),.clr(clr),.enable(enable),.o(R5resul));
-register r6 (.in(opR6),.clk(clk),.clr(clr),.enable(enable),.o(R6resul));
-register #(12) r7 (.in(opR7),.clk(clk),.clr(clr),.enable(enable),.o(R7resul));
-register r8 (.in(opR8),.clk(clk),.clr(clr),.enable(enable),.o(R8resul));
-register r9 (.in(opR9),.clk(clk),.clr(clr),.enable(enable),.o(R9resul));
-register r10 (.in(opR10),.clk(clk),.clr(clr),.enable(enable),.o(R10resul));
-register #(20) r11 (.in(opR11),.clk(clk),.clr(clr),.enable(enable),.o(R11resul));
+register r1 (.in(opR1),.clk(clk),.clr(clr1),.enable(enable1),.o(R1resul));
+register r2 (.in(opR2),.clk(clk),.clr(clr2),.enable(enable2),.o(R2resul));
+register r3 (.in(opR3),.clk(clk),.clr(clr3),.enable(enable3),.o(R3resul));
+register r4 (.in(opR4),.clk(clk),.clr(clr4),.enable(enable4),.o(R4resul));
+register #(11) r5  (.in(add4resul),.clk(clk),.clr(clr5),.enable(enable5),.o(R5resul));
+register r6 (.in(opR6),.clk(clk),.clr(clr6),.enable(enable6),.o(R6resul));
+register #(12) r7 (.in(opR7),.clk(clk),.clr(clr7),.enable(enable7),.o(R7resul));
+register r8 (.in(opR8),.clk(clk),.clr(clr8),.enable(enable8),.o(R8resul));
+register r9 (.in(opR9),.clk(clk),.clr(clr9),.enable(enable9),.o(R9resul));
+register r10 (.in(opR10),.clk(clk),.clr(clr10),.enable(enable10),.o(R10resul));
+register #(20) r11 (.in(opR11),.clk(clk),.clr(clr11),.enable(enable11),.o(R11resul));
 
+register #(11) x1 (.in(Rx1),.clk(clk),.clr(clrx1),.enable(enablex1),.o(x1r));
+register #(11) x2 (.in(Rx2),.clk(clk),.clr(clrx2),.enable(enablex2),.o(x2r));
+register #(11) x3 (.in(Rx3),.clk(clk),.clr(clrx3),.enable(enablex3),.o(x3r));
+register #(11) y1 (.in(Ry1),.clk(clk),.clr(clry1),.enable(enabley1),.o(y1r));
+register #(11) y2 (.in(Ry2),.clk(clk),.clr(clry2),.enable(enabley2),.o(y2r));
+register #(11) y3 (.in(Ry3),.clk(clk),.clr(clry3),.enable(enabley3),.o(y3r));
 endmodule
 
 

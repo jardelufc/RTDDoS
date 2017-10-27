@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log extend.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source extend.tcl
+    with args -log Datapath.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Datapath.tcl
 
 
 ****** Vivado v2017.2 (64-bit)
@@ -8,47 +8,355 @@
   **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
     ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 
-source extend.tcl -notrace
-Command: synth_design -top extend -part xcku5p-ffvb676-2-e
+source Datapath.tcl -notrace
+Command: synth_design -top Datapath -part xcku5p-ffvb676-2-e
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xcku5p-ffvb676'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku5p-ffvb676'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8652 
+INFO: Helper process launched with PID 11548 
+WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/extend.sv:28]
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 305.527 ; gain = 74.922
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 522.793 ; gain = 0.000
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Datapath' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:22]
 INFO: [Synth 8-638] synthesizing module 'extend' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/extend.sv:23]
+	Parameter WIDTH bound to: 11 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'extend' (1#1) [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/extend.sv:23]
-WARNING: [Synth 8-3330] design extend has an empty top module
-WARNING: [Synth 8-3917] design extend has port y[22] driven by constant 0
-WARNING: [Synth 8-3917] design extend has port y[21] driven by constant 0
-WARNING: [Synth 8-3917] design extend has port y[20] driven by constant 0
-WARNING: [Synth 8-3917] design extend has port y[19] driven by constant 0
-WARNING: [Synth 8-3917] design extend has port y[18] driven by constant 0
-WARNING: [Synth 8-3917] design extend has port y[17] driven by constant 0
-WARNING: [Synth 8-3917] design extend has port y[16] driven by constant 0
-WARNING: [Synth 8-3917] design extend has port y[15] driven by constant 0
-WARNING: [Synth 8-3917] design extend has port y[14] driven by constant 0
-WARNING: [Synth 8-3917] design extend has port y[13] driven by constant 0
-WARNING: [Synth 8-3917] design extend has port y[12] driven by constant 0
-WARNING: [Synth 8-3917] design extend has port y[11] driven by constant 0
+WARNING: [Synth 8-689] width (23) of port connection 'y' does not match port width (24) of module 'extend' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:48]
+WARNING: [Synth 8-689] width (23) of port connection 'y' does not match port width (24) of module 'extend' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:49]
+WARNING: [Synth 8-689] width (23) of port connection 'y' does not match port width (24) of module 'extend' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:50]
+WARNING: [Synth 8-689] width (23) of port connection 'y' does not match port width (24) of module 'extend' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:51]
+WARNING: [Synth 8-689] width (23) of port connection 'y' does not match port width (24) of module 'extend' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:52]
+WARNING: [Synth 8-689] width (23) of port connection 'y' does not match port width (24) of module 'extend' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:53]
+INFO: [Synth 8-638] synthesizing module 'reduce' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/reduce.sv:21]
+INFO: [Synth 8-256] done synthesizing module 'reduce' (2#1) [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/reduce.sv:21]
+WARNING: [Synth 8-689] width (12) of port connection 'y' does not match port width (11) of module 'reduce' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:59]
+WARNING: [Synth 8-689] width (12) of port connection 'y' does not match port width (11) of module 'reduce' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:60]
+INFO: [Synth 8-638] synthesizing module 'mux2' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mux.sv:22]
+INFO: [Synth 8-226] default block is never used [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mux.sv:27]
+INFO: [Synth 8-256] done synthesizing module 'mux2' (3#1) [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mux.sv:22]
+WARNING: [Synth 8-689] width (11) of port connection 'a' does not match port width (23) of module 'mux2' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:70]
+WARNING: [Synth 8-689] width (11) of port connection 'b' does not match port width (23) of module 'mux2' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:70]
+WARNING: [Synth 8-689] width (11) of port connection 'y' does not match port width (23) of module 'mux2' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:70]
+WARNING: [Synth 8-689] width (11) of port connection 'a' does not match port width (23) of module 'mux2' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:71]
+WARNING: [Synth 8-689] width (11) of port connection 'b' does not match port width (23) of module 'mux2' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:71]
+WARNING: [Synth 8-689] width (11) of port connection 'y' does not match port width (23) of module 'mux2' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:71]
+INFO: [Synth 8-638] synthesizing module 'mux4' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mux4.sv:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mux4.sv:29]
+INFO: [Synth 8-256] done synthesizing module 'mux4' (4#1) [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mux4.sv:23]
+WARNING: [Synth 8-689] width (11) of port connection 'a' does not match port width (23) of module 'mux4' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:73]
+WARNING: [Synth 8-689] width (11) of port connection 'b' does not match port width (23) of module 'mux4' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:73]
+WARNING: [Synth 8-689] width (11) of port connection 'c' does not match port width (23) of module 'mux4' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:73]
+WARNING: [Synth 8-689] width (11) of port connection 'y' does not match port width (23) of module 'mux4' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:73]
+WARNING: [Synth 8-350] instance 'mux2mul2' of module 'mux4' requires 7 connections, but only 6 given [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:73]
+WARNING: [Synth 8-689] width (11) of port connection 'a' does not match port width (23) of module 'mux4' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:74]
+WARNING: [Synth 8-689] width (11) of port connection 'b' does not match port width (23) of module 'mux4' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:74]
+WARNING: [Synth 8-689] width (11) of port connection 'c' does not match port width (23) of module 'mux4' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:74]
+WARNING: [Synth 8-689] width (11) of port connection 'y' does not match port width (23) of module 'mux4' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:74]
+WARNING: [Synth 8-350] instance 'mux1mul2' of module 'mux4' requires 7 connections, but only 6 given [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:74]
+WARNING: [Synth 8-689] width (11) of port connection 'a' does not match port width (23) of module 'mux4' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:76]
+WARNING: [Synth 8-689] width (11) of port connection 'b' does not match port width (23) of module 'mux4' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:76]
+WARNING: [Synth 8-689] width (11) of port connection 'c' does not match port width (23) of module 'mux4' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:76]
+WARNING: [Synth 8-689] width (11) of port connection 'y' does not match port width (23) of module 'mux4' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:76]
+WARNING: [Synth 8-350] instance 'mux2mul1' of module 'mux4' requires 7 connections, but only 6 given [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:76]
+WARNING: [Synth 8-689] width (11) of port connection 'a' does not match port width (23) of module 'mux4' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:77]
+WARNING: [Synth 8-689] width (11) of port connection 'b' does not match port width (23) of module 'mux4' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:77]
+WARNING: [Synth 8-689] width (11) of port connection 'c' does not match port width (23) of module 'mux4' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:77]
+WARNING: [Synth 8-689] width (11) of port connection 'y' does not match port width (23) of module 'mux4' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:77]
+WARNING: [Synth 8-350] instance 'mux1mul1' of module 'mux4' requires 7 connections, but only 6 given [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:77]
+WARNING: [Synth 8-689] width (1) of port connection 'a' does not match port width (23) of module 'mux2' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:84]
+WARNING: [Synth 8-689] width (20) of port connection 'b' does not match port width (23) of module 'mux2' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:84]
+WARNING: [Synth 8-689] width (24) of port connection 'y' does not match port width (23) of module 'mux2' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:84]
+WARNING: [Synth 8-689] width (1) of port connection 'b' does not match port width (23) of module 'mux2' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:85]
+WARNING: [Synth 8-689] width (24) of port connection 'y' does not match port width (23) of module 'mux2' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:85]
+INFO: [Synth 8-638] synthesizing module 'mux6' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mux6.sv:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mux6.sv:29]
+INFO: [Synth 8-256] done synthesizing module 'mux6' (5#1) [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mux6.sv:23]
+WARNING: [Synth 8-689] width (24) of port connection 'a' does not match port width (23) of module 'mux6' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:87]
+WARNING: [Synth 8-689] width (24) of port connection 'b' does not match port width (23) of module 'mux6' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:87]
+WARNING: [Synth 8-689] width (24) of port connection 'y' does not match port width (23) of module 'mux6' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:87]
+WARNING: [Synth 8-350] instance 'mux2add4' of module 'mux6' requires 11 connections, but only 10 given [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:87]
+WARNING: [Synth 8-689] width (24) of port connection 'a' does not match port width (23) of module 'mux4' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:88]
+WARNING: [Synth 8-689] width (24) of port connection 'y' does not match port width (23) of module 'mux4' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:88]
+WARNING: [Synth 8-350] instance 'mux1add4' of module 'mux4' requires 7 connections, but only 6 given [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:88]
+WARNING: [Synth 8-689] width (24) of port connection 'a' does not match port width (23) of module 'mux6' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:90]
+WARNING: [Synth 8-689] width (24) of port connection 'd' does not match port width (23) of module 'mux6' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:90]
+WARNING: [Synth 8-689] width (24) of port connection 'e' does not match port width (23) of module 'mux6' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:90]
+WARNING: [Synth 8-689] width (24) of port connection 'f' does not match port width (23) of module 'mux6' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:90]
+WARNING: [Synth 8-689] width (24) of port connection 'y' does not match port width (23) of module 'mux6' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:90]
+WARNING: [Synth 8-350] instance 'mux2add3' of module 'mux6' requires 11 connections, but only 10 given [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:90]
+WARNING: [Synth 8-689] width (24) of port connection 'a' does not match port width (23) of module 'mux6' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:91]
+WARNING: [Synth 8-689] width (24) of port connection 'b' does not match port width (23) of module 'mux6' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:91]
+WARNING: [Synth 8-689] width (24) of port connection 'c' does not match port width (23) of module 'mux6' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:91]
+WARNING: [Synth 8-689] width (24) of port connection 'd' does not match port width (23) of module 'mux6' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:91]
+WARNING: [Synth 8-689] width (24) of port connection 'y' does not match port width (23) of module 'mux6' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:91]
+WARNING: [Synth 8-350] instance 'mux1add3' of module 'mux6' requires 11 connections, but only 10 given [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:91]
+WARNING: [Synth 8-689] width (24) of port connection 'a' does not match port width (23) of module 'mux4' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:93]
+WARNING: [Synth 8-689] width (24) of port connection 'b' does not match port width (23) of module 'mux4' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:93]
+WARNING: [Synth 8-689] width (24) of port connection 'c' does not match port width (23) of module 'mux4' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:93]
+WARNING: [Synth 8-689] width (24) of port connection 'y' does not match port width (23) of module 'mux4' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:93]
+WARNING: [Synth 8-350] instance 'mux2add2' of module 'mux4' requires 7 connections, but only 6 given [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:93]
+WARNING: [Synth 8-689] width (24) of port connection 'a' does not match port width (23) of module 'mux6' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:94]
+WARNING: [Synth 8-689] width (24) of port connection 'b' does not match port width (23) of module 'mux6' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:94]
+WARNING: [Synth 8-689] width (24) of port connection 'c' does not match port width (23) of module 'mux6' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:94]
+WARNING: [Synth 8-689] width (24) of port connection 'd' does not match port width (23) of module 'mux6' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:94]
+WARNING: [Synth 8-689] width (24) of port connection 'y' does not match port width (23) of module 'mux6' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:94]
+WARNING: [Synth 8-350] instance 'mux1add2' of module 'mux6' requires 11 connections, but only 10 given [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:94]
+WARNING: [Synth 8-689] width (24) of port connection 'b' does not match port width (23) of module 'mux6' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:96]
+WARNING: [Synth 8-689] width (24) of port connection 'c' does not match port width (23) of module 'mux6' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:96]
+WARNING: [Synth 8-689] width (24) of port connection 'y' does not match port width (23) of module 'mux6' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:96]
+WARNING: [Synth 8-350] instance 'mux2add1' of module 'mux6' requires 11 connections, but only 10 given [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:96]
+WARNING: [Synth 8-689] width (24) of port connection 'a' does not match port width (23) of module 'mux4' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:97]
+WARNING: [Synth 8-689] width (24) of port connection 'b' does not match port width (23) of module 'mux4' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:97]
+WARNING: [Synth 8-689] width (24) of port connection 'c' does not match port width (23) of module 'mux4' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:97]
+WARNING: [Synth 8-689] width (24) of port connection 'y' does not match port width (23) of module 'mux4' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:97]
+WARNING: [Synth 8-350] instance 'mux1add1' of module 'mux4' requires 7 connections, but only 6 given [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:97]
+INFO: [Synth 8-638] synthesizing module 'mul' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mult.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'mul' (6#1) [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mult.sv:23]
+WARNING: [Synth 8-689] width (24) of port connection 'mul' does not match port width (25) of module 'mul' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:104]
+WARNING: [Synth 8-689] width (24) of port connection 'mul' does not match port width (25) of module 'mul' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:105]
+WARNING: [Synth 8-689] width (24) of port connection 'mul' does not match port width (25) of module 'mul' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:106]
+INFO: [Synth 8-638] synthesizing module 'adder' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/adder.sv:22]
+	Parameter WIDTH bound to: 23 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/adder.sv:28]
+INFO: [Synth 8-256] done synthesizing module 'adder' (7#1) [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/adder.sv:22]
+WARNING: [Synth 8-689] width (24) of port connection 'a' does not match port width (23) of module 'adder' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:108]
+WARNING: [Synth 8-689] width (24) of port connection 'b' does not match port width (23) of module 'adder' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:108]
+WARNING: [Synth 8-689] width (24) of port connection 'a' does not match port width (23) of module 'adder' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:109]
+WARNING: [Synth 8-689] width (24) of port connection 'b' does not match port width (23) of module 'adder' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:109]
+WARNING: [Synth 8-689] width (24) of port connection 'a' does not match port width (23) of module 'adder' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:110]
+WARNING: [Synth 8-689] width (24) of port connection 'b' does not match port width (23) of module 'adder' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:110]
+WARNING: [Synth 8-689] width (24) of port connection 'a' does not match port width (23) of module 'adder' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:111]
+WARNING: [Synth 8-689] width (24) of port connection 'b' does not match port width (23) of module 'adder' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:111]
+WARNING: [Synth 8-689] width (24) of port connection 'a' does not match port width (23) of module 'adder' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:112]
+WARNING: [Synth 8-689] width (24) of port connection 'b' does not match port width (23) of module 'adder' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:112]
+INFO: [Synth 8-638] synthesizing module 'mux2r' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mux2r.sv:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mux2r.sv:28]
+INFO: [Synth 8-256] done synthesizing module 'mux2r' (8#1) [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mux2r.sv:23]
+WARNING: [Synth 8-689] width (22) of port connection 'y' does not match port width (24) of module 'mux2r' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:121]
+INFO: [Synth 8-638] synthesizing module 'mux4r' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mux4r.sv:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mux4r.sv:28]
+INFO: [Synth 8-256] done synthesizing module 'mux4r' (9#1) [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/mux4r.sv:23]
+WARNING: [Synth 8-350] instance 'mux2div' of module 'mux4r' requires 6 connections, but only 5 given [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:123]
+WARNING: [Synth 8-350] instance 'mux1div' of module 'mux4r' requires 6 connections, but only 5 given [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-689] width (20) of port connection 'c' does not match port width (24) of module 'mux4r' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:126]
+WARNING: [Synth 8-350] instance 'muxr11' of module 'mux4r' requires 6 connections, but only 5 given [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:126]
+WARNING: [Synth 8-350] instance 'muxr9' of module 'mux4r' requires 6 connections, but only 5 given [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:130]
+WARNING: [Synth 8-350] instance 'muxr8' of module 'mux4r' requires 6 connections, but only 5 given [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:132]
+WARNING: [Synth 8-350] instance 'muxr4' of module 'mux4r' requires 6 connections, but only 5 given [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:138]
+WARNING: [Synth 8-350] instance 'muxr3' of module 'mux4r' requires 6 connections, but only 5 given [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:140]
+WARNING: [Synth 8-350] instance 'muxr2' of module 'mux4r' requires 6 connections, but only 5 given [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:142]
+WARNING: [Synth 8-350] instance 'muxr1' of module 'mux4r' requires 6 connections, but only 5 given [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:144]
+INFO: [Synth 8-638] synthesizing module 'div_gen_0' [C:/Users/pedro/Documents/arm7/tcc-arm7.runs/synth_1/.Xil/Vivado-14060-DESKTOP-BV4C82J/realtime/div_gen_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'div_gen_0' (10#1) [C:/Users/pedro/Documents/arm7/tcc-arm7.runs/synth_1/.Xil/Vivado-14060-DESKTOP-BV4C82J/realtime/div_gen_0_stub.v:6]
+WARNING: [Synth 8-689] width (12) of port connection 's_axis_divisor_tdata' does not match port width (16) of module 'div_gen_0' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:153]
+WARNING: [Synth 8-689] width (12) of port connection 's_axis_dividend_tdata' does not match port width (16) of module 'div_gen_0' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:153]
+WARNING: [Synth 8-689] width (20) of port connection 'm_axis_dout_tdata' does not match port width (24) of module 'div_gen_0' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:153]
+INFO: [Synth 8-638] synthesizing module 'cordic_0' [C:/Users/pedro/Documents/arm7/tcc-arm7.runs/synth_1/.Xil/Vivado-14060-DESKTOP-BV4C82J/realtime/cordic_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'cordic_0' (11#1) [C:/Users/pedro/Documents/arm7/tcc-arm7.runs/synth_1/.Xil/Vivado-14060-DESKTOP-BV4C82J/realtime/cordic_0_stub.v:6]
+WARNING: [Synth 8-689] width (22) of port connection 's_axis_cartesian_tdata' does not match port width (24) of module 'cordic_0' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:157]
+WARNING: [Synth 8-689] width (24) of port connection 'm_axis_dout_tdata' does not match port width (16) of module 'cordic_0' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:157]
+INFO: [Synth 8-638] synthesizing module 'register' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv:23]
+	Parameter WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register' (12#1) [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv:23]
+INFO: [Synth 8-638] synthesizing module 'register__parameterized0' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv:23]
+	Parameter WIDTH bound to: 11 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register__parameterized0' (12#1) [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv:23]
+WARNING: [Synth 8-689] width (24) of port connection 'in' does not match port width (11) of module 'register__parameterized0' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:164]
+WARNING: [Synth 8-689] width (24) of port connection 'o' does not match port width (11) of module 'register__parameterized0' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:164]
+INFO: [Synth 8-638] synthesizing module 'register__parameterized1' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv:23]
+	Parameter WIDTH bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register__parameterized1' (12#1) [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv:23]
+WARNING: [Synth 8-689] width (24) of port connection 'in' does not match port width (12) of module 'register__parameterized1' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:166]
+WARNING: [Synth 8-689] width (24) of port connection 'o' does not match port width (12) of module 'register__parameterized1' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:166]
+INFO: [Synth 8-638] synthesizing module 'register__parameterized2' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv:23]
+	Parameter WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register__parameterized2' (12#1) [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv:23]
+WARNING: [Synth 8-689] width (24) of port connection 'in' does not match port width (20) of module 'register__parameterized2' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:170]
+WARNING: [Synth 8-689] width (1) of port connection 'o' does not match port width (20) of module 'register__parameterized2' [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:170]
+WARNING: [Synth 8-3848] Net add5shifted in module/entity Datapath does not have driver. [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:33]
+WARNING: [Synth 8-3848] Net opR5 in module/entity Datapath does not have driver. [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:41]
+WARNING: [Synth 8-3848] Net add1shifted in module/entity Datapath does not have driver. [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:33]
+WARNING: [Synth 8-3848] Net add3shifted in module/entity Datapath does not have driver. [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:33]
+INFO: [Synth 8-256] done synthesizing module 'Datapath' (13#1) [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:22]
+WARNING: [Synth 8-3331] design mux4 has unconnected port clk
+WARNING: [Synth 8-3331] design mux6 has unconnected port clk
+WARNING: [Synth 8-3331] design reduce has unconnected port a[23]
+WARNING: [Synth 8-3331] design reduce has unconnected port a[22]
+WARNING: [Synth 8-3331] design reduce has unconnected port a[21]
+WARNING: [Synth 8-3331] design reduce has unconnected port a[20]
+WARNING: [Synth 8-3331] design reduce has unconnected port a[19]
+WARNING: [Synth 8-3331] design reduce has unconnected port a[18]
+WARNING: [Synth 8-3331] design reduce has unconnected port a[17]
+WARNING: [Synth 8-3331] design reduce has unconnected port a[16]
+WARNING: [Synth 8-3331] design reduce has unconnected port a[15]
+WARNING: [Synth 8-3331] design reduce has unconnected port a[14]
+WARNING: [Synth 8-3331] design reduce has unconnected port a[13]
+WARNING: [Synth 8-3331] design reduce has unconnected port a[12]
+WARNING: [Synth 8-3331] design reduce has unconnected port a[11]
+WARNING: [Synth 8-3331] design Datapath has unconnected port datasqrt
+WARNING: [Synth 8-3331] design Datapath has unconnected port datadiv
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar11
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar10
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar9
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar8
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar7
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar6
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar5
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar4
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar3
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar2
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar1
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 344.852 ; gain = 114.246
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 522.793 ; gain = 0.000
 ---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[23] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:123]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[22] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:123]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[21] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:123]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[20] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:123]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[19] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:123]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[18] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:123]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[17] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:123]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[16] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:123]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[15] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:123]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[14] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:123]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[13] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:123]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[12] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:123]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[11] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:123]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[10] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:123]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[9] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:123]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[8] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:123]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[7] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:123]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[6] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:123]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[5] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:123]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[4] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:123]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[3] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:123]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[2] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:123]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[1] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:123]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[0] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:123]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:c[23] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:c[22] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:c[21] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:c[20] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:c[19] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:c[18] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:c[17] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:c[16] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:c[15] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:c[14] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:c[13] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:c[12] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:c[11] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:c[10] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:c[9] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:c[8] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:c[7] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:c[6] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:c[5] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:c[4] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:c[3] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:c[2] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:c[1] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:c[0] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[23] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[22] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[21] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[20] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[19] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[18] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[17] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[16] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[15] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[14] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[13] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[12] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[11] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[10] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[9] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[8] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[7] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[6] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[5] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[4] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[3] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[2] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[1] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[0] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:124]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:b[23] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:126]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:b[22] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:126]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:b[21] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:126]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:b[20] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:126]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:b[19] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:126]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:b[18] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:126]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:b[17] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:126]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:b[16] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:126]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:b[15] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:126]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:b[14] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:126]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:b[13] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:126]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:b[12] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:126]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:b[11] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:126]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:b[10] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:126]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:b[9] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:126]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:b[8] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:126]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:b[7] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:126]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:b[6] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:126]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:b[5] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:126]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:b[4] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:126]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:b[3] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:126]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:b[2] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:126]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:b[1] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:126]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:b[0] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:126]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:d[23] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:126]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:d[22] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:126]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:d[21] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:126]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:d[20] to constant 0 [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:126]
+INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 344.852 ; gain = 114.246
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 522.793 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xcku5p-ffvb676-2-e
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/pedro/Documents/arm7/tcc-arm7.runs/synth_1/.Xil/Vivado-14060-DESKTOP-BV4C82J/dcp5/cordic_0_in_context.xdc] for cell 'sqrtcalc'
+Finished Parsing XDC File [C:/Users/pedro/Documents/arm7/tcc-arm7.runs/synth_1/.Xil/Vivado-14060-DESKTOP-BV4C82J/dcp5/cordic_0_in_context.xdc] for cell 'sqrtcalc'
+Parsing XDC File [C:/Users/pedro/Documents/arm7/tcc-arm7.runs/synth_1/.Xil/Vivado-14060-DESKTOP-BV4C82J/dcp7/div_gen_0_in_context.xdc] for cell 'divider'
+Finished Parsing XDC File [C:/Users/pedro/Documents/arm7/tcc-arm7.runs/synth_1/.Xil/Vivado-14060-DESKTOP-BV4C82J/dcp7/div_gen_0_in_context.xdc] for cell 'divider'
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1142.266 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1142.266 ; gain = 619.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xcku5p-ffvb676-2-e
-INFO: [Device 21-403] Loading part xcku5p-ffvb676-2-e
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 344.852 ; gain = 114.246
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1142.266 ; gain = 619.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 344.852 ; gain = 114.246
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for divider. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sqrtcalc. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1142.266 ; gain = 619.473
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1142.266 ; gain = 619.473
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -56,11 +364,23 @@ Report RTL Partitions:
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-No constraint files found.
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 5     
+	   3 Input     23 Bit       Adders := 5     
++---Registers : 
+	               24 Bit    Registers := 8     
+	               20 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     24 Bit        Muxes := 16    
+	   2 Input     24 Bit        Muxes := 2     
+	   2 Input     23 Bit        Muxes := 4     
+	   4 Input     23 Bit        Muxes := 7     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -68,6 +388,45 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
+Module mux2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     23 Bit        Muxes := 1     
+Module mux4 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     23 Bit        Muxes := 1     
+Module adder 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
+	   3 Input     23 Bit       Adders := 1     
++---Muxes : 
+	   4 Input     24 Bit        Muxes := 1     
+Module mux2r 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+Module mux4r 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     24 Bit        Muxes := 1     
+Module register 
+Detailed RTL Component Info : 
++---Registers : 
+	               24 Bit    Registers := 1     
+Module register__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	               11 Bit    Registers := 1     
+Module register__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 1     
+Module register__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	               20 Bit    Registers := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -80,25 +439,77 @@ BRAMs: 960 (col length: RAMB18 96 RAMB36 48)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3330] design extend has an empty top module
-WARNING: [Synth 8-3917] design extend has port y[22] driven by constant 0
-WARNING: [Synth 8-3917] design extend has port y[21] driven by constant 0
-WARNING: [Synth 8-3917] design extend has port y[20] driven by constant 0
-WARNING: [Synth 8-3917] design extend has port y[19] driven by constant 0
-WARNING: [Synth 8-3917] design extend has port y[18] driven by constant 0
-WARNING: [Synth 8-3917] design extend has port y[17] driven by constant 0
-WARNING: [Synth 8-3917] design extend has port y[16] driven by constant 0
-WARNING: [Synth 8-3917] design extend has port y[15] driven by constant 0
-WARNING: [Synth 8-3917] design extend has port y[14] driven by constant 0
-WARNING: [Synth 8-3917] design extend has port y[13] driven by constant 0
-WARNING: [Synth 8-3917] design extend has port y[12] driven by constant 0
-WARNING: [Synth 8-3917] design extend has port y[11] driven by constant 0
+WARNING: [Synth 8-6014] Unused sequential element r5/o_reg was removed.  [C:/Users/pedro/Documents/arm7/tcc-arm7.srcs/sources_1/new/register.sv:29]
+DSP Report: Generating DSP mul3/mul, operation Mode is: A*B.
+DSP Report: operator mul3/mul is absorbed into DSP mul3/mul.
+DSP Report: Generating DSP mul2/mul, operation Mode is: A*B.
+DSP Report: operator mul2/mul is absorbed into DSP mul2/mul.
+DSP Report: Generating DSP mul1/mul, operation Mode is: A*B.
+DSP Report: operator mul1/mul is absorbed into DSP mul1/mul.
+WARNING: [Synth 8-3331] design mux4 has unconnected port clk
+WARNING: [Synth 8-3331] design mux6 has unconnected port clk
+WARNING: [Synth 8-3331] design Datapath has unconnected port datasqrt
+WARNING: [Synth 8-3331] design Datapath has unconnected port datadiv
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar11
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar10
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar9
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar8
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar7
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar6
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar5
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar4
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar3
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar2
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar1
+WARNING: [Synth 8-3332] Sequential element (r11/o_reg[19]) is unused and will be removed from module Datapath.
+WARNING: [Synth 8-3332] Sequential element (r11/o_reg[18]) is unused and will be removed from module Datapath.
+WARNING: [Synth 8-3332] Sequential element (r11/o_reg[17]) is unused and will be removed from module Datapath.
+WARNING: [Synth 8-3332] Sequential element (r11/o_reg[16]) is unused and will be removed from module Datapath.
+WARNING: [Synth 8-3332] Sequential element (r11/o_reg[15]) is unused and will be removed from module Datapath.
+WARNING: [Synth 8-3332] Sequential element (r11/o_reg[14]) is unused and will be removed from module Datapath.
+WARNING: [Synth 8-3332] Sequential element (r11/o_reg[13]) is unused and will be removed from module Datapath.
+WARNING: [Synth 8-3332] Sequential element (r11/o_reg[12]) is unused and will be removed from module Datapath.
+WARNING: [Synth 8-3332] Sequential element (r11/o_reg[11]) is unused and will be removed from module Datapath.
+WARNING: [Synth 8-3332] Sequential element (r11/o_reg[10]) is unused and will be removed from module Datapath.
+WARNING: [Synth 8-3332] Sequential element (r11/o_reg[9]) is unused and will be removed from module Datapath.
+WARNING: [Synth 8-3332] Sequential element (r11/o_reg[8]) is unused and will be removed from module Datapath.
+WARNING: [Synth 8-3332] Sequential element (r11/o_reg[7]) is unused and will be removed from module Datapath.
+WARNING: [Synth 8-3332] Sequential element (r11/o_reg[6]) is unused and will be removed from module Datapath.
+WARNING: [Synth 8-3332] Sequential element (r11/o_reg[5]) is unused and will be removed from module Datapath.
+WARNING: [Synth 8-3332] Sequential element (r11/o_reg[4]) is unused and will be removed from module Datapath.
+WARNING: [Synth 8-3332] Sequential element (r11/o_reg[3]) is unused and will be removed from module Datapath.
+WARNING: [Synth 8-3332] Sequential element (r11/o_reg[2]) is unused and will be removed from module Datapath.
+WARNING: [Synth 8-3332] Sequential element (r11/o_reg[1]) is unused and will be removed from module Datapath.
+WARNING: [Synth 8-3332] Sequential element (r1/o_reg[23]) is unused and will be removed from module Datapath.
+WARNING: [Synth 8-3332] Sequential element (r2/o_reg[23]) is unused and will be removed from module Datapath.
+WARNING: [Synth 8-3332] Sequential element (r3/o_reg[23]) is unused and will be removed from module Datapath.
+WARNING: [Synth 8-3332] Sequential element (r4/o_reg[23]) is unused and will be removed from module Datapath.
+WARNING: [Synth 8-3332] Sequential element (r6/o_reg[23]) is unused and will be removed from module Datapath.
+WARNING: [Synth 8-3332] Sequential element (r8/o_reg[23]) is unused and will be removed from module Datapath.
+WARNING: [Synth 8-3332] Sequential element (r9/o_reg[23]) is unused and will be removed from module Datapath.
+WARNING: [Synth 8-3332] Sequential element (r10/o_reg[23]) is unused and will be removed from module Datapath.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 949.316 ; gain = 718.711
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1142.266 ; gain = 619.473
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|mul         | A*B         | 11     | 11     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mul         | A*B         | 11     | 11     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mul         | A*B         | 11     | 11     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -106,12 +517,17 @@ Report RTL Partitions:
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-No constraint files found.
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1725.449 ; gain = 1202.656
+---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 949.316 ; gain = 718.711
+Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1728.453 ; gain = 1205.660
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -123,7 +539,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 949.316 ; gain = 718.711
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1746.734 ; gain = 1223.941
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -147,7 +563,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 949.316 ; gain = 718.711
+Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1746.734 ; gain = 1223.941
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -160,7 +576,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 949.316 ; gain = 718.711
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1746.734 ; gain = 1223.941
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -172,68 +588,133 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 949.316 ; gain = 718.711
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1746.734 ; gain = 1223.941
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 949.316 ; gain = 718.711
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1746.734 ; gain = 1223.941
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 949.316 ; gain = 718.711
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1746.734 ; gain = 1223.941
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 949.316 ; gain = 718.711
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1746.734 ; gain = 1223.941
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+-+--------------+----------+
-| |BlackBox name |Instances |
-+-+--------------+----------+
-+-+--------------+----------+
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |div_gen_0     |         1|
+|2     |cordic_0      |         1|
++------+--------------+----------+
 
 Report Cell Usage: 
-+------+-----+------+
-|      |Cell |Count |
-+------+-----+------+
-|1     |IBUF |    11|
-|2     |OBUF |    23|
-+------+-----+------+
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |cordic_0        |     1|
+|2     |div_gen_0       |     1|
+|3     |BUFG            |     1|
+|4     |CARRY8          |    26|
+|5     |DSP_ALU         |     3|
+|6     |DSP_A_B_DATA    |     3|
+|7     |DSP_C_DATA      |     3|
+|8     |DSP_MULTIPLIER  |     3|
+|9     |DSP_M_DATA      |     3|
+|10    |DSP_OUTPUT      |     3|
+|11    |DSP_PREADD      |     3|
+|12    |DSP_PREADD_DATA |     3|
+|13    |LUT2            |    41|
+|14    |LUT3            |    76|
+|15    |LUT4            |    60|
+|16    |LUT5            |   235|
+|17    |LUT6            |   387|
+|18    |FDRE            |   197|
+|19    |IBUF            |   136|
+|20    |OBUF            |     1|
++------+----------------+------+
 
 Report Instance Areas: 
-+------+---------+-------+------+
-|      |Instance |Module |Cells |
-+------+---------+-------+------+
-|1     |top      |       |    34|
-+------+---------+-------+------+
++------+-----------+-------------------------+------+
+|      |Instance   |Module                   |Cells |
++------+-----------+-------------------------+------+
+|1     |top        |                         |  1226|
+|2     |  mux1mul3 |mux2                     |    11|
+|3     |  mux2mul3 |mux2_13                  |    11|
+|4     |  mul1     |mul                      |     8|
+|5     |    mul    |\mul3/mul_funnel__2      |     8|
+|6     |  mul2     |mul_0                    |     8|
+|7     |    mul    |\mul3/mul_funnel__1      |     8|
+|8     |  mul3     |mul_1                    |     8|
+|9     |    mul    |\mul3/mul_funnel         |     8|
+|10    |  muxr7    |mux2r                    |    12|
+|11    |  mux1add1 |mux4                     |    23|
+|12    |  mux1add2 |mux6                     |    23|
+|13    |  mux1add3 |mux6_2                   |    34|
+|14    |  mux1add4 |mux4_3                   |    23|
+|15    |  mux1div  |mux4r                    |    11|
+|16    |  mux1mul1 |mux4_4                   |    11|
+|17    |  mux1mul2 |mux4_5                   |    11|
+|18    |  mux2add1 |mux6_6                   |    11|
+|19    |  mux2add2 |mux4_7                   |    11|
+|20    |  mux2add3 |mux6_8                   |    35|
+|21    |  mux2add4 |mux6_9                   |    11|
+|22    |  mux2div  |mux4r_10                 |    22|
+|23    |  mux2mul1 |mux4_11                  |    11|
+|24    |  mux2mul2 |mux4_12                  |    11|
+|25    |  muxr1    |mux4r_14                 |    23|
+|26    |  muxr10   |mux4r_15                 |    23|
+|27    |  muxr11   |mux4r_16                 |     1|
+|28    |  muxr2    |mux4r_17                 |    23|
+|29    |  muxr3    |mux4r_18                 |    23|
+|30    |  muxr4    |mux4r_19                 |    23|
+|31    |  muxr6    |mux4r_20                 |    23|
+|32    |  muxr8    |mux4r_21                 |    23|
+|33    |  muxr9    |mux4r_22                 |    23|
+|34    |  muxsqrt  |mux2r_23                 |    43|
+|35    |  r1       |register                 |    49|
+|36    |  r10      |register_24              |    45|
+|37    |  r11      |register__parameterized2 |    12|
+|38    |  r2       |register_25              |   105|
+|39    |  r3       |register_26              |    23|
+|40    |  r4       |register_27              |    23|
+|41    |  r6       |register_28              |    99|
+|42    |  r7       |register__parameterized1 |    12|
+|43    |  r8       |register_29              |   108|
+|44    |  r9       |register_30              |    36|
++------+-----------+-------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 949.316 ; gain = 718.711
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1746.734 ; gain = 1223.941
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 26 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 949.316 ; gain = 718.711
-Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 949.316 ; gain = 718.711
+Synthesis finished with 0 errors, 0 critical warnings and 43 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 1746.734 ; gain = 604.469
+Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1746.734 ; gain = 1223.941
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 11 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 166 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 11 instances were transformed.
-  IBUF => IBUF (IBUFCTRL, INBUF): 11 instances
+  A total of 140 instances were transformed.
+  BUFG => BUFGCE: 1 instances
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD_DATA, DSP_PREADD): 3 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 136 instances
 
-10 Infos, 26 Warnings, 0 Critical Warnings and 0 Errors encountered.
+49 Infos, 289 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1032.199 ; gain = 810.359
-INFO: [Common 17-1381] The checkpoint 'C:/Users/pedro/Documents/arm7/tcc-arm7.runs/synth_1/extend.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.144 . Memory (MB): peak = 1032.199 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Oct 10 10:30:00 2017...
+synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1767.438 ; gain = 1244.645
+INFO: [Common 17-1381] The checkpoint 'C:/Users/pedro/Documents/arm7/tcc-arm7.runs/synth_1/Datapath.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 1767.438 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 16 10:35:53 2017...

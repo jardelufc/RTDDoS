@@ -3,37 +3,227 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="adder_tb_behav.wdb" id="1">
+      <db_ref path="datapath_tb_behav.wdb" id="1">
          <top_modules>
-            <top_module name="adder_tb" />
+            <top_module name="datapath_tb" />
             <top_module name="glbl" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="805096659fs"></ZoomEndTime>
-      <Cursor1Time time="1000000000fs"></Cursor1Time>
+      <ZoomEndTime time="9380001fs"></ZoomEndTime>
+      <Cursor1Time time="5040000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="59"></NameColumnWidth>
-      <ValueColumnWidth column_width="46"></ValueColumnWidth>
+      <NameColumnWidth column_width="108"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="4" />
-   <wvobject fp_name="/adder_tb/a" type="array">
+   <WVObjectSize size="51" />
+   <wvobject fp_name="/datapath_tb/Rx1" type="array">
+      <obj_property name="ElementShortName">Rx1[10:0]</obj_property>
+      <obj_property name="ObjectShortName">Rx1[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/Rx2" type="array">
+      <obj_property name="ElementShortName">Rx2[10:0]</obj_property>
+      <obj_property name="ObjectShortName">Rx2[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/Rx3" type="array">
+      <obj_property name="ElementShortName">Rx3[10:0]</obj_property>
+      <obj_property name="ObjectShortName">Rx3[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/Ry1" type="array">
+      <obj_property name="ElementShortName">Ry1[10:0]</obj_property>
+      <obj_property name="ObjectShortName">Ry1[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/Ry2" type="array">
+      <obj_property name="ElementShortName">Ry2[10:0]</obj_property>
+      <obj_property name="ObjectShortName">Ry2[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/Ry3" type="array">
+      <obj_property name="ElementShortName">Ry3[10:0]</obj_property>
+      <obj_property name="ObjectShortName">Ry3[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/selmul3_1" type="logic">
+      <obj_property name="ElementShortName">selmul3_1</obj_property>
+      <obj_property name="ObjectShortName">selmul3_1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/selmul3_2" type="logic">
+      <obj_property name="ElementShortName">selmul3_2</obj_property>
+      <obj_property name="ObjectShortName">selmul3_2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/seladd5_2" type="logic">
+      <obj_property name="ElementShortName">seladd5_2</obj_property>
+      <obj_property name="ObjectShortName">seladd5_2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/seladd5_1" type="logic">
+      <obj_property name="ElementShortName">seladd5_1</obj_property>
+      <obj_property name="ObjectShortName">seladd5_1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/selr7" type="logic">
+      <obj_property name="ElementShortName">selr7</obj_property>
+      <obj_property name="ObjectShortName">selr7</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/selsqrt" type="logic">
+      <obj_property name="ElementShortName">selsqrt</obj_property>
+      <obj_property name="ObjectShortName">selsqrt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/datasqrt" type="logic">
+      <obj_property name="ElementShortName">datasqrt</obj_property>
+      <obj_property name="ObjectShortName">datasqrt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/datadiv" type="logic">
+      <obj_property name="ElementShortName">datadiv</obj_property>
+      <obj_property name="ObjectShortName">datadiv</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/selmul2_2" type="array">
+      <obj_property name="ElementShortName">selmul2_2[1:0]</obj_property>
+      <obj_property name="ObjectShortName">selmul2_2[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/selmul2_1" type="array">
+      <obj_property name="ElementShortName">selmul2_1[1:0]</obj_property>
+      <obj_property name="ObjectShortName">selmul2_1[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/selmul1_2" type="array">
+      <obj_property name="ElementShortName">selmul1_2[1:0]</obj_property>
+      <obj_property name="ObjectShortName">selmul1_2[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/selmul1_1" type="array">
+      <obj_property name="ElementShortName">selmul1_1[1:0]</obj_property>
+      <obj_property name="ObjectShortName">selmul1_1[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/seladd2_2" type="array">
+      <obj_property name="ElementShortName">seladd2_2[1:0]</obj_property>
+      <obj_property name="ObjectShortName">seladd2_2[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/seladd1_1" type="array">
+      <obj_property name="ElementShortName">seladd1_1[1:0]</obj_property>
+      <obj_property name="ObjectShortName">seladd1_1[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/seldiv_2" type="array">
+      <obj_property name="ElementShortName">seldiv_2[1:0]</obj_property>
+      <obj_property name="ObjectShortName">seldiv_2[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/seldiv_1" type="array">
+      <obj_property name="ElementShortName">seldiv_1[1:0]</obj_property>
+      <obj_property name="ObjectShortName">seldiv_1[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/selr11" type="array">
+      <obj_property name="ElementShortName">selr11[1:0]</obj_property>
+      <obj_property name="ObjectShortName">selr11[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/selr10" type="array">
+      <obj_property name="ElementShortName">selr10[1:0]</obj_property>
+      <obj_property name="ObjectShortName">selr10[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/selr9" type="array">
+      <obj_property name="ElementShortName">selr9[1:0]</obj_property>
+      <obj_property name="ObjectShortName">selr9[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/selr8" type="array">
+      <obj_property name="ElementShortName">selr8[1:0]</obj_property>
+      <obj_property name="ObjectShortName">selr8[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/selr6" type="array">
+      <obj_property name="ElementShortName">selr6[1:0]</obj_property>
+      <obj_property name="ObjectShortName">selr6[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/selr4" type="array">
+      <obj_property name="ElementShortName">selr4[1:0]</obj_property>
+      <obj_property name="ObjectShortName">selr4[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/selr3" type="array">
+      <obj_property name="ElementShortName">selr3[1:0]</obj_property>
+      <obj_property name="ObjectShortName">selr3[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/selr2" type="array">
+      <obj_property name="ElementShortName">selr2[1:0]</obj_property>
+      <obj_property name="ObjectShortName">selr2[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/selr1" type="array">
+      <obj_property name="ElementShortName">selr1[1:0]</obj_property>
+      <obj_property name="ObjectShortName">selr1[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/seladd4_2" type="array">
+      <obj_property name="ElementShortName">seladd4_2[2:0]</obj_property>
+      <obj_property name="ObjectShortName">seladd4_2[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/seladd4_1" type="array">
+      <obj_property name="ElementShortName">seladd4_1[2:0]</obj_property>
+      <obj_property name="ObjectShortName">seladd4_1[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/seladd3_2" type="array">
+      <obj_property name="ElementShortName">seladd3_2[2:0]</obj_property>
+      <obj_property name="ObjectShortName">seladd3_2[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/seladd3_1" type="array">
+      <obj_property name="ElementShortName">seladd3_1[2:0]</obj_property>
+      <obj_property name="ObjectShortName">seladd3_1[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/seladd2_1" type="array">
+      <obj_property name="ElementShortName">seladd2_1[2:0]</obj_property>
+      <obj_property name="ObjectShortName">seladd2_1[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/seladd1_2" type="array">
+      <obj_property name="ElementShortName">seladd1_2[2:0]</obj_property>
+      <obj_property name="ObjectShortName">seladd1_2[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/cycle" type="array">
+      <obj_property name="ElementShortName">cycle[4:0]</obj_property>
+      <obj_property name="ObjectShortName">cycle[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/opadd1" type="array">
+      <obj_property name="ElementShortName">opadd1[1:0]</obj_property>
+      <obj_property name="ObjectShortName">opadd1[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/opadd2" type="array">
+      <obj_property name="ElementShortName">opadd2[1:0]</obj_property>
+      <obj_property name="ObjectShortName">opadd2[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/opadd3" type="array">
+      <obj_property name="ElementShortName">opadd3[1:0]</obj_property>
+      <obj_property name="ObjectShortName">opadd3[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/opadd4" type="array">
+      <obj_property name="ElementShortName">opadd4[1:0]</obj_property>
+      <obj_property name="ObjectShortName">opadd4[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/opadd5" type="array">
+      <obj_property name="ElementShortName">opadd5[1:0]</obj_property>
+      <obj_property name="ObjectShortName">opadd5[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/data1/r1/o" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">o[23:0]</obj_property>
+      <obj_property name="ObjectShortName">o[23:0]</obj_property>
+      <obj_property name="label">R1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/data1/add1/a" type="array">
       <obj_property name="ElementShortName">a[22:0]</obj_property>
       <obj_property name="ObjectShortName">a[22:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/adder_tb/b" type="array">
+   <wvobject fp_name="/datapath_tb/data1/add1/b" type="array">
       <obj_property name="ElementShortName">b[22:0]</obj_property>
       <obj_property name="ObjectShortName">b[22:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/adder_tb/op" type="array">
+   <wvobject fp_name="/datapath_tb/data1/add1/op" type="array">
       <obj_property name="ElementShortName">op[1:0]</obj_property>
       <obj_property name="ObjectShortName">op[1:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/adder_tb/out" type="array">
-      <obj_property name="ElementShortName">out[23:0]</obj_property>
-      <obj_property name="ObjectShortName">out[23:0]</obj_property>
+   <wvobject fp_name="/datapath_tb/data1/add1/o" type="array">
+      <obj_property name="ElementShortName">o[23:0]</obj_property>
+      <obj_property name="ObjectShortName">o[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath_tb/data1/add1/WIDTH" type="array">
+      <obj_property name="ElementShortName">WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">WIDTH[31:0]</obj_property>
    </wvobject>
 </wave_config>

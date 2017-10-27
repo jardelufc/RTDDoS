@@ -21,8 +21,8 @@
 
 
 module adder_tb();
-reg [22:0] a;
-reg [22:0] b;
+reg [23:0] a;
+reg [23:0] b;
 reg [1:0] op;
 reg [23:0] out;
 
@@ -30,7 +30,7 @@ adder a1 (.a(a),.b(b),.op(op),.o(out));
 
 initial 
 begin
-a=500;
+a=500000;
 b=222;
 op=2'b00;
 #10
