@@ -28,8 +28,13 @@ module adder #(parameter WIDTH=23)
   case (op)
    2'b00:o = a+b;
    2'b01:o = (a+b)>>2;
-   2'b10:o=$unsigned(a-b);
-   2'b11:o=$unsigned(a-b)>>2;
+   2'b10:  if(a>b)
+           begin
+           o=a-b;
+           end
+           else
+           o=b-a;
+   2'b11:o=$unsigned(b-a)>>2;
    default:o=24'bx;
   endcase
     end

@@ -20,35 +20,34 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module controller(start,clk,reset,cycle);
+module controller(clk,reset);
 
 //Parâmetros da máquina de estado
-input reg start,clk,reset;
-input reg [5:0] cycle;
+input reg clk,reset;
+ reg [5:0] cycle;
 //Parâmetros de controle do  datapath
-//reg [10:0] Rx1,Rx2,Rx3,Ry1,Ry2,Ry3;
-reg  selmul3_1,selmul3_2,seladd5_2,seladd5_1,selr7,selsqrt,clr1,clr2,clr3,clr4,clr5,clr6,clr7,clr8,clr9,clr10,clr11,enable1,enable2,enable3,enable4,enable5,enable6,enable7,enable8,enable9,enable10,enable11;
+reg [10:0] Rx1,Rx2,Rx3,Ry1,Ry2,Ry3;
+reg  selmul3_1,selmul3_2,seladd5_2,seladd5_1,selr7,selsqrt,clr1,clr2,clr3,clr4,clr5,clr6,clr7,clr8,clr9,clr10,clr11,enable1,enable2,enable3,enable4,enable5,enable6,enable7,enable8,enable9,enable10,enable11,valid,insqrt;
 reg  clrx1,clrx2,clrx3,clry1,clry2,clry3,enablex1,enablex2,enablex3,enabley1,enabley2,enabley3;
 reg [1:0] selmul2_2,selmul2_1,selmul1_2,selmul1_1,seladd2_2,seladd1_1,seldiv_2,seldiv_1,selr11,selr10,selr9,selr8,selr6,selr4,selr3,selr2,selr1;
 reg[2:0] seladd4_2,seladd4_1,seladd3_2,seladd3_1,seladd2_1,seladd1_2;
 reg [1:0] opadd1,opadd2,opadd3,opadd4,opadd5;
  
 //reg [1:0] opadd1,opadd2,opadd3,opadd4,opadd5;
-Datapath data1 (.selmul3_1(selmul3_1),.selmul3_2(selmul3_2),.seladd5_2(seladd5_2),.seladd5_1(seladd5_1),.selr7(selr7),.selsqrt(selsqrt),.selmul2_2(selmul2_2),.selmul2_1(selmul2_1),.selmul1_2(selmul1_2),.selmul1_1(selmul1_1),.seladd2_2(seladd2_2),.seladd1_1(seladd1_1),.seldiv_2(seldiv_2),.seldiv_1(seldiv_1),.selr11(selr11),.selr10(selr10),.selr9(selr9),.selr8(selr8),.selr6(selr6),.selr4(selr4),.selr3(selr3),.selr2(selr2),.selr1(selr1),
-.seladd4_2(seladd4_2),.seladd4_1(seladd4_1),.seladd3_2(seladd3_2),.seladd3_1(seladd3_1),.seladd2_1(seladd2_1),.seladd1_2(seladd1_2),.clk(clk),.clr1(clr1),.clr2(clr2),.clr3(clr3),.clr4(clr4),.clr5(clr5),.clr6(clr6),.clr7(clr7),.clr8(clr8),.clr9(clr9),.clr10(clr10),.clr11(clr11),.enable1(enable1),.enable2(enable2),.enable3(enable3),.enable4(enable4),.enable5(enable5),.enable6(enable6),.enable7(enable7),.enable8(enable8),.enable9(enable9),.enable10(enable10),.enable11(enable11), .opadd1(opadd1),.opadd2(opadd2),.opadd3(opadd3),.opadd4(opadd4),.opadd5(opadd5),.start(start),.clrx1(clrx1),.clrx2(clrx2),.clrx3(clrx3),.clry1(clry1),.clry2(clry2),.clry3(clry3),.enablex1(enablex1),.enablex2(enablex2),.enablex3(enablex3),.enabley1(enabley1),.enabley2(enabley2),.enabley3(enabley3)
-);
+Datapath data1 (.Rx1(Rx1),.Rx2(Rx2),.Rx3(Rx3),.Ry1(Ry1),.Ry2(Ry2),.Ry3(Ry3),.selmul3_1(selmul3_1),.selmul3_2(selmul3_2),.seladd5_2(seladd5_2),.seladd5_1(seladd5_1),.selr7(selr7),.selsqrt(selsqrt),.selmul2_2(selmul2_2),.selmul2_1(selmul2_1),.selmul1_2(selmul1_2),.selmul1_1(selmul1_1),.seladd2_2(seladd2_2),.seladd1_1(seladd1_1),.seldiv_2(seldiv_2),.seldiv_1(seldiv_1),.selr11(selr11),.selr10(selr10),.selr9(selr9),.selr8(selr8),.selr6(selr6),.selr4(selr4),.selr3(selr3),.selr2(selr2),.selr1(selr1),.seladd4_2(seladd4_2),.seladd4_1(seladd4_1),.seladd3_2(seladd3_2),.seladd3_1(seladd3_1),.seladd2_1(seladd2_1),.seladd1_2(seladd1_2),.clk(clk),.clr1(clr1),.clr2(clr2),.clr3(clr3),.clr4(clr4),.clr5(clr5),.clr6(clr6),.clr7(clr7),.clr8(clr8),.clr9(clr9),.clr10(clr10),.clr11(clr11),.enable1(enable1),.enable2(enable2),.enable3(enable3),.enable4(enable4),.enable5(enable5),.enable6(enable6),.enable7(enable7),.enable8(enable8),.enable9(enable9),.enable10(enable10),.enable11(enable11), .opadd1(opadd1),.opadd2(opadd2),.opadd3(opadd3),.opadd4(opadd4),.opadd5(opadd5),.clrx1(clrx1),.clrx2(clrx2),.clrx3(clrx3),.clry1(clry1),.clry2(clry2),.clry3(clry3),.enablex1(enablex1),.enablex2(enablex2),.enablex3(enablex3),.enabley1(enabley1),.enabley2(enabley2),.enabley3(enabley3),
+.insqrt(insqrt),.valid(valid));
 
 always @(*)           
     begin
         case(cycle)
             6'b0:
                 begin
-                 /* Rx1=40;
+                    Rx1=40;
                     Rx2=20;
                     Rx3=10;
                     Ry1=50;
                     Ry2=60;
-                    Ry3=100;*/           
+                    Ry3=100;          
                     enablex1=1;
                     enablex2=1;
                     enablex3=1;
@@ -58,6 +57,13 @@ always @(*)
                 end
             6'b000001:
                 begin
+                    //disabled
+                      enable5=0;     
+                      enable6=0;   
+                      enable8=0;   
+                      enable9=0;   
+                      enable10=0;   
+                      enable11=0;     
                     //ax1//
                                                                
                     //add
@@ -109,10 +115,19 @@ always @(*)
                      selr4=2'b10;
                      clr4=0;
                      enable4=1;
-    
+                    
+                    
+                    
                 end
             6'b000010:
                 begin
+                    //disabled
+                    enable3=0;     
+                    enable4=0;   
+                    enable5=0;   
+                    enable6=0;   
+                    enable11=0;   
+                    
                     //Mx//
                                                             
                     //add
@@ -127,13 +142,13 @@ always @(*)
                     //My//
                     
                     //add
-                    seladd3_2=3'b101;
-                    seladd3_1=3'b100;
-                    opadd3=2'b01;
+                    seladd3_2=3'b101; //ok
+                    seladd3_1=3'b100; //ok
+                    opadd3=2'b01;//ok
                     //register
                     clr1=0;
                     enable1=1;
-                    selr7=1;
+                    selr7=0;
                                         
                     //amx1//
                     
@@ -180,8 +195,14 @@ always @(*)
                 end
             6'b000011:
                 begin
+                    // disabled
+                   enable1=0;
+                   enable2=0;   
+                   enable3=0;   
+                   enable7=0;
+                   enable10=0;   
+                   enable11=0;   
                     //Mx²
-                    
                     //mult
                     selmul1_2=2'b00;
                     selmul1_1=2'b00;
@@ -206,18 +227,18 @@ always @(*)
                     //add
                     seladd4_2=3'b100;
                     seladd4_1=2'b11;
-                    opadd4=1;
+                    opadd4=2'b10;
                     //register
-                    selr8=2'b01;
-                    clr8=0;
-                    enable8=1;
+                   
+                    clr5=0;
+                    enable5=1;
                      
                     //Mx2
                     
                     //add
                     seladd1_2=3'b010;
-                    seladd1_1=2'b10;
-                    opadd1=0;
+                    seladd1_1=2'b01;
+                    opadd1=2'b01;
                     //register 
                     selr6=2'b10;
                     clr6=0;
@@ -235,6 +256,18 @@ always @(*)
                 end
             6'b000100:
                 begin
+                    enable1=0;
+                    enable2=0;   
+                    enable4=0;   
+                    enable5=0;
+                    enable6=0;   
+                    enable7=0;
+                    enable8=0;
+                    enable9=0;   
+                    enable11=0;   
+                    
+                         
+                    
                     //Vx
                     
                     //add
@@ -252,18 +285,18 @@ always @(*)
                     opadd4=10;
                     
                     //register
-                    selr4=2'b10;
+                    selr4=2'b00;
                     clr4=0;
                     enable4=1;
                     
                     //My²
-                    seladd3_2=3'b011;
-                    seladd3_1=3'b010;
-                    opadd3=0;
+                    seladd1_2=3'b001;
+                    seladd1_1=2'b00;
+                    opadd1=2'b01;
                     //register
-                    selr9=2'b00;
-                    clr9=0;
-                    enable9=1;
+                    selr10=2'b10;
+                    clr10=0;
+                    enable10=1;
                 end
             6'b000101:
                 begin
@@ -271,11 +304,11 @@ always @(*)
                     
                     //sqrt
                     selsqrt=1;
-                    
+                       insqrt=1;
                     //register
                     selr6=2'b00;
                     clr6=0;
-                    enable6=0;
+                    enable6=1;
                     
                     //N3
                     
@@ -287,7 +320,7 @@ always @(*)
                     //register
                     selr3=2'b00;
                     clr3=0;
-                    enable3=0;
+                    enable3=1;
                     
                     //Vy
                     
@@ -299,7 +332,7 @@ always @(*)
                     //register
                     selr9=2'b00;
                     clr9=0;
-                    enable9=0;
+                    enable9=1;
   
                 end
             6'b000110:
@@ -308,14 +341,16 @@ always @(*)
                     
                     //sqrt
                     selsqrt=0;
-                    
+                    insqrt=1;
+    
                     //register
                     selr9=2'b01;
                     clr9=0;
                     enable9=1;                                     
-                end
+                end     
             6'b001101:
                 begin
+
                     //MSDx
                     
                     //add
@@ -453,6 +488,10 @@ always @(*)
                     seldiv_2=2'b10;
                     seldiv_1=2'b10;
                     
+                    //register
+                    selr11=2'b10;
+                    clr11=0;
+                    enable11=1;  
                     
                 end
              6'b010010:
@@ -474,13 +513,10 @@ always @(*)
                     seldiv_1=2'b10;
                                   
                 end
-            6'b100110:
-                begin
-                    //register
-                    selr11=2'b10;
-                    clr11=0;
-                    enable11=1;          
-                end
+          //  6'b100110:
+            //    begin
+                            
+              //  end
             6'b100111:
                 begin
                     //aQ1 
@@ -506,6 +542,7 @@ always @(*)
                 end
             6'b101001:
                 begin
+                   
                 end
             6'b101010:
                 begin   
@@ -531,8 +568,10 @@ always@(posedge clk, negedge reset)
             6'b000101:
                cycle <= 6'b000110;
             6'b000110:
+                if(valid)
                cycle <= 6'b001101;
             6'b001101:
+                 if(valid)
                cycle <= 6'b001110;
             6'b001110:
                cycle <= 6'b001111;
@@ -553,8 +592,10 @@ always@(posedge clk, negedge reset)
             6'b101001:
                cycle <= 6'b101010;
             6'b101010:
+               begin
+               reset=0;
                cycle <= 6'b00000;
- 
+                end
             endcase
          
 endmodule

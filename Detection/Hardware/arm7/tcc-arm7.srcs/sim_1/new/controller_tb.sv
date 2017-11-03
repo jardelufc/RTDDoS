@@ -21,9 +21,19 @@
 
 
 module controller_tb();
-reg start,clk,reset;
-reg [5:0] cycle;
-controller c1(.start(start),.clk(clk),.reset(reset),.cycle(cycle));
+reg clk,reset;
 
-
+controller c1(.clk(clk),.reset(reset));
+initial 
+    begin
+    clk=1;
+    reset=0;
+    #10
+    reset=1;
+    
+    #400
+    reset =1;
+    end
+        always 
+           #10 clk=~clk;
 endmodule

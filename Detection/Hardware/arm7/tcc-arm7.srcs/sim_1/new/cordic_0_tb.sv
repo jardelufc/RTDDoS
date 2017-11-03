@@ -21,20 +21,23 @@
 
 
 module cordic_0_tb();
-reg clk;
+reg clk,test,ini;
 reg [22:0] in;
 wire[14:0] out;
-cordic_0 sqrtcalc (clk,1,in,,out);
+cordic_0 sqrtcalc (clk,ini,in,test,out);
 
 initial begin
    clk=0;
+   
       forever #1 clk=~clk;
    end
    
    initial begin
-   
-   in=24'd16777215;
-   
+  ini=0;
+  
+   in=24'd100040004;
+   #10
+   in=24'd16;
    end
    
    

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xcku5p-ffvb676-2-e" LaunchTime="1508157284">
-  <File Type="RDS-PROPCONSTRS" Name="Datapath_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="Datapath.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Datapath_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="Datapath.vds"/>
   <File Type="RDS-UTIL" Name="Datapath_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="Datapath_utilization_synth.pb"/>
