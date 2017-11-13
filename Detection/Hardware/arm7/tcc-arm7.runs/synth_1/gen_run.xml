@@ -1,16 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xcku5p-ffvb676-2-e" LaunchTime="1508157284">
-  <File Type="PA-TCL" Name="Datapath.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="Datapath_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="Datapath.vds"/>
-  <File Type="RDS-UTIL" Name="Datapath_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="Datapath_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="Datapath.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="Datapath_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="Datapath_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xcku5p-ffvb676-2-e" LaunchTime="1510578579">
+  <File Type="RDS-PROPCONSTRS" Name="Nahid_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="Nahid.tcl"/>
+  <File Type="RDS-RDS" Name="Nahid.vds"/>
+  <File Type="RDS-UTIL" Name="Nahid_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Nahid_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="Nahid.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Nahid_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Nahid_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/ip/cordic_0/cordic_0.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/div_gen_0/div_gen_0.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/adder.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/controller.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/datapath.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -80,7 +108,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/datapath.sv">
+    <File Path="$PSRCDIR/sources_1/new/Nahid.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -96,14 +124,6 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/top.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/Nahid.sv">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -169,7 +189,8 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="Datapath"/>
+      <Option Name="TopModule" Val="Nahid"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -182,6 +203,4 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="cordic_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="div_gen_0"/>
 </GenRun>
