@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="controller_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="controller_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="158630000fs"></ZoomStartTime>
+      <ZoomEndTime time="354430001fs"></ZoomEndTime>
+      <Cursor1Time time="253040000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="165"></NameColumnWidth>
+      <ValueColumnWidth column_width="126"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="36" />
+   <wvobject fp_name="/controller_tb/c1/Rx1" type="array">
+      <obj_property name="ElementShortName">Rx1[10:0]</obj_property>
+      <obj_property name="ObjectShortName">Rx1[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/Rx2" type="array">
+      <obj_property name="ElementShortName">Rx2[10:0]</obj_property>
+      <obj_property name="ObjectShortName">Rx2[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/Rx3" type="array">
+      <obj_property name="ElementShortName">Rx3[10:0]</obj_property>
+      <obj_property name="ObjectShortName">Rx3[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/Ry1" type="array">
+      <obj_property name="ElementShortName">Ry1[10:0]</obj_property>
+      <obj_property name="ObjectShortName">Ry1[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/Ry2" type="array">
+      <obj_property name="ElementShortName">Ry2[10:0]</obj_property>
+      <obj_property name="ObjectShortName">Ry2[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/Ry3" type="array">
+      <obj_property name="ElementShortName">Ry3[10:0]</obj_property>
+      <obj_property name="ObjectShortName">Ry3[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/cycle" type="array">
+      <obj_property name="ElementShortName">cycle[5:0]</obj_property>
+      <obj_property name="ObjectShortName">cycle[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/data1/r1/in" type="array">
+      <obj_property name="ElementShortName">in[23:0]</obj_property>
+      <obj_property name="ObjectShortName">in[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/data1/r1/o" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">o[23:0]</obj_property>
+      <obj_property name="ObjectShortName">o[23:0]</obj_property>
+      <obj_property name="label">R1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/data1/r2/in" type="array">
+      <obj_property name="ElementShortName">in[23:0]</obj_property>
+      <obj_property name="ObjectShortName">in[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/data1/r2/o" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">o[23:0]</obj_property>
+      <obj_property name="ObjectShortName">o[23:0]</obj_property>
+      <obj_property name="label">R2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/data1/r3/in" type="array">
+      <obj_property name="ElementShortName">in[23:0]</obj_property>
+      <obj_property name="ObjectShortName">in[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/data1/r3/o" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">o[23:0]</obj_property>
+      <obj_property name="ObjectShortName">o[23:0]</obj_property>
+      <obj_property name="label">R3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/data1/r4/in" type="array">
+      <obj_property name="ElementShortName">in[23:0]</obj_property>
+      <obj_property name="ObjectShortName">in[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/data1/r4/o" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">o[23:0]</obj_property>
+      <obj_property name="ObjectShortName">o[23:0]</obj_property>
+      <obj_property name="label">R4</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/data1/r5/in" type="array">
+      <obj_property name="ElementShortName">in[10:0]</obj_property>
+      <obj_property name="ObjectShortName">in[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/data1/r5/o" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">o[10:0]</obj_property>
+      <obj_property name="ObjectShortName">o[10:0]</obj_property>
+      <obj_property name="label">R5</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/data1/r6/in" type="array">
+      <obj_property name="ElementShortName">in[23:0]</obj_property>
+      <obj_property name="ObjectShortName">in[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/data1/r6/o" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">o[23:0]</obj_property>
+      <obj_property name="ObjectShortName">o[23:0]</obj_property>
+      <obj_property name="label">R6</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/data1/r7/in" type="array">
+      <obj_property name="ElementShortName">in[11:0]</obj_property>
+      <obj_property name="ObjectShortName">in[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/data1/r7/o" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">o[11:0]</obj_property>
+      <obj_property name="ObjectShortName">o[11:0]</obj_property>
+      <obj_property name="label">R7</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/data1/r8/in" type="array">
+      <obj_property name="ElementShortName">in[23:0]</obj_property>
+      <obj_property name="ObjectShortName">in[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/data1/r8/o" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">o[23:0]</obj_property>
+      <obj_property name="ObjectShortName">o[23:0]</obj_property>
+      <obj_property name="label">R8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/data1/r9/in" type="array">
+      <obj_property name="ElementShortName">in[23:0]</obj_property>
+      <obj_property name="ObjectShortName">in[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/data1/r9/o" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">o[23:0]</obj_property>
+      <obj_property name="ObjectShortName">o[23:0]</obj_property>
+      <obj_property name="label">R9</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/data1/r10/in" type="array">
+      <obj_property name="ElementShortName">in[23:0]</obj_property>
+      <obj_property name="ObjectShortName">in[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/data1/r10/o" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">o[23:0]</obj_property>
+      <obj_property name="ObjectShortName">o[23:0]</obj_property>
+      <obj_property name="label">R10</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/data1/r11/in" type="array">
+      <obj_property name="ElementShortName">in[19:0]</obj_property>
+      <obj_property name="ObjectShortName">in[19:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/data1/r11/o" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">o[19:0]</obj_property>
+      <obj_property name="ObjectShortName">o[19:0]</obj_property>
+      <obj_property name="label">R11</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/data1/sqrtcalc/aclk" type="logic">
+      <obj_property name="ElementShortName">aclk</obj_property>
+      <obj_property name="ObjectShortName">aclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/data1/sqrtcalc/s_axis_cartesian_tvalid" type="logic">
+      <obj_property name="ElementShortName">s_axis_cartesian_tvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axis_cartesian_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/data1/sqrtcalc/s_axis_cartesian_tdata" type="array">
+      <obj_property name="ElementShortName">s_axis_cartesian_tdata[23:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axis_cartesian_tdata[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/data1/sqrtcalc/m_axis_dout_tvalid" type="logic">
+      <obj_property name="ElementShortName">m_axis_dout_tvalid</obj_property>
+      <obj_property name="ObjectShortName">m_axis_dout_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controller_tb/c1/data1/sqrtcalc/m_axis_dout_tdata" type="array">
+      <obj_property name="ElementShortName">m_axis_dout_tdata[15:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_dout_tdata[15:0]</obj_property>
+   </wvobject>
+</wave_config>

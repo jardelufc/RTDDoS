@@ -20,13 +20,20 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module register(input [15:0] in, input clk,clr, output reg [15:0] o);
+module register #(parameter WIDTH=24) (input [WIDTH-1:0] in, input clk,clr,enable, output reg [WIDTH-1:0] o);
 
-always@ (posedge clk)
-         begin
-           if(clr)
+
+
+always@(posedge clk)
+
+if(enable)
+begin
+          if(clr)
            o=0;
-           else 
+          else 
           o=in;
-         end
+      
+     end
+     
+    
 endmodule

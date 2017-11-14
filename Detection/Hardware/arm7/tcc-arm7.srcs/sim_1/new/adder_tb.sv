@@ -3,7 +3,7 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 16.07.2017 21:30:02
+// Create Date: 11.10.2017 14:33:27
 // Design Name: 
 // Module Name: adder_tb
 // Project Name: 
@@ -20,23 +20,35 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module adder_tb( );
- reg [22:0] anew,bnew;
-   wire [22:0] onew;
+module adder_tb();
+reg [23:0] a;
+reg [23:0] b;
+reg [1:0] op;
+reg [23:0] out;
 
-        
-   adder a(.a(anew),.b(bnew),.o(onew));
-   
-   //Para teste de instância (valores) serão atribuidos três exemplos de valores de entrada no intervalo de 10ns
-   initial begin
-   anew = 23'd3;
-   bnew=  23'd5;
-   #10
-   anew = 23'd10;
-   bnew=  23'd6;
-   #10
-   anew= 23'd9;
-   bnew= 23'd1;
-   end
-   
+adder a1 (.a(a),.b(b),.op(op),.o(out));
+
+initial 
+begin
+a=500000;
+b=222;
+op=2'b00;
+#10
+
+a=500;
+b=222;
+op=2'b01;
+#10
+
+a=500;
+b=222;
+op=2'b10;
+#10
+
+a=500;
+b=222;
+op=2'b11;
+
+end
+
 endmodule
