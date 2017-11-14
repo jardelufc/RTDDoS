@@ -1,0 +1,33 @@
+#!/usr/bin/csh
+
+# now startup the BSM auditing
+# if it is running, start new log file
+echo "starting the bsm audit daemon"
+set check=`ps -e | grep "[a]uditd"`
+if ($#check > 0) then
+	/usr/sbin/audit -n
+else
+	/usr/sbin/auditd
+endif
+
+sleep 5
+
+# just a kludge to make sure we only get the latest data
+# sometimes the auditd was remembering old things, and starting the files
+# with old garbage. this cycles it out
+/usr/sbin/audit -n
+
+# now lets do ps once a minute and append the results to a file 
+set name=`date +"%m%d%H%M.ps_results"`
+touch $name
+
+# to give snapshots of system activity, we will do a ps -elf every 60 seconds
+# this will also give us the PIDS of some daemons so that we can figure out what
+# is happening in the bsm data 
+while (1)
+  date >> $name
+  ps -elf >> $name 
+  sleep 60
+end
+
+# must do a ^C to end this script...

@@ -1,0 +1,31 @@
+TCPDUMP CONFIGURATION
+---------------------
+Tcpdump was started with the command:
+
+	tcpdump -s 66000 -F options -w <datafile>
+
+where <datafile> is the name of the dump file.
+
+The "-s 66000" flag is to make sure we capture all the packet contents. 
+
+The "-F options" flag causes tcpdump to read its filtering 
+expression from the file called options which contains the following string:
+ 
+	not host 192.168.0.10 and not (host 192.168.1.1 and port tftp) 
+	and not src host 192.168.0.60
+
+With these options, we wanted to ignore the following sessions:
+- All packets to and from the host at 192.168.0.10.
+  This is a Solaris box on the net from which we are controlling
+  the outside traffic generator through an x-window session.
+
+- All packets from the host at 192.168.0.6.
+  This is a Solaris box on the test network that is not involved with the
+  actual simulation, but is used for development. We wanted to ignore any
+  random traffic coming from this machine.
+
+- Any traffic between the router at 192.168.1.1 and a tftp port.
+  Our router was generating some noise that we wanted to
+  filter out.
+
+ 

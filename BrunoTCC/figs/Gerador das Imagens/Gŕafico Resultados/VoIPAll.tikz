@@ -1,0 +1,60 @@
+ \begin{tikzpicture}
+ \begin{axis}[
+ enlargelimits=false,
+ width = 1.0\textwidth,
+ height = 0.6\textheight,
+ cycle list shift = 0,
+ grid = major,
+ grid style = {dashed, gray!30},
+ xmin = 50,
+ xmax = 300,
+ ymin = 0.4,
+ ymax = 1.0,
+ xtick={50,100,150,180,200,220,240,260,280,300},
+ ytick={0.4,0.5,0.6,0.7,0.8,0.9,1.0},
+ xlabel = {Número de usuários VoIP por célula},
+ ylabel = {Porcentagem de usuários satisfeitos},
+ legend style = {
+  legend pos=south west,
+  font=\large,
+ },
+ ticklabel style = {font=\large},
+ label style = {font=\large},
+ ]
+
+ \definecolor{colorQHMLWDF}{RGB}{255,0,0}
+ \definecolor{colorEXPPF}{RGB}{0,255,0}
+ \definecolor{colorMDU}{RGB}{0,0,255}
+ \definecolor{colorLEI}{RGB}{153,63,0}
+
+ \tikzset{plot common style/.append style={line width=0.8pt, mark options={scale=1pt, solid}}}
+ \tikzset{QHMLWDF style/.append style={plot common style, solid, mark=square, color=colorQHMLWDF}}
+ \tikzset{MDU style/.append style={plot common style,solid, mark=triangle, color=colorMDU}}
+ \tikzset{EXPPF style/.append style={plot common style,solid,mark=diamond, color=colorEXPPF}}
+ \tikzset{LEI style/.append style={plot common style,solid,mark=diamond*, color=Turquoise}}
+
+% \def\tablename{SatVOIP.dat}
+ \def\tablename{SatisfactionVOIP.dat}
+
+ \addplot[QHMLWDF style,error bars/.cd, y dir=both,y explicit]
+ table[x=x,y=QHMLWDF, y error minus = QHMLWDFDOWN, y error plus = QHMLWDFUP] {\tablename};
+ \addlegendentry{QHMLWDF};
+
+ \addplot[EXPPF style,error bars/.cd, y dir=both,y explicit]
+ table[x=x,y=EXPPF, y error minus = EXPPFDOWN, y error plus = EXPPFUP] {\tablename};
+ \addlegendentry{EXP/PF};
+
+ \addplot[MDU style,error bars/.cd, y dir=both,y explicit]
+ table[x=x,y=Song, y error minus = SongDOWN, y error plus = SongUP] {\tablename};
+ \addlegendentry{MDU};
+
+ \addplot[LEI style,error bars/.cd, y dir=both,y explicit]
+ table[x=x,y=UtilityLEI, y error minus = UtilityLEIDOWN, y error plus = UtilityLEIUP] {\tablename};
+ \addlegendentry{Utility Lei};
+
+ \node[anchor=west] (source) at (axis cs:46, 0.9){};
+ \node (destination) at (axis cs:302, 0.9){};
+ \draw[black, line width=1pt](source)--(destination);
+
+ \end{axis}
+ \end{tikzpicture}

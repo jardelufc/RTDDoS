@@ -1,0 +1,147 @@
+\chapter[Metodologia]{Metodologia}
+\label{Simulacao}
+
+Neste capítulo, os detalhes do \textit{fremework} serão apresentados bem como a modelagem do ambiente de simulação utilizado para a detecção de Ataques [DDOS]
+% ----------------------------------------------------------
+
+\section{Modelo de correlação NaHiD}
+
+Neste trabalho, o \textit{framework} utilizado baseia-se na correlação proposta por \cite{NHOQUE} chamada NaHiD, cujo objetivo é distinguir objetos de tráfego normais e maliciosos. Tal medida leva em consideração principalmente desvio padrão e média de cada objeto, ponderando cada elemento como mostrado na fórmula a seguir:  
+
+\begin{equation}
+	NaHiD(X,Y) = 1 - \frac{1}{n} \sum_{i=1}^{n} \frac{\left(|X(i) - Y(i)|\right)}{||\mu{X} - sX| - X(i)| + ||\mu{Y} - sY| - Y(i)|}
+\end{equation}
+onde
+\begin{itemize}
+	\item $\mu{X}$: Média do objeto de tráfego X.
+ 	\item $\mu{X}$: Média do objeto de tráfego Y.
+	\item $sX$: Desvio padrão do objeto de tráfego X.
+	\item $sY$: Desvio Padrão do objeto de tráfego Y.
+\end{itemize}
+As provas de simetria e identidade da correlação podem ser encontradas em \cite{NHOQUE}
+
+\section{Detecção de Ataques DDOS usando NaHiD}
+\label{Sec:NaHiD_VERC}
+Para a avaliação do trabalho, duas bases de tráfegos de rede foram escolhidas: DARPA e  DataMining[escolher melhor esse nome] os quais serão mais detalhados aa seguir 
+\subsection{DARPA - MIT}
+ A base de dados DARPA foi produzida por pesquisadores do \textit{Lincoln Laboratory} do Instituto de Tecnologia de Massachusetts nos Estados Unidos e tem por objetivo coletar dados de tráfego de rede da Força Aérea do país para encontrar vulnerabilidades em seu sistema bem como ser utilizado para avaliações futuras . Os dados foram coletados e passaram por uma fase de treinamento de 7 semanas com 38 tipos de ataques para simular ameaças internas a rede. O ambiente de rede era composto por duas partes: a rede interna da Força aérea e a rede externa que representava a Internet; ambos conectados por meio de um roteador como mostra a figura abaixo
+ 
+ 	\begin{tikzpicture}
+ 	\path [
+ 	mindmap,
+ 	text = white,
+ 	level 1 concept/.append style =
+ 	{font=\small\bfseries, sibling angle=180},
+ 	level 2 concept/.append style =
+ 	{font=\tiny\bfseries},
+ 	level 3 concept/.append style =
+ 	{font=\tiny\bfseries},
+ 	tex/.style     = {concept, ball color=blue,
+ 		font=\normalsize\bfseries},
+ 	engines/.style = {concept, ball color=green!50!black},
+ 	formats/.style = {concept, ball color=blue!50!black},
+ 	systems/.style = {concept, ball color=red!90!black},
+ 	]
+ 	node [tex] {Roteador} [clockwise from=180]
+ 	child[concept color=green!50!black, nodes={engines}] {
+ 		node {Base Aérea} [clockwise from=90]}
+ 	child [concept color=red, nodes={systems}] {
+ 		node {Internet} [clockwise from=90]};
+ 	\end{tikzpicture}
+\\
+Tal banco de dados é disponibilizado pela DARPA em um arquivo de extensão tcpdump, bem como a listagem de tráfegos normais e ataques rotulados como mostrados nas tabelas seguir
+
+\begin{table}[!b]
+	\centering
+	\begin{threeparttable}
+		\caption{Exemplo base de dados DARPA}
+		\label{Tab:WiresharkEx}
+		%	\small
+		\begin{tabular}{c c c c c c}
+			\toprule
+			\textbf{Número} & \textbf{Tempo} & \textbf{Origem} & \textbf{Destino}  & \textbf{Protocolo} & \textbf{Tamanho}[bytes]
+			\\ \midrule
+			1 &  18:56:12.1386 &  192.168.0.20 & 192.168.0.30 & TCP & 60  \\ \midrule
+			2 &  18:56:12.1391 & 192.168.0.30 & 192.168.0.20 & TCP & 60  \\ \midrule
+			3 &  18:56:12.1588 & 192.168.0.30 & 192.168.0.20 & TELNET & 84  \\ \midrule
+			4 &  18:56:12.2099 &  192.168.0.20 & 192.168.0.30 & TCP & 60  \\ \midrule
+			5 &  18:56:13.0567 &  192.168.0.20 & 192.168.0.30 & TELNET & 69    \\ \midrule
+			6 &  18:56:13.0584 & 192.168.0.30 & 192.168.0.20 & TELNET & 66   \\ \midrule
+			7 &  18:56:13.0626 &  192.168.0.20 & 192.168.0.30 & TELNET & 72  \\ \midrule
+			8 & 18:56:13.0821 & 192.168.0.30 & 192.168.0.20 & TCP & 60  \\ \bottomrule
+		\end{tabular}
+		{Fonte: Elaborada pelo autor, baseada em \cite{DARPA}.}
+	\end{threeparttable}
+\end{table}
+
+No presente trabalho ferramentas como edicap e tcpdump foram utilizadas para o tratamento desse dataset. Assim, algumas considerações devem ser feitas:
+\begin{itemize}
+	\item Janela de um segundo de tráfego
+	\item Cálculo de entropia, variação de IPs origem e taxa de pacotes média
+	\item Cálculo da correlação NaHiD
+\end{itemize}
+.
+\subsection{DataMining}
+Outra base de dados estudada no trabalho foi a desenvolvida por \cite{DataMining} a qual consta em sua totalidade por ataques DDOS de quatro tipos:
+\begin{itemize}
+	\item SIDDOS
+	\item HTTP Flood
+	\item UDDP Flood
+	\item Smurf
+\end{itemize}
+
+A Tabela abaixo mostra os campos do \textit{dataset} 
+
+\begin{table}[!b]
+	\centering
+	\begin{threeparttable}
+		\caption{Exemplo base de dados DARPA}
+		\label{Tab:DataMining}
+		%	\small
+		\begin{tabular}{c c }
+			\toprule
+			\textbf{Número} & \textbf{Tempo}
+			\\ \midrule
+			1 &  Endereço IP origem  \\ \midrule
+			2 &  Endereço IP destino  \\ \midrule
+			3 &  Id do pacote  \\ \midrule
+			4 &  Nó origem  \\ \midrule
+			5 &  Nó destino  \\ \midrule
+			6 &  Tipo de pacote  \\ \midrule
+			7 &  Tamanho do pacote  \\ \midrule
+			8 &  Flags  \\ \midrule
+			9 &   Id da flag  \\ \midrule
+			10 &  Número de sequência  \\ \midrule
+			11 &  Número de pacotes  \\ \midrule
+			12 &  Número de bytes  \\ \midrule
+			13 &  Nome do nó origem  \\ \midrule
+			14 &  Nome do nó destino  \\ \midrule
+			15 &  Entrada de pacote  \\ \midrule
+			16 &  Saída de pacote  \\ \midrule
+			17 &  Taxa de pacotes Recebidos \\ \midrule%%%%%%%%%%%%%%%%%%
+			18 &  Atraso de nó do pacote  \\ \midrule
+			19 &  Taxa de pacotes\\ \midrule
+			20 &  Taxa de bytes  \\ \midrule
+			21 &  Tamanho  médio do pacote  \\ \midrule
+			22 &  Utilização  \\ \midrule
+			23 &  Atraso de pacote  \\ \midrule
+			24 &  Tempo de envio do pacote  \\ \midrule
+			25 &  Tempo de pacote reservado  \\ \midrule
+			26 &  Primeiro pacote enviado  \\ \midrule
+			27 &  Último pacote reservado \\ \bottomrule
+		\end{tabular}
+		{Fonte: Elaborada pelo autor, baseada em \cite{DataMining}.}
+	\end{threeparttable}
+\end{table}
+
+Algumas considerações foram tomadas para a análise dessa base de dados:
+\begin{itemize}
+	\item Para construir a janela de um segundo, considerou-se a soma de todos os atrasos por pacote:
+	\begin{itemize}
+	 \item Atraso de nó do pacote.
+	 \item  Atraso de pacote.
+	 \item Tempo de pacote reservado.
+	\end{itemize}
+	\item A média das taxas dos pacotes foi considerada dentro da janela de um segundo.
+	\item Por ser um dataset composto apenas por ataques, a comparação com o limiar inverte-se para denotar o quanto dois pacotes são parecidos na correlação.
+\end{itemize}

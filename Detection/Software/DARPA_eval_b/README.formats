@@ -1,0 +1,249 @@
+List File Description for Sample Data
+3/4/1998
+
+Richard P. Lippmann
+Dave Mcclung
+MIT Lincoln Laboratory
+rpl@sst.ll.mit.edu
+
+
+1.0 Overview
+-------------
+List files specify sessions which must be scored by
+intrusion detection systems.  Separate list files
+are provided for audit data collected using Sun's Basic
+Security Monitoring (BSM) software and for raw packet
+data collected using tcpdump. 
+Each line in a list file corresponds to a separate session.
+Each session corresponds to an individual TCP/IP connection between
+two computers. For TCP sessions, this extends from 
+the beginning of the initial three-message handshake 
+to the final FIN and ACK sequence that closes the connection.
+A session can be short for services such as finger, or
+long for services such as telnet. Sessions can also
+correspond to services that use TCP or UDP protocols.
+A session is uniquely specified by the start time, by the source and
+destination IP addresses, and by the source and destination ports.
+
+The first nine columns in list files provide
+information which identifies the TCP/IP connection.
+The performance of intrusion detection systems will be evaluated 
+using scores assigned to the tenth column.  
+Each Score is a number which represents
+how likely it is that an attack occurred in a particular session.
+More positive numbers indicate that an attack was more likely.
+Sessions can thus be ordered by scores to find those sessions where
+attacks are most probable.
+The tenth column must be filled in for every session. 
+Best performance will be provided by systems which assign scores that
+are monotonically related to the the 
+posterior probability of an attack occurring in a session. 
+The last column is optional, and can be
+filled with an attack name.  A list of attack names in this sample set
+is provided below.
+
+The score and attack name columns will be provided already filled
+in for sample and training data. They provide session labels for this
+data which can be used to train intrusion detection systems and improve
+algorithms.  The score column will contain zero or one to
+indicate whether an attack occurred and the name column will contain
+the name of an attack or a dash.  The score and attack name
+columns will contain no information for test data, but must be filled
+in and returned for scoring. The score column will contain 0.0
+and the name column will contain a dash for test data when it is
+delivered.
+
+Sessions in list files will not include all TCP/IP connections that occur in a
+simulation, but only those connections that must be scored. Some services and
+sessions that are not involved in attacks will be ignored.
+In addition, the number of sessions will be different in 
+tcpdump and BSM list files because BSM audit data only captures 
+TCP/IP connections that impinge on the workstation running BSM, 
+while the tcpdump data captures connections between all internal and
+outside machines during the simulation. In general, there will thus be
+many more sessions in the tcpdump list file than in the BSM list file.
+
+
+2.0 TCPDUMP Sample List File
+---------------------
+The following shows a sample tcpdump list file as it should be returned for
+analysis, after the attack scores and optional attack names have
+been filled in. In this simulation, there were two workstations
+on an inside local network on the inside of a router (IP addresses 192.168.0.20
+and 192.168.0.40), one workstation on the outside of the 
+router (IP address 192.168.1.30), and BSM auditing was running 
+on one of the inside workstations (IP address 192.168.0.20).
+The tcpdump list file only includes TCP/IP connections that go between
+inside and outside workstations that would be captured by a sniffer located
+on the outside of the router.
+
+The three sessions with the highest scores 
+are the SMTP session starting at 06:04:36, the
+telnet session starting at 05:04:43, and the login session starting at
+22:57:53.  The telnet session is presumed to contain an attack named
+"guess" with a score of 9.42, the SMTP session contains an
+unnamed attack with a score of 12.0 , and the login
+session contains an unnamed attack with a score of 7.0.
+
+   Start      Start                     Src   Dest Src         Dest         Attack
+   Date       Time     Duration  Serv   Port  Port IP          IP           Score Name
+1  01/27/1998 00:00:01 00:00:23  ftp    1755  21  192.168.1.30 192.168.0.20 0.31 -
+2  01/27/1998 05:04:43 67:59:01  telnet 1042  23  192.168.1.30 192.168.0.20 0.42 -
+3  01/27/1998 06:04:36 00:00:59  smtp   43590 25  192.168.1.30 192.168.0.40 12.0 - 
+4  01/27/1998 08:45:01 00:00:01  finger 1050  79  192.168.0.40 192.168.1.30 2.56 guess
+5  01/27/1998 09:23:45 00:01:34  http   1031  80  192.168.1.30 192.168.0.40 -1.3 -
+7  01/27/1998 15:11:32 00:00:12  sunrpc 2025  111 192.168.1.30 192.168.0.20 3.10 rpc
+8  01/27/1998 21:53:17 00:00:45  exec   2032  512 192.168.1.30 192.168.0.40 2.95 exec
+9  01/27/1998 21:58:21 00:00:04  http   1031  80  192.168.1.30 192.168.0.20 0.45 -
+10 01/27/1998 22:57:53 26:59:00  login  2031  513 192.168.0.40 192.168.1.20 7.00 -
+11 01/27/1998 23:57:28 130:23:08 shell  1022  514 192.168.1.30 192.168.0.20 0.52 guess
+
+
+3.0 BSM Sample List File
+---------------------
+The following is a sample list file for BSM data corresponding to the same 
+simulation used to obtain the tcpdump list file.
+Formats of the BSM and tcpdump list files are identical.
+The BSM list file has fewer sessions that the tcpdump list file because it
+only includes TCP/IP connections impinging on the workstation
+running BSM (IP address 192.168.0.20). Session numbers in both files (the first
+number in each row) uniquely identify each session. Some
+sessions (e.g. 1, 2, 7, 11) are in both the BSM and tcpdump list files
+because they correspond to TCP/IP connections that affect both audit and 
+sniffing data while other sessions are only in one list file 
+because they correspond to TCP/IP connections
+that are visible only in either the
+audit or the sniffing data.  
+
+Scores in the BSM list file do not have to be identical to 
+scores for  sessions with the same index in the tcpdump list file.
+Participants in the upcoming evaluation will be expected provide scores
+generated by running intrusion detection systems under three conditions. 
+In the first "BSM only" condition, scores will be reported using 
+the BSM list file when only BSM audit data 
+is provided as input to an intrusion detection system. 
+In the second "tcpdump only" condition, scores will be reported 
+using the tcpdump list file when only tcpdump packet sniffer data 
+is provided as input to an intrusion detection system. 
+In the final "combined" condition, scores will be 
+reported using a combined list file where both BSM audit data 
+and tcpdump data are provided as input to an intrusion detection system.
+The combined list file will be created by including all lines from the
+BSM and tcpdump list file and eliminating lines corresponding to the same 
+sessions.
+
+   Start       Start                     Src  Dest Src          Dest        Attack
+   Date        Time     Duration Serv    Port Port IP           IP          Score Name
+1  01/27/1998 00:00:21 00:00:22  ftp    1755 21  192.168.1.30 192.168.0.20 1.13 -
+2  01/27/1998 05:05:03 67:59:00  telnet 1042 23  192.168.1.30 192.168.0.20 25.0 guess
+6  01/27/1998 11:00:15 00:30:01  telnet 1043 23  192.168.0.40 192.168.0.20 1.30 -
+7  01/27/1998 15:11:52 00:00:14  sunrpc 2025 111 192.168.1.30 192.168.0.20 2.76 rpc
+9  01/27/1998 21:58:41 00:00:04  http   1031 80  192.168.1.30 192.168.0.20 1.89 -
+11 01/27/1998 23:57:48 130:23:07 shell  1022 514 192.168.1.30 192.168.0.20 0.52 guess
+12 01/27/1998 25:32:00 00:00:17  tftp/u 1845 69  192.168.0.20 192.168.0.40 0.68 -
+
+4.0 BSM and tcpdump Times and Dates 
+-----------------------------------
+Start dates and times in tcpdump list files are from tcpdump data as
+created on an external sniffer workstation. These times will differ
+from times recorded in BSM list files due to the latency of packet
+transmission and processing and because clocks on the sniffer and on
+the audit workstation are not guaranteed to be synchronized and will drift.
+In the above sample list files this difference was assumed to be 
+roughly 20 seconds. This temporal drift should be accounted for
+when combining tcpdump and BSM data in intrusion detection systems.
+Combining this data should be relatively easy because
+a unique session number identifies BSM and tcpdump data corresponding
+to each session.
+
+
+5.0 Column Descriptions for list files
+----------------------------------------
+The columns in the list file contain the following:
+Column 1: Unique session index.
+
+Column 2: Starting date for the session in mm/dd/yyyy format as 
+	  produced by the UNIX command
+		date '+%m/%d/%Y'.
+	  For example, 01/27/1998.
+   	  Months range from 1 to 12, days start at 1, years 
+   	  have four digits.
+	  Note that the dates in tcpdump and BSM data may differ near 
+	  day boundaries because times in tcpdump and BSM data 
+	  can differ by as much as +/- 15 minutes and this time offset may
+	  drift across the sessions by a small amount.
+
+Column 3: Starting time for the session in hh:mm:ss format as
+	  produced by the UNIX command
+		date '+%H:%M:%S'.
+	  For example, 09:54:18.
+	  This time uses a 24 hour clock. Hours range from 0 to 23, 
+	  minutes range from 0 to 59, and seconds range from 0 to 59.
+	  Note that times in BSM data may be differ from times in tcpdump
+	  data by as much as +/- 15 minutes and that this time offset may
+	  drift across the sessions by a small amount.
+
+Column 4: Duration of the session in hh:mm:ss format.
+		  For example, 123:59:34.
+		  Hours start at 0 and have no upper limit, minutes range from 
+		  0 to 59, and seconds range from 0 to 59.
+
+Column 5: Service name used by this session. A list of most of the
+		  well-known ports and associated services that will be used 
+		  in intrusion detection evaluations is available at
+		  http://www.isi.edu/in-notes/iana/assignments/port-numbers
+		  as well as in many books. This service name is provided
+		  for convenience because the port numbers are also provided.
+		  The service given is assumed to be tcp.  For UDP services, 
+		  a "/u" is placed after the service name. For example,
+		  in the above BSM list file the tftp service uses UDP and
+		  is labeled as tftp/u.
+
+Column 6: The source port for this session.
+
+Column 7: The destination port for this session. 
+
+Column 8: The source IP address for this session.
+
+Column 9: The destination IP address for this session.
+
+Column 10: The score assigned to a session which indicates how likely
+		  an attack was in a session. More positive scores indicate that
+		  an attack is more likely. 
+		  For test data, this will be set to zero and must be filled
+		  in using the output of an intrusion detection system
+		  and returned for scoring. For training and sample data it will
+		  be set to 1.0 or 0.0 to label each session and specify if an attack 
+		  occurred.
+
+Column 11: The optional attack name. For training and sample data this
+		   will be filled in with the name of an attack. For test data,
+		   this can optionally be filled in, if the intrusion detection
+		   system can determine the attack type. If the intrusion detection
+		   system does not determine the attack type, enter a dash.
+
+
+6.0 Attack Names for Sample Data 
+---------------------------------
+The sample data contains only simple attacks which are included to
+illustrate how intrusion detection systems will be scored.  They are
+not necessarily representative of the attacks that will be included
+in the training and test data. Most of the attacks in the 
+sample data fail.  A session is labeled as containing an
+attack if it contains any component of an attack. A session is also
+labeled as containing an attack, even if the attack is unsuccessful and
+fails.  Attacks include instances where a remote user illegally obtains
+local user-level privileges or local root-level privileges on a
+target machine and also instances where a remote user surveys a
+potential target for weaknesses or searches for potential targets.
+Attacks in the sample data include the following:
+
+Name		Description
+------		-------------
+guess		Remote user guesses many passwords to log into a target machine
+ping-sweep	Low level ICMP ping sweep to identify target machines
+port-scan	Determine which services on a target machine are active
+phf		Run Unix command line on a web server
+rlogin		Rlogin to target machine without a password
+rsh		Execute a command on the target machine without a password
+rcp		Remotely copy a file to/from target machine without a password

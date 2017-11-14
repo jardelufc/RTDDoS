@@ -1,0 +1,56 @@
+BSM CONFIGURATION
+-----------------
+The subdirectory CONFIG/bsm contains the bsm configuration files 
+from the server that was attacked during this simulation. 
+The following files are copied from /etc/security:
+	audit_class
+	audit_control
+	audit_event
+	audit_startup
+	audit_user 
+
+These configuration files are fairly standard, except for 
+the "audit_startup" script.  This was modified to ensure that 
+the following processes were audited: sendmail, inetd, cron, and rpcbind.
+
+In addition, there are two scripts, "reset" and "killreset."  
+These are the scripts that we used to start and stop the bsm auditing.  
+Note that the "reset" scripts ends in an inifinite loop that appends 
+the result of a "ps -elf" onto a file every 60 seconds.  
+This was how we recorded the ps reults.
+
+
+BUGS WITH PRAUDIT
+-----------------
+The praudit program core dumps when the complete bsm 
+file is converted using 
+
+   praudit alpha_release.1.0.bsm > before_with_crash.praudit &
+
+The core dump is caused by a class fm event of type AUE_IOCTL.
+
+To get an almost complete praudit file we did the following: 
+
+1. Get everything up to 1 second before the crash
+   auditreduce -b 19980123170433 alpha_release.1.0.bsm > before.bsm
+   praudit before.bsm > before.praudit
+
+2. Get everything after the crash
+auditreduce -a 19980123170434 alpha_release.1.0.bsm > after.bsm
+praudit after.bsm > after.praudit
+
+3. Get the crash
+auditreduce -a 19980123170433 -b 19980123170434 alpha_release.1.0.bsm > during.bsm
+
+4. Get the crash but leave out the fm class events to prevent praudit
+   from core dumping.
+
+auditreduce -c no,fr,fw,fa,fc,fd,cl,pc,nt,ip,na,ad,lo,ap,io,ex,ot during.bsm\
+		| praudit > during_exect_fm.praudit
+
+5. Now edit each file to get rid of the extra file lines at the beginning and
+ends and cat the pieced together. This will be
+missing some fm class events like chmod, but no execs or forks or other
+things that should be important. It 
+would be a lot more work to pull out the other fm events excluding AUE_IOCTL 
+because this isn't easy to do with praudit.

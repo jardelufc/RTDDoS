@@ -3,7 +3,7 @@
 % After, execute getDatasetScript to generate the dataset.mat file
 
 % Enable Debug mode
-debug = 1;
+debug = 0;
 DestIP = 3;
 % windownSize = 5;
 threshold = 0.81;
@@ -35,6 +35,7 @@ for i = 1:length(idxDestIP)
     time = time + pktSendTIME + pktDelayNODE + pktDELAY + pktReservedTIME;
     %
     if time >= 1000
+%         keyboard;
         win = win + 1;
         trafficPktRate = mean(datasetMtxDestIP(step:i,19));
         sourceIPs = datasetMtxDestIP(step:i,1);
@@ -43,12 +44,14 @@ for i = 1:length(idxDestIP)
         for j = 1:(length(sourceIPs) - 1)
             if sourceIPs(j) ~= sourceIPs(j+1)
                 aux = aux + 1;
+                keyboard
             end
         end
         if debug == 1
             trafficPktRate(win,1) = mean(datasetMtxDestIP(step:i,19));
             VarSourceIPs(win,1) = aux/length(sourceIPs);
             entropySourceIPs(win,1) = entropy(sourceIPs);
+%             keyboard;
             NaHidModule(win,1) = NaHid([trafficPktRate(win,1) VarSourceIPs(win,1) entropySourceIPs(win,1)],normalTraffic1);
             NaHiDResults(win,1) = NaHidModule(win,1);
             if(NaHidModule(win,1) < 0.81)
@@ -59,7 +62,7 @@ for i = 1:length(idxDestIP)
                 disp('traffic');
                 disp(i);
                 disp('normal');
-                keyboard
+                
             end
             step =  i + 1;
             time = 0;

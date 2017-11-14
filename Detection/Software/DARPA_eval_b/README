@@ -1,0 +1,56 @@
+README v1.0
+-----------
+
+This directory contains sample data for the 1998
+DARPA Intrusion Detection Evaluation. 
+
+Please read all the READMEs in this directory.
+
+Contents of this directory
+--------------------------
+
+CONFIG/
+contains the bsm configuration files and starting scripts from 
+the simulation (see the file README.bsm for a description of these files)
+
+README
+this document
+
+README.bsm
+describes the bsm configuration files used in this simulation and 
+how we produced praudit output for processing  (there is a bug in praudit)
+
+README.formats
+describes what your intrusion detection system must do and 
+the format of the ".list" files in this directory
+
+README.tcpdump
+describes how the tcpdump data was collected
+
+bsm.list
+the list file for the bsm data. The format is described in "README.formats"
+
+network.ps.gz
+a gzipped PostScript file showing the topology of the 
+test network used in this simulation
+
+sample_data01.bsm.gz
+the actual raw bsm data from this simulation 
+(gzipped.  Uncompressed this is about 7.5 MB)
+
+sample_data01.praudit.gz
+our praudit results (gzipped.  Uncompressed, this is about 12.5 MB)
+
+sample_data01.ps-elf.gz
+the results of running the UNIX command "ps -elf" every 60 seconds 
+on the machine which was audited 
+(see the file CONFIG/bsm/reset for the script that created this file)
+
+sample_data01.tcpdump.gz
+the raw tcpdump data from the sniffer in this simulation
+
+tcpdump.list
+the list file for the tcpdump data as described in "README.formats"
+
+
+(last updated February 2, 1998)

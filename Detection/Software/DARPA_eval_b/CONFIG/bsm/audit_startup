@@ -1,0 +1,24 @@
+#!/bin/csh
+echo "Running audit_startup" 
+auditconfig -conf
+auditconfig -setpolicy none
+auditconfig -setpolicy +argv
+auditconfig -setpolicy +cnt
+auditconfig -setpolicy +trail
+
+# these added Jan 21, 1998
+auditconfig -setpolicy +path
+auditconfig -setpolicy +arge
+
+# now we need to get the pids for the following services
+# and then turn on the auditing for those processes 
+set daemons=("inetd" "sendmail" "cron" "rpcbind")
+ 
+foreach serv ($daemons)
+  set pid=`ps -e | grep $serv | grep -v grep | awk '{print $1}'`
+  auditconfig -setpmask $pid all
+end
+
+
+#/data/se2/swebster/audit/parse_log.pl &
+

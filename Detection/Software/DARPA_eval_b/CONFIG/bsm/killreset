@@ -1,0 +1,7 @@
+#! /usr/bin/csh
+
+# turn off the auditing first
+/usr/sbin/audit -n
+sleep 5
+/usr/sbin/audit -t
+echo "auditing turned off"

@@ -1,0 +1,46 @@
+ \begin{tikzpicture}
+ \begin{axis}[
+ enlargelimits=false,
+ width = 1.0\textwidth,
+ height = 0.6\textheight,
+ cycle list shift = 0,
+ grid = major,
+ grid style = {dashed, gray!30},
+ xmin = 0,
+ xmax = 0.4,
+ ymin = 0,
+ ymax = 100,
+ xtick={0,0.1,0.2,0.3,0.4},
+ ytick={0,10,20,...,100},
+ xlabel = {w (ms)},
+ ylabel = {U(w)},
+ legend style = {%
+  legend pos=north east,
+  font=\large,
+ },
+ ticklabel style = {font=\Large},
+ label style = {font=\Large},
+ ]
+
+ \tikzset{plot common style/.append style={line width=1.2pt, mark options={scale=1pt, solid}}}
+ \tikzset{VoIP style/.append style={plot common style, solid, color=Black}}
+ \tikzset{Streaming style/.append style={plot common style, dashed, color=Red}}
+ \tikzset{BestEffort style/.append style={plot common style, dashdotted, color=blue}}
+
+
+ \def\tablename{WeightsSongOriginal.dat}
+
+ \addplot[VoIP style]
+ table[x=x,y=data1] {\tablename};
+ \addlegendentry{VoIP};
+
+ \addplot[Streaming style]
+ table[x=x,y=data2] {\tablename};
+ \addlegendentry{Streaming};
+
+ \addplot[BestEffort style]
+ table[x=x,y=data3] {\tablename};
+ \addlegendentry{Best Effort};
+
+ \end{axis}
+ \end{tikzpicture}

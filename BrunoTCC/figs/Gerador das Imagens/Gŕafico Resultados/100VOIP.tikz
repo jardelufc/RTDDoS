@@ -1,0 +1,82 @@
+ \begin{tikzpicture}
+ \begin{axis}[
+ enlargelimits=false,
+ width = 1.0\textwidth,
+ height = 0.6\textheight,
+ cycle list shift = 0,
+ grid = major,
+ grid style = {dashed, gray!30},
+ xmin = 103,
+ xmax = 121,
+ ymin = 0,
+ ymax = 1.0,
+ xtick={103,105,...,121},
+ ytick={0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0},
+ xlabel = {Número de usuários por célula},
+ ylabel = {Porcentagem de usuários satisfeitos},
+ legend style = {
+  legend pos=south west,
+  font=\Large,
+ },
+ ticklabel style = {font=\Large},
+ label style = {font=\Large},
+ ]
+
+ \definecolor{colorQHMLWDF}{RGB}{255,0,0}
+ \definecolor{colorJSM}{RGB}{0,0,0}
+ \definecolor{colorEXPPF}{RGB}{0,255,0}
+ \definecolor{colorMDU}{RGB}{0,0,255}
+ \definecolor{colorLEI}{RGB}{153,63,0}
+
+ \tikzset{plot common style/.append style={line width=0.8pt, mark options={scale=1pt, solid}}}
+ \tikzset{QHMLWDF_CBR style/.append style={plot common style, dashed, mark=square, color=colorQHMLWDF}}
+ \tikzset{MDU_CBR style/.append style={plot common style,dashed, mark=triangle, color=colorMDU}}
+ \tikzset{EXPPF_CBR style/.append style={plot common style,dashed,mark=diamond, color=colorEXPPF}}
+ \tikzset{LEI_CBR style/.append style={plot common style,dashed,mark=star, color=Turquoise}}
+
+ \tikzset{plot common style/.append style={line width=0.8pt, mark options={scale=1pt, solid}}}
+ \tikzset{QHMLWDF_Video style/.append style={plot common style, solid, mark=square, color=colorQHMLWDF}}
+ \tikzset{MDU_Video style/.append style={plot common style,solid, mark=triangle, color=colorMDU}}
+ \tikzset{EXPPF_Video style/.append style={plot common style,solid,mark=diamond, color=colorEXPPF}}
+ \tikzset{LEI_Video style/.append style={plot common style,solid,mark=star, color=Turquoise}}
+
+ \def\tablename{Sat100VOIP.dat}
+
+ \addplot[QHMLWDF_CBR style ,error bars/.cd, y dir=both,y explicit]
+ table[x=x,y=QHMLWDFCBR, y error minus = QHMLWDFCBRDOWN, y error plus = QHMLWDFCBRUP] {\tablename};
+ \addlegendentry{QHMLWDF CBR};
+
+ \addplot[QHMLWDF_Video style ,error bars/.cd, y dir=both,y explicit]
+ table[x=x,y=QHMLWDFVoIP , y error minus = QHMLWDFVoIPDOWN, y error plus = QHMLWDFVoIPUP] {\tablename};
+ \addlegendentry{QHMLWDF VoIP};
+
+ \addplot[EXPPF_CBR style ,error bars/.cd, y dir=both,y explicit]
+ table[x=x,y=EXPPFCBR , y error minus = EXPPFCBRDOWN, y error plus = EXPPFCBRUP] {\tablename};
+ \addlegendentry{EXP/PF CBR};
+
+ \addplot[EXPPF_Video style ,error bars/.cd, y dir=both,y explicit]
+ table[x=x,y=EXPPFVoIP, y error minus = EXPPFVoIPDOWN, y error plus = EXPPFVoIPUP] {\tablename};
+ \addlegendentry{EXP/PF VoIP};
+
+ \addplot[MDU_CBR style ,error bars/.cd, y dir=both,y explicit]
+ table[x=x,y=SongCBR , y error minus = SongCBRDOWN, y error plus = SongCBRUP] {\tablename};
+ \addlegendentry{MDU CBR};
+
+ \addplot[MDU_Video style ,error bars/.cd, y dir=both,y explicit]
+ table[x=x,y=SongVoIP , y error minus = SongVoIPDOWN, y error plus = SongVoIPUP] {\tablename};
+ \addlegendentry{MDU VoIP};
+
+ \addplot[LEI_CBR style ,error bars/.cd, y dir=both,y explicit]
+ table[x=x,y=UtilityLEICBR , y error minus = UtilityLEICBRDOWN, y error plus = UtilityLEICBRUP] {\tablename};
+ \addlegendentry{Utility Lei CBR};
+
+ \addplot[LEI_Video style ,error bars/.cd, y dir=both,y explicit]
+ table[x=x,y=UtilityLEIVoIP , y error minus = UtilityLEIVoIPDOWN, y error plus = UtilityLEIVoIPUP] {\tablename};
+ \addlegendentry{Utility Lei VoIP};
+
+  \node[anchor=west] (source) at (axis cs:102, 0.899){};
+  \node (destination) at (axis cs:122, 0.899){};
+  \draw[black, line width=1pt](source)--(destination);
+
+ \end{axis}
+ \end{tikzpicture}

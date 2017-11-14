@@ -1,0 +1,4 @@
+dir:/data/se2/dmcclung/audit_logs
+flags:all
+minfree:10
+naflags:all

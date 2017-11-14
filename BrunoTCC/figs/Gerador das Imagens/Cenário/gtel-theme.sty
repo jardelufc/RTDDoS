@@ -1,0 +1,376 @@
+%----------------------------------------------------------------------------%
+% BEAMER OPTIONS
+%----------------------------------------------------------------------------%
+
+%------------------------------------%% Main theme
+%\usetheme{Boadilla}
+
+%--------------------------------%% Misc options (also match GTEL theme below)
+%\useinnertheme{rectangles}
+%\useinnertheme{circles}
+
+\useinnertheme{rounded} % use round and disable shadow
+%\useinnertheme[shadow]{rounded} % use round and with shadow
+%\setbeamertemplate{title page}[default][rounded=true]
+\setbeamertemplate{title page}[default][rounded=true,shadow=false]
+\setbeamertemplate{part page}[default][rounded=true,shadow=false]
+
+% Outer color pattern to use
+%\usecolortheme{wolverine}
+%\usecolortheme{rose}
+%\usecolortheme{orchid}
+%\usecolortheme{whale}
+
+% Color for title
+%\setbeamercolor{titlelike}{parent=structure,bg=yellow!85!orange}
+
+% Color for blocks
+%\setbeamercolor{block title}{bg=gray!40}
+%\setbeamercolor{block body}{bg=gray!10}
+
+%\setbeamercolor{block title alerted}{fg=red,bg=gray!40}
+%\setbeamercolor{block body alerted}{bg=red!20}
+
+%\setbeamercolor{block title example}{fg=green,bg=gray!40}
+%\setbeamercolor{block body example}{bg=green!20}
+
+% Change color in background
+%\setbeamercolor{background canvas}{bg=blue!5}
+
+% Frame title centered (default is left)
+%\setbeamertemplate{frametitle}[default][center]
+
+% Caption with number
+%\setbeamertemplate{caption}[numbered]
+\setbeamerfont{caption}{size=\scriptsize}
+\setbeamertemplate{caption}{\insertcaption} % remove labels from captions
+
+% Size of title in blocks
+\setbeamerfont{block title}{size={}} % normal size for block titles
+
+% Outer theme
+\useoutertheme{infolines}
+%\useoutertheme{default}
+%\useoutertheme{split}
+%\useoutertheme{shadow}
+%\useoutertheme[subsection=false]{miniframes}
+
+% Color for next entry in \pause
+%\setbeamercovered{transparent} % gray
+
+% Footline format
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor\expandafter\beamer@ifempty\expandafter{\beamer@shortinstitute}{}{~~(\insertshortinstitute)}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{1em} % default was 2em
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+% Remove footline and add only the page number
+%\setbeamertemplate{footline}[page number]
+
+% Remove navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+% Remove sections in the header
+\setbeamertemplate{headline}[default]
+%\renewcommand{\insertnavigation}[1]{} % this keeps the shade
+
+% Headline format
+\setbeamertemplate{headline}{%
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1ex,right]{section in head/foot}%
+		\hspace*{1.5em}%
+		\usebeamerfont{section in head/foot}\insertsection{}\hspace*{2ex}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+
+% Add footnote
+\addtobeamertemplate{footnote}{\vspace{-6pt}}{\vspace{6pt}}
+\makeatletter
+  % Alternative A: footnote rule
+  %\renewcommand*{\footnoterule}{\kern -3pt \hrule \@width 2in \kern 8.6pt}
+  % Alternative B: no footnote rule
+  \renewcommand*{\footnoterule}{\kern 6pt}
+\makeatother
+
+% Continuation slide
+\setbeamertemplate{frametitle continuation}[from second]
+%\setbeamertemplate{frametitle continuation}{\insertcontinuationcount}
+
+% Change permanently the width of boxes
+%\addtobeamertemplate{block begin}{%
+% \setlength{\textwidth}{0.9\textwidth}
+%}{}
+%\addtobeamertemplate{block alerted begin}{%
+% \setlength{\textwidth}{0.9\textwidth}%
+%}{}
+%\addtobeamertemplate{block example begin}{
+% \setlength{\textwidth}{0.9\textwidth}%
+%}{}
+
+% Logo (appears in all slides)
+%\logo{\includegraphics[width=20mm]{gtel_logo}}
+
+% Additional sizes for itemize/enumerate
+% With '\small'
+%\setbeamerfont{itemize/enumerate body}{size=\small}
+%\setbeamerfont{itemize/enumerate subbody}{size=\footnotesize}
+%\setbeamerfont{itemize/enumerate subsubbody}{size=\scriptsize}
+% With '\footnotesize'
+\setbeamerfont{itemize/enumerate body}{size=\scriptsize}
+\setbeamerfont{itemize/enumerate subbody}{size=\scriptsize}
+\setbeamerfont{itemize/enumerate subsubbody}{size=\tiny}
+
+% And for description
+\usepackage{etoolbox}
+% With '\small'
+%\AtBeginEnvironment{description}{\small}
+% With '\footnotesize'
+\AtBeginEnvironment{description}{\footnotesize}
+
+% New theme for item: use \bullet instead of \textbullet (font issues)
+\makeatletter
+  \defbeamertemplate{itemize item}{mycircle}{\normalsize\raise0.5pt\hbox{$\bullet$}}
+  \defbeamertemplate{itemize subitem}{mycircle}{\small\raise0.5pt\hbox{$\bullet$}}
+  \defbeamertemplate{itemize subsubitem}{mycircle}{\small\raise0.5pt\hbox{$\bullet$}}
+  % missing to add enumerate 
+\makeatother
+
+% Itemize/enumerate bullet
+\setbeamertemplate{itemize items}[mycircle] % ball or square or circle or default
+\setbeamertemplate{enumerate items}[default] % ball or square or circle or default
+
+% And for ToC
+%\setbeamertemplate{sections/subsections in toc}[ball] % ball or square or circle or default (for none)
+%\setbeamerfont{section number projected}{%
+% family=\rmfamily, series=\bfseries, size=\normalsize}
+%\setbeamercolor{section number projected}{bg=black, fg=yellow}
+
+% http://tex.stackexchange.com/questions/54656/remove-the-bullets-in-beamers-table-of-contents
+\setbeamertemplate{sections/subsections in toc}[sections numbered]
+%
+%\setbeamerfont{section in toc}{size=\footnotesize}
+
+%------------------------------------%% Taken from GTEL theme
+\usecolortheme{structure}
+%\useoutertheme{infolines}
+%\useinnertheme[shadow]{rounded}
+\usefonttheme{structurebold} % bold in structures
+%\usefonttheme{professionalfonts}
+%\usefonttheme[onlymath]{serif}
+
+\setbeamercolor{structure}{bg=White,fg=DarkGreen!80!Black}
+\setbeamercolor{palette primary}{fg=Black,bg=structure.fg!30!White}
+\setbeamercolor{palette secondary}{fg=Black,bg=structure.fg!90!White}
+%\setbeamercolor{palette tertiary}{fg=structure.bg,bg=Black} % complete black
+\setbeamercolor{palette tertiary}{fg=structure.bg,bg=Black!80} % not that black
+\setbeamercolor{title}{fg=structure.bg,bg=structure.fg}
+\setbeamercolor{part page}{fg=structure.bg,bg=structure.fg}
+\setbeamercolor{frametitle}{fg=structure.bg,bg=structure.fg}
+
+\setbeamercolor{block title}{fg=structure.bg,bg=structure.fg}
+\setbeamercolor{block body}{fg=Black,bg=structure.fg!10!White}
+% Not in original theme
+\setbeamercolor{block title example}{fg=structure,bg=structure.fg!10!White}
+\setbeamercolor{block body example}{fg=Black,bg=structure.fg!10!White}
+%
+\setbeamercolor{block title alerted}{fg=structure.bg,bg=DarkRed}
+\setbeamercolor{block body alerted}{fg=Black,bg=structure.fg!10!White}
+\setbeamercolor{alerted text}{fg=DarkRed}
+\setbeamerfont{part page}{size=\large,series=\bfseries}
+\setbeamerfont{title}{size=\large,series=\bfseries}
+\setbeamerfont{frametitle}{size=\large,series=\bfseries}
+%\setbeamerfont{frametitle}{size=\footnotesize} % FIXME
+
+% With '\small'
+%\setbeamerfont{block title}{size=\small,series=\bfseries}
+%\setbeamerfont{block body}{size=\small} % original: footnotesize
+%% Not in original theme
+%\setbeamerfont{block title example}{size=\small,series=\bfseries}
+%\setbeamerfont{block body example}{size=\small}
+%\setbeamerfont{block title alerted}{size=\small,series=\bfseries}
+%\setbeamerfont{block body alerted}{size=\small}
+
+% With '\scriptsize'
+\setbeamerfont{block title}{size=\scriptsize,series=\bfseries}
+\setbeamerfont{block body}{size=\scriptsize} % original: footnotesize
+% Not in original theme
+\setbeamerfont{block title example}{size=\scriptsize,series=\bfseries}
+\setbeamerfont{block body example}{size=\scriptsize}
+\setbeamerfont{block title alerted}{size=\scriptsize,series=\bfseries}
+\setbeamerfont{block body alerted}{size=\scriptsize}
+%
+\setbeamerfont{section in head/foot}{series=\bfseries,size=\tiny}
+\setbeamerfont{subsection in head/foot}{series=\bfseries,size=\tiny}
+\setbeamerfont{institute in head/foot}{series=\bfseries,size=\tiny}
+\setbeamerfont{author in head/foot}{series=\bfseries,size=\tiny}
+\setbeamerfont{date in head/foot}{series=\bfseries,size=\tiny}
+\setbeamerfont{footnote}{size=\tiny}
+\setbeamerfont{bibliography entry author}{size=\scriptsize,series=\bfseries}
+\setbeamerfont{bibliography entry title}{size=\scriptsize,series=\bfseries}
+\setbeamerfont{bibliography entry journal}{size=\scriptsize,series=\bfseries}
+\setbeamerfont{bibliography entry note}{size=\scriptsize,series=\bfseries}
+\setbeamerfont{alerted text}{series=\bfseries}
+
+%\setlength{\leftmargini}{0.5em}
+\setlength{\leftmarginii}{1em}
+\setlength{\leftmarginiii}{1em}
+
+\iffalse % commented since in conferences it becomes annoying
+
+% Introduce an opening slide at each part
+\AtBeginPart{
+  \begin{frame}[c]{\contentsname}
+    %\begin{block}{\centering\large\bfseries \partname\ \insertpartnumber}
+    % \centering\bfseries\insertpart
+    %\end{block}
+    \hspace{0.1\textwidth}%
+    \begin{varwidth}{0.8\textwidth}%
+    \begin{block}{\centering\large\bfseries \partname\ \insertpartnumber}%
+      \centering\bfseries\insertpart
+    \end{block}%
+    \end{varwidth}%
+    \hfill
+  \end{frame}
+
+  \begin{frame}[t]{\contentsname}
+    \tableofcontents[hideallsubsections]
+  \end{frame}
+}
+
+% ToC at each section
+\AtBeginSection{
+\begin{frame}[t]{\contentsname}
+  \tableofcontents[currentsection,hideothersubsections]
+\end{frame}
+}
+
+\AtBeginSubsection{
+\begin{frame}[t]
+  \frametitle{\contentsname}
+  \tableofcontents[currentsection,subsectionstyle=show/shaded/hide]
+\end{frame}
+}
+
+\fi
+
+	
+\AtBeginSection{
+	\begin{frame}[plain]
+	\vfill
+	\centering
+	%\begin{beamercolorbox}[sep=4pt,center,shadow=false,rounded=true]{title}
+	\begin{beamercolorbox}[sep=8pt,center,shadow=false,rounded=true]{title}
+		%\usebeamerfont{section title}\insertsectionhead\par%
+		\usebeamerfont{frametitle}\insertsectionhead\par%
+	\end{beamercolorbox}
+	\vfill
+	\end{frame}
+}
+
+
+%----------------------------------------------------------------------------%
+% Penalties
+%----------------------------------------------------------------------------%
+
+%\hyphenpenalty=1000
+%\exhyphenpenalty=1000
+\clubpenalty=10000
+\widowpenalty=10000
+\hbadness=100000
+\vbadness=10000
+\vfuzz=30pt
+%\hfuzz=30pt
+
+
+%----------------------------------------------------------------------------%
+% HACKS
+%----------------------------------------------------------------------------%
+
+%------------------------------------%% Description environment like 'style=nextline' provided by enumitem package
+\makeatletter
+\def\description{\@ifnextchar[{\beamer@testforospec}{\beamer@descdefault\beamer@descriptionwidth\@@description}}
+\def\beamer@testforospec[{\@ifnextchar<{\beamer@scandefaultospec[}{\@description[}}
+\def\beamer@scandefaultospec[#1]{\def\beamer@defaultospec{#1}\description}
+\def\@description[#1]{\setbox\beamer@tempbox=\hbox{\def\insertdescriptionitem{#1}\usebeamertemplate**{description item}}%
+  \beamer@descdefault\wd\beamer@tempbox\@@description}
+\def\@@description{%
+  %\beamer@descdefault30pt%
+  \beamer@descdefault22pt%
+  \list
+  {}
+  %{\labelwidth\beamer@descdefault\leftmargin2.8em\let\makelabel\beamer@descriptionitem}%
+  {\labelwidth\beamer@descdefault\leftmargin22pt\let\makelabel\beamer@descriptionitem}%
+  \beamer@cramped%
+  \raggedright
+  \beamer@firstlineitemizeunskip%
+}
+\def\enddescription{\ifhmode\unskip\fi\endlist}
+\long\def\beamer@descriptionitem#1{%
+  \def\insertdescriptionitem{#1}%
+  \hspace\labelsep{\parbox[b]{\dimexpr\textwidth-\labelsep\relax}{%
+    \usebeamertemplate**{description item}%
+  }\par%
+}}
+\makeatother
+
+%------------------------------------%% Box with section name like title
+\newcommand{\insertsectionframe}{%
+  \begin{frame}[c]%
+  \hspace{0.2\textwidth}%
+  \begin{varwidth}{0.6\textwidth}%
+  %\begin{beamercolorbox}[ht=2.25ex,dp=1ex,rounded=true,center]{title}%
+  \begin{beamercolorbox}[sep=8pt,rounded=true,center]{title}%
+    \usebeamerfont{title}\insertsection%
+  \end{beamercolorbox}%
+  \end{varwidth}%
+  \hfill
+  \end{frame}}
+
+%------------------------------------%% Block with defined width
+\newenvironment<>{varblock}[2][.9\textwidth]{%
+  \setlength{\textwidth}{#1}
+  \begin{actionenv}#3%
+    \def\insertblocktitle{#2}%
+    \par%
+    \usebeamertemplate{block begin}}
+  {\par%
+  \usebeamertemplate{block end}%
+  \end{actionenv}}
+
+%------------------------------------%% Alerted block with defined width
+\newenvironment<>{varalertblock}[2][.9\textwidth]{%
+  \setlength{\textwidth}{#1}
+  \begin{actionenv}#3%
+    \def\insertblocktitle{#2}%
+    \par%
+    \setbeamercolor{local structure}{parent=alerted text}%
+    \usebeamertemplate{block alerted begin}}
+  {\par%
+  \usebeamertemplate{block alerted end}%
+  \end{actionenv}}
+
+%------------------------------------%% Example block with defined width
+\newenvironment<>{varexampleblock}[2][.9\textwidth]{%
+  \setlength{\textwidth}{#1}
+  \begin{actionenv}#3%
+    \def\insertblocktitle{#2}%
+    \par%
+    \usebeamertemplate{block example begin}}
+  {\par%
+  \usebeamertemplate{block example end}%
+  \end{actionenv}}
+	

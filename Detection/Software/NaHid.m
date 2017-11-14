@@ -2,6 +2,7 @@
 % into account two objects X and Y. Reference: Real-time DDoS attack 
 % detection using FPGA,2017. Section 3 
 function correlation = NaHid(X,Y)
+% keyboard;
 nx = length(X);
 ny = length(Y);
 correlation = zeros(1,nx);

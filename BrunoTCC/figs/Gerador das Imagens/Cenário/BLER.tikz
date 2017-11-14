@@ -1,0 +1,102 @@
+ \begin{tikzpicture}
+ \begin{semilogyaxis}[
+ width = 2\columnwidth,
+ height = 1.4\columnwidth,
+ cycle list shift = 0,
+ grid = major,
+ grid style = {dashed, gray!30},
+ %% xmin = 3.8, xmax = 4.4,
+ % ymin = 25,
+ ymax = 1,
+ % ytick={25,30,...,45},
+ xlabel = {SNR (dB)},
+ ylabel = {BLER},
+ legend style = {%
+  legend pos=south west,
+ },
+ ]
+
+ \definecolor{colorMCS1}{RGB}{240,163,255}
+ \definecolor{colorMCS2}{RGB}{0,117,220}
+ \definecolor{colorMCS3}{RGB}{153,63,0}
+ \definecolor{colorMCS4}{RGB}{76,0,92}
+ \definecolor{colorMCS5}{RGB}{255,80,5}
+ \definecolor{colorMCS6}{RGB}{0,92,49}
+ \definecolor{colorMCS7}{RGB}{43,206,72}
+ \definecolor{colorMCS8}{RGB}{255,204,153}
+ \definecolor{colorMCS9}{RGB}{128,128,128}
+ \definecolor{colorMCS10}{RGB}{148,255,181}
+ \definecolor{colorMCS11}{RGB}{143,124,0}
+ \definecolor{colorMCS12}{RGB}{157,204,0}
+ \definecolor{colorMCS13}{RGB}{194,0,136}
+ \definecolor{colorMCS14}{RGB}{0,51,128}
+ \definecolor{colorMCS15}{RGB}{255,164,5}
+
+
+ \tikzset{plot common style/.append style={solid, line width=2pt}}
+ \tikzset{MCS1 style/.append style={plot common style, color=colorMCS1}}
+ \tikzset{MCS2 style/.append style={plot common style, color=colorMCS2}}
+ \tikzset{MCS3 style/.append style={plot common style, color=colorMCS3}}
+ \tikzset{MCS4 style/.append style={plot common style, color=colorMCS4}}
+ \tikzset{MCS5 style/.append style={plot common style, color=colorMCS5}}
+ \tikzset{MCS6 style/.append style={plot common style, color=colorMCS6}}
+ \tikzset{MCS7 style/.append style={plot common style, color=colorMCS7}}
+ \tikzset{MCS8 style/.append style={plot common style, color=colorMCS8}}
+ \tikzset{MCS9 style/.append style={plot common style, color=colorMCS9}}
+ \tikzset{MCS10 style/.append style={plot common style, color=colorMCS10}}
+ \tikzset{MCS11 style/.append style={plot common style, color=colorMCS11}}
+ \tikzset{MCS12 style/.append style={plot common style, color=colorMCS12}}
+ \tikzset{MCS13 style/.append style={plot common style, color=colorMCS13}}
+ \tikzset{MCS14 style/.append style={plot common style, color=colorMCS14}}
+ \tikzset{MCS15 style/.append style={plot common style, color=colorMCS15}}
+
+
+ \addplot [MCS15 style]
+ table[x=x,y=MCS15] {BLER.dat};
+ \addlegendentry{MCS 15};
+ \addplot [MCS14 style]
+ table[x=x,y=MCS14] {BLER.dat};
+ \addlegendentry{MCS 14};
+ \addplot [MCS13 style]
+ table[x=x,y=MCS13] {BLER.dat};
+ \addlegendentry{MCS 13};
+ \addplot [MCS12 style]
+ table[x=x,y=MCS12] {BLER.dat};
+ \addlegendentry{MCS 12};
+ \addplot [MCS11 style]
+ table[x=x,y=MCS11] {BLER.dat};
+ \addlegendentry{MCS 11};
+ \addplot [MCS10 style]
+ table[x=x,y=MCS10] {BLER.dat};
+ \addlegendentry{MCS 10};
+ \addplot [MCS9 style]
+ table[x=x,y=MCS09] {BLER.dat};
+ \addlegendentry{MCS 09};
+ \addplot [MCS8 style]
+ table[x=x,y=MCS08] {BLER.dat};
+ \addlegendentry{MCS 08};
+ \addplot [MCS7 style]
+ table[x=x,y=MCS07] {BLER.dat};
+ \addlegendentry{MCS 07};
+ \addplot [MCS6 style]
+ table[x=x,y=MCS06] {BLER.dat};
+ \addlegendentry{MCS 06};
+ \addplot [MCS5 style]
+ table[x=x,y=MCS05] {BLER.dat};
+ \addlegendentry{MCS 05};
+ \addplot [MCS4 style]
+ table[x=x,y=MCS04] {BLER.dat};
+ \addlegendentry{MCS 04};
+ \addplot [MCS3 style]
+ table[x=x,y=MCS03] {BLER.dat};
+ \addlegendentry{MCS 03};
+ \addplot [MCS2 style]
+ table[x=x,y=MCS02] {BLER.dat};
+ \addlegendentry{MCS 02};
+ \addplot [MCS1 style]
+ table[x=x,y=MCS01] {BLER.dat};
+ \addlegendentry{MCS 01};
+
+
+ \end{semilogyaxis}
+ \end{tikzpicture}

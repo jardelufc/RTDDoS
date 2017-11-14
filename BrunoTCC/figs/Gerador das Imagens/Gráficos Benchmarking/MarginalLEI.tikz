@@ -1,0 +1,40 @@
+ \begin{tikzpicture}
+ \begin{axis}[
+ enlargelimits=false,
+ width = 1.0\textwidth,
+ height = 0.6\textheight,
+ cycle list shift = 0,
+ grid = major,
+ grid style = {dashed, gray!30},
+ xmin = 0,
+ xmax = 18,
+ ymin = 0,
+ ymax = 0.4,
+ xtick={0,2,4,...,18},
+ ytick={0,0.1,0.2,0.3,0.4},
+ xlabel = {$d^{\text{hol}}$ (ms)},
+ ylabel = {$U'(d^{\text{hol}})$},
+ legend style = {%
+  legend pos=north east,
+  font=\large,
+ },
+ ticklabel style = {font=\large},
+ label style = {font=\large},
+ ]
+
+ \tikzset{plot common style/.append style={line width=0.8pt, mark options={scale=1pt, solid}}}
+ \tikzset{NRT style/.append style={plot common style, solid, color=Black}}
+ \tikzset{RT style/.append style={plot common style, dashed, color=Red}}
+
+ \def\tablename{MarginalWeightLEIOriginal.dat}
+
+ \addplot[NRT style]
+ table[x=x,y=data2] {\tablename};
+ \addlegendentry{NRT};
+
+ \addplot[RT style]
+ table[x=x,y=data1] {\tablename};
+ \addlegendentry{RT};
+
+ \end{axis}
+ \end{tikzpicture}

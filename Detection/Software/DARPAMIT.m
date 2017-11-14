@@ -1,20 +1,20 @@
 % Destination IP
-DestIP = '172.16.112.194';
+DestIP = '192.168.0.20';
+% keyboard;
 % Reading table from wireshark
-datasetTable = readtable('teste.csv');
+datasetTable = readtable('testeval.csv');
+dataset = table2cell(datasetTable);
 % Removing some cells 
-dataset = datasetTable{:,:};
+% dataset = datasetTable{:,:};
 % initial normal traffic
-normalTraffic1 = [345574 12.98 0.94 ];
+normalTraffic1 = [3120 0.1667 0];
 % Filtering datasetMtx by destination IP
 idxDestIP =  find(strcmp(dataset(:,4), DestIP));
 datasetMtxDestIP = dataset(idxDestIP,:);
 % Getting variables by filtered mtx and converting 
-packetID = datasetMtxDestIP(:,1);
-packetID = str2double(packetID);
-time = str2double(datasetMtxDestIP(:,2));
-packetSize = datasetMtxDestIP(:,6);
-packetSize = str2double(packetSize);
+packetID = [datasetMtxDestIP{:,1}];
+time = [datasetMtxDestIP{:,2}];
+packetSize = [datasetMtxDestIP{:,6}];
 % Variables initialization
 numOfPackets = zeros(1,length(idxDestIP));
 packetRateBps = zeros(1,length(idxDestIP));
@@ -40,9 +40,7 @@ while i < (length(idxDestIP)-1)
     end
     numOfPackets(i) = j - i;
     sourceIPs = datasetMtxDestIP(i:(i+winPacket-1),3);
-%     if length(sourceIPs)~=numOfPackets
-%         keyboard;
-%     end
+
     VarSourceIPs = aux/length(sourceIPs);
     entropySourceIPs = entropy(sourceIPs);
     trafficPktRate = sum(packetRateBps(i:(i+winPacket-1)));
@@ -55,7 +53,8 @@ while i < (length(idxDestIP)-1)
         disp('traffic');
         disp(i);
         disp('normal');
-        keyboard
+        normalTraffic1 = [trafficPktRate VarSourceIPs entropySourceIPs];
+
     end
     i =  i + winPacket;
     winPacket = 0;

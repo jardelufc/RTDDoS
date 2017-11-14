@@ -1,0 +1,158 @@
+% Document class like in main document
+\documentclass[%
+  %aspectratio=1610,
+  english,
+  %serif,
+  %compress,
+  %11pt,
+  8pt,
+  xcolor={table,svgnames},
+  usepdftitle=false,
+  hyperref={breaklinks=true}, % break long section names in ToC
+  %t, % top alignment for all structures (e.g., frames, columns, etc)
+  ]{beamer}
+
+% The theme of GTEL
+\usepackage{gtel-theme}
+
+% Encoding
+%\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+
+% Fonts
+%\usepackage[cmex10]{mathtools}
+%\usepackage{newtxtext,newtxmath}
+\usepackage{mathtools}
+\usepackage{helvet}
+\usepackage[helvet]{sfmath}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{pifont}
+%\usepackage{arev}
+
+% More with fonts
+\usepackage{relsize}
+\usepackage{anyfontsize}
+
+% Compile with xelatex
+%\usepackage[no-math]{fontspec}
+%\setmainfont{Arial}
+%\usepackage{mathastext}
+%%\Mathastext[Arial]
+
+\usepackage{microtype}
+
+% Picture size
+%\newcommand{\defLength}[2]{\newlength{#1}\setlength{#1}{#2}}
+%\defLength{\textWidth}{469.47049pt} % text width in main document
+%\defLength{\textHeight}{674.33032pt} % text height in main document
+%\defLength{\textWidth}{252pt}
+%\defLength{\textHeight}{672pt}
+%\usepackage[textwidth=\textWidth,height=\textHeight]{geometry}
+
+% The drawing
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{fit}
+\usetikzlibrary{positioning}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{arrows}
+\usetikzlibrary{matrix}
+
+\newcounter{dummy}
+\def\getNoOfElements#1#2{%
+  \setcounter{dummy}{0}% 
+  \foreach\dummy in #1 {\stepcounter{dummy}}%
+  \edef#2{\arabic{dummy}}
+}
+
+\def\hexasize{50mm}
+\def\raio{4pt}
+\def\arrowsize{12pt}
+\def\lshift{2pt}
+%\def\lstart{\lshift-\pgflinewidth}
+\def\lstart{\lshift}
+
+% http://tex.stackexchange.com/questions/54368/tikz-nodes-centering-with-small-font
+\tikzset{%
+	%every node/.append style={execute at begin node=\footnotesize}
+	%every node/.style={font=\footnotesize},
+	every picture/.style={font issue=\footnotesize},
+	font issue/.style={execute at begin picture={#1\selectfont}},
+}
+
+\tikzset{%
+	every fit/.style={text badly centered},
+	% http://tex.stackexchange.com/questions/193052/rotate-only-the-shape
+	hexa/.style={shape border rotate=90,draw,shape=regular polygon,regular polygon sides=6,minimum size=\hexasize,inner sep=0pt,outer sep=0pt},
+	>=stealth',
+	%shorten >=1pt,
+	%textdsc/.style={font=\tiny,fill=white,inner xsep=0pt,inner ysep=2pt},
+	textdsc/.style={font=\tiny\smaller},
+	ue/.style={draw,circle,double,text width=2*\raio,inner sep=0pt},
+	bs/.style={draw,circle,fill=black,text width=2*\raio,inner sep=0pt},
+	%pcentro/.style={fill=black},
+}
+
+% Use this or 'standalone' class with options as above
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+
+% Some useful measurements
+\newlength{\twoside}
+\setlength{\twoside}{\dimexpr0.5\textwidth-0.5\columnsep\relax}
+
+\begin{document}
+
+\begin{tikzpicture}
+
+	%\node[rectangle,draw,minimum width=\twoside] (frame) {};		
+
+	% Layout
+	\node[hexa] (centro) at (0,0) {};
+
+%	% D2D-capable MSs
+	\coordinate (d2due1pos) at ($(centro.center)!0.6!(centro.270)$);
+	\node[ue] (d2due1) at (d2due1pos) {};
+	
+	\coordinate (d2due2pos) at ($(centro.center)!0.9!(centro.330)$);
+	\node[ue] (d2due2) at (d2due2pos) {};
+	
+	\coordinate (d2due3pos) at ($(centro.center)!0.3!(centro.360)$);
+	\node[ue] (d2due3) at (d2due3pos) {};
+	
+	\coordinate (d2due3pos) at ($(centro.center)!0.5!(centro.140)$);
+	\node[ue] (d2due3) at (d2due3pos) {};
+	
+	\coordinate (d2due3pos) at ($(centro.center)!0.8!(centro.80)$);
+	\node[ue] (d2due3) at (d2due3pos) {};
+		
+	\coordinate (d2due3pos) at ($(centro.center)!0.15!(centro.200)$);
+	\node[ue] (d2due3) at (d2due3pos) {};
+
+	\newcommand*{\List}{centro}
+	\getNoOfElements{\List}{\No}
+	\foreach \x [count=\xi] in \List {%
+		\node[bs] (\xi) at (\x) {};
+	}
+
+	% Legend
+  \matrix (legend) [%
+		draw=black,
+		cells={anchor=center},
+		inner xsep=3pt,inner ysep=2pt, % same as in legend of plots
+		below=\lstart of centro.south,
+		anchor=north,
+		matrix of nodes,
+		ampersand replacement=\&,
+		nodes={outer sep=2pt,text depth=0.15em,anchor=west}, % 
+  ]
+  {%
+		|[bs]|{} \& {BS} \\
+		|[ue]|{} \& {Dispositivos M\'oveis} \\
+  };
+
+	
+\end{tikzpicture}
+
+\end{document}
