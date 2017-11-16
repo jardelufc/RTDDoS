@@ -5,6 +5,12 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.6 }
 
+\bibitem[Alkasassbeh, G.Al-Naymat e Hassanat 2016]{DataMining}
+\abntrefinfo{Alkasassbeh, G.Al-Naymat e Hassanat}{ALKASASSBEH; G.AL-NAYMAT;
+  HASSANAT}{2016}
+{ALKASASSBEH, M. \emph{et al.} Detecting distributed denial of service attacks
+  using data mining techniques. In:  . [S.l.: s.n.], 2016. p. 436--445.}
+
 \bibitem[Hoque, Kashyap e Bhattachaaryya 2017]{NHOQUE}
 \abntrefinfo{Hoque, Kashyap e Bhattachaaryya}{HOQUE; KASHYAP;
   BHATTACHAARYYA}{2017}

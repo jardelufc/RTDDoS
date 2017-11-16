@@ -17,7 +17,6 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Database file #1: abntex2-options.bib
 Database file #2: bibtex/referencias.bib
 Warning--I didn't find a database entry for "DARPA"
-Warning--I didn't find a database entry for "DataMining"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
@@ -27,45 +26,45 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 8 entries,
+You've used 9 entries,
             6714 wiz_defined-function locations,
-            1219 strings with 9689 characters,
-and the built_in function-call counts, 3317 in all, are:
-= -- 332
-> -- 48
-< -- 2
-+ -- 69
-- -- 15
-* -- 167
-:= -- 420
-add.period$ -- 3
-call.type$ -- 10
-change.case$ -- 35
-chr.to.int$ -- 6
-cite$ -- 1
-duplicate$ -- 67
-empty$ -- 382
-format.name$ -- 63
-if$ -- 879
+            1224 strings with 9893 characters,
+and the built_in function-call counts, 4364 in all, are:
+= -- 422
+> -- 95
+< -- 3
++ -- 86
+- -- 29
+* -- 246
+:= -- 554
+add.period$ -- 8
+call.type$ -- 11
+change.case$ -- 49
+chr.to.int$ -- 7
+cite$ -- 2
+duplicate$ -- 109
+empty$ -- 455
+format.name$ -- 126
+if$ -- 1137
 int.to.chr$ -- 6
 int.to.str$ -- 1
-missing$ -- 90
-newline$ -- 13
-num.names$ -- 5
-pop$ -- 74
+missing$ -- 107
+newline$ -- 17
+num.names$ -- 10
+pop$ -- 98
 preamble$ -- 1
-purify$ -- 26
+purify$ -- 31
 quote$ -- 0
-skip$ -- 425
+skip$ -- 479
 stack$ -- 1
-substring$ -- 120
-swap$ -- 21
-text.length$ -- 1
+substring$ -- 169
+swap$ -- 43
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
+type$ -- 1
 warning$ -- 0
-while$ -- 11
+while$ -- 20
 width$ -- 0
-write$ -- 23
-(There were 2 warnings)
+write$ -- 39
+(There was 1 warning)

@@ -18,36 +18,71 @@ onde
 	\item $sX$: Desvio padrão do objeto de tráfego X.
 	\item $sY$: Desvio Padrão do objeto de tráfego Y.
 \end{itemize}
-As provas de simetria e identidade da correlação podem ser encontradas em \cite{NHOQUE}
+As provas de simetria e identidade da correlação podem ser encontradas em \cite{NHOQUE}.
+
+\section{Framework de detecção de ataques DDOS}
+O \textit{framework} tem como objetivo detectar ataques DDoS em tempo real no computador alvo a partir de dados de tráfego de rede com uma taxa aceitável de erros. Tal arcabouço possui três componentes: pré-processamento, um módulo de detecção e um gerente de segurança.Amostras de tráfego serão capturadas de uma porta do roteador como um pacote TCP/IP, que são enviadas ao módulo de pré-processamento. Nessa fase, a cada segundo, os pacotes recebidos são agrupados e essa instância de tráfego é enviada para o módulo de detecção de ataque, que irá classificar a instância como normal ou ataque. O gerente de segurança manterá um perfil normal e um valor limiar em sua base de perfis, para ser usado pelo módulo de detecção. Incrementalmente, o gerente recalcula o perfil normal e o limiar baseado nos valores anteriores. O último módulo, que é o módulo de segurança irá operar offline e fará análises detalhadas dos \textit{logs} de detecção usando técnicas de \textit{machine learning} e estatística. Os componentes citados acima serão mais detalhados a seguir.
+\subsection{Pré-Processamento}
+Nessa etapa, os dados são coletados da rede e, a cada segundo, as métricas desejadas são calculadas para servirem de entrada para a correlação NaHiD. 
+\subsubsection{Entropia de IPs origem}
+A entropia de IPs origem é uma medida do grau de desordem onde ela é máxima, caso todos os elementos sejam diferentes e o tamanho da entrada é máxima e será mínima (igual a 0) quando todos os elementos são iguais. Assim, a entropia é dada pela seguinte fórmula:
+\begin{equation}
+H(X) = - \sum_{i}^{n}p(x_i)log_2(x_i)
+\end{equation}
+Onde $X$ é a entrada e representa os IPs origem das requisições e $n$ é o número total de valores possíveis para o IP origem.  
+\subsubsection{Variação de IPs Origem}
+Essa medida, diferentemente da entropia, trata-se da taxa de mudança dos IPs origem e é calculada da seguinte forma:
+\begin{equation}
+	V_Ip(X) = \frac{\delta}{N}
+\end{equation}
+Onde $\delta$ é o número de mudanças de IPs origem e $N$ é o numero total de IPs de entrada. Neste trabalho consideramos uma variação cada troca de valores como no exemplo:
+\begin{equation}
+	X = {1,2,1,2,3}
+\end{equation}
+Assim, nesse vetor consideram-se 4 variações ainda que sejam para um valor que repetiu-se. Assim se os IPs origem mudarem frequentemente, a variação será alta. \cite{NHOQUE}
+\\
+A observação do comportamento de ataques por \textit{flood} mostra que esse tipo de ameaça pode ser gerada por atacantes reais como zumbis. Se endereços de IP origem falsificados forem utilizados durante um ataque DDOS TCP SYN, a entropia e variação de IPs origem serão altas e esse comportamento também ocorre em um tráfego normal. \cite{NHOQUE}. Assim faz-se necessário o uso da taxa de pacotes em bits como terceiro medida de entrada para o cálculo da correlação NaHiD.
+
+\subsection{Módulo de Detecção}
+O modulo de detecção consiste no uso da correlação NaHiD utilizando os três parâmetros de entrada:
+\begin{itemize}
+	\item Variação de IPs origem
+	\item Entropia de IPs origem
+	\item Taxa de pacotes
+\end{itemize}
+Onde um tráfego normal deve ser fixado para a comparação com o tráfego a ser analisado. Além disso,define-se um limiar do resultado da correlação para distinguir pacotes normais de maliciosos 
+\subsection{Gerenciador Offline}
+Nessa etapa, os \textit{logs} são salvos e se o módulo de detecção identificar que o tráfego em questão é normal, este será atualizado com os valores do mesmo para a próxima análise
 
 \section{Detecção de Ataques DDOS usando NaHiD}
 \label{Sec:NaHiD_VERC}
 Para a avaliação do trabalho, duas bases de tráfegos de rede foram escolhidas: DARPA e  DataMining[escolher melhor esse nome] os quais serão mais detalhados aa seguir 
 \subsection{DARPA - MIT}
  A base de dados DARPA foi produzida por pesquisadores do \textit{Lincoln Laboratory} do Instituto de Tecnologia de Massachusetts nos Estados Unidos e tem por objetivo coletar dados de tráfego de rede da Força Aérea do país para encontrar vulnerabilidades em seu sistema bem como ser utilizado para avaliações futuras . Os dados foram coletados e passaram por uma fase de treinamento de 7 semanas com 38 tipos de ataques para simular ameaças internas a rede. O ambiente de rede era composto por duas partes: a rede interna da Força aérea e a rede externa que representava a Internet; ambos conectados por meio de um roteador como mostra a figura abaixo
- 
- 	\begin{tikzpicture}
- 	\path [
- 	mindmap,
- 	text = white,
- 	level 1 concept/.append style =
- 	{font=\small\bfseries, sibling angle=180},
- 	level 2 concept/.append style =
- 	{font=\tiny\bfseries},
- 	level 3 concept/.append style =
- 	{font=\tiny\bfseries},
- 	tex/.style     = {concept, ball color=blue,
- 		font=\normalsize\bfseries},
- 	engines/.style = {concept, ball color=green!50!black},
- 	formats/.style = {concept, ball color=blue!50!black},
- 	systems/.style = {concept, ball color=red!90!black},
- 	]
- 	node [tex] {Roteador} [clockwise from=180]
- 	child[concept color=green!50!black, nodes={engines}] {
- 		node {Base Aérea} [clockwise from=90]}
- 	child [concept color=red, nodes={systems}] {
- 		node {Internet} [clockwise from=90]};
- 	\end{tikzpicture}
+% \begin{figure}
+ 		\begin{tikzpicture}
+ 		\path [
+ 		mindmap,
+ 		text = white,
+ 		level 1 concept/.append style =
+ 		{font=\small\bfseries, sibling angle=180},
+ 		level 2 concept/.append style =
+ 		{font=\tiny\bfseries},
+ 		level 3 concept/.append style =
+ 		{font=\tiny\bfseries},
+ 		tex/.style     = {concept, ball color=blue,
+ 			font=\normalsize\bfseries},
+ 		engines/.style = {concept, ball color=green!50!black},
+ 		formats/.style = {concept, ball color=blue!50!black},
+ 		systems/.style = {concept, ball color=red!90!black},
+ 		]
+ 		node [tex] {Roteador} [clockwise from=180]
+ 		child[concept color=green!50!black, nodes={engines}] {
+ 			node {Base Aérea} [clockwise from=90]}
+ 		child [concept color=red, nodes={systems}] {
+ 			node {Internet} [clockwise from=90]};
+ 		\end{tikzpicture}
+% \end{figure}
 \\
 Tal banco de dados é disponibilizado pela DARPA em um arquivo de extensão tcpdump, bem como a listagem de tráfegos normais e ataques rotulados como mostrados nas tabelas seguir
 
@@ -145,3 +180,5 @@ Algumas considerações foram tomadas para a análise dessa base de dados:
 	\item A média das taxas dos pacotes foi considerada dentro da janela de um segundo.
 	\item Por ser um dataset composto apenas por ataques, a comparação com o limiar inverte-se para denotar o quanto dois pacotes são parecidos na correlação.
 \end{itemize}
+
+Para o processamento dos dados, o MATLAB foi utilizado

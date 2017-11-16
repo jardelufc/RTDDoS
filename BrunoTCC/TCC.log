@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  14 NOV 2017 02:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  16 NOV 2017 12:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1626,39 +1626,39 @@ LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 
 
 
-]
+] [10] [11]
 
-LaTeX Warning: Citation `DARPA' on page 10 undefined on input line 73.
+LaTeX Warning: Citation `DARPA' on page 12 undefined on input line 108.
 
 
-Overfull \hbox (3.46153pt too wide) in paragraph at lines 57--75
+Overfull \hbox (3.46153pt too wide) in paragraph at lines 92--110
  [] 
  []
 
 
-LaTeX Warning: Citation `DataMining' on page 10 undefined on input line 85.
+Underfull \hbox (badness 10000) in paragraph at lines 167--167
+[][][]|\T1/lmr/m/n/12 (+20) Exemplo base de da-dos
+ []
 
-[10pdfTeX warning (ext4): destination with the same identifier (name{table.1.1}
+[12pdfTeX warning (ext4): destination with the same identifier (name{table.1.1}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.87 	\item S
-             IDDOS]
-Underfull \hbox (badness 10000) in paragraph at lines 132--132
-[][][]|\T1/lmr/m/n/12 (+20) Exemplo base de da-dos
- []
+l.174 	\item P
+              ara construir a janela de um segundo, considerou-se a soma de ...
+]
 
+LaTeX Warning: Text page 13 contains only floats.
 
-LaTeX Warning: Citation `DataMining' on page 11 undefined on input line 133.
-
-) [11] [12pdfTeX warning (ext4): destination with the same identifier (name{tab
-le.1.2}) has been already used, duplicate ignored
+[13pdfTeX warning (ext4): destination with the same identifier (name{table.1.2}
+) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.88 \include{cap3/metodologia}
-                               ] (./TCC.bbl (./TCC.brf)
+l.174 	\item P
+              ara construir a janela de um segundo, considerou-se a soma de ...
+]) [14] (./TCC.bbl (./TCC.brf)
 \tf@brf=\write7
 \openout7 = `TCC.brf'.
 
@@ -1672,7 +1672,7 @@ bibitemlist
 No file TCC.ind.
 
 AED: lastpage setting LastPage
-[13
+[15
 
 
 ]
@@ -1692,7 +1692,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 123.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 123.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 123.
 Package rerunfilecheck Info: File `TCC.brf' has not changed.
-(rerunfilecheck)             Checksum: 09404FE8120A7D15C6AD023752C35CC7;222.
+(rerunfilecheck)             Checksum: 89449153E3B5D85718B5183950E6A306;322.
 
 
 LaTeX Warning: There were undefined references.
@@ -1703,13 +1703,13 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 123.
  ) 
 Here is how much of TeX's memory you used:
- 25444 strings out of 493029
- 451013 string characters out of 6136234
- 691152 words of memory out of 5000000
- 28375 multiletter control sequences out of 15000+600000
- 69466 words of font info for 78 fonts, out of 8000000 for 9000
+ 25486 strings out of 493029
+ 451526 string characters out of 6136234
+ 693881 words of memory out of 5000000
+ 28389 multiletter control sequences out of 15000+600000
+ 70270 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,12n,81p,722b,978s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,12n,81p,1166b,978s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/s
 hare/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
@@ -1725,10 +1725,10 @@ exmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm
 /lmsso12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/tex
 mf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/symbols/msbm10.pfb>
-Output written on TCC.pdf (14 pages, 504938 bytes).
+Output written on TCC.pdf (16 pages, 520846 bytes).
 PDF statistics:
- 251 PDF objects out of 1000 (max. 8388607)
- 207 compressed objects within 3 object streams
- 38 named destinations out of 1000 (max. 500000)
- 23696 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 310 PDF objects out of 1000 (max. 8388607)
+ 264 compressed objects within 3 object streams
+ 50 named destinations out of 1000 (max. 500000)
+ 23744 words of extra memory for PDF output out of 24883 (max. 10000000)
 
