@@ -59,30 +59,33 @@ Nessa etapa, os \textit{logs} são salvos e se o módulo de detecção identific
 Para a avaliação do trabalho, duas bases de tráfegos de rede foram escolhidas: DARPA e  DataMining[escolher melhor esse nome] os quais serão mais detalhados aa seguir 
 \subsection{DARPA - MIT}
  A base de dados DARPA foi produzida por pesquisadores do \textit{Lincoln Laboratory} do Instituto de Tecnologia de Massachusetts nos Estados Unidos e tem por objetivo coletar dados de tráfego de rede da Força Aérea do país para encontrar vulnerabilidades em seu sistema bem como ser utilizado para avaliações futuras . Os dados foram coletados e passaram por uma fase de treinamento de 7 semanas com 38 tipos de ataques para simular ameaças internas a rede. O ambiente de rede era composto por duas partes: a rede interna da Força aérea e a rede externa que representava a Internet; ambos conectados por meio de um roteador como mostra a figura abaixo
-% \begin{figure}
- 		\begin{tikzpicture}
- 		\path [
- 		mindmap,
- 		text = white,
- 		level 1 concept/.append style =
- 		{font=\small\bfseries, sibling angle=180},
- 		level 2 concept/.append style =
- 		{font=\tiny\bfseries},
- 		level 3 concept/.append style =
- 		{font=\tiny\bfseries},
- 		tex/.style     = {concept, ball color=blue,
- 			font=\normalsize\bfseries},
- 		engines/.style = {concept, ball color=green!50!black},
- 		formats/.style = {concept, ball color=blue!50!black},
- 		systems/.style = {concept, ball color=red!90!black},
- 		]
- 		node [tex] {Roteador} [clockwise from=180]
- 		child[concept color=green!50!black, nodes={engines}] {
- 			node {Base Aérea} [clockwise from=90]}
- 		child [concept color=red, nodes={systems}] {
- 			node {Internet} [clockwise from=90]};
- 		\end{tikzpicture}
-% \end{figure}
+ \begin{figure}
+	\caption{Estrutura de rede Base Aérea dos EUA }
+	\begin{tikzpicture}
+	\path [
+	mindmap,
+	text = white,
+	level 1 concept/.append style =
+	{font=\small\bfseries, sibling angle=180},
+	level 2 concept/.append style =
+	{font=\tiny\bfseries},
+	level 3 concept/.append style =
+	{font=\tiny\bfseries},
+	tex/.style     = {concept, ball color=blue,
+		font=\normalsize\bfseries},
+	engines/.style = {concept, ball color=green!50!black},
+	formats/.style = {concept, ball color=blue!50!black},
+	systems/.style = {concept, ball color=red!90!black},
+	]
+	node [tex] {Roteador} [clockwise from=180]
+	child[concept color=green!50!black, nodes={engines}] {
+		node {Base Aérea} [clockwise from=90]}
+	child [concept color=red, nodes={systems}] {
+		node {Internet} [clockwise from=90]};
+	\end{tikzpicture}
+	{Fonte: Elaborada pelo autor.}
+	\label{fig:DARPA_Estrututra}
+\end{figure}
 \\
 Tal banco de dados é disponibilizado pela DARPA em um arquivo de extensão tcpdump, bem como a listagem de tráfegos normais e ataques rotulados como mostrados nas tabelas seguir
 
@@ -130,7 +133,7 @@ A Tabela abaixo mostra os campos do \textit{dataset}
 \begin{table}[!b]
 	\centering
 	\begin{threeparttable}
-		\caption{Exemplo base de dados DARPA}
+		\caption{Estrutura base de dados \cite{DataMining}}
 		\label{Tab:DataMining}
 		%	\small
 		\begin{tabular}{c c }

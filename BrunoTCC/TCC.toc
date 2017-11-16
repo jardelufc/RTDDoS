@@ -5,18 +5,18 @@
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Metodologia}}{9}{chapter.1}
-\contentsline {section}{\numberline {1.1}Modelo de correla\IeC {\c c}\IeC {\~a}o NaHiD}{9}{section.1.1}
-\contentsline {section}{\numberline {1.2}Framework de detec\IeC {\c c}\IeC {\~a}o de ataques DDOS}{9}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}Pr\IeC {\'e}-Processamento}{10}{subsection.1.2.1}
-\contentsline {subsubsection}{\numberline {1.2.1.1}Entropia de IPs origem}{10}{subsubsection.1.2.1.1}
-\contentsline {subsubsection}{\numberline {1.2.1.2}Varia\IeC {\c c}\IeC {\~a}o de IPs Origem}{10}{subsubsection.1.2.1.2}
-\contentsline {subsection}{\numberline {1.2.2}M\IeC {\'o}dulo de Detec\IeC {\c c}\IeC {\~a}o}{11}{subsection.1.2.2}
-\contentsline {subsection}{\numberline {1.2.3}Gerenciador Offline}{11}{subsection.1.2.3}
-\contentsline {section}{\numberline {1.3}Detec\IeC {\c c}\IeC {\~a}o de Ataques DDOS usando NaHiD}{11}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}DARPA - MIT}{11}{subsection.1.3.1}
-\contentsline {subsection}{\numberline {1.3.2}DataMining}{12}{subsection.1.3.2}
+\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Metodologia}}{7}{chapter.1}
+\contentsline {section}{\numberline {1.1}Modelo de correla\IeC {\c c}\IeC {\~a}o NaHiD}{7}{section.1.1}
+\contentsline {section}{\numberline {1.2}Framework de detec\IeC {\c c}\IeC {\~a}o de ataques DDOS}{7}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Pr\IeC {\'e}-Processamento}{8}{subsection.1.2.1}
+\contentsline {subsubsection}{\numberline {1.2.1.1}Entropia de IPs origem}{8}{subsubsection.1.2.1.1}
+\contentsline {subsubsection}{\numberline {1.2.1.2}Varia\IeC {\c c}\IeC {\~a}o de IPs Origem}{8}{subsubsection.1.2.1.2}
+\contentsline {subsection}{\numberline {1.2.2}M\IeC {\'o}dulo de Detec\IeC {\c c}\IeC {\~a}o}{9}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}Gerenciador Offline}{9}{subsection.1.2.3}
+\contentsline {section}{\numberline {1.3}Detec\IeC {\c c}\IeC {\~a}o de Ataques DDOS usando NaHiD}{9}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}DARPA - MIT}{9}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}DataMining}{10}{subsection.1.3.2}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{15}{section*.8}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{13}{section*.8}
 \vspace {\cftbeforechapterskip }
