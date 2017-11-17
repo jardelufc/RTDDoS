@@ -5,16 +5,19 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.6 }
 
-\bibitem[Alkasassbeh, G.Al-Naymat e Hassanat 2016]{DataMining}
-\abntrefinfo{Alkasassbeh, G.Al-Naymat e Hassanat}{ALKASASSBEH; G.AL-NAYMAT;
-  HASSANAT}{2016}
-{ALKASASSBEH, M. \emph{et al.} Detecting distributed denial of service attacks
-  using data mining techniques. In:  . [S.l.: s.n.], 2016. p. 436--445.}
+\bibitem[Alkasassbeh \emph{et al.} 2016]{DataMining}
+\abntrefinfo{Alkasassbeh \emph{et al.}}{ALKASASSBEH \emph{et al.}}{2016}
+{ALKASASSBEH, M. \emph{et al.} Detecting {D}istributed {D}enial of {S}ervice
+  {A}ttacks {U}sing {D}ata {M}ining {T}echniques.
+v.~7, 01 2016.}
 
-\bibitem[Hoque, Kashyap e Bhattachaaryya 2017]{NHOQUE}
-\abntrefinfo{Hoque, Kashyap e Bhattachaaryya}{HOQUE; KASHYAP;
-  BHATTACHAARYYA}{2017}
-{HOQUE, N. \emph{et al.} {R}eal-time {DDOS} attack detection using {FPGA}.
-\textbf{Computer Communications}, p. 48--58, 2017.}
+\bibitem[Hoque, Kashyap e Bhattacharyya 2017]{HOQUE201748}
+\abntrefinfo{Hoque, Kashyap e Bhattacharyya}{HOQUE; KASHYAP;
+  BHATTACHARYYA}{2017}
+{HOQUE, N. \emph{et al.} Real-time {DDoS} {A}ttack {D}etection {U}sing {FPGA}.
+\textbf{Computer Communications}, v.~110, n. Supplement C, p. 48 -- 58, 2017.
+ISSN 0140-3664.
+Dispon{\'\i}vel em:
+  \url{http://www.sciencedirect.com/science/article/pii/S0140366416306442}.}
 
 \end{thebibliography}

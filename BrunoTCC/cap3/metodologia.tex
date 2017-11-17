@@ -6,7 +6,7 @@ Neste capítulo, os detalhes do \textit{fremework} serão apresentados bem como 
 
 \section{Modelo de correlação NaHiD}
 
-Neste trabalho, o \textit{framework} utilizado baseia-se na correlação proposta por \cite{NHOQUE} chamada NaHiD, cujo objetivo é distinguir objetos de tráfego normais e maliciosos. Tal medida leva em consideração principalmente desvio padrão e média de cada objeto, ponderando cada elemento como mostrado na fórmula a seguir:  
+Neste trabalho, o \textit{framework} utilizado baseia-se na correlação proposta por \cite{HOQUE201748} chamada NaHiD, cujo objetivo é distinguir objetos de tráfego normais e maliciosos. Tal medida leva em consideração principalmente desvio padrão e média de cada objeto, ponderando cada elemento como mostrado na fórmula a seguir:  
 
 \begin{equation}
 	NaHiD(X,Y) = 1 - \frac{1}{n} \sum_{i=1}^{n} \frac{\left(|X(i) - Y(i)|\right)}{||\mu{X} - sX| - X(i)| + ||\mu{Y} - sY| - Y(i)|}
@@ -18,7 +18,7 @@ onde
 	\item $sX$: Desvio padrão do objeto de tráfego X.
 	\item $sY$: Desvio Padrão do objeto de tráfego Y.
 \end{itemize}
-As provas de simetria e identidade da correlação podem ser encontradas em \cite{NHOQUE}.
+As provas de simetria e identidade da correlação podem ser encontradas em \cite{HOQUE201748}.
 
 \section{Framework de detecção de ataques DDOS}
 O \textit{framework} tem como objetivo detectar ataques DDoS em tempo real no computador alvo a partir de dados de tráfego de rede com uma taxa aceitável de erros. Tal arcabouço possui três componentes: pré-processamento, um módulo de detecção e um gerente de segurança.Amostras de tráfego serão capturadas de uma porta do roteador como um pacote TCP/IP, que são enviadas ao módulo de pré-processamento. Nessa fase, a cada segundo, os pacotes recebidos são agrupados e essa instância de tráfego é enviada para o módulo de detecção de ataque, que irá classificar a instância como normal ou ataque. O gerente de segurança manterá um perfil normal e um valor limiar em sua base de perfis, para ser usado pelo módulo de detecção. Incrementalmente, o gerente recalcula o perfil normal e o limiar baseado nos valores anteriores. O último módulo, que é o módulo de segurança irá operar offline e fará análises detalhadas dos \textit{logs} de detecção usando técnicas de \textit{machine learning} e estatística. Os componentes citados acima serão mais detalhados a seguir.
@@ -33,15 +33,15 @@ Onde $X$ é a entrada e representa os IPs origem das requisições e $n$ é o n�
 \subsubsection{Variação de IPs Origem}
 Essa medida, diferentemente da entropia, trata-se da taxa de mudança dos IPs origem e é calculada da seguinte forma:
 \begin{equation}
-	V_Ip(X) = \frac{\delta}{N}
+	V_{Ip}(X) = \frac{\delta}{N}
 \end{equation}
 Onde $\delta$ é o número de mudanças de IPs origem e $N$ é o numero total de IPs de entrada. Neste trabalho consideramos uma variação cada troca de valores como no exemplo:
 \begin{equation}
 	X = {1,2,1,2,3}
 \end{equation}
-Assim, nesse vetor consideram-se 4 variações ainda que sejam para um valor que repetiu-se. Assim se os IPs origem mudarem frequentemente, a variação será alta. \cite{NHOQUE}
+Assim, nesse vetor consideram-se 4 variações ainda que sejam para um valor que repetiu-se. Assim se os IPs origem mudarem frequentemente, a variação será alta. \cite{HOQUE201748}
 \\
-A observação do comportamento de ataques por \textit{flood} mostra que esse tipo de ameaça pode ser gerada por atacantes reais como zumbis. Se endereços de IP origem falsificados forem utilizados durante um ataque DDOS TCP SYN, a entropia e variação de IPs origem serão altas e esse comportamento também ocorre em um tráfego normal. \cite{NHOQUE}. Assim faz-se necessário o uso da taxa de pacotes em bits como terceiro medida de entrada para o cálculo da correlação NaHiD.
+A observação do comportamento de ataques por \textit{flood} mostra que esse tipo de ameaça pode ser gerada por atacantes reais como zumbis. Se endereços de IP origem falsificados forem utilizados durante um ataque DDOS TCP SYN, a entropia e variação de IPs origem serão altas e esse comportamento também ocorre em um tráfego normal. \cite{HOQUE201748}. Assim faz-se necessário o uso da taxa de pacotes em bits como terceiro medida de entrada para o cálculo da correlação NaHiD.
 
 \subsection{Módulo de Detecção}
 O modulo de detecção consiste no uso da correlação NaHiD utilizando os três parâmetros de entrada:
@@ -58,7 +58,7 @@ Nessa etapa, os \textit{logs} são salvos e se o módulo de detecção identific
 \label{Sec:NaHiD_VERC}
 Para a avaliação do trabalho, duas bases de tráfegos de rede foram escolhidas: DARPA e  DataMining[escolher melhor esse nome] os quais serão mais detalhados aa seguir 
 \subsection{DARPA - MIT}
- A base de dados DARPA foi produzida por pesquisadores do \textit{Lincoln Laboratory} do Instituto de Tecnologia de Massachusetts nos Estados Unidos e tem por objetivo coletar dados de tráfego de rede da Força Aérea do país para encontrar vulnerabilidades em seu sistema bem como ser utilizado para avaliações futuras . Os dados foram coletados e passaram por uma fase de treinamento de 7 semanas com 38 tipos de ataques para simular ameaças internas a rede. O ambiente de rede era composto por duas partes: a rede interna da Força aérea e a rede externa que representava a Internet; ambos conectados por meio de um roteador como mostra a figura abaixo
+ A base de dados DARPA foi produzida por pesquisadores do \textit{Lincoln Laboratory} do Instituto de Tecnologia de Massachusetts nos Estados Unidos e tem por objetivo coletar dados de tráfego de rede da Força Aérea do país para encontrar vulnerabilidades em seu sistema bem como ser utilizado para avaliações futuras . Os dados foram coletados e passaram por uma fase de treinamento de 7 semanas com 38 tipos de ataques para simular ameaças internas a rede. O ambiente de rede era composto por duas partes: a rede interna da Força aérea e a rede externa que representava a Internet; ambos conectados por meio de um roteador como mostra a \figref{fig:DARPA_Estrututra}
  \begin{figure}
 	\caption{Estrutura de rede Base Aérea dos EUA }
 	\begin{tikzpicture}
