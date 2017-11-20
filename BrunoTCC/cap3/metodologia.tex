@@ -58,8 +58,8 @@ Nessa etapa, os \textit{logs} são salvos e se o módulo de detecção identific
 \label{Sec:NaHiD_VERC}
 Para a avaliação do trabalho, duas bases de tráfegos de rede foram escolhidas: DARPA e  DataMining[escolher melhor esse nome] os quais serão mais detalhados aa seguir 
 \subsection{DARPA - MIT}
- A base de dados DARPA foi produzida por pesquisadores do \textit{Lincoln Laboratory} do Instituto de Tecnologia de Massachusetts nos Estados Unidos e tem por objetivo coletar dados de tráfego de rede da Força Aérea do país para encontrar vulnerabilidades em seu sistema bem como ser utilizado para avaliações futuras . Os dados foram coletados e passaram por uma fase de treinamento de 7 semanas com 38 tipos de ataques para simular ameaças internas a rede. O ambiente de rede era composto por duas partes: a rede interna da Força aérea e a rede externa que representava a Internet; ambos conectados por meio de um roteador como mostra a \figref{fig:DARPA_Estrututra}
- \begin{figure}
+ A base de dados DARPA foi produzida por pesquisadores do \textit{Lincoln Laboratory} do Instituto de Tecnologia de Massachusetts nos Estados Unidos e tem por objetivo coletar dados de tráfego de rede da Força Aérea do país para encontrar vulnerabilidades em seu sistema bem como ser utilizado para avaliações futuras. Os dados foram coletados e passaram por uma fase de treinamento de 7 semanas com 38 tipos de ataques para simular ameaças internas a rede. O ambiente de rede era composto por duas partes: a rede interna da Força aérea e a rede externa que representava a Internet; ambos conectados por meio de um roteador como mostra a \figref{fig:DARPA_Estrututra}
+ \begin{figure}[!htb]
 	\caption{Estrutura de rede Base Aérea dos EUA }
 	\begin{tikzpicture}
 	\path [
@@ -87,9 +87,9 @@ Para a avaliação do trabalho, duas bases de tráfegos de rede foram escolhidas
 	\label{fig:DARPA_Estrututra}
 \end{figure}
 \\
-Tal banco de dados é disponibilizado pela DARPA em um arquivo de extensão tcpdump, bem como a listagem de tráfegos normais e ataques rotulados como mostrados nas tabelas seguir
+Tal banco de dados é disponibilizado pela DARPA em um arquivo de extensão tcpdump, sendo possível extrair informações acerca de cada pacote transmitido durante o período de aquisição dos dados como mostra o exemplo na \tabref{Tab:WiresharkEx}.
 
-\begin{table}[!b]
+\begin{table}[!htb]
 	\centering
 	\begin{threeparttable}
 		\caption{Exemplo base de dados DARPA}
@@ -112,7 +112,7 @@ Tal banco de dados é disponibilizado pela DARPA em um arquivo de extensão tcpd
 	\end{threeparttable}
 \end{table}
 
-No presente trabalho ferramentas como edicap e tcpdump foram utilizadas para o tratamento desse dataset. Assim, algumas considerações devem ser feitas:
+No presente trabalho ferramentas como edicap e tcpdump foram utilizadas para o tratamento desse \textit{dataset}. Assim, algumas considerações devem ser feitas:
 \begin{itemize}
 	\item Janela de um segundo de tráfego
 	\item Cálculo de entropia, variação de IPs origem e taxa de pacotes média
@@ -128,7 +128,7 @@ Outra base de dados estudada no trabalho foi a desenvolvida por \cite{DataMining
 	\item Smurf
 \end{itemize}
 
-A Tabela abaixo mostra os campos do \textit{dataset} 
+A \tabref{Tab:DataMining} mostra os campos do \textit{dataset} 
 
 \begin{table}[!b]
 	\centering

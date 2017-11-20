@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.11.14)  17 NOV 2017 15:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  19 NOV 2017 21:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1422,8 +1422,11 @@ Writing index file TCC.idx
 LaTeX Warning: Unused global option(s):
     [.english].
 
-(./TCC.aux (./editaveis/siglas.aux) (./editaveis/simbolos.aux)
-(./cap3/metodologia.aux))
+(./TCC.aux (./editaveis/folhadeaprovacao.aux) (./editaveis/dedicatoria.aux)
+(./editaveis/agradecimentos.aux) (./editaveis/epigrafe.aux) (./resumo/ptbr.aux)
+(./resumo/us.aux) (./editaveis/siglas.aux) (./editaveis/simbolos.aux)
+(./cap1/introducao.aux) (./cap2/fundamentacaoteorica.aux)
+(./cap3/metodologia.aux) (./cap4/resultados.aux) (./cap5/conclusoes.aux))
 \openout1 = `TCC.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
@@ -1441,7 +1444,8 @@ LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Try loading font information for T1+lmr on input line 17.
- (/usr/share/texmf/tex/latex/lm/t1lmr.fd
+
+(/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 \AtBeginShipoutBox=\box47
@@ -1577,38 +1581,115 @@ l.28
 
 
 ]
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 55.
- (/usr/share/texmf/tex/latex/lm/t1lmss.fd
+\openout2 = `editaveis/folhadeaprovacao.aux'.
+
+ (./editaveis/folhadeaprovacao.tex
+Underfull \hbox (badness 10000) in paragraph at lines 24--27
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--27
+
+ []
+
+[2
+
+
+
+])
+\openout2 = `editaveis/dedicatoria.aux'.
+
+ (./editaveis/dedicatoria.tex [3
+
+
+
+])
+\openout2 = `editaveis/agradecimentos.aux'.
+
+ (./editaveis/agradecimentos.tex
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 5.
+
+(/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package microtype Info: Loading generic settings for font family
 (microtype)             `lmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- (./TCC.lof) [2
+ [4
 
-] (./TCC.lot) [3
+
+
+
+])
+\openout2 = `editaveis/epigrafe.aux'.
+
+ (./editaveis/epigrafe.tex
+[5
+
+
+
+])
+\openout2 = `resumo/ptbr.aux'.
+
+ (./resumo/ptbr.tex [6
+
+
+
+])
+\openout2 = `resumo/us.aux'.
+
+ (./resumo/us.tex
+
+Package babel Warning: You haven't loaded the language english yet
+(babel)                I'll proceed, but expect unexpected results.
+(babel)                Reported on input line 3.
+
+[7
+
+
+
+]) (./TCC.lof) [8
+
+
+] (./TCC.lot) [9
 
 ]
 \openout2 = `editaveis/siglas.aux'.
 
- (./editaveis/siglas.tex [4
+ (./editaveis/siglas.tex [10
 
 
 
 ])
 \openout2 = `editaveis/simbolos.aux'.
 
- (./editaveis/simbolos.tex [5
+
+(./editaveis/simbolos.tex [11
 
 
 
 
 ]) (./TCC.toc
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 11.
-)
-[6
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 18.
+) [12
+
+
+]
+\openout2 = `cap1/introducao.aux'.
+
+ (./cap1/introducao.tex)
+[13
+
+
+
+]
+\openout2 = `cap2/fundamentacaoteorica.aux'.
+
+ (./cap2/fundamentacaoteorica.tex) [14
+
 
 
 ]
@@ -1616,49 +1697,66 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
 
  (./cap3/metodologia.tex
 LaTeX Font Info:    Try loading font information for OMS+lmr on input line 16.
- (/usr/share/texmf/tex/latex/lm/omslmr.fd
+
+(/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 16.
- [7
+ [15
 
 
 
-]
-[8]
+] [16]
 Underfull \hbox (badness 2310) in paragraph at lines 85--88
 [][] \T1/lmr/m/n/12 (+20) Fonte: Ela-bo-rada
  []
 
 
-LaTeX Warning: Citation `DARPA' on page 9 undefined on input line 111.
+LaTeX Warning: Citation `DARPA' on page 17 undefined on input line 111.
 
 
 Overfull \hbox (3.46153pt too wide) in paragraph at lines 95--113
  [] 
  []
 
-[9] [10pdfTeX warning (ext4): destination with the same identifier (name{figure
-.1.1}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.173 \end{table}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{table.1.1}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.173 \end{table}
-                 ] [11pdfTeX warning (ext4): destination with the same identifi
-er (name{table.1.2}) has been already used, duplicate ignored
+[17] [18pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.3.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.177 	\item P
               ara construir a janela de um segundo, considerou-se a soma de ...
-]) [12] (./TCC.bbl (./TCC.brf)
+pdfTeX warning (ext4): destination with the same identifier (name{table.3.1}) h
+as been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.177 	\item P
+              ara construir a janela de um segundo, considerou-se a soma de ...
+] [19pdfTeX warning (ext4): destination with the same identifier (name{table.3.
+2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.177 	\item P
+              ara construir a janela de um segundo, considerou-se a soma de ...
+]) [20]
+\openout2 = `cap4/resultados.aux'.
+
+ (./cap4/resultados.tex) [21
+
+
+
+]
+\openout2 = `cap5/conclusoes.aux'.
+
+ (./cap5/conclusoes.tex) [22
+
+
+
+] (./TCC.bbl
+(./TCC.brf)
 \tf@brf=\write7
 \openout7 = `TCC.brf'.
 
@@ -1672,7 +1770,7 @@ bibitemlist
 No file TCC.ind.
 
 AED: lastpage setting LastPage
-[13
+[23
 
 
 ]
@@ -1685,14 +1783,18 @@ AED: lastpage setting LastPage
 \tf@toc=\write10
 \openout10 = `TCC.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 123.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 123.
- (./TCC.aux (./editaveis/siglas.aux) (./editaveis/simbolos.aux)
-(./cap3/metodologia.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 123.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 123.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 121.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 121.
+ (./TCC.aux (./editaveis/folhadeaprovacao.aux) (./editaveis/dedicatoria.aux) (.
+/editaveis/agradecimentos.aux) (./editaveis/epigrafe.aux)
+(./resumo/ptbr.aux) (./resumo/us.aux) (./editaveis/siglas.aux)
+(./editaveis/simbolos.aux) (./cap1/introducao.aux)
+(./cap2/fundamentacaoteorica.aux) (./cap3/metodologia.aux)
+(./cap4/resultados.aux) (./cap5/conclusoes.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 121.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 121.
 Package rerunfilecheck Info: File `TCC.brf' has not changed.
-(rerunfilecheck)             Checksum: EEB0C4E8362C0EB355CFC9F90337803C;434.
+(rerunfilecheck)             Checksum: 467D0D3C6710DC471F5A7BBC0861FC27;438.
 
 
 LaTeX Warning: There were undefined references.
@@ -1700,16 +1802,16 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 123.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 121.
  ) 
 Here is how much of TeX's memory you used:
- 25493 strings out of 493029
- 451669 string characters out of 6136233
- 696555 words of memory out of 5000000
- 28391 multiletter control sequences out of 15000+600000
+ 25649 strings out of 493029
+ 454423 string characters out of 6136234
+ 708160 words of memory out of 5000000
+ 28447 multiletter control sequences out of 15000+600000
  64692 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,12n,81p,1166b,1121s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,12n,81p,1862b,1121s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share
 /texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
@@ -1723,10 +1825,10 @@ are/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/t
 exmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm
 /lmsso12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on TCC.pdf (14 pages, 494039 bytes).
+Output written on TCC.pdf (24 pages, 506747 bytes).
 PDF statistics:
- 303 PDF objects out of 1000 (max. 8388607)
- 259 compressed objects within 3 object streams
- 49 named destinations out of 1000 (max. 500000)
- 22720 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 413 PDF objects out of 1000 (max. 8388607)
+ 358 compressed objects within 4 object streams
+ 78 named destinations out of 1000 (max. 500000)
+ 22816 words of extra memory for PDF output out of 24883 (max. 10000000)
 

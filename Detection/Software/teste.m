@@ -18,7 +18,7 @@ for i = 1:length(time)
     
 end
 
-keyboard;
+% keyboard;
 t = 1;
 while t < length(diferencas)
     coisa = diferencas(t);
