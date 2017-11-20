@@ -1,0 +1,27 @@
+\chapter{Introdução}\label{CAP:introducao}
+%\thispagestyle{empty}
+
+O ataque do tipo DoS (Denial Of Service, em inglês), também conhecido como ataque de negação de serviço, é uma tentativa de fazer com que aconteça uma sobrecarga em um servidor ou computador comum para que recursos do sistema fiquem indisponíveis para seus utilizadores. Esses ataques se tornam cada vez mais comuns, principalmente pelo surgimento de ataques do tipo DDoS(um tipo de ataque DoS de grandes dimensões), por isso, vale ressaltar a importância da detecção desse tipo de ataques. Tendo como principal objetivo detecção de ataques DDoS em tempo real, foi escolhido uma solução de detecção em hardware, pois soluções baseadas em software são ineficientes para aplicações de tempo real, uma vez que essas exigem grande quantidade de ciclos de CPU, utilizados em todo o software. Uma arquitetura de hardware dedicada para o módulo de detecção de ataque DDoS é considerada para implementação em FPGAs. Os recentes dispositivos FPGA oferecem alto desempenho e estão aptos a receber lógicas grandes e complexas. Além disso, os FPGAs oferecem adaptabilidade dinâmica, que é importante para aplicações que requerem mudanças freqüentes em suas configurações, como a detecção de ataques DDoS que evoluem com freqüência. No trabalho será utilizado, uma solução híbrida para detecção de ataques, para a implementação da variável de correlação proposta. Por isso, os módulos do pré-processador e do gerenciador de segurança são implementados separadamente usando software. As máquinas que implementam esses módulos e o FPGA podem comunicar usando as interfaces de E / S de alta velocidade suportadas pelos FPGAs modernos, como PCeI e Gigabit Ethernet. O módulo de detecção de ataque recebe a instância de tráfego do módulo pré-processador. Além disso, ele recebe o perfil normal e um valor limiar do banco de dados do perfil criado pelo gerenciador de segurança. Cada uma das instâncias de tráfego e o perfil padrão são vetores que consistem em três recursos de tráfego. O módulo de detecção de ataque calcula primeiro o NaHiD VERC (variável de correlação de acordo com a principal referência de estudo, “Real-time DDoS attack detection using FPGA”) entre a instância de tráfego de entrada e o perfil normal. O valor de correlação calculado é comparado com o limite para classificar a ocorrência de tráfego recebido como ataque ou normal. O resultado da classificação é armazenado no banco de dados Log para análise off-line pelo gerenciador de segurança. Além disso, um alarme é gerado no caso de a instância ser classificada como um ataque. A
+2/3
+nível de arquitetura, para separar controle e computação, a unidade de controle e o datapath são desenvolvidos separadamente. No entanto, eles são tão intrinsecamente dependentes. O datapath consiste nos operadores para os cálculos e os registros para armazenar as entradas e os resultados da computação intermediária. A unidade de controle envia os sinais de seleção do multiplexador usados pelas operações e os registros para selecionar a entrada. Eles são as principais partes do módulo da FPGA para a detecção, porém existem outros elementos que vão ser de suma importância para realizar operações complexas e necessárias.
+\section{Motivação e objetivos}
+
+
+ 
+\section{Contribuicoes}
+
+
+
+
+\section{Producao cientifica}
+
+
+\section{Organizacao da tese}
+
+\noindent \textbf{Capitulo \ref{CAP2}}: descricao...
+
+\noindent \textbf{Capitulo \ref{CAP3}}: descricaoo...
+
+\noindent \textbf{Capitulo \ref{CAP4}}: descricao...
+
+\noindent \textbf{Capitulo \ref{CAP5}}: descricao...

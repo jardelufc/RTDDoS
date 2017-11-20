@@ -509,6 +509,14 @@ output reg [1:0] opadd1,opadd2,opadd3,opadd4,opadd5;
                     end
                 6'b101001:
                     begin
+                        //Verc
+                        seladd5_2=0;
+                        seladd5_1=0;
+                        opadd5=2'b10; 
+                        //register 
+                        selr11=2'b01;
+                        clr11=0;   
+                        enable11=1;  
                     end
                 6'b101010:
                     begin   

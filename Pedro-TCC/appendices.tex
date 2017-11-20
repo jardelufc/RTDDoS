@@ -1,0 +1,27 @@
+\chapter{Título do Apêndice}
+\label{Apx:A}
+
+
+
+
+\chapter{Exemplo do pacote Algorithm}
+\label{Apx:B}
+
+
+\begin{algorithm}[!h]
+\caption{Estimador ML otimizado.}\label{Alg:MAXVER}
+\begin{algorithmic}[1]
+\STATE Inicializar o contador: $j\leftarrow 1$;%
+\STATE Fixar o limiar de variação das estimativas: $e_{\mathrm{out}}\leftarrow 10^{-4}$;%
+\STATE Fixar o número máximo de iterações: $N\leftarrow 1000$;%
+\STATE Computar o ponto inicial: $\hat \gamma(0)$;%
+\STATE Determinar o limiar inicial: $e_1 \leftarrow1000$;%
+\STATE Estabelecer o valor inicial de $\alpha$: $\hat \alpha(0) \leftarrow -10^{-6}$;%
+\WHILE{ $e_j \geq e_{\mathrm{out}}$ e $ j\leq M$}
+    \STATE Solucionar $\hat \alpha_j\leftarrow {\arg \max}_{\alpha}\;{l_1(\alpha; \gamma_{j-1},\mathbf{z},n)}$;%
+    \STATE Solucionar $\hat \gamma_j\leftarrow {\arg \max}_{\gamma}\;{l_2(\gamma; \alpha_j,\mathbf{z},n)}$;%
+    \STATE $j\leftarrow j+1$
+    \STATE Computar o critério de convergência: $e_j$;%
+\ENDWHILE
+\end{algorithmic}
+\end{algorithm}

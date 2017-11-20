@@ -1,0 +1,14 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{1.52 }
+
+\bibitem[Oetiker \textit{et al.} 2007]{Oetiker:1995}
+\abntrefinfo{Oetiker \textit{et al.}}{OETIKER \textit{et al.}}{2007}
+{OETIKER, Tobias; PARTL, Hubert; HYNA, Irene; SCHLEGL, Elisabeth. \textbf{Uma
+  não tão pequena introdução ao LaTex}. [S.l.]: Free Software Foundation,
+  2007.}
+
+\end{thebibliography}

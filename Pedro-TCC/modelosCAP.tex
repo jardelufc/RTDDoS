@@ -1,0 +1,38 @@
+%Estilo de formatação de capítulos
+
+\makeatletter
+\newcommand{\thechapterwords}
+{ \ifcase \thechapter\or 1\or 2\or 3\or 4\or 5\or6\or 7\or 8\or 9\or 10\or 11\fi}
+
+\def\@makechapterhead#1{%
+\vspace*{10\p@}%
+{\parindent \z@  \reset@font
+
+\scshape \@chapapp{} \thechapterwords
+\quad %
+\par\nobreak
+\vspace*{10\p@}%
+\interlinepenalty\@M
+\hrule
+\vspace*{10\p@}%
+\Huge \bfseries #1\par\nobreak
+\par
+\vspace*{10\p@}%
+\hrule
+\vskip 40\p@
+}}
+\def\@makeschapterhead#1{%
+\vspace*{10\p@}%
+{\parindent \z@ \centering \reset@font
+\par\nobreak
+\vspace*{10\p@}%
+\interlinepenalty\@M
+\hrule
+\vspace*{10\p@}%
+\Huge \bfseries #1\par\nobreak
+\par
+\vspace*{10\p@}%
+\hrule
+\vskip 40\p@
+%\vskip 100\p@
+}}

@@ -58,7 +58,7 @@ extend er5 (.a(R5resul),.y(R5ex));
 extend er1  (.a(R1resul),.y(R1ex));
 extend #(20) er11 (.a(R11resul),.y(R11ex));
 extend #(20) ediv (.a(divresul),.y(divnew));
-//Reduce( Módulo para ajustar Saídas de 24 para 12 bits)
+//Reduce(Módulo para ajustar Saídas de 24 para 12 bits)
 
 reduce rr7 (.a(R7resul),.y(R7resulnew));
 reduce rr1 (.a(R1resul),.y(R1resulnew));
@@ -92,7 +92,7 @@ mux4 mux1mul1(.a(R1resulnew),.b(y1r),.c(x1r),.d(0),.sel(selmul1_1),.y(op1mul1));
 
 //Multiplexadores do Somador 5
 mux2 mux2add5(.a(R11ex),.b(divnew),.sel(seladd5_2),.y(op2add5));
-mux2 mux1add5(.a(100),.b(R11ex),.sel(seladd5_1),.y(op1add5));
+mux2 mux1add5(.a(24'b000000000000000100000000),.b(R11ex),.sel(seladd5_1),.y(op1add5));
 //Multiplexadores do Somador 4
 mux6 mux2add4(.a(R1resul),.b(R2resul),.c(Ry3new),.d(Ry2new),.e(Ry1new),.f(0),.g(0),.h(0),.sel(seladd4_2),.y(op2add4));
 mux4 mux1add4(.a(R8resul),.b(Rx3new),.c(Rx2new),.d(Rx1new),.sel(seladd4_1),.y(op1add4));

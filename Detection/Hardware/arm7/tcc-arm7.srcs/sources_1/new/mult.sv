@@ -22,7 +22,7 @@
 
 module mul(a,b,mul);
 input [10:0] a,b;
-output [24:0]mul;
+output [23:0]mul;
 
 assign mul=a*b;
 

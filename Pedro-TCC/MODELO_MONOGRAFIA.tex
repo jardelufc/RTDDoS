@@ -1,0 +1,143 @@
+\documentclass[ruledheader,noindentfirst,anapcustomindent,abntfigtabnum,tocpage=plain]{abnt}
+\usepackage{amsmath, amssymb, amsthm, verbatim, amsfonts, amstext}
+%\usepackage[latin1]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{dropping}
+\usepackage{graphicx}
+\usepackage[hang,small,bf]{caption}
+\usepackage[abnt-etal-list=0,abnt-etal-text=it,abnt-and-type=&,abnt-emphasize=bf,abnt-full-initials=yes,alf,bibjustif]{abntcite}
+\usepackage{fancyhdr}
+\usepackage{makeidx}
+\usepackage[none]{hyphenat}
+\usepackage{color}
+\usepackage{subfig}
+\usepackage{algorithms}
+\usepackage{algorithmic}
+\usepackage{mdwlist}
+\usepackage{bm}
+\usepackage[titletoc,title]{appendix}
+\usepackage{ltxtable}
+\usepackage{longtable}
+\usepackage{supertabular}
+\usepackage{indentfirst}
+\usepackage{color}
+\usepackage{icomma}
+
+\sloppy
+
+
+%
+%Tradução do pacote Algorithm para portugues
+%
+\renewcommand{\algorithmicrequire}{\textbf{Entrada:}}
+\renewcommand{\algorithmicensure}{\textbf{Saída:}}
+\renewcommand{\algorithmicend}{\textbf{fim}}
+\renewcommand{\algorithmicif}{\textbf{se}}
+\renewcommand{\algorithmicthen}{\textbf{então}}
+\renewcommand{\algorithmicelse}{\textbf{senão}}
+\renewcommand{\algorithmicelsif}{\algorithmicelse \, \algorithmicif}
+\renewcommand{\algorithmicendif}{\algorithmicend \, \algorithmicif}
+\renewcommand{\algorithmicfor}{\textbf{para}}
+\renewcommand{\algorithmicforall}{\textbf{para todo}}
+\renewcommand{\algorithmicdo}{\textbf{fazer}}
+\renewcommand{\algorithmicendfor}{\algorithmicend \, \algorithmicfor}
+\renewcommand{\algorithmicwhile}{\textbf{enquanto}}
+\renewcommand{\algorithmicendwhile}{\algorithmicend \, \algorithmicwhile}
+\renewcommand{\algorithmicloop}{\textbf{laço}}
+\renewcommand{\algorithmicendloop}{\algorithmicend \, \algorithmicloop}
+\renewcommand{\algorithmicrepeat}{\textbf{repetir}}
+\renewcommand{\algorithmicuntil}{\textbf{até}}
+\renewcommand{\algorithmiccomment}[1]{\{#1\}}
+\renewcommand{\listalgorithmname}{Lista de Algoritmos}
+\floatname{algorithm}{Algoritmo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeindex
+
+%%%% O arquivo modelosCAP.tex possui as definições para ciação do estilo de capítulo (fonte de título, barras horizontais, etc.)
+% ele não gera texto de saída, é um arquivo de configuração somente
+%
+\input{modelosCAP}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%FIM DO PREAMBULO%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%%%%% IMPORTANTE: ALTERA O TEXTO ENTRE ARIAL E TIMES NEW ROMAN (ALTERNAR OS COMENTÁRIOS)
+%
+%%%%%%%%%%%%%%%%%%%%%PARA UTILIZAR ARIAL%%%%%%%%%%%%%%%%%%%%%%%
+%
+\fontfamily{phv}                    %fonte Arial
+\renewcommand{\rmdefault}{phv}      %
+%
+%%%%%%%%%%%%%%%%%%%%%PARA UTILIZAR TIMES%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\fontfamily{ptm}               %fonte Times
+%\renewcommand{\rmdefault}{ptm} %
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%Arquivos .tex com os elementos pré-textuais
+%
+\include{capa}
+\include{folharosto}
+\include{folhadeaprovacao}
+\include{dedicatoria}
+\include{agradecimentos}
+\include{epigrafe}
+\pagestyle{plain}%%%%% Utilizar ESTILO PLAIN AQUI%%%%%%%
+\include{resumo}
+\include{abstract}
+
+%%%Comandos para criação automática das listas
+%
+\tableofcontents
+\listoffigures
+\listoftables
+
+%%%Comandos para criar outras listas não suportadas pelo pacote ABNTex%%%
+%
+\pretextualchapter{Lista de Símbolos}
+\input{nomenclatura}
+\newpage
+
+\pretextualchapter{Lista de Abreviacoes}
+\input{abreviacoes}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Capítulos passam a ter páginas numeradas
+%
+\pagestyle{fancy}
+
+%resseta os contadores de capítulo e seção
+%
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+%%%%%%%%%%%%%%NÃO LEMBRO O QUE FAZ, APARENTEMENTE NADA, TESTAR DEPOIS
+%\fancyhf{}%
+%\fancyhead[RO,LE]{\large\slshape\thepage}%
+%\fancyhead[CE]{\large\slshape\leftmark}%
+%\fancyhead[CO]{\large\slshape\rightmark}%
+
+
+%%% Outros arquivos .tex. É acoselhável utilizar vários arquivos, pelo menos um por capítulo
+\include{introducao}
+\include{cap2}
+\include{cap3}
+\include{cap4}
+\include{cap5}
+
+
+%%%% Estilo de citação ABNT e arquivo de bibitens (mybibliography.bib)
+\bibliographystyle{abnt-alf}
+\bibliography{mybibliography}
+
+\apendice
+\include{appendices}
+
+
+\end{document}
