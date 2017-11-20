@@ -1,27 +1,28 @@
 \chapter[Metodologia]{Metodologia}
 \label{metodologia}
 
-Neste capítulo, os detalhes do \textit{framework} serão apresentados bem como a modelagem do ambiente de simulação utilizado para a detecção de Ataques DDoS
+Neste capítulo, os detalhes do \textit{framework} são apresentados, bem como a modelagem do ambiente de simulação utilizado para a detecção de ataques DDoS. 
+
 % ----------------------------------------------------------
 
 \section{Modelo de correlação NaHiD}
 
-Neste trabalho, o \textit{framework} utilizado baseia-se na correlação proposta por \cite{HOQUE201748} chamada NaHiD, cujo objetivo é distinguir objetos de tráfego normais e maliciosos. Tal medida leva em consideração principalmente desvio padrão e média de cada objeto, ponderando cada elemento como mostrado na fórmula a seguir:  
+Neste trabalho, o \textit{framework} utilizado baseia-se na correlação proposta por \cite{HOQUE201748} chamada NaHiD (nome que possivelmente provém a partir das iniciais de cada autor), cujo objetivo é distinguir objetos de tráfego normais e maliciosos. Tal medida leva em consideração principalmente o desvio padrão e a média de cada objeto, ponderando cada elemento como mostrado na equação a seguir:  
 
 \begin{equation}
-	NaHiD(X,Y) = 1 - \frac{1}{n} \sum_{i=1}^{n} \frac{\left(|X(i) - Y(i)|\right)}{||\mu{X} - sX| - X(i)| + ||\mu{Y} - sY| - Y(i)|}
+	NaHiD(X,Y) = 1 - \frac{1}{n} \sum_{i=1}^{n} \frac{\left(|X(i) -	 Y(i)|\right)}{||\mu{X} - sX| - X(i)| + ||\mu{Y} - sY| - Y(i)|}
 \end{equation}
 onde
 \begin{itemize}
-	\item $\mu{X}$: Média do objeto de tráfego X.
- 	\item $\mu{X}$: Média do objeto de tráfego Y.
+	\item $\mu{X}$: Média aritmética do objeto de tráfego X.
+ 	\item $\mu{X}$: Média aritmética do objeto de tráfego Y.
 	\item $sX$: Desvio padrão do objeto de tráfego X.
 	\item $sY$: Desvio Padrão do objeto de tráfego Y.
 \end{itemize}
 As provas de simetria e identidade da correlação podem ser encontradas em \cite{HOQUE201748}.
 
 \section{Framework de detecção de ataques DDoS}
-O \textit{framework} tem como objetivo detectar ataques DDoS em tempo real no computador alvo a partir de dados de tráfego de rede com uma taxa aceitável de erros. Tal arcabouço possui três componentes: pré-processamento, um módulo de detecção e um gerente de segurança.Amostras de tráfego serão capturadas de uma porta do roteador como um pacote TCP/IP, que são enviadas ao módulo de pré-processamento. Nessa fase, a cada segundo, os pacotes recebidos são agrupados e essa instância de tráfego é enviada para o módulo de detecção de ataque, que irá classificar a instância como normal ou ataque. O gerente de segurança manterá um perfil normal e um valor limiar em sua base de perfis, para ser usado pelo módulo de detecção. Incrementalmente, o gerente recalcula o perfil normal e o limiar baseado nos valores anteriores. O último módulo, que é o módulo de segurança irá operar offline e fará análises detalhadas dos \textit{logs} de detecção usando técnicas de \textit{machine learning} e estatística. Os componentes citados acima serão mais detalhados a seguir.
+O \textit{framework} tem como objetivo detectar ataques DDoS em tempo real no computador alvo a partir de dados de tráfego de rede com uma taxa aceitável de erros. Tal arcabouço possui três componentes: pré-processamento, um módulo de detecção e um gerente de segurança. Amostras de tráfego são capturadas de uma porta do roteador na forma de um pacote TCP/IP e enviadas ao módulo de pré-processamento. Nessa fase, a cada segundo, os pacotes recebidos são agrupados e essa instância de tráfego é enviada para o módulo de detecção de ataque, que irá classificar a instância como normal ou ataque. O gerente de segurança manterá um perfil normal e um valor limiar em sua base de perfis, para ser usado pelo módulo de detecção. Incrementalmente, o gerente recalcula o perfil normal baseado nos valores anteriores. O último módulo, que é o módulo de segurança irá operar offline e fará análises detalhadas dos \textit{logs} de detecção usando técnicas simplificadas de \textit{machine learning} e estatística. Os componentes citados acima são mais detalhados a seguir.
 \subsection{Pré-Processamento}
 Nessa etapa, os dados são coletados da rede e, a cada segundo, as métricas desejadas são calculadas para servirem de entrada para a correlação NaHiD. 
 \subsubsection{Entropia de IPs origem}
@@ -56,7 +57,7 @@ Nessa etapa, os \textit{logs} são salvos e se o módulo de detecção identific
 
 \section{Detecção de Ataques DDoS usando NaHiD}
 \label{Sec:NaHiD_VERC}
-Para a avaliação do trabalho, duas bases de tráfegos de rede foram escolhidas: DARPA e  DataMining[escolher melhor esse nome] os quais serão mais detalhados aa seguir 
+Para a avaliação do trabalho, duas bases de tráfegos de rede foram escolhidas: DARPA e  DataMining[escolher melhor esse nome] os quais são mais detalhados a seguir 
 \subsection{DARPA - MIT}
  A base de dados DARPA foi produzida por pesquisadores do \textit{Lincoln Laboratory} do Instituto de Tecnologia de Massachusetts nos Estados Unidos e tem por objetivo coletar dados de tráfego de rede da Força Aérea do país para encontrar vulnerabilidades em seu sistema bem como ser utilizado para avaliações futuras. Os dados foram coletados e passaram por uma fase de treinamento de 7 semanas com 38 tipos de ataques para simular ameaças internas a rede. O ambiente de rede era composto por duas partes: a rede interna da Força aérea e a rede externa que representava a Internet; ambos conectados por meio de um roteador como mostra a \figref{fig:DARPA_Estrututra}
  \begin{figure}[!htb]
