@@ -20,4 +20,11 @@ ISSN 0140-3664.
 Dispon{\'\i}vel em:
   \url{http://www.sciencedirect.com/science/article/pii/S0140366416306442}.}
 
+\bibitem[Lippmann \emph{et al.} 2000]{DARPA}
+\abntrefinfo{Lippmann \emph{et al.}}{LIPPMANN \emph{et al.}}{2000}
+{LIPPMANN, R.~P. \emph{et al.} Evaluating intrusion detection systems: the 1998
+  darpa off-line intrusion detection evaluation. In:  \textbf{DARPA Information
+  Survivability Conference and Exposition, 2000. DISCEX '00. Proceedings}.
+  [S.l.: s.n.], 2000. v.~2, p. 12--26 vol.2.}
+
 \end{thebibliography}

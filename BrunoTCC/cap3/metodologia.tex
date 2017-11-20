@@ -1,7 +1,7 @@
 \chapter[Metodologia]{Metodologia}
-\label{Simulacao}
+\label{metodologia}
 
-Neste capítulo, os detalhes do \textit{framework} serão apresentados bem como a modelagem do ambiente de simulação utilizado para a detecção de Ataques [DDOS]
+Neste capítulo, os detalhes do \textit{framework} serão apresentados bem como a modelagem do ambiente de simulação utilizado para a detecção de Ataques DDoS
 % ----------------------------------------------------------
 
 \section{Modelo de correlação NaHiD}
@@ -20,7 +20,7 @@ onde
 \end{itemize}
 As provas de simetria e identidade da correlação podem ser encontradas em \cite{HOQUE201748}.
 
-\section{Framework de detecção de ataques DDOS}
+\section{Framework de detecção de ataques DDoS}
 O \textit{framework} tem como objetivo detectar ataques DDoS em tempo real no computador alvo a partir de dados de tráfego de rede com uma taxa aceitável de erros. Tal arcabouço possui três componentes: pré-processamento, um módulo de detecção e um gerente de segurança.Amostras de tráfego serão capturadas de uma porta do roteador como um pacote TCP/IP, que são enviadas ao módulo de pré-processamento. Nessa fase, a cada segundo, os pacotes recebidos são agrupados e essa instância de tráfego é enviada para o módulo de detecção de ataque, que irá classificar a instância como normal ou ataque. O gerente de segurança manterá um perfil normal e um valor limiar em sua base de perfis, para ser usado pelo módulo de detecção. Incrementalmente, o gerente recalcula o perfil normal e o limiar baseado nos valores anteriores. O último módulo, que é o módulo de segurança irá operar offline e fará análises detalhadas dos \textit{logs} de detecção usando técnicas de \textit{machine learning} e estatística. Os componentes citados acima serão mais detalhados a seguir.
 \subsection{Pré-Processamento}
 Nessa etapa, os dados são coletados da rede e, a cada segundo, as métricas desejadas são calculadas para servirem de entrada para a correlação NaHiD. 
@@ -41,7 +41,7 @@ Onde $\delta$ é o número de mudanças de IPs origem e $N$ é o numero total de
 \end{equation}
 Assim, nesse vetor consideram-se 4 variações ainda que sejam para um valor que repetiu-se. Assim se os IPs origem mudarem frequentemente, a variação será alta. \cite{HOQUE201748}
 \\
-A observação do comportamento de ataques por \textit{flood} mostra que esse tipo de ameaça pode ser gerada por atacantes reais como zumbis. Se endereços de IP origem falsificados forem utilizados durante um ataque DDOS TCP SYN, a entropia e variação de IPs origem serão altas e esse comportamento também ocorre em um tráfego normal. \cite{HOQUE201748}. Assim faz-se necessário o uso da taxa de pacotes em bits como terceiro medida de entrada para o cálculo da correlação NaHiD.
+A observação do comportamento de ataques por \textit{flood} mostra que esse tipo de ameaça pode ser gerada por atacantes reais como zumbis. Se endereços de IP origem falsificados forem utilizados durante um ataque DDoS TCP SYN, a entropia e variação de IPs origem serão altas e esse comportamento também ocorre em um tráfego normal. \cite{HOQUE201748}. Assim faz-se necessário o uso da taxa de pacotes em bits como terceiro medida de entrada para o cálculo da correlação NaHiD.
 
 \subsection{Módulo de Detecção}
 O modulo de detecção consiste no uso da correlação NaHiD utilizando os três parâmetros de entrada:
@@ -54,7 +54,7 @@ Onde um tráfego normal deve ser fixado para a comparação com o tráfego a ser
 \subsection{Gerenciador Offline}
 Nessa etapa, os \textit{logs} são salvos e se o módulo de detecção identificar que o tráfego em questão é normal, este será atualizado com os valores do mesmo para a próxima análise
 
-\section{Detecção de Ataques DDOS usando NaHiD}
+\section{Detecção de Ataques DDoS usando NaHiD}
 \label{Sec:NaHiD_VERC}
 Para a avaliação do trabalho, duas bases de tráfegos de rede foram escolhidas: DARPA e  DataMining[escolher melhor esse nome] os quais serão mais detalhados aa seguir 
 \subsection{DARPA - MIT}
@@ -120,9 +120,9 @@ No presente trabalho ferramentas como edicap e tcpdump foram utilizadas para o t
 \end{itemize}
 .
 \subsection{DataMining}
-Outra base de dados estudada no trabalho foi a desenvolvida por \cite{DataMining} a qual consta em sua totalidade por ataques DDOS de quatro tipos:
+Outra base de dados estudada no trabalho foi a desenvolvida por \cite{DataMining} a qual consta em sua totalidade por ataques DDoS de quatro tipos:
 \begin{itemize}
-	\item SIDDOS
+	\item SIDDoS
 	\item HTTP Flood
 	\item UDDP Flood
 	\item Smurf
@@ -184,4 +184,4 @@ Algumas considerações foram tomadas para a análise dessa base de dados:
 	\item Por ser um dataset composto apenas por ataques, a comparação com o limiar inverte-se para denotar o quanto dois pacotes são parecidos na correlação.
 \end{itemize}
 
-Para o processamento dos dados, o MATLAB foi utilizado
+A base de dados é disponibilizada no formato \textit{Weka Attribute-relation}(extensão arff), o qual é utilizado geralmente para compactar grandes massas de dados e processá-las utilizando técnicas de \textit{machine learning}. Assim, para o processamento dos mesmos as ferramentas Weka e MATLAB foram utilizadas.

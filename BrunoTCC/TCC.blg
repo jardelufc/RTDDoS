@@ -13,6 +13,7 @@ A level-1 auxiliary file: cap1/introducao.aux
 A level-1 auxiliary file: cap2/fundamentacaoteorica.aux
 A level-1 auxiliary file: cap3/metodologia.aux
 A level-1 auxiliary file: cap4/resultados.aux
+A level-1 auxiliary file: cap5/conclusoes.aux
 The style file: abntex2-alf.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -25,7 +26,6 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Database file #1: abntex2-options.bib
 Database file #2: bibtex/referencias.bib
-Warning--I didn't find a database entry for "DARPA"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
@@ -35,45 +35,44 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 9 entries,
+You've used 10 entries,
             6714 wiz_defined-function locations,
-            1237 strings with 10243 characters,
-and the built_in function-call counts, 5436 in all, are:
-= -- 587
-> -- 91
-< -- 74
-+ -- 152
-- -- 27
-* -- 305
-:= -- 674
-add.period$ -- 8
-call.type$ -- 11
-change.case$ -- 49
-chr.to.int$ -- 13
-cite$ -- 2
-duplicate$ -- 306
-empty$ -- 428
-format.name$ -- 124
-if$ -- 1282
+            1243 strings with 10639 characters,
+and the built_in function-call counts, 6535 in all, are:
+= -- 670
+> -- 133
+< -- 77
++ -- 168
+- -- 39
+* -- 390
+:= -- 811
+add.period$ -- 13
+call.type$ -- 12
+change.case$ -- 63
+chr.to.int$ -- 17
+cite$ -- 3
+duplicate$ -- 356
+empty$ -- 515
+format.name$ -- 185
+if$ -- 1555
 int.to.chr$ -- 6
 int.to.str$ -- 1
-missing$ -- 107
-newline$ -- 20
-num.names$ -- 10
-pop$ -- 95
+missing$ -- 126
+newline$ -- 24
+num.names$ -- 15
+pop$ -- 120
 preamble$ -- 1
-purify$ -- 31
+purify$ -- 36
 quote$ -- 0
-skip$ -- 663
+skip$ -- 718
 stack$ -- 1
-substring$ -- 198
-swap$ -- 108
-text.length$ -- 5
+substring$ -- 254
+swap$ -- 136
+text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
+type$ -- 1
 warning$ -- 0
-while$ -- 16
+while$ -- 24
 width$ -- 0
-write$ -- 41
-(There was 1 warning)
+write$ -- 58

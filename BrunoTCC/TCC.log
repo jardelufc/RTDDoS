@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  19 NOV 2017 21:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  20 NOV 2017 01:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1673,22 +1673,22 @@ Package babel Warning: You haven't loaded the language english yet
 
 ]) (./TCC.toc
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 18.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 17.
 ) [12
 
 
 ]
 \openout2 = `cap1/introducao.aux'.
 
- (./cap1/introducao.tex)
+ (./cap1/introducao.tex
 [13
 
 
 
-]
+]) [14]
 \openout2 = `cap2/fundamentacaoteorica.aux'.
 
- (./cap2/fundamentacaoteorica.tex) [14
+ (./cap2/fundamentacaoteorica.tex) [15
 
 
 
@@ -1703,24 +1703,21 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 16.
- [15
+ [16
 
 
 
-] [16]
+] [17]
 Underfull \hbox (badness 2310) in paragraph at lines 85--88
 [][] \T1/lmr/m/n/12 (+20) Fonte: Ela-bo-rada
  []
-
-
-LaTeX Warning: Citation `DARPA' on page 17 undefined on input line 111.
 
 
 Overfull \hbox (3.46153pt too wide) in paragraph at lines 95--113
  [] 
  []
 
-[17] [18pdfTeX warning (ext4): destination with the same identifier (name{figur
+[18] [19pdfTeX warning (ext4): destination with the same identifier (name{figur
 e.3.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1734,24 +1731,24 @@ as been already used, duplicate ignored
                                                   \fi \fi 
 l.177 	\item P
               ara construir a janela de um segundo, considerou-se a soma de ...
-] [19pdfTeX warning (ext4): destination with the same identifier (name{table.3.
+] [20pdfTeX warning (ext4): destination with the same identifier (name{table.3.
 2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.177 	\item P
               ara construir a janela de um segundo, considerou-se a soma de ...
-]) [20]
+]) [21]
 \openout2 = `cap4/resultados.aux'.
 
- (./cap4/resultados.tex) [21
+ (./cap4/resultados.tex) [22
 
 
 
 ]
 \openout2 = `cap5/conclusoes.aux'.
 
- (./cap5/conclusoes.tex) [22
+ (./cap5/conclusoes.tex) [23
 
 
 
@@ -1770,7 +1767,7 @@ bibitemlist
 No file TCC.ind.
 
 AED: lastpage setting LastPage
-[23
+[24
 
 
 ]
@@ -1794,10 +1791,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 121.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 121.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 121.
 Package rerunfilecheck Info: File `TCC.brf' has not changed.
-(rerunfilecheck)             Checksum: 467D0D3C6710DC471F5A7BBC0861FC27;438.
-
-
-LaTeX Warning: There were undefined references.
+(rerunfilecheck)             Checksum: 45494D1722DDD477FD6B19480A814948;482.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
@@ -1805,13 +1799,13 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 121.
  ) 
 Here is how much of TeX's memory you used:
- 25649 strings out of 493029
- 454423 string characters out of 6136234
- 708160 words of memory out of 5000000
- 28447 multiletter control sequences out of 15000+600000
- 64692 words of font info for 88 fonts, out of 8000000 for 9000
+ 25672 strings out of 493029
+ 454681 string characters out of 6136234
+ 708335 words of memory out of 5000000
+ 28453 multiletter control sequences out of 15000+600000
+ 65458 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,12n,81p,1862b,1121s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,12n,81p,1944b,1121s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share
 /texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
@@ -1825,10 +1819,10 @@ are/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/t
 exmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm
 /lmsso12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on TCC.pdf (24 pages, 506747 bytes).
+Output written on TCC.pdf (25 pages, 515632 bytes).
 PDF statistics:
- 413 PDF objects out of 1000 (max. 8388607)
- 358 compressed objects within 4 object streams
- 78 named destinations out of 1000 (max. 500000)
- 22816 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 424 PDF objects out of 1000 (max. 8388607)
+ 368 compressed objects within 4 object streams
+ 79 named destinations out of 1000 (max. 500000)
+ 22808 words of extra memory for PDF output out of 24883 (max. 10000000)
 
