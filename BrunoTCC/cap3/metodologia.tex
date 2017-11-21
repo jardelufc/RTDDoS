@@ -21,6 +21,57 @@ onde
 As provas de simetria e identidade da correlação podem ser encontradas em \cite{HOQUE201748}.
 
 \section{Framework de detecção de ataques DDoS}
+
+\begin{tikzpicture}[node distance=1.5cm,
+every node/.style={fill=white, font=\sffamily}, align=center]
+% Specification of nodes (position, etc.)
+\node (start)             [activityStarts]              {Activity starts};
+\node (onCreateBlock)     [process, below of=start]          {onCreate()};
+\node (onStartBlock)      [process, below of=onCreateBlock]   {onStart()};
+\node (onResumeBlock)     [process, below of=onStartBlock]   {onResume()};
+\node (activityRuns)      [activityRuns, below of=onResumeBlock]
+{Activity is running};
+\node (onPauseBlock)      [process, below of=activityRuns, yshift=-1cm]
+{onPause()};
+\node (onStopBlock)       [process, below of=onPauseBlock, yshift=-1cm]
+{onStop()};
+\node (onDestroyBlock)    [process, below of=onStopBlock, yshift=-1cm] 
+{onDestroy()};
+\node (onRestartBlock)    [process, right of=onStartBlock, xshift=4cm]
+{onRestart()};
+\node (ActivityEnds)      [startstop, left of=activityRuns, xshift=-4cm]
+{Process is killed};
+\node (ActivityDestroyed) [startstop, below of=onDestroyBlock]
+{Activity is shut down};     
+% Specification of lines between nodes specified above
+% with aditional nodes for description 
+\draw[->]             (start) -- (onCreateBlock);
+\draw[->]     (onCreateBlock) -- (onStartBlock);
+\draw[->]      (onStartBlock) -- (onResumeBlock);
+\draw[->]     (onResumeBlock) -- (activityRuns);
+\draw[->]      (activityRuns) -- node[text width=4cm]
+{Another activity comes in
+	front of the activity} (onPauseBlock);
+\draw[->]      (onPauseBlock) -- node {The activity is no longer visible}
+(onStopBlock);
+\draw[->]       (onStopBlock) -- node {The activity is shut down by
+	user or system} (onDestroyBlock);
+\draw[->]    (onRestartBlock) -- (onStartBlock);
+\draw[->]       (onStopBlock) -| node[yshift=1.25cm, text width=3cm]
+{The activity comes to the foreground}
+(onRestartBlock);
+\draw[->]    (onDestroyBlock) -- (ActivityDestroyed);
+\draw[->]      (onPauseBlock) -| node(priorityXMemory)
+{higher priority $\rightarrow$ more memory}
+(ActivityEnds);
+\draw           (onStopBlock) -| (priorityXMemory);
+\draw[->]     (ActivityEnds)  |- node [yshift=-2cm, text width=3.1cm]
+{User navigates back to the activity}
+(onCreateBlock);
+\draw[->] (onPauseBlock.east) -- ++(2.6,0) -- ++(0,2) -- ++(0,2) --                
+node[xshift=1.2cm,yshift=-1.5cm, text width=2.5cm]
+{The activity comes to the foreground}(onResumeBlock.east);
+\end{tikzpicture}
 O \textit{framework} tem como objetivo detectar ataques DDoS em tempo real no computador alvo a partir de dados de tráfego de rede com uma taxa aceitável de erros. Tal arcabouço possui três componentes: pré-processamento, um módulo de detecção e um gerente de segurança. Amostras de tráfego são capturadas de uma porta do roteador na forma de um pacote TCP/IP e enviadas ao módulo de pré-processamento. Nessa fase, a cada segundo, os pacotes recebidos são agrupados e essa instância de tráfego é enviada para o módulo de detecção de ataque, que irá classificar a instância como normal ou ataque. O gerente de segurança manterá um perfil normal e um valor limiar em sua base de perfis, para ser usado pelo módulo de detecção. Incrementalmente, o gerente recalcula o perfil normal baseado nos valores anteriores. O último módulo, que é o módulo de segurança irá operar offline e fará análises detalhadas dos \textit{logs} de detecção usando técnicas simplificadas de \textit{machine learning} e estatística. Os componentes citados acima são mais detalhados a seguir.
 \subsection{Pré-Processamento}
 Nessa etapa, os dados são coletados da rede e, a cada segundo, as métricas desejadas são calculadas para servirem de entrada para a correlação NaHiD. 
@@ -72,7 +123,7 @@ Para a avaliação do trabalho, duas bases de tráfegos de rede foram escolhidas
 	level 3 concept/.append style =
 	{font=\tiny\bfseries},
 	tex/.style     = {concept, ball color=blue,
-		font=\normalsize\bfseries},
+		font=\small\bfseries},
 	engines/.style = {concept, ball color=green!50!black},
 	formats/.style = {concept, ball color=blue!50!black},
 	systems/.style = {concept, ball color=red!90!black},
