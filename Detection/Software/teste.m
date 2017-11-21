@@ -2,7 +2,9 @@ datasetTable = readtable('testeval.csv');
 dataset = table2cell(datasetTable);
 time = [dataset{:,2}];
 diferencas = zeros(1,length(time));
+janelas = zeros(1,length(time));
 j = 2;
+keyboard;
 for i = 1:length(time)
     valor = time(i);
     % keyboard;
@@ -12,13 +14,17 @@ for i = 1:length(time)
         diferencas(j) = diferenca;
         j = j+1;
         if diferenca > 1
+            janelas(i) = j;
             break;
+        else
+            janelas(i) = j;
         end
+        
     end
     
 end
 
-% keyboard;
+keyboard;
 t = 1;
 while t < length(diferencas)
     coisa = diferencas(t);
@@ -29,7 +35,7 @@ while t < length(diferencas)
             index1 = t;
             index2 = u -1;
             t = t +1;
-            keyboard;
+%             keyboard;
             break;
         else
             u = u +1;
