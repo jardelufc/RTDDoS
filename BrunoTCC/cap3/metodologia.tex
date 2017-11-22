@@ -1,7 +1,7 @@
 \chapter[Metodologia]{Metodologia}
 \label{metodologia}
 Nesse capítulo são apresentadas a medida de correlação utilizada no trabalho, além das principais características do \textit{framework}, mostrando como a correlação é aplicada
-para a detecção de ataques DDoS e quais bases de dados são utilizadas para a avaliação do \textit{framework}, destacando sua estrutura e ferramentas utilizadas para o tratamento dos dados
+para a detecção de ataques DDoS e quais bases de dados são utilizadas para a avaliação do \textit{framework}, destacando sua estrutura e ferramentas utilizadas para o tratamento dos dados.
 % ----------------------------------------------------------
 
 \section{Modelo de correlação NaHiD}
@@ -22,56 +22,6 @@ As provas de simetria e identidade da correlação podem ser encontradas em \cit
 
 \section{Framework de detecção de ataques DDoS}
 
-\begin{tikzpicture}[node distance=1.5cm,
-every node/.style={fill=white, font=\sffamily}, align=center]
-% Specification of nodes (position, etc.)
-\node (start)             [activityStarts]              {Activity starts};
-\node (onCreateBlock)     [process, below of=start]          {onCreate()};
-\node (onStartBlock)      [process, below of=onCreateBlock]   {onStart()};
-\node (onResumeBlock)     [process, below of=onStartBlock]   {onResume()};
-\node (activityRuns)      [activityRuns, below of=onResumeBlock]
-{Activity is running};
-\node (onPauseBlock)      [process, below of=activityRuns, yshift=-1cm]
-{onPause()};
-\node (onStopBlock)       [process, below of=onPauseBlock, yshift=-1cm]
-{onStop()};
-\node (onDestroyBlock)    [process, below of=onStopBlock, yshift=-1cm] 
-{onDestroy()};
-\node (onRestartBlock)    [process, right of=onStartBlock, xshift=4cm]
-{onRestart()};
-\node (ActivityEnds)      [startstop, left of=activityRuns, xshift=-4cm]
-{Process is killed};
-\node (ActivityDestroyed) [startstop, below of=onDestroyBlock]
-{Activity is shut down};     
-% Specification of lines between nodes specified above
-% with aditional nodes for description 
-\draw[->]             (start) -- (onCreateBlock);
-\draw[->]     (onCreateBlock) -- (onStartBlock);
-\draw[->]      (onStartBlock) -- (onResumeBlock);
-\draw[->]     (onResumeBlock) -- (activityRuns);
-\draw[->]      (activityRuns) -- node[text width=4cm]
-{Another activity comes in
-	front of the activity} (onPauseBlock);
-\draw[->]      (onPauseBlock) -- node {The activity is no longer visible}
-(onStopBlock);
-\draw[->]       (onStopBlock) -- node {The activity is shut down by
-	user or system} (onDestroyBlock);
-\draw[->]    (onRestartBlock) -- (onStartBlock);
-\draw[->]       (onStopBlock) -| node[yshift=1.25cm, text width=3cm]
-{The activity comes to the foreground}
-(onRestartBlock);
-\draw[->]    (onDestroyBlock) -- (ActivityDestroyed);
-\draw[->]      (onPauseBlock) -| node(priorityXMemory)
-{higher priority $\rightarrow$ more memory}
-(ActivityEnds);
-\draw           (onStopBlock) -| (priorityXMemory);
-\draw[->]     (ActivityEnds)  |- node [yshift=-2cm, text width=3.1cm]
-{User navigates back to the activity}
-(onCreateBlock);
-\draw[->] (onPauseBlock.east) -- ++(2.6,0) -- ++(0,2) -- ++(0,2) --                
-node[xshift=1.2cm,yshift=-1.5cm, text width=2.5cm]
-{The activity comes to the foreground}(onResumeBlock.east);
-\end{tikzpicture}
 O \textit{framework} tem como objetivo, detectar ataques DDoS em tempo real na rede monitorada, a partir de dados trafegados na rede com uma taxa aceitável de erros. Tal arcabouço possui três módulos: pré-processamento, detecção e um de segurança. Amostras de tráfego são capturadas de uma porta do roteador na forma de um pacote TCP/IP e enviadas ao módulo de pré-processamento. Nessa fase, a cada segundo, os pacotes recebidos são agrupados e essa instância de tráfego é enviada para o módulo de detecção de ataques, que irá classificar a instância como normal ou maliciosa. O gerente de segurança manterá um perfil normal, como referência, e um valor limiar de correlação em sua base de perfis, para ser usado pelo módulo de detecção. Incrementalmente, o gerente recalcula o perfil normal baseado nos valores anteriores. O último módulo, que é o módulo de segurança irá operar offline e fará análises detalhadas dos \textit{logs} de detecção usando técnicas simplificadas de \textit{machine learning} e estatística. Os componentes citados acima são mais detalhados a seguir.
 \subsection{Pré-Processamento}
 Nessa etapa, os dados são coletados por um \textit{sniffer} da rede, o qual analisa todos os pacotes trafegados e, a cada segundo, as métricas desejadas são calculadas para servirem de entrada para a correlação NaHiD. 
@@ -82,18 +32,18 @@ H(X) = - \sum_{i}^{n}p(x_i)log_2(x_i)
 \end{equation}
 Onde $X$ é a entrada e representa os IPs origem das requisições e $n$ é o número total de valores possíveis para o IP origem. 
 A \tabref{Tab:entropía} mostra exemplos com valores de entrada para entropia, bem como o resultado do cálculo da função.
-\begin{table}[!htb]
-	\centering
-	\begin{threeparttable}
-		\caption{Exemplo base de dados DARPA}
-		\label{Tab:entropía}
-		%	\small
-		\begin{tabular}{c c }
-			\toprule
-			\textbf{IP origem}  \\ \midrule  \textbf{Entropia}    \\ \midrule
-		{Fonte: Elaborada pelo autor.}
-	\end{threeparttable}
-\end{table}
+%\begin{table}[!htb]
+%	\centering
+%	\begin{threeparttable}
+%		\caption{Exemplo base de dados DARPA}
+%		\label{Tab:entropía}
+%		%	\small
+%		\begin{tabular}{c c }
+%			\toprule
+%			\textbf{IP origem}  \\ \midrule  \textbf{Entropia}    \\ \midrule
+%		{Fonte: Elaborada pelo autor.}
+%	\end{threeparttable}
+%\end{table}
 \subsubsection{Variação de IPs Origem}
 Essa medida, diferentemente da entropia, trata-se da taxa de mudança dos IPs origem e é calculada da seguinte forma:
 \begin{equation}
