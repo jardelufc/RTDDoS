@@ -21,8 +21,17 @@ onde
 As provas de simetria e identidade da correlação podem ser encontradas em \cite{HOQUE201748}.
 
 \section{Framework de detecção de ataques DDoS}
+ 
+ \begin{figure}[ht]
+	\centering
+	\caption{Estrutura do \textit{framework} analisado }
+	\includegraphics[width=0.4\textwidth]{figs/fluxoFramework.pdf}
+	{Fonte: Elaborada pelo autor.}
+	\label{fig:Fluxo_Framework}
+\end{figure}
 
-O \textit{framework} tem como objetivo, detectar ataques DDoS em tempo real na rede monitorada, a partir de dados trafegados na rede com uma taxa aceitável de erros. Tal arcabouço possui três módulos: pré-processamento, detecção e um de segurança. Amostras de tráfego são capturadas de uma porta do roteador na forma de um pacote TCP/IP e enviadas ao módulo de pré-processamento. Nessa fase, a cada segundo, os pacotes recebidos são agrupados e essa instância de tráfego é enviada para o módulo de detecção de ataques, que irá classificar a instância como normal ou maliciosa. O gerente de segurança manterá um perfil normal, como referência, e um valor limiar de correlação em sua base de perfis, para ser usado pelo módulo de detecção. Incrementalmente, o gerente recalcula o perfil normal baseado nos valores anteriores. O último módulo, que é o módulo de segurança irá operar offline e fará análises detalhadas dos \textit{logs} de detecção usando técnicas simplificadas de \textit{machine learning} e estatística. Os componentes citados acima são mais detalhados a seguir.
+O \textit{framework} tem como objetivo, detectar ataques DDoS em tempo real na rede monitorada, a partir de dados trafegados na rede com uma taxa aceitável de erros. Tal arcabouço possui três módulos: pré-processamento, detecção e um de segurança. A \figref{fig:Fluxo_Framework} mostra o fluxo de funcionamento do \textit{framework}. Amostras de tráfego são capturadas de uma porta do roteador na forma de um pacote TCP/IP e enviadas ao módulo de pré-processamento. Nessa fase, a cada segundo, os pacotes recebidos são agrupados e essa instância de tráfego é enviada para o módulo de detecção de ataques, que irá classificar a instância como normal ou maliciosa. O gerente de segurança manterá um perfil normal, como referência, e um valor limiar de correlação em sua base de perfis, para ser usado pelo módulo de detecção. Incrementalmente, o gerente recalcula o perfil normal baseado nos valores anteriores. 
+
 \subsection{Pré-Processamento}
 Nessa etapa, os dados são coletados por um \textit{sniffer} da rede, o qual analisa todos os pacotes trafegados e, a cada segundo, as métricas desejadas são calculadas para servirem de entrada para a correlação NaHiD. 
 \subsubsection{Entropia de IPs origem}
@@ -31,19 +40,29 @@ A entropia de IPs origem é uma medida do grau de desordem, onde ela é máxima 
 H(X) = - \sum_{i}^{n}p(x_i)log_2(x_i)
 \end{equation}
 Onde $X$ é a entrada e representa os IPs origem das requisições e $n$ é o número total de valores possíveis para o IP origem. 
-A \tabref{Tab:entropía} mostra exemplos com valores de entrada para entropia, bem como o resultado do cálculo da função.
-%\begin{table}[!htb]
-%	\centering
-%	\begin{threeparttable}
-%		\caption{Exemplo base de dados DARPA}
-%		\label{Tab:entropía}
-%		%	\small
-%		\begin{tabular}{c c }
-%			\toprule
-%			\textbf{IP origem}  \\ \midrule  \textbf{Entropia}    \\ \midrule
-%		{Fonte: Elaborada pelo autor.}
-%	\end{threeparttable}
-%\end{table}
+A \tabref{Tab:entropia} mostra exemplos com valores de entrada para entropia, bem como o resultado do cálculo da função.
+\\
+\begin{table}[!htb]
+	\centering
+	\begin{threeparttable}
+		\caption{Exemplo de IPs origem com respectivos valores de entropia}
+		\label{Tab:entropia}
+		  \begin{tabular}{cccccc}
+			\hline
+			\multicolumn{5}{c}{IPs origem} %%\\               %% <-- mistake
+			&                                            %% <--  addition
+			\multicolumn{1}{|c|}{Entropia} \\\hline           %% <--  Changed
+			192.168.8.8 & 192.168.8.8 & 192.168.8.8 & 192.168.8.8 & 192.168.8.8 & 0        \\
+			192.168.15.129 & 192.168.8.5 & 192.168.8.8 & 192.168.10.16 & 192.168.20.22 & 2.3219\\
+			192.168.8.8 & 192.168.8.8 & 192.168.8.5 & 192.168.10.16 & 192.168.20.22 & 1.9219\\
+			192.168.20.22 & 192.168.20.22 & 192.168.20.22 & 192.168.20.22 & 192.168.8.8 & 0.7219\\
+			\hline
+		\end{tabular}
+		{Fonte: Elaborada pelo autor.}
+	\end{threeparttable}
+\end{table}
+Note que a entropia é mínima quando todos os IPs origem são iguais (primeira linha da tabela) e máxima quando todos os os IPs origem são diferentes (segunda linha). 
+
 \subsubsection{Variação de IPs Origem}
 Essa medida, diferentemente da entropia, trata-se da taxa de mudança dos IPs origem e é calculada da seguinte forma:
 \begin{equation}
@@ -55,48 +74,28 @@ Onde $\delta$ é o número de mudanças de IPs origem e $N$ é o numero total de
 \end{equation}
 Assim, nesse vetor consideram-se 4 variações ainda que sejam para um valor que repetiu-se. Assim se os IPs origem mudarem frequentemente, a variação será alta. \cite{HOQUE201748}
 \\
-A observação do comportamento de ataques por \textit{flood} mostra que esse tipo de ameaça pode ser gerada por atacantes reais como zumbis. Se endereços de IP origem falsificados forem utilizados durante um ataque DDoS TCP SYN, a entropia e variação de IPs origem serão altas e esse comportamento também ocorre em um tráfego normal. \cite{HOQUE201748}. Assim faz-se necessário o uso da taxa de pacotes em bits como terceiro medida de entrada para o cálculo da correlação NaHiD.
+A observação do comportamento de ataques por \textit{flood} mostra que esse tipo de ameaça pode ser gerada por atacantes reais como zumbis. Se endereços de IP origem falsificados forem utilizados durante um ataque DDoS TCP SYN, a entropia e variação de IPs origem serão altas e esse comportamento também ocorre em um tráfego normal. \cite{HOQUE201748}. Assim faz-se necessário o uso da taxa de pacotes em bits como terceiro parâmetro de entrada para o módulo de detecção.
 
 \subsection{Módulo de Detecção}
-O modulo de detecção consiste no uso da correlação NaHiD utilizando os três parâmetros de entrada:
+O modulo de detecção consiste na aplicação da correlação NaHiD, utilizando os três parâmetros de entrada fornecidos pelo módulo de pré-processamento:
 \begin{itemize}
 	\item Variação de IPs origem
 	\item Entropia de IPs origem
 	\item Taxa de pacotes
 \end{itemize}
-Onde um tráfego normal deve ser fixado para a comparação com o tráfego a ser analisado. Além disso,define-se um limiar do resultado da correlação para distinguir pacotes normais de maliciosos 
+Por tratar-se de uma medida de correlação é necessário manter um valor de referência para o cálculo. Assim, os parâmetros(Variação e entropia de IPs origem além da taxa de pacotes) de um tráfego normal devem ser fixados para a comparação com a instância de tráfego a ser analisada. Além disso, define-se um limiar do resultado da correlação para distinguir instâncias normais de maliciosas. 
 \subsection{Gerenciador Offline}
-Nessa etapa, os \textit{logs} são salvos e se o módulo de detecção identificar que o tráfego em questão é normal, este será atualizado com os valores do mesmo para a próxima análise
+Nessa módulo, os valores de correlação, IPs origem, destino, taxas de pacotes, resultado do módulo de detecção são salvos para a janela de tráfego em análise e se o módulo de detecção identificar que o tráfego em questão é normal, este será atualizado com os valores do mesmo para a próxima análise.
 
-\section{Detecção de Ataques DDoS usando NaHiD}
+\section{Aplicação do \textit{framework} de detecção em bases de dados reais}
 \label{Sec:NaHiD_VERC}
 Para a avaliação do trabalho, duas bases de tráfegos de rede foram escolhidas: DARPA e  DataMining[escolher melhor esse nome] os quais são mais detalhados a seguir 
 \subsection{DARPA - MIT}
  A base de dados DARPA foi produzida por pesquisadores do \textit{Lincoln Laboratory} do Instituto de Tecnologia de Massachusetts nos Estados Unidos e tem por objetivo coletar dados de tráfego de rede da Força Aérea do país para encontrar vulnerabilidades em seu sistema bem como ser utilizado para avaliações futuras. Os dados foram coletados e passaram por uma fase de treinamento de 7 semanas com 38 tipos de ataques para simular ameaças internas a rede. O ambiente de rede era composto por duas partes: a rede interna da Força aérea e a rede externa que representava a Internet; ambos conectados por meio de um roteador como mostra a \figref{fig:DARPA_Estrututra}
- \begin{figure}[!htb]
+ \begin{figure}[ht]
+ 	\centering
 	\caption{Estrutura de rede Base Aérea dos EUA }
-	\begin{tikzpicture}
-	\path [
-	mindmap,
-	text = white,
-	level 1 concept/.append style =
-	{font=\small\bfseries, sibling angle=180},
-	level 2 concept/.append style =
-	{font=\tiny\bfseries},
-	level 3 concept/.append style =
-	{font=\tiny\bfseries},
-	tex/.style     = {concept, ball color=blue,
-		font=\small\bfseries},
-	engines/.style = {concept, ball color=green!50!black},
-	formats/.style = {concept, ball color=blue!50!black},
-	systems/.style = {concept, ball color=red!90!black},
-	]
-	node [tex] {Roteador} [clockwise from=180]
-	child[concept color=green!50!black, nodes={engines}] {
-		node {Base Aérea} [clockwise from=90]}
-	child [concept color=red, nodes={systems}] {
-		node {Internet} [clockwise from=90]};
-	\end{tikzpicture}
+		\includegraphics[width=0.8\textwidth]{figs/darpaStructure.pdf}
 	{Fonte: Elaborada pelo autor.}
 	\label{fig:DARPA_Estrututra}
 \end{figure}
@@ -195,7 +194,7 @@ Algumas considerações foram tomadas para a análise dessa base de dados:
 	 \item Tempo de pacote reservado.
 	\end{itemize}
 	\item A média das taxas dos pacotes foi considerada dentro da janela de um segundo.
-	\item Por ser um dataset composto apenas por ataques, a comparação com o limiar inverte-se para denotar o quanto dois pacotes são parecidos na correlação.
+	\item Por ser um \textit{dataset} composto apenas por ataques, a comparação com o limiar inverte-se para denotar o quanto dois pacotes são parecidos na correlação.
 \end{itemize}
 
 A base de dados é disponibilizada no formato \textit{Weka Attribute-relation}(extensão arff), o qual é utilizado geralmente para compactar grandes massas de dados e processá-las utilizando técnicas de \textit{machine learning}. Assim, para o processamento dos mesmos as ferramentas Weka e MATLAB foram utilizadas.
