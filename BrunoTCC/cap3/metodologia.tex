@@ -1,7 +1,7 @@
 \chapter[Metodologia]{Metodologia}
 \label{metodologia}
 Nesse capítulo são apresentadas a medida de correlação utilizada no trabalho, além das principais características do \textit{framework}, mostrando como a correlação é aplicada
-para a detecção de ataques DDoS e quais bases de dados são utilizadas para a avaliação do \textit{framework}, destacando sua estrutura e ferramentas utilizadas para o tratamento dos dados. 
+para a detecção de ataques DDoS e quais bases de dados são utilizadas para a avaliação do \textit{framework}, destacando sua estrutura e ferramentas utilizadas para o tratamento dos dados
 % ----------------------------------------------------------
 
 \section{Modelo de correlação NaHiD}
@@ -72,15 +72,28 @@ every node/.style={fill=white, font=\sffamily}, align=center]
 node[xshift=1.2cm,yshift=-1.5cm, text width=2.5cm]
 {The activity comes to the foreground}(onResumeBlock.east);
 \end{tikzpicture}
-O \textit{framework} tem como objetivo detectar ataques DDoS em tempo real no computador alvo a partir de dados de tráfego de rede com uma taxa aceitável de erros. Tal arcabouço possui três componentes: pré-processamento, um módulo de detecção e um gerente de segurança. Amostras de tráfego são capturadas de uma porta do roteador na forma de um pacote TCP/IP e enviadas ao módulo de pré-processamento. Nessa fase, a cada segundo, os pacotes recebidos são agrupados e essa instância de tráfego é enviada para o módulo de detecção de ataque, que irá classificar a instância como normal ou ataque. O gerente de segurança manterá um perfil normal e um valor limiar em sua base de perfis, para ser usado pelo módulo de detecção. Incrementalmente, o gerente recalcula o perfil normal baseado nos valores anteriores. O último módulo, que é o módulo de segurança irá operar offline e fará análises detalhadas dos \textit{logs} de detecção usando técnicas simplificadas de \textit{machine learning} e estatística. Os componentes citados acima são mais detalhados a seguir.
+O \textit{framework} tem como objetivo, detectar ataques DDoS em tempo real na rede monitorada, a partir de dados trafegados na rede com uma taxa aceitável de erros. Tal arcabouço possui três módulos: pré-processamento, detecção e um de segurança. Amostras de tráfego são capturadas de uma porta do roteador na forma de um pacote TCP/IP e enviadas ao módulo de pré-processamento. Nessa fase, a cada segundo, os pacotes recebidos são agrupados e essa instância de tráfego é enviada para o módulo de detecção de ataques, que irá classificar a instância como normal ou maliciosa. O gerente de segurança manterá um perfil normal, como referência, e um valor limiar de correlação em sua base de perfis, para ser usado pelo módulo de detecção. Incrementalmente, o gerente recalcula o perfil normal baseado nos valores anteriores. O último módulo, que é o módulo de segurança irá operar offline e fará análises detalhadas dos \textit{logs} de detecção usando técnicas simplificadas de \textit{machine learning} e estatística. Os componentes citados acima são mais detalhados a seguir.
 \subsection{Pré-Processamento}
-Nessa etapa, os dados são coletados da rede e, a cada segundo, as métricas desejadas são calculadas para servirem de entrada para a correlação NaHiD. 
+Nessa etapa, os dados são coletados por um \textit{sniffer} da rede, o qual analisa todos os pacotes trafegados e, a cada segundo, as métricas desejadas são calculadas para servirem de entrada para a correlação NaHiD. 
 \subsubsection{Entropia de IPs origem}
-A entropia de IPs origem é uma medida do grau de desordem onde ela é máxima, caso todos os elementos sejam diferentes e o tamanho da entrada é máxima e será mínima (igual a 0) quando todos os elementos são iguais. Assim, a entropia é dada pela seguinte fórmula:
+A entropia de IPs origem é uma medida do grau de desordem, onde ela é máxima caso todos os elementos sejam diferentes e o tamanho da entrada seja máximo, e será mínima (igual a 0) quando todos os elementos forem iguais, independentemente do tamanho. Assim, a entropia é dada pela seguinte fórmula:
 \begin{equation}
 H(X) = - \sum_{i}^{n}p(x_i)log_2(x_i)
 \end{equation}
-Onde $X$ é a entrada e representa os IPs origem das requisições e $n$ é o número total de valores possíveis para o IP origem.  
+Onde $X$ é a entrada e representa os IPs origem das requisições e $n$ é o número total de valores possíveis para o IP origem. 
+A \tabref{Tab:entropía} mostra exemplos com valores de entrada para entropia, bem como o resultado do cálculo da função.
+\begin{table}[!htb]
+	\centering
+	\begin{threeparttable}
+		\caption{Exemplo base de dados DARPA}
+		\label{Tab:entropía}
+		%	\small
+		\begin{tabular}{c c }
+			\toprule
+			\textbf{IP origem}  \\ \midrule  \textbf{Entropia}    \\ \midrule
+		{Fonte: Elaborada pelo autor.}
+	\end{threeparttable}
+\end{table}
 \subsubsection{Variação de IPs Origem}
 Essa medida, diferentemente da entropia, trata-se da taxa de mudança dos IPs origem e é calculada da seguinte forma:
 \begin{equation}
