@@ -143,15 +143,15 @@ Note que de acordo com a estrutura do \textit{dataset} mostrada na \tabref{Tab:W
 
 .
 \subsection{DataMining}
-Outra base de dados estudada no trabalho foi a desenvolvida por \cite{DataMining} a qual consta em sua totalidade por ataques DDoS de quatro tipos:
+Outra base de dados estudada no trabalho foi a desenvolvida por \cite{DataMining}, a qual consta em sua totalidade por ataques DDoS de quatro tipos:
 \begin{itemize}
 	\item SIDDoS
 	\item HTTP Flood
 	\item UDDP Flood
 	\item Smurf
 \end{itemize}
-
-A \tabref{Tab:DataMining} mostra os campos do \textit{dataset} 
+Esse \textit{dataset} foi gerado em um simulador de rede chamado NS2, um software que representa uma rede de computadores de forma realista. 
+A \tabref{Tab:DataMining} mostra os campos do \textit{dataset} avaliado. 
 
 \begin{table}[!b]
 	\centering
@@ -207,4 +207,4 @@ Algumas considerações foram tomadas para a análise dessa base de dados:
 	\item Por ser um \textit{dataset} composto apenas por ataques, a comparação com o limiar inverte-se para denotar o quanto dois pacotes são parecidos na correlação.
 \end{itemize}
 
-A base de dados é disponibilizada no formato \textit{Weka Attribute-relation}(extensão arff), o qual é utilizado geralmente para compactar grandes massas de dados e processá-las utilizando técnicas de \textit{machine learning}. Assim, para o processamento dos mesmos as ferramentas Weka e MATLAB foram utilizadas.
+A base de dados é disponibilizada no formato \textit{Weka Attribute-relation}(extensão arff), o qual é utilizado geralmente para compactar grandes massas de dados e processá-las utilizando técnicas de \textit{machine learning}. Assim, para o processamento dos mesmos as ferramentas Weka e MATLAB foram utilizadas. Inicialmente, no módulo de Pré-Processamento, converteu-se o arquivo .arff para um .mat por meio de \textit{script} e em seguida, com o \textit{dataset} carregado, a janela de um segundo é aplicada, conforme as considerações já mencionadas. Em seguida, os pacotes da janela são agrupados para a extração dos IPs origem, a partir de onde serão calculadas a entropia e  variação, além da taxa de pacotes média. Posteriormente, a partir dos parâmetros da etapa anterior, o módulo de detecção calcula a correlação NaHiD entre o perfil normal e o tráfego em questão e compara com o limiar, retornando 0 caso seja um tráfego normal e 1 caso contrário. Após isso, no gerente \textit{offline}, as informações do tráfego analisado são salvas e caso o módulo de detecção tenha identificado o tráfego como normal, o perfil de comparação na correlação será atualizado.
