@@ -20,7 +20,7 @@ brazil				]{standalone}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \begin{document}
-\begin{tikzpicture}[node distance=1.5cm,
+\begin{tikzpicture}[node distance=3.5cm,
 every node/.style={fill=white, font=\sffamily}, align=center]
 % Specification of nodes (position, etc.)
 \node (start)             [activityStarts]              {Pré-Processamento };
@@ -47,6 +47,12 @@ every node/.style={fill=white, font=\sffamily}, align=center]
 %\draw[->]     (onCreateBlock) -- (onStartBlock);
 %\draw[->]      (onStartBlock) -- (onResumeBlock);
 \draw[->]     (activityRuns) -- (ActivityDestroyed);
+
+  \draw[->]     (start)  -- node [ text width=6.6cm]
+  {\footnotesize - Entropia de IPs Origem\\
+  	- Variação de IPs Origem\\
+  	- Taxa de Pacotes\\}
+  (activityRuns);
 %\draw[->]      (activityRuns) -- node[text width=4cm]
 %{Another activity comes in
 %	front of the activity} (onPauseBlock);
