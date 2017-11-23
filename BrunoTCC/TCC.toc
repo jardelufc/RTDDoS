@@ -24,10 +24,10 @@
 \contentsline {subsection}{\numberline {3.3.1}DARPA - MIT}{19}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}DataMining}{20}{subsection.3.3.2}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados}}{23}{chapter.4}
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados}}{24}{chapter.4}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es e Trabalhos Futuros}}{24}{chapter.5}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es e Trabalhos Futuros}}{25}{chapter.5}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{25}{section*.15}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{26}{section*.15}
 \vspace {\cftbeforechapterskip }
