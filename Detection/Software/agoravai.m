@@ -5,6 +5,9 @@ packetSize = [dataset{:,6}];
 numOfPackets = zeros(1,length(dataset(:,1)));
 packetRateBps = zeros(1,length(dataset(:,1)));
 sourceIPs = dataset(:,3);
+normalTraffic = [688 0.5 1];
+numeroataques = 0;
+numeronormal = 0;
 
 % Getting packet size in bps
 for k= 1:length(dataset(:,1))
@@ -42,16 +45,39 @@ end
 janelas(14523) = 523;
 aux = 1;
 for idx = 1:523
+%     if idx == 19
+%         keyboard;
+%     end
     win = find(janelas == idx);
     IPsOrigemWin = sourceIPs(win);
     packetRate = mean(packetRateBps(win));
-    keyboard
+%     keyboard
     for indices = 1:(length(IPsOrigemWin) - 1)
-        if IPsOrigemWin(indices)~=IPsOrigemWin(indices+1)
+        if strcmp(IPsOrigemWin(indices + 1),IPsOrigemWin(indices))
             aux = aux + 1;
         end
     end
-    keyboard;
+    
+    VarSourceIPs = aux/length(IPsOrigemWin);
+    entropySourceIPs = entropy(IPsOrigemWin);
+    NaHidModule = NaHid([packetRate VarSourceIPs entropySourceIPs],normalTraffic);
+    
+    if(NaHidModule < 0.81)
+        disp('traffic');
+        disp(i);
+        disp('atack');
+        numeroataques = numeroataques + 1;
+%         keyboard;
+    else
+        disp('traffic');
+        disp(i);
+        disp('normal');
+        normalTraffic = [packetRate VarSourceIPs entropySourceIPs];
+        numeronormal = numeronormal + 1;
+%         keyboard;
+        
+        
+    end
 end
 
 
