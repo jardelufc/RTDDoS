@@ -1,19 +1,21 @@
-datasetTable = readtable('testeval.csv');
-% datasetTable = readtable('janela1.csv');
-keyboard
-dataset = table2cell(datasetTable);
-time = [dataset{:,2}];
-packetSize = [dataset{:,6}];
-numOfPackets = zeros(1,length(dataset(:,1)));
-packetRateBps = zeros(1,length(dataset(:,1)));
-sourceIPs = dataset(:,3);
+datasetTable = readtable('janela3.csv');
+datasetTable = table2cell(datasetTable);
+packetID = datasetTable(:,1);
+timeCell = datasetTable(:,2);
+packetSize = datasetTable(:,6);
+numOfPackets = zeros(1,length(packetID));
+packetRateBps = zeros(1,length(packetID));
+time = zeros(1,length(packetID));
+sourceIPs = datasetTable(:,3);
 normalTraffic = [688 0.5 1];
 numeroataques = 0;
 numeronormal = 0;
+% keyboard;
 
 % Getting packet size in bps
-for k= 1:length(dataset(:,1))
-    packetRateBps(k) = packetSize(k) * 8;
+for k= 1:length(packetID)
+    packetRateBps(k) = str2num(packetSize{k}) * 8;
+    time(k) = str2num(timeCell{k});
 end
 
 janela = time(1);
@@ -23,9 +25,9 @@ janelas(1) = 1;
 i = 1;
 j = 2;
 contador = 1;
-% keyboard;
+keyboard;
 % organizando as janelas de tempo
-while i < length(time) - 1
+while i < length(time)
     valor1 = time(i);
     primeirojanela = time(i);
     while j < length(time)
@@ -41,12 +43,14 @@ while i < length(time) - 1
             j = j + 1;
             break;
         end
+    end   
+    if j == length(time)
+        break;
     end
 end
-% keyboard
-janelas(14523) = 523;
+janelas(length(time)) = 1;
 aux = 1;
-for idx = 1:523
+for idx = 1:length(time)
 %     if idx == 19
 %         keyboard;
 %     end
@@ -66,13 +70,13 @@ for idx = 1:523
     
     if(NaHidModule < 0.81)
         disp('traffic');
-        disp(i);
+        disp(idx);
         disp('atack');
         numeroataques = numeroataques + 1;
-%         keyboard;
+        keyboard;
     else
         disp('traffic');
-        disp(i);
+        disp(idx);
         disp('normal');
         normalTraffic = [packetRate VarSourceIPs entropySourceIPs];
         numeronormal = numeronormal + 1;
