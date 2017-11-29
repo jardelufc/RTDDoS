@@ -25,7 +25,7 @@ janelas(1) = 1;
 i = 1;
 j = 2;
 contador = 1;
-keyboard;
+% keyboard;
 % organizando as janelas de tempo
 while i < length(time)
     valor1 = time(i);
@@ -48,7 +48,7 @@ while i < length(time)
         break;
     end
 end
-keyboard;
+% keyboard;
 janelas(length(time)) = 5;
 aux = 1;
 for idx = 1:5
@@ -68,7 +68,7 @@ for idx = 1:5
     VarSourceIPs = aux/length(IPsOrigemWin);
     entropySourceIPs = entropy(IPsOrigemWin);
     NaHidModule = NaHid([packetRate VarSourceIPs entropySourceIPs],normalTraffic);
-    
+    keyboard;
     if isnan(NaHidModule)
         keyboard;
     end

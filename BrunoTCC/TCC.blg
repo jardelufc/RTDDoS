@@ -1,4 +1,6 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: TCC.aux
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: TCC.aux
 A level-1 auxiliary file: editaveis/folhadeaprovacao.aux
 A level-1 auxiliary file: editaveis/dedicatoria.aux
 A level-1 auxiliary file: editaveis/agradecimentos.aux
@@ -13,12 +15,66 @@ A level-1 auxiliary file: cap3/metodologia.aux
 A level-1 auxiliary file: cap4/resultados.aux
 A level-1 auxiliary file: cap5/conclusoes.aux
 The style file: abntex2-alf.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Database file #1: abntex2-options.bib
 Database file #2: bibtex/referencias.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 Warning--campo year vazio ou faltando em siteDarpa
 +---------------------------------------------------------+
 | Estilo bibliográfico abntex2-alf.bst versão v-1.9.6           |
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
+You've used 13 entries,
+            6714 wiz_defined-function locations,
+            1264 strings with 11124 characters,
+and the built_in function-call counts, 10344 in all, are:
+= -- 1121
+> -- 199
+< -- 149
++ -- 271
+- -- 59
+* -- 617
+:= -- 1257
+add.period$ -- 25
+call.type$ -- 15
+change.case$ -- 92
+chr.to.int$ -- 26
+cite$ -- 7
+duplicate$ -- 675
+empty$ -- 706
+format.name$ -- 279
+if$ -- 2406
+int.to.chr$ -- 6
+int.to.str$ -- 1
+missing$ -- 181
+newline$ -- 40
+num.names$ -- 25
+pop$ -- 195
+preamble$ -- 1
+purify$ -- 47
+quote$ -- 0
+skip$ -- 1102
+stack$ -- 1
+substring$ -- 415
+swap$ -- 261
+text.length$ -- 11
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 7
+warning$ -- 1
+while$ -- 41
+width$ -- 0
+write$ -- 105
 (There was 1 warning)

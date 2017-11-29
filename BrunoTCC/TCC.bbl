@@ -17,6 +17,15 @@ v.~7, 01 2016.}
   \url{https://www.ll.mit.edu/ideval/index.html}.
 Acessado em 18/08/2017.}
 
+\bibitem[Douligeris e Mitrokotsa 2004]{ddosatacks}
+\abntrefinfo{Douligeris e Mitrokotsa}{DOULIGERIS; MITROKOTSA}{2004}
+{DOULIGERIS, C.; MITROKOTSA, A. Ddos attacks and defense mechanisms:
+  classification and state-of-the-art.
+\textbf{Computer Networks}, v.~44, n.~5, p. 643 -- 666, 2004.
+ISSN 1389-1286.
+Dispon{\'\i}vel em:
+  \url{http://www.sciencedirect.com/science/article/pii/S1389128603004250}.}
+
 \bibitem[Hoque, Kashyap e Bhattacharyya 2017]{HOQUE201748}
 \abntrefinfo{Hoque, Kashyap e Bhattacharyya}{HOQUE; KASHYAP;
   BHATTACHARYYA}{2017}
@@ -25,6 +34,11 @@ Acessado em 18/08/2017.}
 ISSN 0140-3664.
 Dispon{\'\i}vel em:
   \url{http://www.sciencedirect.com/science/article/pii/S0140366416306442}.}
+
+\bibitem[Kurose e Ross 2010]{kurose}
+\abntrefinfo{Kurose e Ross}{KUROSE; ROSS}{2010}
+{KUROSE, J.~F.; ROSS, K.~W. \textbf{Redes de Computadores e a Internet: Uma
+  abordagem top-down}. Trad. 5 ed. São Paulo: Pearson, 2010.}
 
 \bibitem[Lippmann \emph{et al.} 2000]{DARPA}
 \abntrefinfo{Lippmann \emph{et al.}}{LIPPMANN \emph{et al.}}{2000}

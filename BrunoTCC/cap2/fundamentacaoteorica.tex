@@ -1,6 +1,17 @@
 \chapter[Revisão Bibliográfica]{Revisão Bibliográfica}
 % ----------------------------------------------------------
-Ataques distribuídos de negação de serviço (do inglês, DDsS) figuram uma das principais ameaças de segurança atualmente. Organizações perdem financeiramente e principalmente tendem a ter seu valor questionado quando são vítimas de invasores na rede.
-Falar sobre ataques, definir objeto de tráfego, sniffer ...
+Ataques distribuídos de negação de serviço (do inglês, DDoS) figuram uma das principais ameaças de segurança atualmente. Organizações perdem financeiramente e principalmente tendem a ter seu valor questionado quando são vítimas de invasores na rede.
+
+Um ataque de negação de serviço(DoS - Denial-of-Service) torna um componente de rede inutilizável por usuários que estejam consumindo o serviço fornecido. A maioria dos ataques DoS na internet pode ser dividida em três categorias: \cite{kurose}
+\begin{itemize}
+	\item Ataque de vulnerabilidade: Mensagens são enviadas a uma aplicação vulnerável ou a um servidor, sendo executado em um hospedeiro alvo.
+	\item Inundação na largura de banda: O atacante envia um grande número de pacotes maliciosos ao hospedeiro alvo até que o enlace de acesso do alvo se entope, impedindo os pacotes legítimos de alcançarem o servidor. 
+	\item Inundação na conexão: O atacante estabelece um grande número de conexões TCP semiabertas ou abertas no hospedeiro alvo. 
+\end{itemize}
+Já segundo \cite{ddosatacks}, os ataques DoS são classificados em 5 categorias baseadas no protocolo cujo é atacado: Dispositivo, sistema operacional, aplicação, inundação de dados e características do protocolo. O primeiro inclui ataques que podem ser causados ao tirar vantagem de \textit{bugs} ou vulnerabilidades em software. O segundo leva em consideração ataques que aproveitam-se das formas nas quais os sistemas operacionais implementam os protocolos. Ataques baseados na aplicação infectam o alvo por meio de \textit{bugs} específicos da rede e tentam drenar os recursos da vítima. Em ataques baseados em inundação de dados, um atacante tenta usar a largura de banda disponível para mandar quantidades massivas de dados, fazendo com que o alvo processe essa grande quantidade. Por fim, ataques baseados em características do protocolo são caracterizados por tirarem vantagens de certos padrões de protocolo.
+ 
+Um ataque distribuído de negação de serviço  
+
+Falar sobre ataques, definir objeto de tráfego, sniffer IDS vulnerabilidades...
    
 
