@@ -12,22 +12,22 @@
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Revis\IeC {\~a}o Bibliogr\IeC {\'a}fica}}{15}{chapter.2}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Metodologia}}{16}{chapter.3}
-\contentsline {section}{\numberline {3.1}Modelo de correla\IeC {\c c}\IeC {\~a}o NaHiD}{16}{section.3.1}
-\contentsline {section}{\numberline {3.2}Framework de detec\IeC {\c c}\IeC {\~a}o de ataques DDoS}{16}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Pr\IeC {\'e}-Processamento}{17}{subsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.1.1}Entropia de IPs origem}{17}{subsubsection.3.2.1.1}
-\contentsline {subsubsection}{\numberline {3.2.1.2}Varia\IeC {\c c}\IeC {\~a}o de IPs Origem}{18}{subsubsection.3.2.1.2}
-\contentsline {subsection}{\numberline {3.2.2}M\IeC {\'o}dulo de Detec\IeC {\c c}\IeC {\~a}o}{18}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Gerenciador Offline}{19}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Aplica\IeC {\c c}\IeC {\~a}o do \textit {framework} de detec\IeC {\c c}\IeC {\~a}o em bases de dados reais}{19}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}DARPA - MIT}{19}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}DataMining}{20}{subsection.3.3.2}
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Metodologia}}{17}{chapter.3}
+\contentsline {section}{\numberline {3.1}Modelo de correla\IeC {\c c}\IeC {\~a}o NaHiD}{17}{section.3.1}
+\contentsline {section}{\numberline {3.2}Framework de detec\IeC {\c c}\IeC {\~a}o de ataques DDoS}{17}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Pr\IeC {\'e}-Processamento}{18}{subsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.1.1}Entropia de IPs origem}{18}{subsubsection.3.2.1.1}
+\contentsline {subsubsection}{\numberline {3.2.1.2}Varia\IeC {\c c}\IeC {\~a}o de IPs Origem}{19}{subsubsection.3.2.1.2}
+\contentsline {subsection}{\numberline {3.2.2}M\IeC {\'o}dulo de Detec\IeC {\c c}\IeC {\~a}o}{19}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Gerenciador Offline}{20}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Aplica\IeC {\c c}\IeC {\~a}o do \textit {framework} de detec\IeC {\c c}\IeC {\~a}o em bases de dados reais}{20}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}DARPA - MIT}{20}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}DataMining}{21}{subsection.3.3.2}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados}}{24}{chapter.4}
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados}}{25}{chapter.4}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es e Trabalhos Futuros}}{25}{chapter.5}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es e Trabalhos Futuros}}{26}{chapter.5}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{26}{section*.15}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{27}{section*.15}
 \vspace {\cftbeforechapterskip }

@@ -36,45 +36,45 @@ Warning--campo year vazio ou faltando em siteDarpa
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 13 entries,
+You've used 15 entries,
             6714 wiz_defined-function locations,
-            1264 strings with 11124 characters,
-and the built_in function-call counts, 10344 in all, are:
-= -- 1121
-> -- 199
-< -- 149
-+ -- 271
-- -- 59
-* -- 617
-:= -- 1257
-add.period$ -- 25
-call.type$ -- 15
-change.case$ -- 92
-chr.to.int$ -- 26
-cite$ -- 7
-duplicate$ -- 675
-empty$ -- 706
-format.name$ -- 279
-if$ -- 2406
+            1281 strings with 11626 characters,
+and the built_in function-call counts, 15103 in all, are:
+= -- 1717
+> -- 274
+< -- 302
++ -- 445
+- -- 81
+* -- 917
+:= -- 1812
+add.period$ -- 35
+call.type$ -- 17
+change.case$ -- 117
+chr.to.int$ -- 34
+cite$ -- 9
+duplicate$ -- 1206
+empty$ -- 835
+format.name$ -- 387
+if$ -- 3322
 int.to.chr$ -- 6
 int.to.str$ -- 1
-missing$ -- 181
-newline$ -- 40
-num.names$ -- 25
-pop$ -- 195
+missing$ -- 217
+newline$ -- 54
+num.names$ -- 35
+pop$ -- 237
 preamble$ -- 1
-purify$ -- 47
+purify$ -- 56
 quote$ -- 0
-skip$ -- 1102
+skip$ -- 1633
 stack$ -- 1
-substring$ -- 415
-swap$ -- 261
-text.length$ -- 11
+substring$ -- 662
+swap$ -- 463
+text.length$ -- 18
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 7
 warning$ -- 1
-while$ -- 41
+while$ -- 59
 width$ -- 0
-write$ -- 105
+write$ -- 142
 (There was 1 warning)
