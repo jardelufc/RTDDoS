@@ -38,24 +38,24 @@ Warning--campo year vazio ou faltando em siteDarpa
 +---------------------------------------------------------+
 You've used 15 entries,
             6714 wiz_defined-function locations,
-            1281 strings with 11626 characters,
-and the built_in function-call counts, 15103 in all, are:
-= -- 1717
+            1280 strings with 11545 characters,
+and the built_in function-call counts, 14834 in all, are:
+= -- 1675
 > -- 274
-< -- 302
-+ -- 445
+< -- 290
++ -- 433
 - -- 81
-* -- 917
-:= -- 1812
+* -- 903
+:= -- 1785
 add.period$ -- 35
 call.type$ -- 17
 change.case$ -- 117
 chr.to.int$ -- 34
 cite$ -- 9
-duplicate$ -- 1206
-empty$ -- 835
+duplicate$ -- 1168
+empty$ -- 832
 format.name$ -- 387
-if$ -- 3322
+if$ -- 3275
 int.to.chr$ -- 6
 int.to.str$ -- 1
 missing$ -- 217
@@ -65,10 +65,10 @@ pop$ -- 237
 preamble$ -- 1
 purify$ -- 56
 quote$ -- 0
-skip$ -- 1633
+skip$ -- 1594
 stack$ -- 1
-substring$ -- 662
-swap$ -- 463
+substring$ -- 641
+swap$ -- 449
 text.length$ -- 18
 text.prefix$ -- 0
 top$ -- 0

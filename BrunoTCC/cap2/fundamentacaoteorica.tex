@@ -2,7 +2,15 @@
 % ----------------------------------------------------------
 %Ataques distribuídos de negação de serviço (do inglês, DDoS) figuram uma das principais ameaças de segurança atualmente. Organizações perdem financeiramente e principalmente tendem a ter seu valor questionado quando são vítimas de invasores na rede.
 
-Uma ameaça trata-se de um potencial para violação de segurança quando há uma circunstância que pode quebrá-la, causando danos a um serviço/\textit{host}. Exemplos de ameaças são: \textit{malwares}, ataques de negação de serviço, envio de pacotes com falso endereço origem. Uma ameaça explora uma vulnerabilidade no alvo para obter s informações que deseja ou mesmo tornar o serviço indisponível, ou seja, ocorrendo a violação da segurança no alvo que é o ataque. Um ataque pode ocasionar, por exemplo, a destruição dos dados, perda da integridade, quebra de equipamentos, dentre outros incidentes. Um incidente, por sua vez pode causar prejuízo financeiro para a imagem do alvo, além de causar indisponibilidade do serviço. A \figref{} mostra uma síntese desses conceitos.   
+Uma ameaça trata-se de um potencial para violação de segurança quando há uma circunstância que pode quebrá-la, causando danos a um serviço/\textit{host}. Exemplos de ameaças são: \textit{malwares}, ataques de negação de serviço, envio de pacotes com falso endereço origem. Uma ameaça explora uma vulnerabilidade no alvo para obter s informações que deseja ou mesmo tornar o serviço indisponível, ou seja, ocorrendo a violação da segurança no alvo que é o ataque. Um ataque pode ocasionar, por exemplo, a destruição dos dados, perda da integridade, quebra de equipamentos, dentre outros incidentes. Um incidente, por sua vez pode causar prejuízo financeiro para a imagem do alvo, além de causar indisponibilidade do serviço. A \figref{fig:ameacas} mostra uma síntese desses conceitos.   
+
+ \begin{figure}[ht]
+ 	\centering
+ 	\caption{Fluxo explicativo de uma ameaça }
+ 	\includegraphics[width=0.8\textwidth]{figs/ameacas.pdf}\\
+ 	{Fonte: Elaborada pelo autor.}
+ 	\label{fig:ameacas}
+ \end{figure}
 
 Um ataque de negação de serviço(DoS - Denial-of-Service) torna um componente de rede inutilizável por usuários que estejam consumindo o serviço fornecido. A maioria dos ataques DoS na internet pode ser dividida em três categorias: \cite{kurose}
 \begin{itemize}
@@ -12,7 +20,16 @@ Um ataque de negação de serviço(DoS - Denial-of-Service) torna um componente 
 \end{itemize}
 Já segundo \cite{ddosatacks}, os ataques DoS são classificados em 5 categorias baseadas no protocolo cujo é atacado: Dispositivo, sistema operacional, aplicação, inundação de dados e características do protocolo. O primeiro inclui ataques que podem ser causados ao tirar vantagem de \textit{bugs} ou vulnerabilidades em software. O segundo leva em consideração ataques que aproveitam-se das formas nas quais os sistemas operacionais implementam os protocolos. Ataques baseados na aplicação infectam o alvo por meio de \textit{bugs} específicos da rede e tentam drenar os recursos da vítima. Em ataques baseados em inundação de dados, um atacante tenta usar a largura de banda disponível para mandar quantidades massivas de dados, fazendo com que o alvo processe essa grande quantidade. Por fim, ataques baseados em características do protocolo são caracterizados por tirarem vantagens de certos padrões de protocolo.
  
-Um ataque distribuído de negação de serviço (do inglês, DDoS) utiliza as propriedades de um ataque DoS de forma distribuída. Em outras palavras, a indisponibilidade de um serviço é causada por ataques oriundos de um ou mais IPs origem, tornando mais complexo o tratamento e a busca pelo atacante que está propagando a ameaça. De acordo com \cite{WANG2015308}, Atualmente os atacantes podem lançar vários ataques DDoS, focando-se além nos recursos (largura de banda da memória e CPU), em aplicativos (aplicações web, serviços de banco de dados).
+Um ataque distribuído de negação de serviço (do inglês, DDoS) utiliza as propriedades de um ataque DoS de forma distribuída. Em outras palavras, a indisponibilidade de um serviço é causada por ataques oriundos de um ou mais IPs origem, tornando mais complexo o tratamento e a busca pelo atacante que está propagando a ameaça. De acordo com \cite{WANG2015308}, Atualmente os atacantes podem lançar vários ataques DDoS, focando-se além nos recursos (largura de banda da memória e CPU), em aplicativos (aplicações web, serviços de banco de dados). Alguns tipos de ataques DDoS podem ser citados:
+
+\begin{itemize}
+	 \item \textit{Smurf}
+	 \item UDP \textit{Flood}
+	 \item SIDDoS
+	 \item HTTP \textit{Flood}
+\end{itemize}
+
+Ataques DDoS do tipo Smurf possuem dois componentes principais que são o uso de requisições ICMP forjadas e a direção dos pacotes para um endereço \textit{broadcast}. O protocolo ICMP é usado para troca de mensagens de controle e pode ser usado para determinar se uma máquina na internet está respondendo. Um exemplo prático desse comando é o ping, onde vc envia mensagens para um IP e recebe uma resposta, seja do IP alvo, ou de tempo de requisição excedido (\textit{timeout}). Além disso, um IPs \textit{broadcast} serve para comunicar-se com todos os hosts em um segmento de rede. Assim, https://www.cert.org/historical/advisories/CA-1998-01.cfm
 
 Para tratar esse tipo de problema, sistemas de detecção de intrusos (do inglês, IDS) são utilizados. Trata-se de softwares responsáveis  por detectar anomalias na rede, como por exemplo acessos não autorizados e tráfegos mal intencionados. O IDS monitora o tráfego, buscando anomalias e em caso positivo, alerta aos administradores da rede para estes tomarem as medidas corretivas, bloqueando as portas, negando serviço a um IP específico que esteja enviando requisições maliciosas ou fechando serviços que são geralmente utilizados para ataques. Segundo \cite{Ashoor2011}, IDS possuem 3 categorias: 
 \begin{itemize}
