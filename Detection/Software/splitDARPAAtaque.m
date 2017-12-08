@@ -1,4 +1,5 @@
-datasetTable = readtable('ataque.csv');
+datasetTable = readtable('ataqueultimoNT2000.csv');
+% keyboard;
 datasetTable = table2cell(datasetTable);
 packetID = datasetTable(:,1);
 timeCell = datasetTable(:,2);
@@ -7,17 +8,18 @@ numOfPackets = zeros(1,length(packetID));
 packetRateBps = zeros(1,length(packetID));
 time = zeros(1,length(packetID));
 sourceIPs = datasetTable(:,3);
-normalTraffic = [688 0.5 1];
+% normalTraffic = [688 0.5 1];
+normalTraffic = [848 0.5 1];
 numeroataques = 0;
 numeronormal = 0;
-keyboard;
+% keyboard;
 
 % Getting packet size in bps
 for k= 1:length(packetID)
     packetRateBps(k) = str2num(packetSize{k}) * 8;
     time(k) = str2num(timeCell{k});
 end
-
+% keyboard;
 janela = time(1);
 % conjunto de janelas de tempo
 janelas = zeros(1,length(time));
@@ -49,9 +51,9 @@ while i < length(time)
     end
 end
 % keyboard;
-janelas(length(time)) = 5;
+janelas(length(time)) = janelas(length(time) - 1);
 aux = 1;
-for idx = 1:5
+for idx = 1:janelas(length(time))
 %     if idx == 19
 %         keyboard;
 %     end
@@ -68,7 +70,7 @@ for idx = 1:5
     VarSourceIPs = aux/length(IPsOrigemWin);
     entropySourceIPs = entropy(IPsOrigemWin);
     NaHidModule = NaHid([packetRate VarSourceIPs entropySourceIPs],normalTraffic);
-    keyboard;
+%     keyboard;
     if isnan(NaHidModule)
         keyboard;
     end
@@ -78,7 +80,7 @@ for idx = 1:5
         disp(idx);
         disp('atack');
         numeroataques = numeroataques + 1;
-        keyboard;
+%         keyboard;
     else
         disp('traffic');
         disp(idx);
