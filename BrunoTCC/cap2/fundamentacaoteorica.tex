@@ -26,15 +26,34 @@ Um ataque distribuído de negação de serviço (do inglês, DDoS) utiliza as pr
 
 \begin{itemize}
 	 \item \textit{Smurf}
+	 \item HTTP \textit{Flood}
 	 \item UDP \textit{Flood}
 	 \item SIDDoS
-	 \item HTTP \textit{Flood}
+
 \end{itemize}
 
 \subsection{Smurf}
 Ataques DDoS do tipo \textit{Smurf} possuem dois componentes principais que são o uso de requisições ICMP forjadas e a direção dos pacotes para um endereço \textit{broadcast}. O protocolo ICMP é usado para troca de mensagens de controle e pode ser usado para determinar se uma máquina na internet está respondendo. Um exemplo prático desse comando é o ping, onde vc envia mensagens para um IP e recebe uma resposta, sendo do IP alvo, ou por tempo de requisição excedido (\textit{timeout}). Além disso, um IP \textit{broadcast} serve para comunicar-se com todos os \textit{hosts} em um segmento de rede. Assim, os invasores usam pacotes de solicitação de eco ICMP direcionados para endereços de IP \textit{broadcast} para gerar ataques de negação de serviço. Note que esse ataque possui três participantes: o atacante,, um intermediário(que também pode ser uma vitima) e o alvo. Esse intermediário recebe um pacote ICMP direcionado ao IP \textit{broadcst} de sua rede. Se esse intermediário não filtra seu tráfego, muitas máquinas na rede irão receber esse pacote de requisição e responderão ao mesmo por meio de uma resposta eco ICMP, provocando um congestionamento grave na rede \cite{certSmurf}.
 \subsection{HTTP \textit{flood}}
-Esse tipo de ataque, diferentemente do \textit{Smurf} é realizado na camada de aplicação, pois utiliza o protocolo HTTP. Trata-se de um ataque volumétrico, ou seja, torna um recurso indisponível por meio de uma grande quantidade de informação em uma pequena janela de tempo. Tal ataque pode ser explorado por  usar uma grande quantidade de conexões concorrentes, ou por meio de um grande consumo de banda (como por exemplo vários \textit{hosts} fazendo \textit{download} de um arquivo grande) em uma pequena janela de tempo. Assim, um atacante pode infectar vários \textit{hosts} e comandá-los a realizar um "bombardeio" de conexões em um alvo. Além disso, dentre as várias ferramentas existentes, pode-se citar o LOIC. Tal ferramenta realiza um número de requisições por segundo definido pelo usuário a um alvo. A \figref{sa} mostra seu uso  
+Esse tipo de ataque, diferentemente do \textit{Smurf} é realizado na camada de aplicação, pois utiliza o protocolo HTTP. Trata-se de um ataque volumétrico, ou seja, torna um recurso indisponível por meio de uma grande quantidade de informação em uma pequena janela de tempo. Tal ataque pode ser explorado por  usar uma grande quantidade de conexões concorrentes, ou por meio de um grande consumo de banda (como por exemplo vários \textit{hosts} fazendo \textit{download} de um arquivo grande) em uma pequena janela de tempo. Assim, um atacante pode infectar vários \textit{hosts} e comandá-los a realizar um "bombardeio" de conexões em um alvo. Além disso, dentre as várias ferramentas existentes, pode-se citar o LOIC. Tal ferramenta realiza um número de requisições por segundo definido pelo usuário a um alvo. A \figref{fig:loic} mostra seu uso 
+ 
+ \begin{figure}[ht]
+ 	\centering
+ 	\caption{Exemplo de ataque utilizando a ferramenta LOIC }
+ 	\includegraphics[width=1\textwidth]{figs/loic.pdf}\\
+ 	{Fonte: http://metacortexsecurity.com/tools/anon/LOIC/LOICv1.html}
+ 	\label{fig:loic}
+ \end{figure} 
+ 
+ A figura mostra requisições à direita sendo respondidas com código 200(OK) pelo servidor alvo, sendo que 30 requisições por segundo são enviadas ao mesmo. Vale ressaltar que o uso de apenas um \textit{host} realizando  esse processo não configura um ataque DDoS, visto que seriam necessários várias máquinas enviando esse tipo de requisição em uma mesma janela de tempo para causar algum dano ao servidor.
+ 
+ \subsection{UDP \textit{flood}}
+ 
+ Diferentemente do HTTP \textit{flood}, a versão UDP atua no protocolo da camada de transporte e tem como objetivo congestionar o \textit{link} do alvo. Assim, em um ataque UDP \textit{flood}, uma grande quantidade de pacotes UDP são enviados ou para portas aleatórias ou específicas no alvo. Para determinar o pedido requisitado, a vítima processa os dados recebidos. Em caso de ausência do pedido solicitado na porta solicitada, o sistema da vítima envia uma mensagem "Destino inacessível" ao remetente (invasor). Para ocultar a identidade do atacante, o mesmo falsifica o endereço IP de origem dos pacotes de ataque. Os ataques de inundação UDP também podem esgotar a largura de banda da rede em torno do sistema da vítima. Por isso, os sistemas em torno da vítima também são impactados devido ao ataque de inundação UDP \cite{xiaoming2010denial}. 
+ 
+ 
+ \subsection{SIDDoS}   
+  Outro tipo de ataque DDoS é o SQL \textit{Injection} DDoS, no qual atacantes inserem um código malicioso SQL como uma string que irá passar para um banco de dados de um site web como uma equação. Então, ilegalmente, permitindo acesso aos recursos ou mesmo aos dados guardados pelo servidor \cite{DataMining}. A maior parte desse tipo de ataque ocorre em telas de login, pois o atacante tem acesso indireto ao banco por meio do mesmo, facilitando as consultas ao banco de dados por meio de códigos maliciosos.   Em complemento a isso, uma vez que o atacante inseriu o código malicioso, ele utiliza-se a técnica do \textit{proxy} reverso, que faz com que o servidor alvo estabeleça comunicação com a máquina do atacante e o mesmo passa a possuir controle total do alvo por meio do \textit{prompt} de comando ou terminal.
 
 \section{IDS}
 

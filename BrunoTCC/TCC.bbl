@@ -62,4 +62,9 @@ ISSN 1389-1286.
 Dispon{\'\i}vel em:
   \url{http://www.sciencedirect.com/science/article/pii/S1389128615000742}.}
 
+\bibitem[Xiaoming, Sejdini e Chowdhury 2010]{xiaoming2010denial}
+\abntrefinfo{Xiaoming, Sejdini e Chowdhury}{XIAOMING; SEJDINI; CHOWDHURY}{2010}
+{XIAOMING, L. \emph{et al.} Denial of service (dos) attack with udp flood.
+\textbf{School of Computer Science, University of Windsor, Canada}, 2010.}
+
 \end{thebibliography}
