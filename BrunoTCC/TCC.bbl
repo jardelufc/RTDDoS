@@ -47,6 +47,12 @@ Dispon{\'\i}vel em:
   Survivability Conference and Exposition, 2000. DISCEX '00. Proceedings}.
   [S.l.: s.n.], 2000. v.~2, p. 12--26 vol.2.}
 
+\bibitem[Smurf IP Denial-of-Service Attacks]{certSmurf}
+\abntrefinfo{Smurf\ldots}{SMURF\ldots}{}
+{SMURF IP Denial-of-Service Attacks.
+  \url{https://www.cert.org/historical/advisories/CA-1998-01.cfm}.
+Acessado em 08/09/2017.}
+
 \bibitem[Wang \emph{et al.} 2015]{WANG2015308}
 \abntrefinfo{Wang \emph{et al.}}{WANG \emph{et al.}}{2015}
 {WANG, B. \emph{et al.} Ddos attack protection in the era of cloud computing

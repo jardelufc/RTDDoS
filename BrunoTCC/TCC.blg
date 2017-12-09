@@ -26,11 +26,13 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Database file #1: abntex2-options.bib
 Database file #2: bibtex/referencias.bib
+Warning--I didn't find a database entry for "Ashoor2011"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 Warning--campo year vazio ou faltando em siteDarpa
+Warning--campo year vazio ou faltando em certSmurf
 +---------------------------------------------------------+
 | Estilo bibliográfico abntex2-alf.bst versão v-1.9.6           |
 | Em caso de dúvidas ou problemas com este estilo procure |
@@ -38,43 +40,43 @@ Warning--campo year vazio ou faltando em siteDarpa
 +---------------------------------------------------------+
 You've used 15 entries,
             6714 wiz_defined-function locations,
-            1280 strings with 11545 characters,
-and the built_in function-call counts, 14834 in all, are:
-= -- 1675
-> -- 274
-< -- 290
-+ -- 433
-- -- 81
-* -- 903
-:= -- 1785
-add.period$ -- 35
+            1279 strings with 11525 characters,
+and the built_in function-call counts, 13407 in all, are:
+= -- 1506
+> -- 241
+< -- 220
++ -- 366
+- -- 71
+* -- 799
+:= -- 1611
+add.period$ -- 33
 call.type$ -- 17
-change.case$ -- 117
-chr.to.int$ -- 34
-cite$ -- 9
-duplicate$ -- 1168
-empty$ -- 832
-format.name$ -- 387
-if$ -- 3275
+change.case$ -- 113
+chr.to.int$ -- 31
+cite$ -- 10
+duplicate$ -- 950
+empty$ -- 833
+format.name$ -- 340
+if$ -- 3076
 int.to.chr$ -- 6
 int.to.str$ -- 1
-missing$ -- 217
-newline$ -- 54
-num.names$ -- 35
-pop$ -- 237
+missing$ -- 215
+newline$ -- 52
+num.names$ -- 30
+pop$ -- 238
 preamble$ -- 1
-purify$ -- 56
+purify$ -- 55
 quote$ -- 0
-skip$ -- 1594
+skip$ -- 1447
 stack$ -- 1
-substring$ -- 641
-swap$ -- 449
-text.length$ -- 18
+substring$ -- 558
+swap$ -- 367
+text.length$ -- 15
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 7
-warning$ -- 1
-while$ -- 59
+type$ -- 13
+warning$ -- 2
+while$ -- 52
 width$ -- 0
-write$ -- 142
-(There was 1 warning)
+write$ -- 137
+(There were 3 warnings)
