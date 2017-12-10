@@ -1,0 +1,42 @@
+\select@language {brazilian}
+\contentsline {chapter}{Lista de Figuras}{}
+\contentsline {chapter}{Lista de Tabelas}{}
+\contentsline {chapter}{Lista de S\IeC {\'\i }mbolos}{}
+\contentsline {chapter}{Lista de Abreviacoes}{}
+\contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{14}
+\contentsline {section}{\numberline {1.1}Motiva\IeC {\c c}\IeC {\~a}o e objetivos}{15}
+\contentsline {section}{\numberline {1.2}Contribuicoes}{15}
+\contentsline {section}{\numberline {1.3}Producao cientifica}{15}
+\contentsline {section}{\numberline {1.4}Organizacao da tese}{15}
+\contentsline {chapter}{\numberline {2}Referencial Te\IeC {\'o}rico}{16}
+\contentsline {section}{\numberline {2.1}Ataques}{16}
+\contentsline {section}{\numberline {2.2}DoS}{16}
+\contentsline {section}{\numberline {2.3}DDoS}{17}
+\contentsline {section}{\numberline {2.4}Detec\IeC {\c c}\IeC {\~a}o}{17}
+\contentsline {section}{\numberline {2.5}Correla\IeC {\c c}\IeC {\~a}o}{17}
+\contentsline {section}{\numberline {2.6}Solu\IeC {\c c}\IeC {\~o}es em Hardware}{18}
+\contentsline {section}{\numberline {2.7}T\IeC {\'e}cnicas Utilizadas}{19}
+\contentsline {subsection}{\numberline {2.7.1}Soma:}{19}
+\contentsline {subsection}{\numberline {2.7.2}M\IeC {\'o}dulo:}{19}
+\contentsline {subsection}{\numberline {2.7.3}Divis\IeC {\~a}o:}{19}
+\contentsline {subsubsection}{Ponto Fixo}{20}
+\contentsline {subsection}{\numberline {2.7.4}M\IeC {\'e}dia aritm\IeC {\'e}tica:}{20}
+\contentsline {subsection}{\numberline {2.7.5}Desvio padr\IeC {\~a}o:}{20}
+\contentsline {section}{\numberline {2.8}FPGA}{21}
+\contentsline {section}{\numberline {2.9}FPGA'S Xinlix de s\IeC {\'e}rie 7}{22}
+\contentsline {chapter}{\numberline {3}M\IeC {\'o}dulo Nahid}{23}
+\contentsline {section}{\numberline {3.1}M\IeC {\'o}dulo Nahid}{23}
+\contentsline {subsection}{\numberline {3.1.1}Datapath}{24}
+\contentsline {subsubsection}{Extend}{24}
+\contentsline {subsubsection}{Reduce}{25}
+\contentsline {subsubsection}{Mux}{25}
+\contentsline {subsubsection}{Mul}{25}
+\contentsline {subsubsection}{Adder}{26}
+\contentsline {subsubsection}{Divider}{26}
+\contentsline {subsubsection}{Sqrt}{27}
+\contentsline {subsubsection}{Register}{28}
+\contentsline {subsection}{\numberline {3.1.2}Controller}{28}
+\contentsline {chapter}{\numberline {4}Resultados Experimentais}{30}
+\contentsline {chapter}{\numberline {5}Conclus\IeC {\~a}o e Trabalhos Futuros}{31}
+\contentsline {chapter}{Ap\^endice{} A{} -$\tmspace -\thinmuskip {.1667em}$-{} T\IeC {\'\i }tulo do Ap\IeC {\^e}ndice}{32}
+\contentsline {chapter}{Ap\^endice{} B{} -$\tmspace -\thinmuskip {.1667em}$-{} Exemplo do pacote Algorithm}{33}
