@@ -1,0 +1,16 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{smartdiagram}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\smartdiagramset{
+	description font = \tiny,
+	planet size = 1cm
+}
+\begin{document}
+	\smartdiagram[descriptive diagram]{
+		{\tiny Processamento,{Inicialmente a janela de um segundo é definida e os pacotes que estão nessa janela são agrupados para a extração da Entropia, Variação de IPs origem e taxa de pacotes média.  }},
+		{\tiny Módulo de Detecção, {A partir dos parâmetros da etapa anterior, calcula correlação NaHiD entre o perfil normal e o tráfego em questão e compara esse valor com o limiar, retornando 0 caso seja um tráfego normal e 1 caso contrário.  }},
+		{\tiny Gerente de \textit{logs}, {Em seguida, as informações do tráfego são salvas e caso o módulo de detecção tenha identificado o tráfego como normal, o  perfil de comparação na correlação será atualizado  	 } }}
+\end{document}
+

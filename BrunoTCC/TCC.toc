@@ -7,26 +7,34 @@
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdu\IeC {\c c}\IeC {\~a}o}}{13}{chapter.1}
-\contentsline {section}{\numberline {1.1}Organiza\IeC {\c c}\IeC {\~a}o da monografia}{14}{section.1.1}
+\contentsline {section}{\numberline {1.1}Objetivos}{14}{section.1.1}
+\contentsline {section}{\numberline {1.2}Organiza\IeC {\c c}\IeC {\~a}o da monografia}{14}{section.1.2}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Revis\IeC {\~a}o Bibliogr\IeC {\'a}fica}}{15}{chapter.2}
+\contentsline {section}{\numberline {2.1}Seguran\IeC {\c c}a da Informa\IeC {\c c}\IeC {\~a}o}{15}{section.2.1}
+\contentsline {section}{\numberline {2.2}Ataques DoS e DDoS}{15}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Smurf}{16}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}HTTP \textit {flood}}{17}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}UDP \textit {flood}}{17}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}SIDDoS}{18}{subsection.2.2.4}
+\contentsline {section}{\numberline {2.3}IDS}{18}{section.2.3}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Metodologia}}{16}{chapter.3}
-\contentsline {section}{\numberline {3.1}Modelo de correla\IeC {\c c}\IeC {\~a}o NaHiD}{16}{section.3.1}
-\contentsline {section}{\numberline {3.2}Framework de detec\IeC {\c c}\IeC {\~a}o de ataques DDoS}{16}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Pr\IeC {\'e}-Processamento}{17}{subsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.1.1}Entropia de IPs origem}{17}{subsubsection.3.2.1.1}
-\contentsline {subsubsection}{\numberline {3.2.1.2}Varia\IeC {\c c}\IeC {\~a}o de IPs Origem}{17}{subsubsection.3.2.1.2}
-\contentsline {subsection}{\numberline {3.2.2}M\IeC {\'o}dulo de Detec\IeC {\c c}\IeC {\~a}o}{18}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Gerenciador Offline}{18}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Detec\IeC {\c c}\IeC {\~a}o de Ataques DDoS usando NaHiD}{18}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}DARPA - MIT}{18}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}DataMining}{19}{subsection.3.3.2}
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Metodologia}}{20}{chapter.3}
+\contentsline {section}{\numberline {3.1}Modelo de correla\IeC {\c c}\IeC {\~a}o NaHiD}{20}{section.3.1}
+\contentsline {section}{\numberline {3.2}Framework de detec\IeC {\c c}\IeC {\~a}o de ataques DDoS}{20}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Pr\IeC {\'e}-Processamento}{21}{subsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.1.1}Entropia de IPs origem}{21}{subsubsection.3.2.1.1}
+\contentsline {subsubsection}{\numberline {3.2.1.2}Varia\IeC {\c c}\IeC {\~a}o de IPs Origem}{22}{subsubsection.3.2.1.2}
+\contentsline {subsection}{\numberline {3.2.2}M\IeC {\'o}dulo de Detec\IeC {\c c}\IeC {\~a}o}{22}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Gerenciador Offline}{23}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Aplica\IeC {\c c}\IeC {\~a}o do \textit {framework} de detec\IeC {\c c}\IeC {\~a}o em bases de dados reais}{23}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}DARPA - MIT}{23}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}DataMining}{24}{subsection.3.3.2}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados}}{22}{chapter.4}
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados}}{28}{chapter.4}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es e Trabalhos Futuros}}{23}{chapter.5}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es e Trabalhos Futuros}}{29}{chapter.5}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{24}{section*.15}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{30}{section*.15}
 \vspace {\cftbeforechapterskip }

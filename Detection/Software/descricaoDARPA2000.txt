@@ -1,0 +1,37 @@
+DARPA 2000
+
+CENÁRIO 1 : 
+LLDOS 1.0
+
+Este é o primeiro conjunto de dados do cenário de ataque a ser criado para o DARPA como parte desse esforço. 
+Inclui um ataque distribuído de negação de serviço executado por um invasor novato. 
+As futuras versões deste e outros cenários de exemplo conterão mais versões de ataques furtivos.
+
+Este cenário de ataque é realizado em várias sessões de rede e auditoria. 
+Essas sessões foram agrupadas em 5 fases de ataque, ao longo das quais o invasor examina a rede, 
+invade um host, explorando a vulnerabilidade do sadmind do Solaris, instala o software DDoS trojan mstream e 
+lança um ataque DDoS em um servidor fora do site o host composto.
+ADVERSÁRIO: novato
+OBJETIVO ADVERSÁRIO: instalar componentes para e executar um ataque DDOS
+DEFENSOR: ingênuo
+
+CENÁRIO 2 
+LLDOS 2.0.2
+Este é o segundo conjunto de dados do cenário de ataque a ser criado para o DARPA como parte desse esforço. 
+Ele inclui um ataque distribuído de negação de serviço executado por um atacante que é mais sigiloso que o 
+atacante no primeiro conjunto de dados. O atacante ainda é considerado um novato, já que o ataque é principalmente 
+roteado de uma forma que se dispersa sendo um pouco mais sigiloso, ainda é algo que qualquer atacante pode baixar 
+e executar.
+Este cenário de ataque é realizado em várias sessões de rede e auditoria. 
+Essas sessões foram agrupadas em 5 fases de ataque, ao longo das quais o invasor examina a rede, invade um host,
+explorando a vulnerabilidade do sadmind do Solaris, instala o software DDoS trojan mstream e lança um ataque DDoS
+em um servidor fora do local do host composto.
+ADVERSÁRIO: novato
+OBJETIVO ADVERSÁRIO: instalar componentes para e executar um ataque DDOS
+DEFENSOR: ingênuo
+
+
+Windows NT Attack Data Set
+Um experimento com um nível de auditoria do NT superior ao que foi executado na avaliação de 1999 foi executado em janeiro de 2000.
+Aqui estão os traços coletados de dados daquela corrida de um dia de tráfego e ataque que invade a máquina NT. 
+Informações de rotulagem de alto nível para estes estão disponíveis agora.
