@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  9 DEC 2017 01:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  11 DEC 2017 00:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1745,11 +1745,16 @@ l.53
 
 LaTeX Warning: Citation `Ashoor2011' on page 18 undefined on input line 60.
 
-[18]) [19]
+[18]
+
+LaTeX Warning: Citation `gil2001multops' on page 19 undefined on input line 71.
+
+
+) [19]
 \openout2 = `cap3/metodologia.aux'.
 
  (./cap3/metodologia.tex
-<figs/fluxoFramework.pdf, id=251, 214.4522pt x 248.0216pt>
+<figs/fluxoFramework.pdf, id=266, 214.4522pt x 248.0216pt>
 File: figs/fluxoFramework.pdf Graphic file (type pdf)
 
 <use figs/fluxoFramework.pdf>
@@ -1783,7 +1788,7 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <17.28> not available
 
 Package hyperref Warning: Suppressing empty link on input line 94.
 
-<figs/darpaStructure.pdf, id=301, 469.74596pt x 235.011pt>
+<figs/darpaStructure.pdf, id=316, 469.74596pt x 235.011pt>
 File: figs/darpaStructure.pdf Graphic file (type pdf)
 
 <use figs/darpaStructure.pdf>
@@ -1794,7 +1799,7 @@ Overfull \hbox (3.46153pt too wide) in paragraph at lines 108--126
  [] 
  []
 
-[23] <figs/analiseDarpa.pdf, id=313, 231.3714pt x 167.19464pt>
+[23] <figs/analiseDarpa.pdf, id=328, 231.3714pt x 167.19464pt>
 File: figs/analiseDarpa.pdf Graphic file (type pdf)
 
 <use figs/analiseDarpa.pdf>
@@ -1854,14 +1859,14 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 3.
 
 bibitemlist
-)
-No file TCC.ind.
-
-AED: lastpage setting LastPage
 [30
 
 
-]
+])
+No file TCC.ind.
+
+AED: lastpage setting LastPage
+[31]
 \tf@lof=\write8
 \openout8 = `TCC.lof'.
 
@@ -1882,7 +1887,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 121.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 121.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 121.
 Package rerunfilecheck Info: File `TCC.brf' has not changed.
-(rerunfilecheck)             Checksum: 165759C99F0024DE4BEC94046B80CEE9;889.
+(rerunfilecheck)             Checksum: D38D419B44A7316F2B0C08CBDE85C8D6;1240.
 
 
 LaTeX Warning: There were undefined references.
@@ -1893,13 +1898,13 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 121.
  ) 
 Here is how much of TeX's memory you used:
- 26054 strings out of 493029
- 462317 string characters out of 6136234
- 716967 words of memory out of 5000000
- 28753 multiletter control sequences out of 15000+600000
- 70541 words of font info for 120 fonts, out of 8000000 for 9000
+ 26128 strings out of 493029
+ 464143 string characters out of 6136234
+ 717801 words of memory out of 5000000
+ 28816 multiletter control sequences out of 15000+600000
+ 70928 words of font info for 123 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,12n,67p,1944b,505s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,12n,67p,2064b,661s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share
 /texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
@@ -1918,10 +1923,10 @@ super/sfrm0500.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsi0800.pfb><
 /usr/share/texmf/fonts/type1/public/cm-super/sfss0800.pfb></usr/share/texmf/fon
 ts/type1/public/cm-super/sfss1000.pfb></usr/share/texmf/fonts/type1/public/cm-s
 uper/sfti0500.pfb>
-Output written on TCC.pdf (31 pages, 868206 bytes).
+Output written on TCC.pdf (32 pages, 875214 bytes).
 PDF statistics:
- 626 PDF objects out of 1000 (max. 8388607)
- 530 compressed objects within 6 object streams
- 104 named destinations out of 1000 (max. 500000)
+ 651 PDF objects out of 1000 (max. 8388607)
+ 554 compressed objects within 6 object streams
+ 109 named destinations out of 1000 (max. 500000)
  23379 words of extra memory for PDF output out of 24883 (max. 10000000)
 

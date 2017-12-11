@@ -38,45 +38,45 @@ Warning--campo year vazio ou faltando em certSmurf
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 16 entries,
+You've used 20 entries,
             6714 wiz_defined-function locations,
-            1283 strings with 11697 characters,
-and the built_in function-call counts, 14199 in all, are:
-= -- 1557
-> -- 288
-< -- 220
-+ -- 383
-- -- 85
-* -- 867
-:= -- 1722
-add.period$ -- 36
-call.type$ -- 18
-change.case$ -- 127
-chr.to.int$ -- 32
-cite$ -- 11
-duplicate$ -- 982
-empty$ -- 879
-format.name$ -- 403
-if$ -- 3256
+            1303 strings with 12647 characters,
+and the built_in function-call counts, 17358 in all, are:
+= -- 1807
+> -- 391
+< -- 222
++ -- 422
+- -- 117
+* -- 1082
+:= -- 2146
+add.period$ -- 54
+call.type$ -- 22
+change.case$ -- 166
+chr.to.int$ -- 36
+cite$ -- 15
+duplicate$ -- 1127
+empty$ -- 1155
+format.name$ -- 557
+if$ -- 4032
 int.to.chr$ -- 6
 int.to.str$ -- 1
-missing$ -- 232
-newline$ -- 57
-num.names$ -- 35
-pop$ -- 264
+missing$ -- 298
+newline$ -- 74
+num.names$ -- 55
+pop$ -- 351
 preamble$ -- 1
-purify$ -- 60
+purify$ -- 75
 quote$ -- 0
-skip$ -- 1485
+skip$ -- 1659
 stack$ -- 1
-substring$ -- 575
-swap$ -- 377
-text.length$ -- 15
+substring$ -- 708
+swap$ -- 446
+text.length$ -- 17
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 13
 warning$ -- 2
-while$ -- 58
+while$ -- 88
 width$ -- 0
-write$ -- 151
+write$ -- 212
 (There were 3 warnings)
