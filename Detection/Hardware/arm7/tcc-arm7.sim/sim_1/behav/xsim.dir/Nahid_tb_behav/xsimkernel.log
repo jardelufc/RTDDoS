@@ -1,7 +1,4 @@
-Running: xsim.dir/Nahid_tb_behav/xsimk.exe -simmode gui -wdb Nahid_tb_behav.wdb -simrunnum 0 -socket 1096
+Running: xsim.dir/Nahid_tb_behav/xsimk.exe -simmode gui -wdb Nahid_tb_behav.wdb -simrunnum 0 -socket 52108
 Design successfully loaded
 Design Loading Memory Usage: 8260 KB (Peak: 8260 KB)
-Design Loading CPU Usage: 31 ms
-Simulation completed
-Simulation Memory Usage: 30156 KB (Peak: 30156 KB)
-Simulation CPU Usage: 77 ms
+Design Loading CPU Usage: 15 ms

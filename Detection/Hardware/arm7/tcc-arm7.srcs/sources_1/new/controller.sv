@@ -1,4 +1,4 @@
-    `timescale 1ns / 1ps
+//    `timescale 1ns / 1ps
     //////////////////////////////////////////////////////////////////////////////////
     // Company: 
     // Engineer: 
@@ -24,13 +24,15 @@ module controller(clk,reset,valid,valid2,selmul3_1,selmul3_2,seladd5_2,seladd5_1
                   clrx1,clrx2,clrx3,clry1,clry2,clry3,enablex1,enablex2,enablex3,enabley1,enabley2,enabley3,
                   selmul2_2,selmul2_1,selmul1_2,selmul1_1,seladd2_2,seladd1_1,seldiv_2,seldiv_1,selr11,selr10,selr9,selr8,selr6,selr4,selr3,selr2,selr1,
                   seladd4_2,seladd4_1,seladd3_2,seladd3_1,seladd2_1,seladd1_2,
-                  opadd1,opadd2,opadd3,opadd4,opadd5
+                  opadd1,opadd2,opadd3,opadd4,opadd5,
+                  finish
                   );
                   
 //Parâmetros da máquina de estado
 input  clk,reset,valid,valid2;
 reg [5:0] cycle;
 //Parâmetros de controle do  datapath
+output  reg finish;
 output reg selmul3_1,selmul3_2,seladd5_2,seladd5_1,selr7,selsqrt,clr1,clr2,clr3,clr4,clr5,clr6,clr7,clr8,clr9,clr10,clr11,enable1,enable2,enable3,enable4,enable5,enable6,enable7,enable8,enable9,enable10,enable11,insqrt,inbottom,intop;
 output reg clrx1,clrx2,clrx3,clry1,clry2,clry3,enablex1,enablex2,enablex3,enabley1,enabley2,enabley3;
 output reg [1:0] selmul2_2,selmul2_1,selmul1_2,selmul1_1,seladd2_2,seladd1_1,seldiv_2,seldiv_1,selr11,selr10,selr9,selr8,selr6,selr4,selr3,selr2,selr1;
@@ -49,6 +51,7 @@ output reg [1:0] opadd1,opadd2,opadd3,opadd4,opadd5;
                         enabley1=1;
                         enabley2=1;
                         enabley3=1;
+                        finish=0;
                     end
                 6'b000001:
                     begin
@@ -520,6 +523,18 @@ output reg [1:0] opadd1,opadd2,opadd3,opadd4,opadd5;
                     end
                 6'b101010:
                     begin   
+                     finish =1;
+                     clr1=1; 
+                     clr2=1; 
+                     clr3=1; 
+                     clr4=1; 
+                     clr5=1; 
+                     clr6=1;                       clr11=0; 
+                     clr7=1;
+                     clr8=1;
+                     clr9=1;
+                     clr10=1;
+                     clr11=1;    
                     end         
             endcase
         end
@@ -567,6 +582,7 @@ output reg [1:0] opadd1,opadd2,opadd3,opadd4,opadd5;
                         6'b101001:
                            cycle <= 6'b101010;
                         6'b101010:
+                          
                            cycle <= 6'b00000; 
                     endcase
     endmodule
