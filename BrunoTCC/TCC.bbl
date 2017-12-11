@@ -11,6 +11,12 @@
   {A}ttacks {U}sing {D}ata {M}ining {T}echniques.
 v.~7, 01 2016.}
 
+\bibitem[Ashoor e Gore 2011]{ashoor2011importance}
+\abntrefinfo{Ashoor e Gore}{ASHOOR; GORE}{2011}
+{ASHOOR, A.~S.; GORE, S. Importance of intrusion detection system (ids).
+\textbf{International Journal of Scientific and Engineering Research}, v.~2,
+  n.~1, p.~1--4, 2011.}
+
 \bibitem[Cabrera \emph{et al.} 2001]{cabrera2001proactive}
 \abntrefinfo{Cabrera \emph{et al.}}{CABRERA \emph{et al.}}{2001}
 {CABRERA, J.~B. \emph{et al.} Proactive detection of distributed denial of
@@ -44,6 +50,12 @@ Acessado em 18/08/2017.}
 ISSN 1389-1286.
 Dispon{\'\i}vel em:
   \url{http://www.sciencedirect.com/science/article/pii/S1389128603004250}.}
+
+\bibitem[Gil e Poletto 2001]{multops}
+\abntrefinfo{Gil e Poletto}{GIL; POLETTO}{2001}
+{GIL, T.~M.; POLETTO, M. Multops: A data-structure for bandwidth attack
+  detection. In:  \textbf{USENIX Security Symposium}. [S.l.: s.n.], 2001. p.
+  23--38.}
 
 \bibitem[Hoque, Kashyap e Bhattacharyya 2017]{HOQUE201748}
 \abntrefinfo{Hoque, Kashyap e Bhattacharyya}{HOQUE; KASHYAP;

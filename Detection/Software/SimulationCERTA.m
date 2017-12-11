@@ -42,7 +42,7 @@ for i = 1:length(datasetMtx(:,1))
     time = time + pktSendTIME + pktDelayNODE + pktDELAY + pktReservedTIME;
     %
     if time >= 1000
-        keyboard;
+%         keyboard;
         win = win + 1;
         trafficPktRate = mean(datasetMtx(step:i,19));
         sourceIPs = datasetMtx(step:i,1);
