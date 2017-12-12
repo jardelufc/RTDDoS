@@ -32,10 +32,11 @@
 \contentsline {subsection}{\numberline {3.3.2}DataMining}{26}{subsection.3.3.2}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados}}{29}{chapter.4}
-\contentsline {section}{\numberline {4.1}Resultados an\IeC {\'a}lise \textit {dataset}\cite {DataMining}}{29}{section.4.1}
+\contentsline {section}{\numberline {4.1}An\IeC {\'a}lise \textit {dataset}\cite {DataMining}}{29}{section.4.1}
+\contentsline {section}{\numberline {4.2}An\IeC {\'a}lise \textit {dataset} DARPA}{30}{section.4.2}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es e Trabalhos Futuros}}{30}{chapter.5}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es e Trabalhos Futuros}}{31}{chapter.5}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{31}{section*.15}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{32}{section*.15}
 \vspace {\cftbeforechapterskip }
