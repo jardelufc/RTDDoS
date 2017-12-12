@@ -1,3 +1,17 @@
 \chapter[Resultados]{Experimentos e Resultados}
 \label{resultados}
-Nessa seção, detalhes dos experimentos realizados, bem como resultados experimentais são mostrados a partir de simulações utilizando as bases de dados apresentadas na \secref{metodologia}. Na \figref{as} tem-se os gráficos de taxa e acerto em função dos diferentes limiares simulados. Tal comportamento é esperado, visto que com o 
+Nessa seção, detalhes dos experimentos realizados, bem como resultados experimentais são mostrados a partir de simulações utilizando as bases de dados apresentadas na \secref{metodologia}. Como forma de avaliação são consideradas a  taxa de acertos, o número de falsos positivos e o número de falsos negativos. Em outras palavras, os \textit{datasets} avaliados possuem arquivos de respostas, onde os tráfegos normais e ataques são descriminados. Assim, a resposta do \textit{framework} estudado será comparada com esse arquivo e a taxa de acertos será calculada da seguinte forma
+\begin{equation}
+	T_a = \frac{N_e}{N_t},
+\end{equation}
+onde $T_a$ é a taxa de acertos, $N_e$ é o número tráfegos julgados erroneamente, $N_t$ é o número de tráfegos analisados pelo \textit{framework}. 
+
+\section{Análise \textit{dataset}\cite{DataMining}}  
+Na \figref{as} tem-se os gráficos de taxa e acerto em função dos diferentes limiares simulados para o \textit{dataset} proposto por \cite{DataMining}, o qual possui apenas ataques e   . Tal comportamento é esperado, visto que com o aumento do limiar, percebe-se uma diminuição da taxa de acerto, visto que para valores altos de limiar, o tráfego analisado deve ter propriedades (entropia, variação de IPs origem e taxa de pacotes) muito próximas do perfil normal para não ser considerado um ataque. Vale ressaltar que existem diferentes tipos de ataques DDoS e geralmente possuem abordagens singulares para os ataques. Assim, seria uma escolha equivocada escolher valores de limiar próximos a 1, pois a granularidade dos ataques não seria abrangida pelo \textit{framework}. A \tabref{ass} complementa o gráfico da \figref{as}, pois mostra o número de acertos, falsos positivos e falsos negativos na análise do \textit{dataset}.
+
+\section{Análise \textit{dataset} DARPA}
+A \figref{ass} apresenta os gráficos da taxa de acertos em função dos limiares simulados 
+
+
+
+   

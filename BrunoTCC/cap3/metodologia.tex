@@ -1,7 +1,7 @@
 \chapter[Metodologia]{Metodologia}
 \label{metodologia}
 Nesse capítulo são apresentadas a medida de correlação utilizada no trabalho, além das principais características do \textit{framework}, mostrando como a correlação é aplicada
-para a detecção de ataques DDoS e quais bases de dados são utilizadas para a avaliação do \textit{framework}, destacando sua estrutura e ferramentas utilizadas para o tratamento dos dados.
+para a detecção de ataques DDoS e quais bases de dados são utilizadas para a avaliação do \textit{framework}, destacando sua estrutura e ferramentas utilizadas para o tratamento desses dados.
 % ----------------------------------------------------------
 
 \section{Modelo de correlação NaHiD}
@@ -22,15 +22,15 @@ As provas de simetria e identidade da correlação podem ser encontradas em \cit
 
 \section{Framework de detecção de ataques DDoS}
  
- \begin{figure}[ht]
+ \begin{figure}[htb]
 	\centering
 	\caption{Estrutura do \textit{framework} analisado }
-	\includegraphics[width=0.5\textwidth]{figs/fluxoFramework.pdf}\\
+	\includegraphics[width=0.6\textwidth]{figs/fluxoFramework.pdf}\\
 	{Fonte: Elaborada pelo autor.}
 	\label{fig:Fluxo_Framework}
 \end{figure}
 
-O \textit{framework} tem como objetivo, detectar ataques DDoS em tempo real na rede monitorada, a partir de dados trafegados na rede com uma taxa aceitável de erros. Tal arcabouço possui três módulos: pré-processamento, detecção e um de segurança. A \figref{fig:Fluxo_Framework} mostra o fluxo de funcionamento do \textit{framework}. Amostras de tráfego são capturadas de uma porta do roteador na forma de um pacote TCP/IP e enviadas ao módulo de pré-processamento. Nessa fase, a cada segundo, os pacotes recebidos são agrupados e essa instância de tráfego é enviada para o módulo de detecção de ataques, que irá classificar a instância como normal ou maliciosa. O gerente de segurança manterá um perfil normal, como referência, e um valor limiar de correlação em sua base de perfis, para ser usado pelo módulo de detecção. Incrementalmente, o gerente recalcula o perfil normal baseado nos valores anteriores. 
+O \textit{framework} tem como objetivo, detectar ataques DDoS em tempo real na rede monitorada, a partir de dados trafegados na rede com uma taxa aceitável de erros. Tal arcabouço possui três módulos: pré-processamento, detecção e um de segurança. A \figref{fig:Fluxo_Framework} mostra o fluxo de funcionamento do \textit{framework}. Amostras de tráfego são capturadas de uma porta do roteador na forma de um pacote TCP/IP e enviadas ao módulo de pré-processamento. Nessa fase, a cada segundo, os pacotes recebidos são agrupados e essa instância de tráfego é enviada para o módulo de detecção de ataques, que irá classificar a instância como normal ou maliciosa. O gerente de segurança manterá um perfil normal, como referência, e um valor limiar de correlação em sua base de perfis, para ser usado pelo módulo de detecção. Incrementalmente, o gerente recalcula o perfil normal baseado nos valores anteriores. Se o tráfego anterior for considerado normal, este será o tráfego referencial para a correlação na janela seguinte.
 
 \subsection{Pré-Processamento}
 Nessa etapa, os dados são coletados por um \textit{sniffer} da rede, o qual analisa todos os pacotes trafegados e, a cada segundo, as métricas desejadas são calculadas para servirem de entrada para a correlação NaHiD. 
@@ -136,7 +136,7 @@ Note que de acordo com a estrutura do \textit{dataset} mostrada na \tabref{Tab:W
  \begin{figure}[!ht]
  	\centering
  	\caption{Diagrama descritivo análise e aplicação do \textit{framework} na base de dados DARPA  }
- 	\includegraphics[width=0.8\textwidth]{figs/analiseDarpa.pdf}\\
+ 	\includegraphics[width=0.9\textwidth]{figs/analiseDarpa.pdf}\\
  	{Fonte: Elaborada pelo autor.}
  	\label{fig:analiseDarpa}
  \end{figure}

@@ -9,7 +9,7 @@ tic;
 debug = 0;
 % DestIP = 3;
 % windownSize = 5;
-threshold = 0.88:0.01:0.95;
+threshold = 0.8:0.01:0.95;
 % [PktRate VarSourceIP EntropySourceIP]
 normalTraffic1 = [305.644 0.808 3.1 ];
 normalTraffic2 = [357663 12.7 0.94 ];

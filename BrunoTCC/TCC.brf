@@ -1,4 +1,5 @@
 \backcite {DataMining}{{9}{(document)}{Doc-Start}}
+\backcite {DataMining}{{12}{(document)}{Doc-Start}}
 \backcite {HOQUE201748}{{13}{1}{chapter.1}}
 \backcite {kurose}{{15}{2.2}{section.2.2}}
 \backcite {ddosatacks}{{15}{2.2}{section.2.2}}
@@ -20,6 +21,7 @@
 \backcite {HOQUE201748}{{23}{3.2.1.2}{equation.3.2.4}}
 \backcite {siteDarpa}{{24}{3.3.1}{subsection.3.3.1}}
 \backcite {DARPA}{{25}{2}{table.3.2}}
-\backcite {DataMining}{{25}{3.3.2}{subsection.3.3.2}}
+\backcite {DataMining}{{26}{3.3.2}{subsection.3.3.2}}
 \backcite {DataMining}{{27}{3}{table.3.3}}
 \backcite {DataMining}{{27}{3}{table.3.3}}
+\backcite {DataMining}{{29}{4.1}{section.4.1}}
