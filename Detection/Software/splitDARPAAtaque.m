@@ -1,4 +1,4 @@
-datasetTable = readtable('ataque5NT2000.csv');
+datasetTable = readtable('ataque6NT2000.csv');
 % keyboard;
 datasetTable = table2cell(datasetTable);
 packetID = datasetTable(:,1);
@@ -57,16 +57,24 @@ for idx = 1:janelas(length(time))
 %     if idx == 19
 %         keyboard;
 %     end
+%     if idx == 213
+%     keyboard;
+%     end
     win = find(janelas == idx);
     IPsOrigemWin = sourceIPs(win);
     packetRate = mean(packetRateBps(win));
 %     keyboard
     for indices = 1:(length(IPsOrigemWin) - 1)
         if strcmp(IPsOrigemWin(indices + 1),IPsOrigemWin(indices))
+%             if strcmp(IPsOrigemWin(indices + 1),'172.016.113.204')
+%             keyboard;
+%             end
             aux = aux + 1;
         end
     end
     
+
+
     VarSourceIPs = aux/length(IPsOrigemWin);
     entropySourceIPs = entropy(IPsOrigemWin);
     NaHidModule = NaHid([packetRate VarSourceIPs entropySourceIPs],normalTraffic);
@@ -80,7 +88,7 @@ for idx = 1:janelas(length(time))
         disp(idx);
         disp('atack');
         numeroataques = numeroataques + 1;
-%         keyboard;
+        keyboard;
     else
         disp('traffic');
         disp(idx);
