@@ -24,6 +24,11 @@ v.~7, 01 2016.}
   \textbf{Integrated Network Management Proceedings, 2001 IEEE/IFIP
   International Symposium on}. [S.l.], 2001. p. 609--622.}
 
+\bibitem[Center 1998]{certSmurf}
+\abntrefinfo{Center}{CENTER}{1998}
+{CENTER, C.~C. \textbf{CERT advisory CA-1998-01 smurf IP denial-of-service
+  attacks}. [S.l.]: January, 1998.}
+
 \bibitem[Criscuolo 2000]{criscuolo2000distributed}
 \abntrefinfo{Criscuolo}{CRISCUOLO}{2000}
 {CRISCUOLO, P.~J. \textbf{Distributed denial of service: Trin00, tribe flood
@@ -84,12 +89,6 @@ Dispon{\'\i}vel em:
   darpa off-line intrusion detection evaluation. In:  \textbf{DARPA Information
   Survivability Conference and Exposition, 2000. DISCEX '00. Proceedings}.
   [S.l.: s.n.], 2000. v.~2, p. 12--26 vol.2.}
-
-\bibitem[Smurf IP Denial-of-Service Attacks]{certSmurf}
-\abntrefinfo{Smurf\ldots}{SMURF\ldots}{}
-{SMURF IP Denial-of-Service Attacks.
-  \url{https://www.cert.org/historical/advisories/CA-1998-01.cfm}.
-Acessado em 08/09/2017.}
 
 \bibitem[Wang \emph{et al.} 2015]{WANG2015308}
 \abntrefinfo{Wang \emph{et al.}}{WANG \emph{et al.}}{2015}

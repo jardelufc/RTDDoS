@@ -19,9 +19,11 @@ brazil]{standalone}
 	
 	\begin{tikzpicture}
 	\begin{axis}[
+	ytick={0.6,0.7,...,1},
+	xtick={0.64,0.68,0.72,0.76,0.8,0.84,0.88,0.92},
 	xlabel= Valor de limiar utilizado na análise do dataset,
 	ylabel= Taxa de acerto]
-	\addplot table [y=y1, x=x1]{results60-95.dat};
+	\addplot table [y=y1, x=x1]{resultsDarpa.dat};
 %	\addlegendentry{$Q_A$ series}
 	\end{axis}
 	\end{tikzpicture}
