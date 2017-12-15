@@ -15,7 +15,7 @@
 \contentsline {section}{\numberline {2.2}Ataques DoS e DDoS}{15}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Smurf}{16}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}HTTP \textit {flood}}{17}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}UDP \textit {flood}}{17}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.3}UDP \textit {flood}}{18}{subsection.2.2.3}
 \contentsline {subsection}{\numberline {2.2.4}SIDDoS}{18}{subsection.2.2.4}
 \contentsline {section}{\numberline {2.3}IDS}{18}{section.2.3}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
@@ -29,12 +29,15 @@
 \contentsline {subsection}{\numberline {3.2.3}Gerenciador Offline}{24}{subsection.3.2.3}
 \contentsline {section}{\numberline {3.3}Aplica\IeC {\c c}\IeC {\~a}o do \textit {framework} de detec\IeC {\c c}\IeC {\~a}o em bases de dados reais}{24}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}DARPA - MIT}{24}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}DataMining}{25}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.2}DataMining}{26}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}M\IeC {\'e}todo de avalia\IeC {\c c}\IeC {\~a}o do \textit {framework}}{28}{section.3.4}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados}}{29}{chapter.4}
+\contentsline {section}{\numberline {4.1}An\IeC {\'a}lise \textit {dataset DataMining}}{29}{section.4.1}
+\contentsline {section}{\numberline {4.2}An\IeC {\'a}lise \textit {dataset} DARPA}{29}{section.4.2}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es e Trabalhos Futuros}}{30}{chapter.5}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es e Trabalhos Futuros}}{34}{chapter.5}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{31}{section*.15}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{35}{section*.15}
 \vspace {\cftbeforechapterskip }

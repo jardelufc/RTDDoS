@@ -11,6 +11,8 @@ normalTraffic = [688 0.5 1];
 numeroataques = 0;
 numeronormal = 0;
 % keyboard;
+threshold = 0.8:0.01:0.95;
+
 
 % Getting packet size in bps
 for k= 1:length(packetID)
