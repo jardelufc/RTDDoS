@@ -1,0 +1,91 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.6 }
+
+\bibitem[Ahmed \emph{et al.} 2014]{6814272}
+\abntrefinfo{Ahmed \emph{et al.}}{AHMED \emph{et al.}}{2014}
+{AHMED, H.~A. \emph{et al.} Shifting-and-scaling correlation based biclustering
+  algorithm.
+\textbf{IEEE/ACM Transactions on Computational Biology and Bioinformatics},
+  v.~11, n.~6, p. 1239--1252, Nov 2014.
+ISSN 1545-5963.}
+
+\bibitem[ALECRIM 2008]{alecrim2008ataques}
+\abntrefinfo{ALECRIM}{ALECRIM}{2008}
+{ALECRIM, E. \textbf{Ataques DoS (Denial of Service) e DDoS (Distributed DoS)}.
+  [S.l.]: Dispon{\'\i}vel na Internet em< http://www. infowester.
+  com/col120904. php> em, 2008.}
+
+\bibitem[Demetrio, Constante e Arrigoni]{demetrioarquitetura}
+\abntrefinfo{Demetrio, Constante e Arrigoni}{DEMETRIO; CONSTANTE; ARRIGONI}{}
+{DEMETRIO, A. \emph{et al.} Arquitetura fpgas e cplds da xilinx.}
+
+\bibitem[Feitosa, Souto e Sadok 2008]{feitosa2008trafego}
+\abntrefinfo{Feitosa, Souto e Sadok}{FEITOSA; SOUTO; SADOK}{2008}
+{FEITOSA, E. \emph{et al.} Tr{\'a}fego internet n{\~a}o desejado: Conceitos,
+  caracteriza{\c{c}}{\~a}o e solu{\c{c}}{\~o}es.
+\textbf{Proc. VIII SBSeg, SBC}, p. 91--137, 2008.}
+
+\bibitem[Handley e Rescorla 2006]{handley2006internet}
+\abntrefinfo{Handley e Rescorla}{HANDLEY; RESCORLA}{2006}
+{HANDLEY, M.~J.; RESCORLA, E. Internet denial-of-service considerations.
+2006.}
+
+\bibitem[Heath 2002]{heath2002embedded}
+\abntrefinfo{Heath}{HEATH}{2002}
+{HEATH, S. \textbf{Embedded systems design}. [S.l.]: Newnes, 2002.}
+
+\bibitem[Hoque, Kashyap e Bhattacharyya 2017]{HOQUE201748}
+\abntrefinfo{Hoque, Kashyap e Bhattacharyya}{HOQUE; KASHYAP;
+  BHATTACHARYYA}{2017}
+{HOQUE, N. \emph{et al.} Real-time {DDoS} {A}ttack {D}etection {U}sing {FPGA}.
+\textbf{Computer Communications}, v.~110, n. Supplement C, p. 48 -- 58, 2017.
+ISSN 0140-3664.
+Dispon{\'\i}vel em:
+  \url{http://www.sciencedirect.com/science/article/pii/S0140366416306442}.}
+
+\bibitem[Mandia e PROSISE 2001]{mandia2001hackers}
+\abntrefinfo{Mandia e PROSISE}{MANDIA; PROSISE}{2001}
+{MANDIA, K.; PROSISE, C. Hackers resposta e contraataque.
+\textbf{Rio de Janeiro: Campus}, 2001.}
+
+\bibitem[Miranda \emph{et al.} 2002]{miranda2002computador}
+\abntrefinfo{Miranda \emph{et al.}}{MIRANDA \emph{et al.}}{2002}
+{MIRANDA, L.~C. \emph{et al.} O computador na educa{\c{c}}{\~a}o do
+  eletrot{\'e}cnico.
+Florian{\'o}polis, SC, 2002.}
+
+\bibitem[Pinheiro 2017]{dos2017ameaccas}
+\abntrefinfo{Pinheiro}{PINHEIRO}{2017}
+{PINHEIRO, J.~M. dos S. Amea{\c{c}}as e ataques aos sistemas de
+  informa{\c{c}}{\~a}o: Prevenir e antecipar.
+\textbf{Cadernos UniFOA}, v.~3, n.~5, p. 11--21, 2017.}
+
+\bibitem[Przybus 2010]{przybus2010xilinx}
+\abntrefinfo{Przybus}{PRZYBUS}{2010}
+{PRZYBUS, B. Xilinx redefines power, performance, and design productivity with
+  three new 28 nm fpga families: Virtex-7, kintex-7, and artix-7 devices.
+\textbf{Xilinx White Paper}, 2010.}
+
+\bibitem[Stein 2002]{stein2002world}
+\abntrefinfo{Stein}{STEIN}{2002}
+{STEIN, L.~D. \textbf{World Wide Web Security FAQ.} [S.l.]: Lincoln D. Stein.,
+  2002.}
+
+\bibitem[Woods \emph{et al.} 2008]{woods2008reconfigurable}
+\abntrefinfo{Woods \emph{et al.}}{WOODS \emph{et al.}}{2008}
+{WOODS, J. B.~R. \emph{et al.} Reconfigurable computing: Architectures, tools
+  and applications.
+Springer, 2008.}
+
+\bibitem[Yu \emph{et al.} 2012]{yu2012discriminating}
+\abntrefinfo{Yu \emph{et al.}}{YU \emph{et al.}}{2012}
+{YU, S. \emph{et al.} Discriminating ddos attacks from flash crowds using flow
+  correlation coefficient.
+\textbf{IEEE Transactions on Parallel and Distributed Systems}, IEEE, v.~23,
+  n.~6, p. 1073--1080, 2012.}
+
+\end{thebibliography}

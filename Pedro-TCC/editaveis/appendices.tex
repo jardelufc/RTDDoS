@@ -1,0 +1,1048 @@
+\chapter{Códigos do Módulo}
+\label{Apx:A}
+
+\definecolor{vgreen}{RGB}{104,180,104}
+\definecolor{vblue}{RGB}{49,49,255}
+\definecolor{vorange}{RGB}{255,143,102}
+\lstdefinestyle{verilog-style}
+{
+	language=Verilog,
+	basicstyle=\small\ttfamily,
+	keywordstyle=\color{vblue},
+	identifierstyle=\color{black},
+	commentstyle=\color{vgreen},
+	numbers=left,
+	numberstyle=\tiny\color{black},
+	numbersep=10pt,
+	tabsize=8,
+	moredelim=*[s][\colorIndex]{[}{]},
+	literate=*{:}{:}1	
+}
+
+\makeatletter
+\newcommand*\@lbracket{[}
+\newcommand*\@rbracket{]}
+\newcommand*\@colon{:}
+\newcommand*\colorIndex{%
+	\edef\@temp{\the\lst@token}%
+	\ifx\@temp\@lbracket \color{black}%
+	\else\ifx\@temp\@rbracket \color{black}%
+	\else\ifx\@temp\@colon \color{black}%
+	\else \color{vorange}%
+	\fi\fi\fi
+}
+\makeatother
+
+\section{Código Nahid}
+\label{nahidcode}
+\begin{lstlisting}[style={verilog-style}]
+module Nahid(clk,reset,Rx1,Rx2,Rx3,Ry1,Ry2,Ry3,R11resul,threshold);
+//entrada do controller
+input clk,reset;
+//entrada do datapath
+input [10:0] Rx1,Rx2,Rx3,Ry1,Ry2,Ry3;
+output[19:0] R11resul;
+input  [19:0] threshold;
+reg selmul3_1,selmul3_2,seladd5_2,seladd5_1,selr7,selsqrt,clr1,clr2,
+clr3,clr4,clr5,clr6,clr7,clr8,clr9,clr10,clr11,enable1,enable2,
+enable3,enable4,enable5,enable6,enable7,enable8,enable9,enable10,
+enable11,valid,insqrt,valid2,inbottom,intop;
+reg clrx1,clrx2,clrx3,clry1,clry2,clry3,enablex1,enablex2,enablex3,
+enabley1,enabley2,enabley3;
+reg [1:0] selmul2_2,selmul2_1,selmul1_2,selmul1_1,seladd2_2,seladd1_1,
+seldiv_2,seldiv_1,selr11,selr10,selr9,selr8,selr6,selr4,selr3,
+selr2,selr1;
+reg [2:0] seladd4_2,seladd4_1,seladd3_2,seladd3_1,seladd2_1,seladd1_2;
+reg [1:0] opadd1,opadd2,opadd3,opadd4,opadd5;
+reg [19:0] R11resul;
+reg attack,finish;
+Datapath data1 (.Rx1(Rx1),.Rx2(Rx2),.Rx3(Rx3),.Ry1(Ry1),.Ry2(Ry2),
+.Ry3(Ry3),.selmul3_1(selmul3_1),.selmul3_2(selmul3_2),
+.seladd5_2(seladd5_2),.seladd5_1(seladd5_1),.selr7(selr7),
+.selsqrt(selsqrt),.selmul2_2(selmul2_2),.selmul2_1(selmul2_1),
+.selmul1_2(selmul1_2),.selmul1_1(selmul1_1),.seladd2_2(seladd2_2),
+.seladd1_1(seladd1_1),.seldiv_2(seldiv_2),.seldiv_1(seldiv_1),
+.selr11(selr11),.selr10(selr10),.selr9(selr9),.selr8(selr8),
+.selr6(selr6),.selr4(selr4),.selr3(selr3),.selr2(selr2),
+.selr1(selr1),.seladd4_2(seladd4_2),.seladd4_1(seladd4_1),
+.seladd3_2(seladd3_2),.seladd3_1(seladd3_1),.seladd2_1(seladd2_1),
+.seladd1_2(seladd1_2),.clk(clk),.clr1(clr1),.clr2(clr2),
+.clr3(clr3),.clr4(clr4),.clr5(clr5),.clr6(clr6),.clr7(clr7)
+,.clr8(clr8),.clr9(clr9),.clr10(clr10),.clr11(clr11),
+.enable1(enable1),.enable2(enable2),.enable3(enable3),
+.enable4(enable4),.enable5(enable5),.enable6(enable6),
+.enable7(enable7),.enable8(enable8),.enable9(enable9),
+.enable10(enable10),.enable11(enable11), .opadd1(opadd1),.opadd2(opadd2),
+.opadd3(opadd3),.opadd4(opadd4),.opadd5(opadd5),
+.clrx1(clrx1),.clrx2(clrx2),.clrx3(clrx3),
+.clry1(clry1),.clry2(clry2),
+.clry3(clry3),.enablex1(enablex1),.enablex2(enablex2),
+.enablex3(enablex3),.enabley1(enabley1),.enabley2(enabley2),
+.enabley3(enabley3),.insqrt(insqrt),.valid(valid),
+.valid2(valid2),.inbottom(inbottom),
+.intop(intop),.R11resul(R11resul));
+
+controller c1 (.clk(clk),.reset(reset),.selmul3_1(selmul3_1),
+.selmul3_2(selmul3_2),.seladd5_2(seladd5_2),.seladd5_1(seladd5_1),
+.selr7(selr7),.selsqrt(selsqrt),.selmul2_2(selmul2_2),
+.selmul2_1(selmul2_1),.selmul1_2(selmul1_2),.selmul1_1(selmul1_1),
+.seladd2_2(seladd2_2),.seladd1_1(seladd1_1),.seldiv_2(seldiv_2),
+.seldiv_1(seldiv_1),.selr11(selr11),.selr10(selr10),.selr9(selr9),
+.selr8(selr8),.selr6(selr6),.selr4(selr4),.selr3(selr3),
+.selr2(selr2),.selr1(selr1),.seladd4_2(seladd4_2),
+.seladd4_1(seladd4_1),.seladd3_2(seladd3_2),
+.seladd3_1(seladd3_1),.seladd2_1(seladd2_1),
+.seladd1_2(seladd1_2),.clr1(clr1),.clr2(clr2),
+.clr3(clr3),.clr4(clr4),.clr5(clr5),.clr6(clr6),
+.clr7(clr7),.clr8(clr8),.clr9(clr9),.clr10(clr10),
+.clr11(clr11),.enable1(enable1),.enable2(enable2),
+.enable3(enable3),.enable4(enable4),.enable5(enable5),
+.enable6(enable6),.enable7(enable7),.enable8(enable8),
+.enable9(enable9),.enable10(enable10),.enable11(enable11),
+.opadd1(opadd1),.opadd2(opadd2),.opadd3(opadd3),.opadd4(opadd4)
+,.opadd5(opadd5),.clrx1(clrx1),.clrx2(clrx2),.clrx3(clrx3),
+.clry1(clry1),.clry2(clry2),.clry3(clry3),.enablex1(enablex1),
+.enablex2(enablex2),.enablex3(enablex3),.enabley1(enabley1),
+.enabley2(enabley2),.enabley3(enabley3),
+.insqrt(insqrt),.valid(valid),.valid2(valid2),.inbottom(inbottom),
+.intop(intop),.finish(finish));
+
+always_comb
+	begin
+		begin
+			attack=0;
+				if (finish)
+					if(threshold>R11resul)
+						attack=1;
+					else
+						attack=0;
+					end
+				end
+endmodule
+\end{lstlisting}
+
+\section{Código Datapath}
+\label{codedatapath}
+
+\begin{lstlisting}[style={verilog-style}]
+
+module Datapath(Rx1,Rx2,Rx3,Ry1,Ry2,Ry3,
+selmul3_1,selmul3_2,seladd5_2,seladd5_1,selr7,selsqrt,selmul2_2
+,selmul2_1,selmul1_2,selmul1_1,seladd2_2,seladd1_1,seldiv_2
+,seldiv_1,selr11,selr10,selr9,selr8,selr6,selr4,selr3,selr2
+,selr1,seladd4_2,seladd4_1,seladd3_2,seladd3_1,seladd2_1
+,seladd1_2,clk,clr1,clr2,clr3,clr4,clr5,clr6,clr7,clr8,clr9
+,clr10,clr11,clrx1,clrx2,clrx3,clry1,clry2,clry3,enable1
+,enable2,enable3,enable4,enable5,enable6,enable7,enable8
+,enable9,enable10,enable11,enablex1,enablex2,enablex3,enabley1
+,enabley2,enabley3,datasqrt,datadiv,datar11,datar10,datar9
+,datar8,datar7,datar6,datar5,datar4,datar3,datar2,datar1
+,opadd1,opadd2,opadd3,opadd4,opadd5,R11resul
+,valid,insqrt,valid2,inbottom,intop);
+input [10:0] Rx1,Rx2,Rx3,Ry1,Ry2,Ry3;
+//Seletores
+input  selmul3_1,selmul3_2,seladd5_2,seladd5_1,selr7,selsqrt,clk,clr1
+,clr2,clr3,clr4,clr5,clr6,clr7,clr8,clr9,clr10,clr11,clrx1
+,clrx2,clrx3,clry1,clry2,clry3,enable1,enable2,enable3,enable4
+,enable5,enable6,enable7,enable8,enable9,enable10,enable11
+,enablex1,enablex2,enablex3,enabley1,enabley2,enabley3,datasqrt
+,datadiv,datar11,datar10,datar9,datar8,datar7,datar6,datar5
+,datar4,datar3,datar2,datar1,insqrt,inbottom,intop;
+input [1:0] selmul2_2,seladd4_1,selmul2_1,selmul1_2,selmul1_1,seladd2_2
+,seladd1_1,seldiv_2,seldiv_1,selr11,selr10,selr9,selr8
+,selr6,selr4,selr3,selr2,selr1,opadd1,opadd2,opadd3,opadd4,opadd5;
+input [2:0] seladd4_2,seladd3_2,seladd3_1,seladd2_1,seladd1_2; 
+output valid,valid2;
+output [19:0] R11resul ;
+wire  clrx1,clrx2,clrx3,clry1,clry2,clry3,enablex1,enablex2,enablex3
+,enabley1,enabley2,enabley3,valid,valid2;
+wire [23:0] op2add5,op1add5,op2add4,op1add4,op2add3,op1add3
+,op2add2,op1add2,op2add1,op1add1;
+wire [23:0] add5resul,add4resul,add3resul,add2resul,add1resul,add5shifted
+,add4shifted,add3shifted,add2shifted,add1shifted;
+wire [23:0] mul3resul,mul2resul,mul1resul,
+op2div,op1div,sqrtresul,
+div;
+wire [10:0] op2mul3,op1mul3,op2mul2,op1mul2,op2mul1,op1mul1,x1r,x2r,x3r
+,y1r,y2r,y3r;
+wire [22:0] Rx1new,Rx2new,Rx3new,Ry1new,Ry2new,Ry3new,R7ex,R5ex
+,R11ex,divnew;
+wire [19:0] divresul;
+wire [23:0] opR1,opR2,opR3,opR4,opR5,opR6,opR7,opR8,opR9,opR10,opR11,
+opsqrt,sqrtresulnew;
+wire [23:0] R10resul,R9resul,R8resul,R7resul,R6resul,R5resul,R4resul,
+R3resul,R2resul,R1resul;
+wire [10:0] R7resulnew,R1resulnew;
+wire [11:0] op1divnew,op2divnew;
+//extends (Modulo para ajustar entradas de 11 para 23 bits)
+extend ex1 (.a(x1r),.y(Rx1new));
+extend ex2 (.a(x2r),.y(Rx2new));
+extend ex3 (.a(x3r),.y(Rx3new));
+extend ey1 (.a(y1r),.y(Ry1new));
+extend ey2 (.a(y2r),.y(Ry2new));
+extend ey3 (.a(y3r),.y(Ry3new));
+extend #(12) er7 (.a(R7resul),.y(R7ex));
+extend #(16) sqrt (.a(sqrtresul),.y(sqrtresulnew));
+extend er5 (.a(R5resul),.y(R5ex));
+extend er1  (.a(R1resul),.y(R1ex));
+extend #(20) er11 (.a(R11resul),.y(R11ex));
+extend #(20) ediv (.a(divresul),.y(divnew));
+//Reduce(Modulo para ajustar Saidas de 24 para 12 bits)
+
+reduce rr7 (.a(R7resul),.y(R7resulnew));
+reduce rr1 (.a(R1resul),.y(R1resulnew));
+
+
+reduce rop1 (.a(op1div),.y(op1divnew));
+reduce rop2 (.a(op2div),.y(op2divnew));
+
+
+
+/*Multiplexadores parte 1 
+Primeira coluna da arquitetura
+-- O que recebe?
+Entradas dos dados e a 
+realimentacao de registradores e variaveis,
+ alem disso coloca as entradas em nos valores dos adders.
+*/
+
+//Mux dos multiplicadores 
+//Multiplexadores do Multiplicador 3 
+mux2 mux2mul3(.a(y3r),.b(x3r),.sel(selmul3_2),.y(op2mul3));
+mux2 mux1mul3(.a(y3r),.b(x3r),.sel(selmul3_1),.y(op1mul3));
+//Multiplexadores do Multiplicador 2
+mux4 mux2mul2(.a(R7resulnew),.b(y2r),.c(x2r),.d(0),.sel(selmul2_2)
+,.y(op2mul2));
+mux4 mux1mul2(.a(R7resulnew),.b(y2r),.c(x2r),.d(0),.sel(selmul2_1)
+,.y(op1mul2));
+//Multiplexadores do Multiplicador 1
+mux4 mux2mul1(.a(R1resulnew),.b(y1r),.c(x1r),.d(0),.sel(selmul1_2)
+,.y(op2mul1));
+mux4 mux1mul1(.a(R1resulnew),.b(y1r),.c(x1r),.d(0),.sel(selmul1_1)
+,.y(op1mul1));
+
+
+
+//Mux dos Somadores 
+
+//Multiplexadores do Somador 5
+mux2 mux2add5(.a(R11ex),.b(divnew),.sel(seladd5_2),.y(op2add5));
+mux2 mux1add5(.a(24'b000000000000000100000000),.b(R11ex)
+,.sel(seladd5_1),.y(op1add5));
+//Multiplexadores do Somador 4
+mux6 mux2add4(.a(R1resul),.b(R2resul),.c(Ry3new),.d(Ry2new)
+,.e(Ry1new),.f(0),.g(0),.h(0),.sel(seladd4_2),.y(op2add4));
+mux4 mux1add4(.a(R8resul),.b(Rx3new),.c(Rx2new),.d(Rx1new)
+,.sel(seladd4_1),.y(op1add4));
+//Multiplexadores do Somador 3
+mux6 mux2add3(.a(R10resul),.b(Ry2new),.c(Rx2new),.d(R9resul)
+,.e(R4resul),.f(R7ex),.g(0),.h(0),.sel(seladd3_2),.y(op2add3));
+mux6 mux1add3(.a(R8resul),.b(R2resul),.c(R10resul),.d(R6resul)
+,.e(Ry3new),.f(0),.g(0),.h(0),.sel(seladd3_1),.y(op1add3));
+//Multiplexadores do Somador 2
+mux4 mux2add2(.a(R6resul),.b(R9resul),.c(R3resul),.d(Ry2new)
+,.sel(seladd2_2),.y(op2add2));
+mux6 mux1add2(.a(R7ex),.b(R1resul),.c(R8resul),.d(R2resul)
+,.e(Ry1new),.f(0),.g(0),.h(0),.sel(seladd2_1),.y(op1add2));
+//Multiplexadores do Somador 1
+mux6 mux2add1(.a(Ry1new),.b(R10resul),.c(R4resul),.d(Rx3new)
+,.e(Rx1new),.f(0),.g(0),.h(0),.sel(seladd1_2),.y(op2add1));
+mux4 mux1add1(.a(R8resul),.b(R2resul),.c(R1resul),.d(Rx2new)
+,.sel(seladd1_1),.y(op1add1));
+
+/*Multiplicadores e Somadores
+segunda coluna da arquitetura
+-- O que recebe?
+Os dados que os multiplexadores parte 1 selecionam.
+*/
+mul mul3 (.a(op1mul3),.b(op2mul3),.mul(mul3resul));
+mul mul2 (.a(op1mul2),.b(op2mul2),.mul(mul2resul));
+mul mul1 (.a(op1mul1),.b(op2mul1),.mul(mul1resul));
+
+adder add5(.a(op1add5),.b(op2add5),.op(opadd5),.o(add5resul));
+adder add4(.a(op1add4),.b(op2add4),.op(opadd4),.o(add4resul));
+adder add3(.a(op1add3),.b(op2add3),.op(opadd3),.o(add3resul));
+adder add2(.a(op1add2),.b(op2add2),.op(opadd2),.o(add2resul));
+adder add1(.a(op1add1),.b(op2add1),.op(opadd1),.o(add1resul));
+
+/*Multiplexadores parte 2 
+terceira coluna da arquitetura
+-- O que recebe?
+Saida dos modulos da parte 2 e variaveis.
+*/
+
+//mux raiz quadrada
+mux2r muxsqrt(.a(R9resul),.b(R3resul),.sel(selsqrt),.y(opsqrt));
+//mux divisor
+mux4r mux2div(.a(R10resul),.b(R6resul),.c(R1resul),.sel(seldiv_2)
+,.y(op2div));
+mux4r mux1div(.a(R3resul),.b(R4resul),.c(R5ex)
+,.sel(seldiv_1),.y(op1div));
+//mux dos registradores
+mux4r muxr11(.a(add5resul),.b(add5resul),.c(divresul),.sel(selr11)
+,.y(opR11));
+
+mux4r muxr10(.a(add3resul),.b(add4resul),.c(add1resul),.d(mul3resul)
+,.sel(selr10),.y(opR10));
+
+mux4r muxr9(.a(add3resul),.b(sqrtresulnew),.c(mul2resul),.sel(selr9)
+,.y(opR9));
+
+mux4r muxr8(.a(add1resul),.b(add2resul),.c(mul1resul),.sel(selr8)
+,.y(opR8));
+
+mux2r muxr7(.a(add3resul),.b(add2resul),.sel(selr7),.y(opR7));
+
+mux4r muxr6(.a(sqrtresulnew),.b(add4resul),.c(add1resul),.d(add2resul)
+,.sel(selr6),.y(opR6));
+
+mux4r muxr4(.a(add4resul),.b(mul1resul),.c(mul3resul),.sel(selr4)
+,.y(opR4));
+
+mux4r muxr3(.a(add4resul),.b(add3resul),.c(mul2resul),.d(0)
+,.sel(selr3),.y(opR3));
+
+mux4r muxr2(.a(add2resul),.b(add3resul),.c(mul1resul),.sel(selr2)
+,.y(opR2));
+
+mux4r muxr1(.a(add4resul),.b(add1shifted),.c(add1resul),.sel(selr1)
+,.y(opR1));
+
+/*Registradores, div e sqrt
+quarta coluna da arquitetura
+-- O que recebe?
+Os dados que os multiplexadores parte 3 selecionam.
+*/  
+//div div1 (.a(op1divnew),.b(op2divnew),.div(divresul));
+
+div_gen_1 divider (clk,inbottom,op2div,intop,op1div,valid2,divresul);
+
+//sqrt sqrt1(.b(opsqrt),.square(sqrtresul));
+
+cordic_1 sqrtcalc (clk,insqrt,opsqrt,valid,sqrtresul);
+
+
+register r1 (.in(opR1),.clk(clk),.clr(clr1)
+,.enable(enable1),.o(R1resul));
+register r2 (.in(opR2),.clk(clk),.clr(clr2)
+,.enable(enable2),.o(R2resul));
+register r3 (.in(opR3),.clk(clk),.clr(clr3)
+,.enable(enable3),.o(R3resul));
+register r4 (.in(opR4),.clk(clk),.clr(clr4)
+,.enable(enable4),.o(R4resul));
+register #(11) r5  (.in(add4resul),.clk(clk),.clr(clr5)
+,.enable(enable5),.o(R5resul));
+register r6 (.in(opR6),.clk(clk),.clr(clr6)
+,.enable(enable6),.o(R6resul));
+register #(12) r7 (.in(opR7),.clk(clk),.clr(clr7)
+,.enable(enable7),.o(R7resul));
+register r8 (.in(opR8),.clk(clk),.clr(clr8)
+,.enable(enable8),.o(R8resul));
+register r9 (.in(opR9),.clk(clk),.clr(clr9)
+,.enable(enable9),.o(R9resul));
+register r10 (.in(opR10),.clk(clk),.clr(clr10)
+,.enable(enable10),.o(R10resul));
+register #(20) r11 (.in(opR11),.clk(clk),.clr(clr11)
+,.enable(enable11),.o(R11resul));
+
+register #(11) x1 (.in(Rx1),.clk(clk),.clr(clrx1)
+,.enable(enablex1),.o(x1r));
+register #(11) x2 (.in(Rx2),.clk(clk),.clr(clrx2)
+,.enable(enablex2),.o(x2r));
+register #(11) x3 (.in(Rx3),.clk(clk),.clr(clrx3)
+,.enable(enablex3),.o(x3r));
+register #(11) y1 (.in(Ry1),.clk(clk),.clr(clry1)
+,.enable(enabley1),.o(y1r));
+register #(11) y2 (.in(Ry2),.clk(clk),.clr(clry2)
+,.enable(enabley2),.o(y2r));
+register #(11) y3 (.in(Ry3),.clk(clk),.clr(clry3)
+,.enable(enabley3),.o(y3r));
+endmodule
+
+
+\end{lstlisting}
+
+\section{Código Extend}
+
+\label{codeextend}
+\begin{lstlisting}[style={verilog-style}]
+module extend #(parameter WIDTH=11) (input [WIDTH-1:0] a
+,output reg [23:0] y);
+
+	always_comb
+
+		y = {0, a};   
+
+endmodule
+\end{lstlisting}
+
+\section{Código Reduce}
+\label{codereduce}
+\begin{lstlisting}[style={verilog-style}]
+module reduce(input [23:0] a,
+output reg [10:0] y);
+
+	always_comb
+
+		y =a[10:0];  
+
+endmodule
+
+\end{lstlisting}
+
+\section{Código Mux}
+\label{codemux}
+\begin{lstlisting}[style={verilog-style}]
+module mux2(input [22:0] a,b,
+input  sel, 
+output reg [22:0] y );
+	always_comb 
+ 		begin                 
+			case(sel)    
+				0: y =a;
+				1: y =b;
+				default: y=23'bx;
+			endcase
+		end
+
+endmodule
+
+\end{lstlisting}
+
+\section{Código Mul}
+\label{codemul}
+\begin{lstlisting}[style={verilog-style}]
+module mul(a,b,mul);
+input [10:0] a,b;
+output [23:0]mul;
+
+	assign mul=a*b;
+
+endmodule
+\end{lstlisting}
+
+\section{Código Adder}
+\label{codeadder}
+\begin{lstlisting}[style={verilog-style}]
+module adder #(parameter WIDTH=23)
+(input  [WIDTH-1:0] a,b,
+input [1:0]op,
+output  reg [WIDTH:0] o);
+	always_comb
+		begin
+			case (op)
+				2'b00:o = a+b;
+				2'b01:o = (a+b)>>2;
+				2'b10: 
+				 if(a>b)
+					begin
+						o=a-b;
+					end
+				else
+						o=b-a;
+				2'b11:o=$unsigned(b-a)>>2;
+				default:o=24'bx;
+			endcase
+		end
+endmodule
+
+\end{lstlisting}
+
+\section{Código Register}
+\label{coderegister}
+\begin{lstlisting}[style={verilog-style}]
+
+module register #(parameter WIDTH=24) (input [WIDTH-1:0] in
+, input clk,clr,enable, output reg [WIDTH-1:0] o);
+
+	always@(posedge clk)
+
+		if(enable)
+			begin
+				if(clr)
+					o=0;
+				else 
+					o=in;
+			end
+\end{lstlisting}
+
+\section{Código Controller}
+\label{codecontroller}
+\begin{lstlisting}[style={verilog-style}]
+
+module controller(clk,reset,valid,valid2,selmul3_1,selmul3_2,seladd5_2,seladd5_1,selr7,selsqrt,clr1,clr2,clr3,clr4,clr5,clr6,clr7,clr8,clr9,clr10,clr11,enable1,enable2,enable3,enable4,enable5,enable6,enable7,enable8,enable9,enable10,enable11,insqrt,inbottom,intop,
+clrx1,clrx2,clrx3,clry1,clry2,clry3,enablex1,enablex2,enablex3,enabley1,enabley2,enabley3,
+selmul2_2,selmul2_1,selmul1_2,selmul1_1,seladd2_2,seladd1_1,seldiv_2,seldiv_1,selr11,selr10,selr9,selr8,selr6,selr4,selr3,selr2,selr1,
+seladd4_2,seladd4_1,seladd3_2,seladd3_1,seladd2_1,seladd1_2,
+opadd1,opadd2,opadd3,opadd4,opadd5,
+finish
+);
+
+//Parametros da maquina de estado
+input  clk,reset,valid,valid2;
+reg [5:0] cycle;
+//Parametros de controle do  datapath
+output  reg finish;
+output reg selmul3_1,selmul3_2,seladd5_2,seladd5_1,
+selr7,selsqrt,clr1,clr2,clr3,clr4,clr5,clr6,clr7,
+clr8,clr9,clr10,clr11,enable1,enable2,enable3,
+enable4,enable5,enable6,enable7,enable8,enable9,
+enable10,enable11,insqrt,inbottom,intop;
+output reg clrx1,clrx2,clrx3,clry1,clry2,clry3,enablex1,
+enablex2,enablex3,enabley1,enabley2,enabley3;
+output reg [1:0] selmul2_2,selmul2_1,selmul1_2,selmul1_1,
+seladd2_2,seladd1_1,seldiv_2,seldiv_1,selr11,selr10,
+selr9,selr8,selr6,selr4,selr3,selr2,selr1;
+output reg [2:0] seladd4_2,seladd4_1,seladd3_2,seladd3_1,seladd2_1,seladd1_2;
+output reg [1:0] opadd1,opadd2,opadd3,opadd4,opadd5;
+
+
+always @(*)           
+begin
+	case(cycle)
+		6'b0:      
+			begin          
+				enablex1=1;
+				enablex2=1;
+				enablex3=1;
+				enabley1=1;
+				enabley2=1;
+				enabley3=1;
+				finish=0;
+			end
+		6'b000001:
+			begin
+				//disabled
+				enable5=0;     
+				enable6=0;   
+				enable8=0;   
+				enable9=0;   
+				enable10=0;   
+				enable11=0;     
+				//ax1//                                      
+				//add
+				seladd1_2=3'b100;
+				seladd1_1=2'b11;
+				opadd1=2'b00;
+				//register
+				selr1=2'b10;
+				clr1=0;
+				enable1=1;
+				//ay1//
+				//add
+				seladd2_2=2'b11;
+				seladd2_1=3'b100;
+				opadd2=2'b0;
+				//register
+				selr7=2'b01;
+				clr7=0;
+				enable7=1;
+				//mx1//
+				//mult
+				selmul1_1=2'b10;
+				selmul1_2=2'b10;
+				//register
+				selr2=2'b10;
+				clr2=0;
+				enable2=1;
+				//mx2//
+				//mult
+				selmul2_1=2'b10;
+				selmul2_2=2'b10;
+				//register
+				selr3=2'b10;
+				clr3=0;
+				enable3=1;
+				//mx3//
+				//mult
+				selmul3_1=1'b1;
+				selmul3_2=1'b1;
+				//register
+				selr4=2'b10;
+				clr4=0;
+				enable4=1; 
+			end
+		6'b000010:
+			begin
+				//disabled
+				enable3=0;     
+				enable4=0;   
+				enable5=0;   
+				enable6=0;   
+				enable11=0;   
+				//Mx//                                        
+				//add
+				seladd1_2=3'b011;
+				seladd1_1=2'b10;
+				opadd1=2'b01;
+				//register
+				clr1=0;
+				enable1=1;
+				selr1=2'b10;
+				//My//
+				//add
+				seladd3_2=3'b101; //ok
+				seladd3_1=3'b100; //ok
+				opadd3=2'b01;//ok
+				//register
+				clr1=0;
+				enable1=1;
+				selr7=0;            
+				//amx1//
+				//add
+				seladd2_2=2'b10;
+				seladd2_1=3'b011;
+				opadd2=2'b00;
+				//register
+				clr2=0;
+				enable2=1;
+				selr2=2'b00;
+				//my1//
+				//mult
+				selmul1_1=2'b01;
+				selmul1_2=2'b01;
+				//register
+				clr8=0;
+				enable8=1;
+				selr8=2'b10;
+				//my2//
+				//mult
+				selmul2_1=2'b01;
+				selmul2_2=2'b01;
+				//register
+				clr9=0;
+				enable9=1;                 
+				selr9=2'b10;
+				//my3//
+				//mult
+				selmul3_1=0;
+				selmul3_2=0;
+				//register
+				clr10=0;
+				enable10=1;
+				selr10=2'b11;                    
+				end
+				6'b000011:
+				begin
+				// disabled
+				enable1=0;
+				enable2=0;   
+				enable3=0;   
+				enable7=0;
+				enable10=0;   
+				enable11=0;   
+				//Mx2
+				//mult
+				selmul1_2=2'b00;
+				selmul1_1=2'b00;
+				//register
+				enable4=1;
+				selr4=2'b01;
+				//amy1
+				//add
+				seladd2_2=2'b01;
+				seladd2_1=3'b010;
+				opadd2=0;
+				//register
+				selr8=2'b01;
+				clr8=0;
+				enable8=1;
+				//N1
+				//add
+				seladd4_2=3'b100;
+				seladd4_1=2'b11;
+				opadd4=2'b10;
+				//register
+				clr5=0;
+				enable5=1;
+				//Mx2
+				//add
+				seladd1_2=3'b010;
+				seladd1_1=2'b01;
+				opadd1=2'b01;
+				//register 
+				selr6=2'b10;
+				clr6=0;
+				enable6=1;
+				//My2
+				//mult
+				selmul2_2=2'b00;
+				selmul2_1=2'b00;
+				//register
+				selr9=2'b10;
+				clr9=0;
+				enable9=1;
+			end
+	6'b000100:
+			begin
+				enable1=0;
+				enable2=0;   
+				enable4=0;   
+				enable5=0;
+				enable6=0;   
+				enable7=0;
+				enable8=0;
+				enable9=0;   
+				enable11=0; 
+				//Vx
+				//add
+				seladd3_2=3'b100;
+				seladd3_1=3'b011;
+				opadd3=2'b10;
+				//register
+				selr3=2'b01;
+				clr3=0;
+				enable3=1;
+				//N2
+				seladd4_2=3'b011;
+				seladd4_1=2'b10;
+				opadd4=10;
+				//register
+				selr4=2'b00;
+				clr4=0;
+				enable4=1; 
+				//M2
+				seladd1_2=3'b001;
+				seladd1_1=2'b00;
+				opadd1=2'b01;
+				//register
+				selr10=2'b10;
+				clr10=0;
+				enable10=1;
+				end
+				6'b000101:
+				begin
+				enable1=0;
+				enable2=0;   
+				enable4=0;   
+				enable5=0;
+				enable7=0;   
+				enable8=0;
+				enable10=0;   
+				enable11=0;  
+				//SDx
+				//sqrt
+				selsqrt=1;
+				insqrt=1;
+				//register
+				selr6=2'b00;
+				clr6=0;
+				enable6=1;
+				//N3
+				//add
+				seladd4_2=3'b010;
+				seladd4_1=2'b01;
+				opadd4=2'b10;
+				//register
+				selr3=2'b00;
+				clr3=0;
+				enable3=1;
+				//Vy
+				//add
+				seladd3_2=3'b011;
+				seladd3_1=3'b010;
+				opadd3=2'b10;
+				//register
+				selr9=2'b00;
+				clr9=0;
+				enable9=1;
+			end
+		6'b000110:
+			begin
+				enable1=0;
+				enable2=0;   
+				enable3=0;
+				enable4=0;   
+				enable5=0;
+				enable7=0;   
+				enable8=0;
+				enable10=0;   
+				enable11=0;  
+				//SDy
+				//sqrt
+				selsqrt=0;
+				insqrt=1;
+				//register
+				selr9=2'b01;
+				clr9=0;
+				enable9=1;                                     
+				end     
+				6'b001101:
+				begin
+				enable1=0;
+				enable3=0;
+				enable4=0;   
+				enable5=0;
+				enable6=0;   
+				enable7=0;   
+				enable8=0;
+				enable10=0;   
+				enable11=0;
+				//MSDx
+				//add
+				seladd2_2=2'b00;
+				seladd2_1=3'b001; 
+				opadd2=2'b10;
+				//register
+				selr2=2'b0;
+				clr2=0;
+				enable2=1;
+				end
+				6'b001110:
+				
+				begin
+				enable3=0;
+				enable4=0;   
+				enable5=0;  
+				enable7=0;
+				enable9=0;
+				enable10=0;   
+				enable11=0;
+				//DX1
+				//add
+				seladd1_2=3'b100;
+				seladd1_1=2'b01;
+				opadd1=2'b10;
+				//register
+				selr1=2'b10;
+				clr1=0;
+				enable1=1;
+				//DX2
+				//add
+				seladd3_2=3'b010;
+				seladd3_1=3'b001;
+				opadd3=2'b10;
+				//register
+				selr2=2'b01;
+				clr2=0;
+				enable2=1;
+				//DX3
+				//add
+				seladd4_2=3'b001;
+				seladd4_1=2'b01;
+				opadd4=2'b10;
+				//register
+				selr6=2'b01;
+				clr6=0;
+				enable6=1;                
+				//MSDY
+				//add
+				seladd2_2=2'b01;
+				seladd2_1=3'b000; 
+				opadd2=2'b10;
+				//register
+				selr8=2'b01;
+				clr8=0;
+				enable8=1;  
+			end
+		6'b001111:
+				begin
+				enable1=0;
+				enable2=0;
+				enable3=0;
+				enable4=0;   
+				enable5=0;
+				enable6=0;   
+				enable7=0;    
+				enable11=0;
+				//DY
+				//add
+				seladd1_2=3'b000;
+				seladd1_1=2'b00;
+				opadd1=2'b10;
+				//register
+				selr8=2'b00;
+				clr8=0;
+				enable8=1;
+				//DY2
+				//add
+				seladd3_2=3'b001;
+				seladd3_1=3'b000;
+				opadd3=2'b10;
+				//register
+				selr9=2'b00;
+				clr9=0;
+				enable9=1;
+				//DY3
+				//add
+				seladd4_2=3'b010;
+				seladd4_1=2'b00;
+				opadd4=2'b10;
+				//register
+				selr10=2'b01;
+				clr10=0;
+				enable10=1;      
+			end
+		6'b010000:
+				begin
+				enable2=0;
+				enable3=0;
+				enable4=0;   
+				enable5=0;
+				enable7=0;
+				enable8=0;
+				enable9=0;    
+				enable11=0;
+				//D1
+				//add
+				seladd4_2=3'b0;
+				seladd4_1=2'b0;
+				opadd4=2'b0;
+				//register
+				selr1=2'b00;
+				clr1=0;
+				enable1=1;
+				//D2
+				//add
+				seladd2_2=2'b01;
+				seladd2_1=3'b011;
+				opadd2=2'b0;
+				//register
+				selr6=2'b11;
+				clr6=0;
+				enable6=1;
+				//D3
+				//add
+				seladd3_2=3'b000;
+				seladd3_1=3'b011;
+				opadd3=2'b0;
+				//register
+				selr10=2'b00;
+				clr10=0;
+				enable10=1;
+				end 
+				6'b010001:
+				begin
+				enable10=0;
+				enable1=0;
+				//Q1   
+				inbottom=1;
+				intop=1;
+				//div
+				seldiv_2=2'b10;
+				seldiv_1=2'b10;
+				//register
+				selr11=2'b10;
+				clr11=0;
+				enable11=1;  
+			end
+		6'b010010:
+			begin
+				//Q2
+				inbottom=1;
+				intop=1;
+				//div
+				seldiv_2=2'b01;
+				seldiv_1=2'b01;
+			end
+		6'b010011:
+			begin
+				//Q3
+				inbottom=1;
+				intop=1;
+				//div
+				seldiv_2=2'b00;
+				seldiv_1=2'b00;
+			end
+		6'b100111:
+			begin
+				//aQ1 
+				//add
+				seladd5_2=1;
+				seladd5_1=1;
+				opadd5=2'b00;
+				//register
+				selr11=2'b00;
+				clr11=0;
+				enable11=1;                    
+				end
+				6'b101000:
+				begin 
+				//aQ2
+				seladd5_2=1;
+				seladd5_1=1;
+				opadd5=2'b01; 
+				//register 
+				selr11=2'b01;
+				clr11=0;   
+				enable11=1;                               
+			end
+		6'b101001:
+			begin
+				//Verc
+				seladd5_2=0;
+				seladd5_1=0;
+				opadd5=2'b10; 
+				//register 
+				selr11=2'b01;
+				clr11=0;   
+				enable11=1;  
+				end
+				6'b101010:
+				begin   
+				finish =1;
+				clr1=1; 
+				clr2=1; 
+				clr3=1; 
+				clr4=1; 
+				clr5=1; 
+				clr6=1;                        
+				clr7=1;
+				clr8=1;
+				clr9=1;
+				clr10=1;
+				clr11=1;    
+			end         
+	endcase
+end
+
+always@(posedge clk, negedge reset)
+
+	if(~reset)
+		cycle <= 6'b0; 
+	else   
+			case(cycle)
+				6'b0:
+					cycle <= 6'b000001;
+				6'b000001:
+					cycle <= 6'b000010;
+				6'b000010:
+					cycle <= 6'b000011;
+				6'b000011:   
+					cycle <= 6'b000100;
+				6'b000100:
+					cycle <= 6'b000101;
+				6'b000101:
+					cycle <= 6'b000110;
+				6'b000110:
+					if(valid)
+						cycle <= 6'b001101;
+								 6'b001101:
+								if(valid)
+					cycle <= 6'b001110;
+				6'b001110:
+					cycle <= 6'b001111;
+				6'b001111:
+					cycle <= 6'b010000;
+				6'b010000: 
+					cycle <= 6'b010001;
+				6'b010001:
+					cycle <= 6'b010010;
+				6'b010010:
+					cycle <= 6'b010011;
+				6'b010011:
+						if(valid2)
+					cycle <= 6'b100111;
+				6'b100111:    
+					cycle <= 6'b101000;
+				6'b101000:            
+					cycle <= 6'b101001;
+				6'b101001:
+					cycle <= 6'b101010;
+				6'b101010:
+					cycle <= 6'b00000; 
+		endcase
+endmodule
+\end{lstlisting}
+
+

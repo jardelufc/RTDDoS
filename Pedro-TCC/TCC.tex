@@ -1,0 +1,121 @@
+\include{fixos/pacoteseclass}
+
+%\usepackage[xindy={language=portuguese},nonumberlist=true]{glossaries}
+
+% Informações de dados para CAPA e FOLHA DE ROSTO
+\titulo{ Projeto de um IP Soft Core para Detecção de Ataques DDoS }
+\autor{PEDRO LUCAS FALCÃO LIMA}
+\local{Fortaleza, Ceará}
+\data{2017}
+\orientador{Prof. Msc. Ricardo Jardel Nunes da Silveira}
+\include{fixos/instituicao/ufc_teleinfo}
+
+%\input{TeX/acronyms.tex}
+
+\begin{document}
+\frenchspacing 
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+% \pretextual
+% Capa
+\imprimircapa
+% Folha de rosto (* indica que haverá a ficha bibliográfica)
+\imprimirfolhaderosto
+
+% Ficha Bibliográfica
+%\include{fixos/fichabibliografica}
+
+% Errata
+%\include{editaveis/errata}
+
+% Folha de Aprovação
+% DEVE ser modificada para adicionar os membros da banca
+\include{editaveis/folhadeaprovacao}
+%\imprimirfolhadeaprovacao
+
+% Dedicatória
+\include{editaveis/dedicatoria}
+
+% Agradecimentos
+\include{editaveis/agradecimentos}
+
+% Epígrafe
+\include{editaveis/epigrafe}
+
+% RESUMOS
+\include{resumo/ptbr}
+\include{resumo/us}
+
+% Lista de ilustrações
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+
+% Lista de tabelas
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+
+% Abreviaturas e Siglas
+%\setlist[description]{leftmargin=!, labelwidth=7ex} %
+\include{editaveis/siglas}
+%\setlist[description]{style=standard} % reset settings
+
+% Símbolos
+\include{editaveis/simbolos}
+
+% Sumário
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+% ----------------------------------------------------------
+% Introdução (exemplo de capítulo sem numeração, mas presente no Sumário)
+% ----------------------------------------------------------
+\include{cap1/introducao}
+
+\include{cap2/fundamentacaoteorica}
+
+\include{cap3/metodologia}
+
+\include{cap4/resultados}
+
+\include{cap5/conclusoes}
+
+
+	
+% Capitulo com exemplos de comandos inseridos de arquivo externo 
+%\include{abntex2-modelo-include-comandos}
+
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
+\postextual
+
+% Referências bibliográficas
+\bibliography{bibtex/referencias}
+
+% Glossário (Consulte o manual da classe abntex2 para orientações sobre o glossário)
+%\glossary
+
+% Apêndices
+\include{editaveis/appendices}
+	
+% Anexos
+%\include{editaveis/anexos}
+
+%---------------------------------------------------------------------
+% INDICE REMISSIVO
+%---------------------------------------------------------------------
+\phantompart
+\printindex
+%---------------------------------------------------------------------
+
+\end{document}
