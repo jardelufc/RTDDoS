@@ -59,12 +59,6 @@ v.~7, 01 2016.}
   network, tribe flood network 2000, and stacheldraht ciac-2319}.
 [S.l.], 2000.}
 
-\bibitem[DARPA INTRUSION DETECTION EVALUATION]{siteDarpa}
-\abntrefinfo{DARPA\ldots}{DARPA\ldots}{}
-{DARPA INTRUSION DETECTION EVALUATION.
-  \url{https://www.ll.mit.edu/ideval/index.html}.
-Acessado em 18/08/2017.}
-
 \bibitem[Dittrich 2002]{dittrich2002projectos}
 \abntrefinfo{Dittrich}{DITTRICH}{2002}
 {DITTRICH, D. \textbf{The DoS Project{\~O}s ‘‘trinoo’’Distributed
@@ -107,8 +101,14 @@ Dispon{\'\i}vel em:
 {KUROSE, J.~F.; ROSS, K.~W. \textbf{Redes de Computadores e a Internet: Uma
   abordagem top-down}. Trad. 5 ed. São Paulo: Pearson, 2010.}
 
+\bibitem[Lippmann \emph{et al.} 2000]{siteDarpa}
+\abntrefinfo{Lippmann \emph{et al.}}{LIPPMANN \emph{et al.}}{2000a}
+{LIPPMANN, R. \emph{et al.} \textbf{DARPA INTRUSION DETECTION EVALUATION}.
+  2000. \url{https://www.ll.mit.edu/ideval/index.html}.
+Acessado em 18/08/2017.}
+
 \bibitem[Lippmann \emph{et al.} 2000]{DARPA}
-\abntrefinfo{Lippmann \emph{et al.}}{LIPPMANN \emph{et al.}}{2000}
+\abntrefinfo{Lippmann \emph{et al.}}{LIPPMANN \emph{et al.}}{2000b}
 {LIPPMANN, R.~P. \emph{et al.} Evaluating intrusion detection systems: the 1998
   darpa off-line intrusion detection evaluation. In:  \textbf{DARPA Information
   Survivability Conference and Exposition, 2000. DISCEX '00. Proceedings}.

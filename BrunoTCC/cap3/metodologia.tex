@@ -89,7 +89,7 @@ Nessa módulo, os valores de correlação, IPs origem, destino, taxas de pacotes
 
 \section{Aplicação do \textit{framework} de detecção em bases de dados reais}
 \label{Sec:NaHiD_VERC}
-Para a avaliação do trabalho, duas bases de tráfegos de rede foram escolhidas: DARPA e  DataMining[escolher melhor esse nome] os quais são mais detalhados a seguir 
+Para a avaliação do trabalho, duas bases de tráfegos de rede foram escolhidas: DARPA e  DataMining, os quais são mais detalhados a seguir 
 \subsection{DARPA - MIT}
  A base de dados DARPA foi produzida por pesquisadores do \textit{Lincoln Laboratory} do Instituto de Tecnologia de Massachusetts nos Estados Unidos e tem por objetivo coletar dados de tráfego de rede da Força Aérea do país para encontrar vulnerabilidades em seu sistema bem como ser utilizado para avaliações futuras. Os dados foram coletados e passaram por uma fase de treinamento de 7 semanas com 38 tipos de ataques para simular ameaças internas a rede. O ambiente de rede era composto por duas partes: a rede interna da Força aérea e a rede externa que representava a Internet; ambos conectados por meio de um roteador como mostra a \figref{fig:DARPA_Estrututra}.	Assim, um \textit{sniffer} de rede foi instalado no roteador e todas as requisições para os computadores da Força aérea foram capturadas em um arquivo tcpdump, o qual pode ser encontrado em \cite{siteDarpa}. 
  \begin{figure}[ht]
@@ -110,16 +110,16 @@ A partir desse \textit{dataset} é possível extrair informações acerca de cad
 		%	\small
 		\begin{tabular}{c c c c c c}
 			\toprule
-			\textbf{Número} & \textbf{Tempo} & \textbf{Origem} & \textbf{Destino}  & \textbf{Protocolo} & \textbf{Tamanho}[bytes]
+			\textbf{Número} & \textbf{Tempo} & \textbf{Origem} & \textbf{Destino}  & \textbf{Protocolo} & \textbf{Tamanho}
 			\\ \midrule
-			1 &  18:56:12.1386 &  192.168.0.20 & 192.168.0.30 & TCP & 60  \\ \midrule
-			2 &  18:56:12.1391 & 192.168.0.30 & 192.168.0.20 & TCP & 60  \\ \midrule
-			3 &  18:56:12.1588 & 192.168.0.30 & 192.168.0.20 & TELNET & 84  \\ \midrule
-			4 &  18:56:12.2099 &  192.168.0.20 & 192.168.0.30 & TCP & 60  \\ \midrule
-			5 &  18:56:13.0567 &  192.168.0.20 & 192.168.0.30 & TELNET & 69    \\ \midrule
-			6 &  18:56:13.0584 & 192.168.0.30 & 192.168.0.20 & TELNET & 66   \\ \midrule
-			7 &  18:56:13.0626 &  192.168.0.20 & 192.168.0.30 & TELNET & 72  \\ \midrule
-			8 & 18:56:13.0821 & 192.168.0.30 & 192.168.0.20 & TCP & 60  \\ \bottomrule
+			2710 &  09:12:42 &  194.27.251.21 & 172.16.112.100 & TCP & 60  \\ \midrule
+			2711 &  09:12:42 & 3comFast\_9c:b2:54 & Broadcast & ARP & 60  \\ \midrule
+			2712 &  09:12:42 & Cisco\_38:46:33 & 3comFast\_9c:b2:54 & ARP & 60  \\ \midrule
+			2713 &  09:12:42 &  172.16.112.100 & 194.27.251.21 & TCP & 60  \\ \midrule
+			2714 &  09:12:42 &  194.27.251.21 & 172.16.112.100 & TCP & 60    \\ \midrule
+			2715 &  109:12:42 & 3comFast\_9c:b2:54 & Broadcast & ARP & 60   \\ \midrule
+			2716 &  09:12:42 &  Dell\_a3:57:db & 3comFast\_9c:b2:54 & ARP & 60  \\ \midrule
+			2717 & 09:12:42 & 172.16.112.100 & 172.16.112.20 & DNS & 86  \\ \bottomrule
 		\end{tabular}
 		{Fonte: Elaborada pelo autor, baseada em \cite{DARPA}.}
 	\end{threeparttable}
@@ -132,15 +132,55 @@ No presente trabalho a ferramenta Wireshark foi utilizada para o tratamento dess
 \end{itemize}
 Note que de acordo com a estrutura do \textit{dataset} mostrada na \tabref{Tab:WiresharkEx}, a implementação do \textit{framework} segue o seguinte fluxo mostrado na \figref{fig:analiseDarpa}
 
- \begin{figure}[!ht]
+\begin{figure}[!ht]
  	\centering
  	\caption{Diagrama descritivo análise e aplicação do \textit{framework} na base de dados DARPA  }
  	\includegraphics[width=0.9\textwidth]{figs/analiseDarpa.pdf}\\
  	{Fonte: Elaborada pelo autor.}
  	\label{fig:analiseDarpa}
- \end{figure}
+\end{figure}
 
+A documentação da base de dados DARPA, fornece informações de quais fluxos capturados são ataques. Possuindo a estrutura da \tabref{Tab:RespostasDarpa} 
+ \begin{table}[!htb]
+ 	\centering
+ 	\begin{threeparttable}
+ 		\caption{Exemplo da estrutura do  arquivo de respostas do \textit{dataset} DARPA}
+ 		\label{Tab:RespostasDarpa}
+ 		%	\small
+ 		\begin{tabular}{c c c c c }
+ 			\toprule
+ 			 \textbf{Tempo} &  \textbf{Duração H:Min:Seg} & \textbf{Protocolo} & \textbf{Origem} & \textbf{Destino}
+ 			\\ \midrule
+ 			  08:12:42 & 00:00:05 & SMTP& 194.27.251.21 & 172.16.112.100    \\ \midrule
+			 08:49:17 & 00:00:06 & SMTP&  135.8.60.182 & 172.16.112.100    \\ \midrule
+			 08:55:10 & 00:01:05 & SMTP&  206.48.044.018 & 172.16.112.100    \\ \midrule
+			 09:44:17 & 00:00:40 & FTP&  172.16.113.204 & 172.16.112.100    \\ \midrule
+			 09:55:27 & 00:00:03 & SMTP&  153.107.252.061 & 72.16.112.100    \\ \midrule
+			 10:06:42 & 00:03:43 & TELNET&  172.016.118.070 & 172.16.112.100    \\ \midrule
+			 10:40:29 & 00:00:03 & FTP&  205.160.208.190 & 172.16.112.100    \\ \midrule
+ 			 10:52:28 & 000:02:56 & TELNET& 172.016.118.070 & 172.16.112.100  \\ \bottomrule
+ 		\end{tabular}
+ 		{Fonte: Elaborada pelo autor, baseada em \cite{DARPA}.}
+ 	\end{threeparttable}
+ \end{table}
+ 
+ Com base nas informações da documentação, cada ataque ocorre no período descrito conforme \tabref{Tab:RespostasDarpa}.  Ao abrir o \textit{dataset} no \textit{Wireshark} percebe-se também que existe a variação de fuso-horário que deve ser convertida, sendo no caso uma hora adiantado. Assim, aplica-se um filtro no \textit{Wireshark} conforme o exemplo abaixo.
+ 
+ \begin{equation}
+ 	(frame.time >= "Aug 07, 1999 09:12:42") \&\& (frame.time <= "Aug 07, 1999 09:12:48")
+ \end{equation} 
+ 
+ Desta forma, estamos filtrando os pacotes transmitidos entre o horário de $09:12:42$ e $09:12:47$, conforme primeiro elemento da \tabref{Tab:RespostasDarpa}. Assim, resultando nos pacotes filtrados conforme \figref{fig:wiresharkFilt}
+
+ \begin{figure}[ht]
+ 	\centering
+ 	\caption{Resultado do filtro aplicado no \textit{Wireshark} }
+ 	\includegraphics[width=0.7\textwidth]{figs/filtWireshark1.png}\\
+ 	{Fonte: Elaborada pelo autor}
+ 	\label{fig:wiresharkFilt}
+ \end{figure} 
 .
+Vale ressaltar que o ataque não consta em toda a janela de duração, podendo ser encontrado dentro de tal intervalo. Assim, para meios de detecção, o \textit{framework} irá buscar um ataque dentro do intervalo dado pelo arquivo de respostas. Se houver pelo menos um ataque dentro dessa duração, o módulo de detecção terá acertado.
 \subsection{DataMining}
 Outra base de dados estudada no trabalho foi a desenvolvida por \cite{DataMining}, a qual consta em sua totalidade por ataques DDoS de quatro tipos:
 \begin{itemize}
@@ -155,7 +195,7 @@ A \tabref{Tab:DataMining} mostra os campos do \textit{dataset} avaliado.
 \begin{table}[!b]
 	\centering
 	\begin{threeparttable}
-		\caption{Estrutura base de dados \cite{DataMining}}
+		\caption{Estrutura base de dados \textit{Data Mining}}
 		\label{Tab:DataMining}
 		%	\small
 		\begin{tabular}{c c }
