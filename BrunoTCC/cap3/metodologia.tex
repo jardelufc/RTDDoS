@@ -6,7 +6,7 @@ para a detecção de ataques DDoS e quais bases de dados são utilizadas para a 
 
 \section{Modelo de correlação NaHiD}
 
-Neste trabalho, o \textit{framework} utilizado baseia-se na correlação proposta por \cite{HOQUE201748} chamada NaHiD (nome que possivelmente provém a partir das iniciais de cada autor), cujo objetivo é distinguir objetos de tráfego normais e maliciosos. Tal medida leva em consideração principalmente o desvio padrão e a média de cada objeto, ponderando cada elemento como mostrado na equação a seguir:  
+Neste trabalho, o \textit{framework} utilizado baseia-se na correlação proposta por \cite{HOQUE201748} chamada NaHiD, cujo objetivo é distinguir objetos de tráfego normais e maliciosos. Tal medida leva em consideração o desvio padrão e a média de cada objeto, ponderando cada elemento como mostrado na equação a seguir:  
 
 \begin{equation}
 	NaHiD(X,Y) = 1 - \frac{1}{n} \sum_{i=1}^{n} \frac{\left(|X(i) -	 Y(i)|\right)}{||\mu{X} - sX| - X(i)| + ||\mu{Y} - sY| - Y(i)|}
@@ -72,9 +72,9 @@ Onde $\delta$ é o número de mudanças de IPs origem e $N$ é o numero total de
 \begin{equation}
 	X = {1,2,1,2,3}
 \end{equation}
-Assim, nesse vetor consideram-se 4 variações ainda que sejam para um valor que repetiu-se. Assim se os IPs origem mudarem frequentemente, a variação será alta. \cite{HOQUE201748}
+Assim, nesse vetor consideram-se 4 variações ainda que sejam para um valor que repetiu-se. Assim se os IPs origem mudarem frequentemente, a variação será alta \cite{HOQUE201748}.
 \\
-A observação do comportamento de ataques por \textit{flood} mostra que esse tipo de ameaça pode ser gerada por atacantes reais como zumbis. Se endereços de IP origem falsificados forem utilizados durante um ataque DDoS TCP SYN, a entropia e variação de IPs origem serão altas e esse comportamento também ocorre em um tráfego normal. \cite{HOQUE201748}. Assim faz-se necessário o uso da taxa de pacotes em bits como terceiro parâmetro de entrada para o módulo de detecção.
+A observação do comportamento de ataques por \textit{flood} mostra que esse tipo de ameaça pode ser gerada por atacantes reais como zumbis. Se endereços de IP origem falsificados forem utilizados durante um ataque DDoS TCP SYN, a entropia e variação de IPs origem serão altas e esse comportamento também ocorre em um tráfego normal \cite{HOQUE201748}. Assim faz-se necessário o uso da taxa de pacotes em bits como terceiro parâmetro de entrada para o módulo de detecção.
 
 \subsection{Módulo de Detecção}
 O modulo de detecção consiste na aplicação da correlação NaHiD, utilizando os três parâmetros de entrada fornecidos pelo módulo de pré-processamento:
@@ -83,15 +83,15 @@ O modulo de detecção consiste na aplicação da correlação NaHiD, utilizando
 	\item Entropia de IPs origem
 	\item Taxa de pacotes
 \end{itemize}
-Por tratar-se de uma medida de correlação é necessário manter um valor de referência para o cálculo. Assim, os parâmetros(Variação e entropia de IPs origem, além da taxa de pacotes) de um tráfego normal devem ser fixados para a comparação com a instância de tráfego a ser analisada. Além disso, define-se um limiar do resultado da correlação para distinguir instâncias normais de maliciosas. Caso a correlação calculada seja menor que esse limiar, tal tráfego em analisado não tem semelhança suficiente com o perfil normal comparado, sendo considerado um ataque.
+Por tratar-se de uma medida de correlação é necessário manter um valor de referência para o cálculo. Assim, os parâmetros(Variação e entropia de IPs origem, além da taxa de pacotes) de um tráfego normal devem ser fixados para a comparação com a instância de tráfego a ser analisada. Além disso, define-se um limiar do resultado da correlação para distinguir instâncias normais de maliciosas. Caso a correlação calculada seja menor que esse limiar, o tráfego analisado não possui semelhança suficiente com o perfil normal comparado, sendo, portanto, considerado um ataque.
 \subsection{Gerenciador Offline}
-Nessa módulo, os valores de correlação, IPs origem, destino, taxas de pacotes, além dos resultados do módulo de detecção são salvos para a janela de tráfego em análise e se o módulo de detecção identificar que o tráfego em questão é normal, este será atualizado com os valores do mesmo para a próxima janela.
+Nesse módulo, os valores de correlação, IPs origem, destino, taxas de pacotes, além dos resultados do módulo de detecção são salvos para a janela de tráfego em análise e caso o módulo de detecção identifique que o tráfego em questão é normal, este será atualizado com os valores do mesmo para a próxima janela.
 
 \section{Aplicação do \textit{framework} de detecção em bases de dados reais}
 \label{Sec:NaHiD_VERC}
 Para a avaliação do trabalho, duas bases de tráfegos de rede foram escolhidas: DARPA e  DataMining, os quais são mais detalhados a seguir 
 \subsection{DARPA - MIT}
- A base de dados DARPA foi produzida por pesquisadores do \textit{Lincoln Laboratory} do Instituto de Tecnologia de Massachusetts nos Estados Unidos e tem por objetivo coletar dados de tráfego de rede da Força Aérea do país para encontrar vulnerabilidades em seu sistema bem como ser utilizado para avaliações futuras. Os dados foram coletados e passaram por uma fase de treinamento de 7 semanas com 38 tipos de ataques para simular ameaças internas a rede. O ambiente de rede era composto por duas partes: a rede interna da Força aérea e a rede externa que representava a Internet; ambos conectados por meio de um roteador como mostra a \figref{fig:DARPA_Estrututra}.	Assim, um \textit{sniffer} de rede foi instalado no roteador e todas as requisições para os computadores da Força aérea foram capturadas em um arquivo tcpdump, o qual pode ser encontrado em \cite{siteDarpa}. 
+ A base de dados DARPA foi produzida por pesquisadores do \textit{Lincoln Laboratory} do Instituto de Tecnologia de Massachusetts (MIT) nos Estados Unidos e tem por objetivo coletar dados de tráfego de rede da Força Aérea do país para encontrar vulnerabilidades em seu sistema bem como ser utilizado para avaliações futuras. Os dados foram coletados e passaram por uma fase de treinamento de 7 semanas com 38 tipos de ataques para simular ameaças internas a rede. O ambiente de rede era composto por duas partes: a rede interna da Força aérea e a rede externa que representava a Internet; ambos conectados por meio de um roteador como mostra a \figref{fig:DARPA_Estrututra}.	Assim, um \textit{sniffer} de rede foi instalado no roteador e todas as requisições para os computadores da Força aérea foram capturadas em um arquivo tcpdump, o qual pode ser encontrado em \cite{siteDarpa}. 
  \begin{figure}[ht]
  	\centering
 	\caption{Estrutura de rede Base Aérea dos EUA }
@@ -242,6 +242,7 @@ Algumas considerações foram tomadas para a análise dessa base de dados:
 	 \item  Atraso de pacote.
 	 \item Tempo de pacote reservado.
 	\end{itemize}
+	Essa consideração foi tomada devido a natureza do \textit{dataset}, o qual não tem outra abordagem para a recepção.
 	\item A média das taxas dos pacotes foi considerada dentro da janela de um segundo.
 	\item Por ser um \textit{dataset} composto apenas por ataques, a comparação com o limiar inverte-se para denotar o quanto dois pacotes são parecidos na correlação.
 \end{itemize}

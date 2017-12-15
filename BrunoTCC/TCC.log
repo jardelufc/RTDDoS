@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  15 DEC 2017 13:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  15 DEC 2017 15:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1744,7 +1744,7 @@ l.49
 \openout2 = `cap3/metodologia.aux'.
 
  (./cap3/metodologia.tex
-<figs/fluxoFramework.pdf, id=327, 214.4522pt x 248.0216pt>
+<figs/fluxoFramework.pdf, id=328, 214.4522pt x 248.0216pt>
 File: figs/fluxoFramework.pdf Graphic file (type pdf)
 
 <use figs/fluxoFramework.pdf>
@@ -1775,7 +1775,7 @@ l.83 	\item E
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <17.28> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 90.
 
-<figs/darpaStructure.pdf, id=378, 381.10078pt x 235.011pt>
+<figs/darpaStructure.pdf, id=379, 381.10078pt x 235.011pt>
 File: figs/darpaStructure.pdf Graphic file (type pdf)
 
 <use figs/darpaStructure.pdf>
@@ -1786,7 +1786,7 @@ Overfull \hbox (22.11722pt too wide) in paragraph at lines 108--126
  [] 
  []
 
-[25] <figs/analiseDarpa.pdf, id=390, 231.3714pt x 167.19464pt>
+[25] <figs/analiseDarpa.pdf, id=391, 231.3714pt x 167.19464pt>
 File: figs/analiseDarpa.pdf Graphic file (type pdf)
 
 <use figs/analiseDarpa.pdf>
@@ -1825,7 +1825,7 @@ Overfull \hbox (11.60364pt too wide) detected at line 171
 /n/12 07\OML/lmm/m/it/12 ; \OT1/lmr/m/n/12 199909 : 12 : 48")
  []
 
-<figs/filtWireshark1.png, id=438, 602.25pt x 346.29375pt>
+<figs/filtWireshark1.png, id=439, 602.25pt x 346.29375pt>
 File: figs/filtWireshark1.png Graphic file (type png)
 
 <use figs/filtWireshark1.png>
@@ -1848,7 +1848,7 @@ l.88 \include{cap3/metodologia}
 \openout2 = `cap4/resultados.aux'.
 
  (./cap4/resultados.tex
-<figs/results80-95Mining.pdf, id=473, 279.77724pt x 226.94888pt>
+<figs/results80-95Mining.pdf, id=474, 279.77724pt x 226.94888pt>
 File: figs/results80-95Mining.pdf Graphic file (type pdf)
 
 <use figs/results80-95Mining.pdf>
@@ -1859,7 +1859,7 @@ Overfull \hbox (0.6933pt too wide) in paragraph at lines 19--48
  [] 
  []
 
-<figs/resultsDarpa.pdf, id=478, 279.77724pt x 226.95189pt>
+<figs/resultsDarpa.pdf, id=479, 279.77724pt x 226.95189pt>
 File: figs/resultsDarpa.pdf Graphic file (type pdf)
 
 <use figs/resultsDarpa.pdf>
@@ -1874,7 +1874,7 @@ Overfull \hbox (0.6933pt too wide) in paragraph at lines 64--90
  [] 
  []
 
-<figs/resultNHOQUE.jpg, id=490, 250.48782pt x 165.06468pt>
+<figs/resultNHOQUE.jpg, id=491, 250.48782pt x 165.06468pt>
 File: figs/resultNHOQUE.jpg Graphic file (type jpg)
 
 <use figs/resultNHOQUE.jpg>
@@ -1967,12 +1967,12 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 121.
  ) 
 Here is how much of TeX's memory you used:
  26297 strings out of 493029
- 467336 string characters out of 6136234
+ 467334 string characters out of 6136234
  722927 words of memory out of 5000000
  28930 multiletter control sequences out of 15000+600000
  72347 words of font info for 134 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,13n,67p,2827b,639s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,13n,67p,2718b,639s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share
 /texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
@@ -1994,10 +1994,10 @@ xmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/publ
 ic/cm-super/sfsi0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0800
 .pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1000.pfb></usr/share/tex
 mf/fonts/type1/public/cm-super/sfti0500.pfb>
-Output written on TCC.pdf (40 pages, 1194497 bytes).
+Output written on TCC.pdf (40 pages, 1194638 bytes).
 PDF statistics:
- 815 PDF objects out of 1000 (max. 8388607)
- 712 compressed objects within 8 object streams
+ 816 PDF objects out of 1000 (max. 8388607)
+ 713 compressed objects within 8 object streams
  136 named destinations out of 1000 (max. 500000)
  23423 words of extra memory for PDF output out of 24883 (max. 10000000)
 
