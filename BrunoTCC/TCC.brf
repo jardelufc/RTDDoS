@@ -1,5 +1,10 @@
 \backcite {HOQUE201748}{{8}{(document)}{Doc-Start}}
 \backcite {DataMining}{{9}{(document)}{Doc-Start}}
+\backcite {barford2002signal}{{13}{1}{chapter.1}}
+\backcite {badishi2006exposing}{{13}{1}{chapter.1}}
+\backcite {1638123}{{13}{1}{chapter.1}}
+\backcite {srivastava2011recent}{{13}{1}{chapter.1}}
+\backcite {calce2008mafiaboy}{{13}{1}{chapter.1}}
 \backcite {HOQUE201748}{{13}{1}{chapter.1}}
 \backcite {kurose}{{15}{2.1}{section.2.1}}
 \backcite {kurose}{{15}{2.2}{section.2.2}}
@@ -30,3 +35,4 @@
 \backcite {HOQUE201748}{{30}{4.2}{table.4.5}}
 \backcite {HOQUE201748}{{32}{4.3}{figure.4.3}}
 \backcite {HOQUE201748}{{32}{4.3}{figure.4.3}}
+\backcite {HOQUE201748}{{34}{5}{chapter.5}}

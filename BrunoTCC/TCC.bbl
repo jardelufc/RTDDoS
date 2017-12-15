@@ -17,6 +17,19 @@ v.~7, 01 2016.}
 \textbf{International Journal of Scientific and Engineering Research}, v.~2,
   n.~1, p.~1--4, 2011.}
 
+\bibitem[Badishi, Keidar e Sasson 2006]{badishi2006exposing}
+\abntrefinfo{Badishi, Keidar e Sasson}{BADISHI; KEIDAR; SASSON}{2006}
+{BADISHI, G. \emph{et al.} Exposing and eliminating vulnerabilities to denial
+  of service attacks in secure gossip-based multicast.
+\textbf{IEEE Transactions on Dependable and Secure Computing}, IEEE, v.~3,
+  n.~1, p. 45--61, 2006.}
+
+\bibitem[Barford \emph{et al.} 2002]{barford2002signal}
+\abntrefinfo{Barford \emph{et al.}}{BARFORD \emph{et al.}}{2002}
+{BARFORD, P. \emph{et al.} A signal analysis of network traffic anomalies. In:
+  ACM. \textbf{Proceedings of the 2nd ACM SIGCOMM Workshop on Internet
+  measurment}. [S.l.], 2002. p. 71--82.}
+
 \bibitem[Cabrera \emph{et al.} 2001]{cabrera2001proactive}
 \abntrefinfo{Cabrera \emph{et al.}}{CABRERA \emph{et al.}}{2001}
 {CABRERA, J.~B. \emph{et al.} Proactive detection of distributed denial of
@@ -24,10 +37,21 @@ v.~7, 01 2016.}
   \textbf{Integrated Network Management Proceedings, 2001 IEEE/IFIP
   International Symposium on}. [S.l.], 2001. p. 609--622.}
 
+\bibitem[Calce e Silverman 2008]{calce2008mafiaboy}
+\abntrefinfo{Calce e Silverman}{CALCE; SILVERMAN}{2008}
+{CALCE, M.; SILVERMAN, C. \textbf{Mafiaboy: How I Cracked the Internet and why
+  It's Still Broken}. [S.l.]: Penguin Group Canada, 2008.}
+
 \bibitem[Center 1998]{certSmurf}
 \abntrefinfo{Center}{CENTER}{1998}
 {CENTER, C.~C. \textbf{CERT advisory CA-1998-01 smurf IP denial-of-service
   attacks}. [S.l.]: January, 1998.}
+
+\bibitem[Chen 2006]{1638123}
+\abntrefinfo{Chen}{CHEN}{2006}
+{CHEN, E.~Y. Detecting dos attacks on sip systems. In:  \textbf{1st IEEE
+  Workshop on VoIP Management and Security, 2006.} [S.l.: s.n.], 2006. p.
+  53--58.}
 
 \bibitem[Criscuolo 2000]{criscuolo2000distributed}
 \abntrefinfo{Criscuolo}{CRISCUOLO}{2000}
@@ -89,6 +113,13 @@ Dispon{\'\i}vel em:
   darpa off-line intrusion detection evaluation. In:  \textbf{DARPA Information
   Survivability Conference and Exposition, 2000. DISCEX '00. Proceedings}.
   [S.l.: s.n.], 2000. v.~2, p. 12--26 vol.2.}
+
+\bibitem[Srivastava \emph{et al.} 2011]{srivastava2011recent}
+\abntrefinfo{Srivastava \emph{et al.}}{SRIVASTAVA \emph{et al.}}{2011}
+{SRIVASTAVA, A. \emph{et al.} A recent survey on ddos attacks and defense
+  mechanisms.
+\textbf{Advances in Parallel Distributed Computing}, Springer, p. 570--580,
+  2011.}
 
 \bibitem[Wang \emph{et al.} 2015]{WANG2015308}
 \abntrefinfo{Wang \emph{et al.}}{WANG \emph{et al.}}{2015}
