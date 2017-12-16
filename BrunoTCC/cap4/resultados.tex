@@ -7,7 +7,7 @@ Na \figref{fig:ResultsMining} têm-se os gráficos de taxa de acerto em função
 
  \begin{figure}[htb]
  	\centering
- 	\caption{Análise do \textit{dataset} avaliado }
+ 	\caption{Análise do \textit{dataset} \textit{Data Mining} }
  	\includegraphics[width=0.9\textwidth]{figs/results80-95Mining.pdf}\\
  	\hspace{1.5cm}{Fonte: Elaborada pelo autor.}
  	\label{fig:ResultsMining}
@@ -24,35 +24,35 @@ Na \figref{fig:ResultsMining} têm-se os gráficos de taxa de acerto em função
  			\textbf{Limiar} & \textbf{Taxa de acerto} & \textbf{Taxa de falsos positivos} & \textbf{Taxa de falsos negativos}
  			\\ \midrule
 	 			
- 			0.60 &  100\% &  0\%& 0\%   \\ \midrule
- 			0.62 &  99.9996\% &  0\%& 0.0003996\%   \\ \midrule
- 			0.64 &  99.9996\% &  0\%& 0.0003996\%   \\ \midrule
- 			0.66 &  99.9996\% &  0\%& 0.0003996\%   \\ \midrule
- 			0.68 &  99.9996\% &  0\%& 0.0003996\%   \\ \midrule
- 			0.70 &  99.9992\% &  0\%& 0.0007993\%   \\ \midrule
- 			0.72 &  99.9992\% &  0\%& 0.0007993\%   \\ \midrule
- 			0.74 &  99.9992\% &  0\%& 0.0007993\%   \\ \midrule
- 			0.76 &  99.9800\% &  0\%& 0.0.01998\%   \\ \midrule
- 			0.78 &  99.9664\% &  0\%& 0.03357\%   \\\midrule 		 			 			 			 			 			 			 			
- 			0.80 &  99.7790\% &  0\%& 0.2210\%   \\ \midrule
- 			0.82 &  99.3905\% & 0\% & 0.6095 \%   \\ \midrule
- 			0.84 &  98.4137\%  & 0\% & 1.5863\%   \\ \midrule
- 			0.86 &  96.2556\%  &  0\% & 3.7444\%   \\ \midrule
- 			0.88 &  92.1842\%  &  0\% & 7.8158\%     \\ \midrule
- 			0.90 &  85.2309\%  & 0\% & 14.7691\%    \\ \midrule
- 			0.92 &  74.7722\%  &  0\% & 25.2278\%   \\ \midrule
- 			0.94 &  60.6753\%  & 0\% & 39.3247\%   \\ \bottomrule
+ 			0.60 &  100\% &  NA& 0\%   \\ \midrule
+ 			0.62 &  99.9996\% &  NA& 0.0003996\%   \\ \midrule
+ 			0.64 &  99.9996\% &  NA& 0.0003996\%   \\ \midrule
+ 			0.66 &  99.9996\% &  NA& 0.0003996\%   \\ \midrule
+ 			0.68 &  99.9996\% &  NA& 0.0003996\%   \\ \midrule
+ 			0.70 &  99.9992\% &  NA& 0.0007993\%   \\ \midrule
+ 			0.72 &  99.9992\% &  NA& 0.0007993\%   \\ \midrule
+ 			0.74 &  99.9992\% &  NA& 0.0007993\%   \\ \midrule
+ 			0.76 &  99.9800\% &  NA& 0.0.01998\%   \\ \midrule
+ 			0.78 &  99.9664\% &  NA& 0.03357\%   \\\midrule 		 			 			 			 			 			 			 			
+ 			0.80 &  99.7790\% &  NA& 0.2210\%   \\ \midrule
+ 			0.82 &  99.3905\% & NA & 0.6095 \%   \\ \midrule
+ 			0.84 &  98.4137\%  & NA & 1.5863\%   \\ \midrule
+ 			0.86 &  96.2556\%  &  NA & 3.7444\%   \\ \midrule
+ 			0.88 &  92.1842\%  &  NA & 7.8158\%     \\ \midrule
+ 			0.90 &  85.2309\%  & NA & 14.7691\%    \\ \midrule
+ 			0.92 &  74.7722\%  &  NA & 25.2278\%   \\ \midrule
+ 			0.94 &  60.6753\%  & NA & 39.3247\%   \\ \bottomrule
  		\end{tabular}
  		{Fonte: Elaborada pelo autor.}
  	\end{threeparttable}
  \end{table}
-Como pode ser visto na tabela \tabref{Tab:ResultsMining}, a coluna "Taxa de falsos positivos" não apresentou nenhuma ocorrência (0\%). Esse fato, deve-se especialmente a natureza do \textit{dataset} ser apenas de ataques e, dessa forma possuir uma correlação mais forte em comparação com a de um tráfego normal. Já na coluna "Taxa de falsos negativos" (tráfego de ataque que foi considerado normal) apresentou, dependendo do valor de limiar, um número considerável de eventos.
+Como pode ser visto na tabela \tabref{Tab:ResultsMining}, a coluna "Taxa de falsos positivos" não apresentou nenhuma ocorrência (NA). Esse fato, deve-se especialmente a natureza do \textit{dataset} ser apenas de ataques e, dessa forma, não se aplica o conceito de falsos positivos. Já na coluna "Taxa de falsos negativos" (tráfego de ataque que foi considerado normal) apresentou, dependendo do valor de limiar, um número considerável de eventos. Para altas taxas de limiar, a taxa de acertos baixa e consequentemente, o número de falsos negativos aumenta. 
 \section{Análise \textit{dataset} DARPA}
 Outra base de dados avaliada pelo \textit{framework} é o DARPA conforme descrito na \secref{metodologia}.
-A \figref{fig:ResultsDarpa} apresenta os gráficos das taxas de acertos em função dos limiares simulados. Para limiares entre 0.64 e 0.68, as taxas de acertos ficam entre 60 a 85\%. Tal comportamento é diferente da base de dados anterior, pois tratam-se de bases que diferem em termos de tratamento temporal, modo de detecção e arquivo de respostas, já que no DARPA é mostrada uma janela de tempo onde provavelmente o ataque nomeado irá ocorrer, enquanto no \textit{Datamining} tem-se uma base constituída apenas por ataques. Além disso, conforme explanado na \secref{metodologia}, o \textit{framework} teve que ser adaptado para analisar o \textit{dataset}, sendo possível analisar a base a qual contém apenas ataques. Logo, espera-se que os valores sejam diferentes para ambos os \textit{datasets}. A \tabref{Tab:ResultsDARPA} mostra as taxas de acertos, falsos positivos e falsos negativos resultantes da análise. O \textit{framework} possui baixa taxa de falsos negativos, tendo em vista que a taxa de detecção é máxima para a maioria dos limiares simulados, mostrando a eficiência do método de detecção.       
+A \figref{fig:ResultsDarpa} apresenta os gráficos das taxas de acertos em função dos limiares simulados. Para limiares entre 0.64 e 0.68, as taxas de acertos ficam entre 60 a 85\%. Tal comportamento é diferente da base de dados anterior, pois tratam-se de bases que diferem em termos de tratamento temporal, modo de detecção e arquivo de respostas, já que no DARPA é mostrada uma janela de tempo onde provavelmente o ataque nomeado irá ocorrer, enquanto no \textit{Datamining} tem-se uma base constituída apenas por ataques. Além disso, conforme explanado na \secref{metodologia}, o \textit{framework} teve que ser adaptado para analisar o \textit{dataset}, sendo possível analisar a base a qual contém apenas ataques. Logo, espera-se que os valores sejam diferentes para ambos os \textit{datasets}. A \tabref{Tab:ResultsDARPA} mostra as taxas de acertos, falsos positivos e falsos negativos resultantes da análise. O \textit{framework} possui baixa taxa de falsos positivos e negativos, tendo em vista que a taxa de detecção é máxima para a maioria dos limiares simulados, mostrando a eficiência do método de detecção.       
  \begin{figure}[htb]
  	\centering
- 	\caption{Análise do \textit{dataset} avaliado }
+ 	\caption{Análise do \textit{dataset} DARPA }
  	\includegraphics[width=0.85\textwidth]{figs/resultsDarpa.pdf}\\
  	\hspace{1.5cm}{Fonte: Elaborada pelo autor.}
  	\label{fig:ResultsDarpa}
@@ -68,9 +68,9 @@ A \figref{fig:ResultsDarpa} apresenta os gráficos das taxas de acertos em funç
   			\toprule
   			\textbf{Limiar} & \textbf{Taxa de acerto} & \textbf{Taxa de falsos positivos} & \textbf{Taxa de falsos negativos}
   			\\ \midrule
-  			0.64 &  65\% &  0\%& 35\%   \\ \midrule
-  			0.66 &  75\% & 0\% & 25 \%   \\ \midrule
-  			0.68 &  85\%  & 0\% & 15\%   \\ \midrule
+  			0.64 &  65\% &  10\%& 25\%   \\ \midrule
+  			0.66 &  75\% & 7.5\% & 17.5 \%   \\ \midrule
+  			0.68 &  82.5\%  & 5\% & 12.5\%   \\ \midrule
   			0.70 &  100\%  &  0\% & 0\%   \\ \midrule
   			0.72 &  100\%  &  0\% & 0\%     \\ \midrule
   			0.74 &  100\%  & 0\% & 0\%    \\ \midrule
@@ -88,8 +88,7 @@ A \figref{fig:ResultsDarpa} apresenta os gráficos das taxas de acertos em funç
   		{Fonte: Elaborada pelo autor.}
   	\end{threeparttable}
   \end{table}
-
-A \figref{fig:ResultsNHOQUE} mostra os resultados obtidos por \cite{HOQUE201748} para a análise do \textit{dataset} DARPA. Vale ressaltar que na referência, a versão exata do \textit{dataset} não foi explicitada. No entanto, os gráficos possuem semelhança em seus valores de taxa de acerto, sendo possível considerar validado o \textit{framework}.  
+  
  \begin{figure}[htb]
  	\centering
  	\caption{Resultados artigo \cite{HOQUE201748} }
@@ -98,4 +97,6 @@ A \figref{fig:ResultsNHOQUE} mostra os resultados obtidos por \cite{HOQUE201748}
  	\label{fig:ResultsNHOQUE}
  \end{figure}
 
-   Para limiares acima de 70\%, ambos os gráficos têm 100\% de acerto. Assim, ao escolher um intervalo válido de limiares para realizar a detecção deve-se levar em conta os valores para os quais a detecção teve maiores taxas de acerto.
+A \figref{fig:ResultsNHOQUE} mostra os resultados obtidos por \cite{HOQUE201748} para a análise do \textit{dataset} DARPA. Vale ressaltar que na referência, a versão exata do \textit{dataset} não foi explicitada.  Para limiares acima de 70\%, ambos os gráficos têm 100\% de acerto. Assim, ao escolher um intervalo válido de limiares para realizar a detecção deve-se levar em conta os valores para os quais a detecção teve maiores taxas de acerto.
+
+Como pode ser visto, apesar de não ter utilizado o mesmo \textit{dataset} de \cite{HOQUE201748},  os gráficos resultantes possuem semelhança em seus valores de taxa de acerto, confirmando que o \textit{framework} implementado está funcionando corretamente.  
