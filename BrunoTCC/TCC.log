@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  16 DEC 2017 00:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  16 DEC 2017 14:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1370,7 +1370,7 @@ LaTeX Info: Redefining \newblock on input line 591.
 LaTeX Info: Redefining \cite on input line 618.
 \ABCItoken=\toks49
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 112.
+Package hyperref Info: Option `colorlinks' set `true' on input line 113.
 
 (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
@@ -1682,7 +1682,7 @@ Package babel Warning: You haven't loaded the language english yet
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 16.
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <12> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 30.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 24.
 ) [12
 
 
@@ -1695,24 +1695,24 @@ LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <12> not available
 
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 20.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 18.
  (/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 20.
-) [14] [15]
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 18.
+) [14]
 \openout2 = `cap2/fundamentacaoteorica.aux'.
 
 
 (./cap2/fundamentacaoteorica.tex
-<figs/ameacas.pdf, id=230, 328.1289pt x 49.253pt>
+<figs/ameacas.pdf, id=226, 328.1289pt x 49.253pt>
 File: figs/ameacas.pdf Graphic file (type pdf)
  <use figs/ameacas.pdf>
-Package pdftex.def Info: figs/ameacas.pdf used on input line 10.
+Package pdftex.def Info: figs/ameacas.pdf used on input line 12.
 (pdftex.def)             Requested size: 455.0pt x 68.29689pt.
 
-[16
+[15
 
 
 
@@ -1721,40 +1721,46 @@ has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.24 
-      <./figs/ameacas.pdf>] [17]
+l.23 	\item I
+             nundação na conexão: O atacante estabelece um grande número...
+ <./figs/ameacas.pdf>]
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 37.
-
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 36.
+ [16]
 
 pdfTeX warning: /usr/bin/pdflatex (file ./figs/loic.pdf): PDF inclusion: found 
 PDF version <1.7>, but at most version <1.5> allowed
-<figs/loic.pdf, id=271, 1854.93pt x 773.89125pt>
+<figs/loic.pdf, id=266, 1854.93pt x 773.89125pt>
 File: figs/loic.pdf Graphic file (type pdf)
  <use figs/loic.pdf>
-Package pdftex.def Info: figs/loic.pdf used on input line 43.
+Package pdftex.def Info: figs/loic.pdf used on input line 44.
 (pdftex.def)             Requested size: 455.0pt x 189.82347pt.
- [18pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
-2}) has been already used, duplicate ignored
+ [17]
+[18pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.49 
-      <./figs/loic.pdf>] [19] [20]) [21]
+l.63 	\item
+            Sistemas de detecção baseados em assinatura. <./figs/loic.pdf>]
+[19]) [20]
 \openout2 = `cap3/metodologia.aux'.
 
  (./cap3/metodologia.tex
-<figs/fluxoFramework.pdf, id=328, 214.4522pt x 248.0216pt>
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <17.28> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 23.
+
+<figs/fluxoFramework.pdf, id=324, 214.4522pt x 248.0216pt>
 File: figs/fluxoFramework.pdf Graphic file (type pdf)
 
 <use figs/fluxoFramework.pdf>
 Package pdftex.def Info: figs/fluxoFramework.pdf used on input line 28.
 (pdftex.def)             Requested size: 273.00278pt x 315.75595pt.
- [22
+ [21
 
 
 
-] [23pdfTeX warning (ext4): destination with the same identifier (name{figure.3
+] [22pdfTeX warning (ext4): destination with the same identifier (name{figure.3
 .1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1765,17 +1771,14 @@ Overfull \hbox (11.2608pt too wide) in paragraph at lines 48--63
  [] 
  []
 
-[24pdfTeX warning (ext4): destination with the same identifier (name{table.3.1}
+[23pdfTeX warning (ext4): destination with the same identifier (name{table.3.1}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.83 	\item E
              ntropia de IPs origem]
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <17.28> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 90.
-
-<figs/darpaStructure.pdf, id=379, 381.10078pt x 235.011pt>
+<figs/darpaStructure.pdf, id=375, 381.10078pt x 235.011pt>
 File: figs/darpaStructure.pdf Graphic file (type pdf)
 
 <use figs/darpaStructure.pdf>
@@ -1786,13 +1789,13 @@ Overfull \hbox (22.11722pt too wide) in paragraph at lines 108--126
  [] 
  []
 
-[25] <figs/analiseDarpa.pdf, id=391, 231.3714pt x 167.19464pt>
+[24] <figs/analiseDarpa.pdf, id=387, 231.3714pt x 167.19464pt>
 File: figs/analiseDarpa.pdf Graphic file (type pdf)
 
 <use figs/analiseDarpa.pdf>
 Package pdftex.def Info: figs/analiseDarpa.pdf used on input line 138.
 (pdftex.def)             Requested size: 409.49722pt x 295.94725pt.
- [26pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+ [25pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1804,7 +1807,7 @@ l.166
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.166 
-       <./figs/darpaStructure.pdf>] [27pdfTeX warning (ext4): destination with 
+       <./figs/darpaStructure.pdf>] [26pdfTeX warning (ext4): destination with 
 the same identifier (name{figure.3.3}) has been already used, duplicate ignored
 
 
@@ -1825,30 +1828,30 @@ Overfull \hbox (11.60364pt too wide) detected at line 171
 /n/12 07\OML/lmm/m/it/12 ; \OT1/lmr/m/n/12 199909 : 12 : 48")
  []
 
-<figs/filtWireshark1.png, id=439, 602.25pt x 346.29375pt>
+<figs/filtWireshark1.png, id=435, 602.25pt x 346.29375pt>
 File: figs/filtWireshark1.png Graphic file (type png)
 
 <use figs/filtWireshark1.png>
 Package pdftex.def Info: figs/filtWireshark1.png used on input line 178.
 (pdftex.def)             Requested size: 318.49861pt x 183.14378pt.
- [28pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+ [27pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.235 \end{table}
-                  <./figs/filtWireshark1.png>]) [29] [30pdfTeX warning (ext4): 
+                  <./figs/filtWireshark1.png>]) [28] [29pdfTeX warning (ext4): 
 destination with the same identifier (name{table.3.4}) has been already used, d
 uplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.88 \include{cap3/metodologia}
-                               ] [31]
+                               ] [30]
 \openout2 = `cap4/resultados.aux'.
 
  (./cap4/resultados.tex
-<figs/results80-95Mining.pdf, id=473, 279.77724pt x 226.94888pt>
+<figs/results80-95Mining.pdf, id=469, 279.77724pt x 226.94888pt>
 File: figs/results80-95Mining.pdf Graphic file (type pdf)
 
 <use figs/results80-95Mining.pdf>
@@ -1859,13 +1862,13 @@ Overfull \hbox (0.6933pt too wide) in paragraph at lines 19--48
  [] 
  []
 
-<figs/resultsDarpa.pdf, id=479, 279.77724pt x 226.95189pt>
+<figs/resultsDarpa.pdf, id=474, 279.77724pt x 226.95189pt>
 File: figs/resultsDarpa.pdf Graphic file (type pdf)
 
 <use figs/resultsDarpa.pdf>
 Package pdftex.def Info: figs/resultsDarpa.pdf used on input line 56.
 (pdftex.def)             Requested size: 386.75278pt x 313.75839pt.
- [32
+ [31
 
 
 
@@ -1874,26 +1877,26 @@ Overfull \hbox (0.6933pt too wide) in paragraph at lines 64--90
  [] 
  []
 
-<figs/resultNHOQUE.jpg, id=488, 250.48782pt x 165.06468pt>
+<figs/resultNHOQUE.jpg, id=483, 250.48782pt x 165.06468pt>
 File: figs/resultNHOQUE.jpg Graphic file (type jpg)
 
 <use figs/resultNHOQUE.jpg>
 Package pdftex.def Info: figs/resultNHOQUE.jpg used on input line 95.
 (pdftex.def)             Requested size: 318.49861pt x 209.89679pt.
-) [33pdfTeX warning (ext4): destination with the same identifier (name{figure.4
+) [32pdfTeX warning (ext4): destination with the same identifier (name{figure.4
 .1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.90 \include{cap4/resultados}
-                               <./figs/results80-95Mining.pdf>] [34pdfTeX warni
+                               <./figs/results80-95Mining.pdf>] [33pdfTeX warni
 ng (ext4): destination with the same identifier (name{table.4.5}) has been alre
 ady used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.90 \include{cap4/resultados}
-                              ] [35pdfTeX warning (ext4): destination with the 
+                              ] [34pdfTeX warning (ext4): destination with the 
 same identifier (name{figure.4.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1906,7 +1909,7 @@ identifier (name{figure.4.3}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.90 \include{cap4/resultados}
                                <./figs/resultsDarpa.pdf> <./figs/resultNHOQUE.j
-pg>] [36pdfTeX warning (ext4): destination with the same identifier (name{table
+pg>] [35pdfTeX warning (ext4): destination with the same identifier (name{table
 .4.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1915,7 +1918,7 @@ l.90 \include{cap4/resultados}
                               ]
 \openout2 = `cap5/conclusoes.aux'.
 
- (./cap5/conclusoes.tex) [37
+ (./cap5/conclusoes.tex) [36
 
 
 
@@ -1930,14 +1933,14 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 3.
 
 bibitemlist
-[38
+[37
 
 
 ])
 No file TCC.ind.
 
 AED: lastpage setting LastPage
-[39]
+[38]
 \tf@lof=\write8
 \openout8 = `TCC.lof'.
 
@@ -1958,7 +1961,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 121.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 121.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 121.
 Package rerunfilecheck Info: File `TCC.brf' has not changed.
-(rerunfilecheck)             Checksum: E3901E38092904B8C67E9BAE7181765B;1901.
+(rerunfilecheck)             Checksum: 7CE404CCD872AA077472FCAB0465A393;1948.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
@@ -1966,13 +1969,13 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 121.
  ) 
 Here is how much of TeX's memory you used:
- 26300 strings out of 493029
- 467382 string characters out of 6136234
- 722931 words of memory out of 5000000
- 28933 multiletter control sequences out of 15000+600000
- 72347 words of font info for 134 fonts, out of 8000000 for 9000
+ 26304 strings out of 493029
+ 467443 string characters out of 6136234
+ 723027 words of memory out of 5000000
+ 28937 multiletter control sequences out of 15000+600000
+ 75339 words of font info for 135 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,13n,67p,2718b,639s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,13n,67p,2736b,639s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share
 /texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
@@ -1994,10 +1997,10 @@ xmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/publ
 ic/cm-super/sfsi0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0800
 .pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1000.pfb></usr/share/tex
 mf/fonts/type1/public/cm-super/sfti0500.pfb>
-Output written on TCC.pdf (40 pages, 1195846 bytes).
+Output written on TCC.pdf (39 pages, 1197856 bytes).
 PDF statistics:
- 819 PDF objects out of 1000 (max. 8388607)
- 716 compressed objects within 8 object streams
- 136 named destinations out of 1000 (max. 500000)
- 23423 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 817 PDF objects out of 1000 (max. 8388607)
+ 715 compressed objects within 8 object streams
+ 135 named destinations out of 1000 (max. 500000)
+ 23935 words of extra memory for PDF output out of 24883 (max. 10000000)
 
