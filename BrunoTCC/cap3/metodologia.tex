@@ -83,7 +83,8 @@ O modulo de detecção consiste na aplicação da correlação NaHiD, utilizando
 	\item Entropia de IPs origem
 	\item Taxa de pacotes
 \end{itemize}
-Por tratar-se de uma medida de correlação é necessário manter um valor de referência para o cálculo. Assim, os parâmetros (Variação e entropia de IPs origem, além da taxa de pacotes) de um tráfego normal devem ser fixados para a comparação com a instância de tráfego a ser analisada. Além disso, define-se um limiar do resultado da correlação para distinguir instâncias normais de maliciosas. Caso a correlação calculada seja menor que esse limiar, o tráfego analisado não possui semelhança suficiente com o perfil normal comparado, sendo, portanto, considerado um ataque.
+
+Por tratar-se de uma medida de correlação, é necessário manter um valor de referência para o cálculo. Assim, os parâmetros (Variação e entropia de IPs origem, além da taxa de pacotes) de um tráfego normal devem ser fixados para a comparação com a instância de tráfego a ser analisada. Além disso, define-se um limiar do resultado da correlação para distinguir instâncias normais de maliciosas. Caso a correlação calculada seja menor que esse limiar, o tráfego analisado não possui semelhança suficiente com o perfil normal comparado, sendo, portanto, considerado um ataque.
 \subsection{Gerenciador de Segurança}
 Nesse módulo, os valores de correlação, IPs origem, destino, taxas de pacotes, além dos resultados do módulo de detecção são salvos para a janela de tráfego em análise e caso o módulo de detecção identifique que o tráfego em questão é normal, este será atualizado com os valores do mesmo para a próxima janela.
 
@@ -189,6 +190,7 @@ Outra base de dados estudada no trabalho foi a desenvolvida por \cite{DataMining
 	\item UDP \textit{Flood}
 	\item \textit{Smurf}
 \end{itemize}
+
 Esse \textit{dataset} foi gerado em um simulador de rede chamado NS2, um \textit{software} que representa uma rede de computadores de forma realista. 
 A \tabref{Tab:DataMining} mostra os campos do \textit{dataset} avaliado. 
 
