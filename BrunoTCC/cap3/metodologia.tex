@@ -6,7 +6,7 @@ para a detecção de ataques DDoS e quais bases de dados são utilizadas para a 
 
 \section{Modelo de correlação NaHiD}
 
-Neste trabalho, o \textit{framework} utilizado baseia-se na correlação proposta por \cite{HOQUE201748} chamada NaHiD (nome que possivelmente provém a partir das iniciais de cada autor), cujo objetivo é distinguir objetos de tráfego normais e maliciosos. Tal medida leva em consideração principalmente o desvio padrão e a média de cada objeto, ponderando cada elemento como mostrado na equação a seguir:  
+Neste trabalho, o \textit{framework} utilizado baseia-se na correlação proposta por \cite{HOQUE201748} chamada NaHiD, cujo objetivo é distinguir objetos de tráfego normais e maliciosos. Tal medida leva em consideração o desvio padrão e a média de cada objeto, ponderando cada elemento como mostrado na equação a seguir:  
 
 \begin{equation}
 	NaHiD(X,Y) = 1 - \frac{1}{n} \sum_{i=1}^{n} \frac{\left(|X(i) -	 Y(i)|\right)}{||\mu{X} - sX| - X(i)| + ||\mu{Y} - sY| - Y(i)|}
@@ -20,7 +20,7 @@ onde
 \end{itemize}
 As provas de simetria e identidade da correlação podem ser encontradas em \cite{HOQUE201748}.
 
-\section{Framework de detecção de ataques DDoS}
+\section{\textit{Framework} de detecção de ataques DDoS}
  
  \begin{figure}[htb]
 	\centering
@@ -68,13 +68,13 @@ Essa medida, diferentemente da entropia, trata-se da taxa de mudança dos IPs or
 \begin{equation}
 	V_{Ip}(X) = \frac{\delta}{N}
 \end{equation}
-Onde $\delta$ é o número de mudanças de IPs origem e $N$ é o numero total de IPs de entrada. Neste trabalho consideramos uma variação cada troca de valores como no exemplo:
+Onde $\delta$ é o número de mudanças de IPs origem e $N$ é o número total de IPs de entrada. Neste trabalho consideramos uma variação cada troca de valores como no exemplo:
 \begin{equation}
 	X = {1,2,1,2,3}
 \end{equation}
-Assim, nesse vetor consideram-se 4 variações ainda que sejam para um valor que repetiu-se. Assim se os IPs origem mudarem frequentemente, a variação será alta. \cite{HOQUE201748}
+Assim, nesse vetor consideram-se 4 variações ainda que sejam para um valor que repetiu-se. Assim se os IPs origem mudarem frequentemente, a variação será alta \cite{HOQUE201748}.
 \\
-A observação do comportamento de ataques por \textit{flood} mostra que esse tipo de ameaça pode ser gerada por atacantes reais como zumbis. Se endereços de IP origem falsificados forem utilizados durante um ataque DDoS TCP SYN, a entropia e variação de IPs origem serão altas e esse comportamento também ocorre em um tráfego normal. \cite{HOQUE201748}. Assim faz-se necessário o uso da taxa de pacotes em bits como terceiro parâmetro de entrada para o módulo de detecção.
+A observação do comportamento de ataques por \textit{flood} mostra que esse tipo de ameaça pode ser gerada por atacantes reais como zumbis. Se endereços de IP origem falsificados forem utilizados durante um ataque DDoS TCP SYN, a entropia e variação de IPs origem serão altas e esse comportamento também ocorre em um tráfego normal \cite{HOQUE201748}. Assim faz-se necessário o uso da taxa de pacotes em \textit{bits} como terceiro parâmetro de entrada para o módulo de detecção.
 
 \subsection{Módulo de Detecção}
 O modulo de detecção consiste na aplicação da correlação NaHiD, utilizando os três parâmetros de entrada fornecidos pelo módulo de pré-processamento:
@@ -83,15 +83,16 @@ O modulo de detecção consiste na aplicação da correlação NaHiD, utilizando
 	\item Entropia de IPs origem
 	\item Taxa de pacotes
 \end{itemize}
-Por tratar-se de uma medida de correlação é necessário manter um valor de referência para o cálculo. Assim, os parâmetros(Variação e entropia de IPs origem, além da taxa de pacotes) de um tráfego normal devem ser fixados para a comparação com a instância de tráfego a ser analisada. Além disso, define-se um limiar do resultado da correlação para distinguir instâncias normais de maliciosas. Caso a correlação calculada seja menor que esse limiar, tal tráfego em analisado não tem semelhança suficiente com o perfil normal comparado, sendo considerado um ataque.
-\subsection{Gerenciador Offline}
-Nessa módulo, os valores de correlação, IPs origem, destino, taxas de pacotes, além dos resultados do módulo de detecção são salvos para a janela de tráfego em análise e se o módulo de detecção identificar que o tráfego em questão é normal, este será atualizado com os valores do mesmo para a próxima janela.
+
+Por tratar-se de uma medida de correlação, é necessário manter um valor de referência para o cálculo. Assim, os parâmetros (Variação e entropia de IPs origem, além da taxa de pacotes) de um tráfego normal devem ser fixados para a comparação com a instância de tráfego a ser analisada. Além disso, define-se um limiar do resultado da correlação para distinguir instâncias normais de maliciosas. Caso a correlação calculada seja menor que esse limiar, o tráfego analisado não possui semelhança suficiente com o perfil normal comparado, sendo, portanto, considerado um ataque.
+\subsection{Gerenciador de Segurança}
+Nesse módulo, os valores de correlação, IPs origem, destino, taxas de pacotes, além dos resultados do módulo de detecção são salvos para a janela de tráfego em análise e caso o módulo de detecção identifique que o tráfego em questão é normal, este será atualizado com os valores do mesmo para a próxima janela.
 
 \section{Aplicação do \textit{framework} de detecção em bases de dados reais}
 \label{Sec:NaHiD_VERC}
-Para a avaliação do trabalho, duas bases de tráfegos de rede foram escolhidas: DARPA e  DataMining[escolher melhor esse nome] os quais são mais detalhados a seguir 
-\subsection{DARPA - MIT}
- A base de dados DARPA foi produzida por pesquisadores do \textit{Lincoln Laboratory} do Instituto de Tecnologia de Massachusetts nos Estados Unidos e tem por objetivo coletar dados de tráfego de rede da Força Aérea do país para encontrar vulnerabilidades em seu sistema bem como ser utilizado para avaliações futuras. Os dados foram coletados e passaram por uma fase de treinamento de 7 semanas com 38 tipos de ataques para simular ameaças internas a rede. O ambiente de rede era composto por duas partes: a rede interna da Força aérea e a rede externa que representava a Internet; ambos conectados por meio de um roteador como mostra a \figref{fig:DARPA_Estrututra}.	Assim, um \textit{sniffer} de rede foi instalado no roteador e todas as requisições para os computadores da Força aérea foram capturadas em um arquivo tcpdump, o qual pode ser encontrado em \cite{siteDarpa}. 
+Para a avaliação do trabalho, duas bases de tráfegos de rede foram escolhidas: DARPA e  \textit{DataMining}, os quais são mais detalhados a seguir. 
+\subsection{DARPA 2000}
+ A base de dados DARPA foi produzida por pesquisadores do \textit{Lincoln Laboratory} do Instituto de Tecnologia de Massachusetts (MIT) nos Estados Unidos e tem por objetivo coletar dados de tráfego de rede da Força Aérea do país para encontrar vulnerabilidades em seu sistema bem como ser utilizado para avaliações futuras. Os dados foram coletados e passaram por uma fase de treinamento de 5 semanas com 19 tipos de ataques para simular ameaças internas a rede. O ambiente de rede era composto por duas partes: a rede interna da Força aérea e a rede externa que representava a \textit{Internet}; ambos conectados por meio de um roteador como mostra a \figref{fig:DARPA_Estrututra}.	Assim, um \textit{sniffer} de rede foi instalado no roteador e todas as requisições para os computadores da Força aérea foram capturadas em um arquivo \textit{tcpdump}, o qual pode ser encontrado em \cite{siteDarpa}. 
  \begin{figure}[ht]
  	\centering
 	\caption{Estrutura de rede Base Aérea dos EUA }
@@ -110,22 +111,21 @@ A partir desse \textit{dataset} é possível extrair informações acerca de cad
 		%	\small
 		\begin{tabular}{c c c c c c}
 			\toprule
-			\textbf{Número} & \textbf{Tempo} & \textbf{Origem} & \textbf{Destino}  & \textbf{Protocolo} & \textbf{Tamanho}[bytes]
+			\textbf{Número} & \textbf{Tempo} & \textbf{Origem} & \textbf{Destino}  & \textbf{Protocolo} & \textbf{Tamanho}
 			\\ \midrule
-			1 &  18:56:12.1386 &  192.168.0.20 & 192.168.0.30 & TCP & 60  \\ \midrule
-			2 &  18:56:12.1391 & 192.168.0.30 & 192.168.0.20 & TCP & 60  \\ \midrule
-			3 &  18:56:12.1588 & 192.168.0.30 & 192.168.0.20 & TELNET & 84  \\ \midrule
-			4 &  18:56:12.2099 &  192.168.0.20 & 192.168.0.30 & TCP & 60  \\ \midrule
-			5 &  18:56:13.0567 &  192.168.0.20 & 192.168.0.30 & TELNET & 69    \\ \midrule
-			6 &  18:56:13.0584 & 192.168.0.30 & 192.168.0.20 & TELNET & 66   \\ \midrule
-			7 &  18:56:13.0626 &  192.168.0.20 & 192.168.0.30 & TELNET & 72  \\ \midrule
-			8 & 18:56:13.0821 & 192.168.0.30 & 192.168.0.20 & TCP & 60  \\ \bottomrule
+			2710 &  09:12:42 &  194.27.251.21 & 172.16.112.100 & TCP & 60  \\ \midrule
+			2711 &  09:12:42 & 3comFast\_9c:b2:54 & \textit{Broadcast} & ARP & 60  \\ \midrule
+			2712 &  09:12:42 & Cisco\_38:46:33 & 3comFast\_9c:b2:54 & ARP & 60  \\ \midrule
+			2713 &  09:12:42 &  172.16.112.100 & 194.27.251.21 & TCP & 60  \\ \midrule
+			2714 &  09:12:42 &  194.27.251.21 & 172.16.112.100 & TCP & 60    \\ \midrule
+			2715 &  109:12:42 & 3comFast\_9c:b2:54 & \textit{Broadcast} & ARP & 60   \\ \midrule
+			2716 &  09:12:42 &  Dell\_a3:57:db & 3comFast\_9c:b2:54 & ARP & 60  \\ \midrule
+			2717 & 09:12:42 & 172.16.112.100 & 172.16.112.20 & DNS & 86  \\ \bottomrule
 		\end{tabular}
 		{Fonte: Elaborada pelo autor, baseada em \cite{DARPA}.}
 	\end{threeparttable}
 \end{table}
-
-No presente trabalho a ferramenta Wireshark foi utilizada para o tratamento desse \textit{dataset} no módulo de processamento. Assim, algumas considerações devem ser feitas:
+No presente trabalho a ferramenta \textit{Wireshark} foi utilizada para o tratamento desse \textit{dataset} no módulo de processamento. Assim, algumas considerações devem ser feitas:
 \begin{itemize}
 	\item Janela de um segundo de tráfego.
 	\item Cálculo de entropia, variação de IPs origem e taxa de pacotes média.
@@ -133,30 +133,71 @@ No presente trabalho a ferramenta Wireshark foi utilizada para o tratamento dess
 \end{itemize}
 Note que de acordo com a estrutura do \textit{dataset} mostrada na \tabref{Tab:WiresharkEx}, a implementação do \textit{framework} segue o seguinte fluxo mostrado na \figref{fig:analiseDarpa}
 
- \begin{figure}[!ht]
+\begin{figure}[!ht]
  	\centering
  	\caption{Diagrama descritivo análise e aplicação do \textit{framework} na base de dados DARPA  }
  	\includegraphics[width=0.9\textwidth]{figs/analiseDarpa.pdf}\\
  	{Fonte: Elaborada pelo autor.}
  	\label{fig:analiseDarpa}
- \end{figure}
+\end{figure}
 
-.
-\subsection{DataMining}
+A documentação da base de dados DARPA, fornece informações de quais fluxos capturados são ataques. Possuindo a estrutura da \tabref{Tab:RespostasDarpa} 
+ \begin{table}[!htb]
+ 	\centering
+ 	\begin{threeparttable}
+ 		\caption{Exemplo da estrutura do  arquivo de respostas do \textit{dataset} DARPA 2000}
+ 		\label{Tab:RespostasDarpa}
+ 		%	\small
+ 		\begin{tabular}{c c c c c }
+ 			\toprule
+ 			 \textbf{Tempo} &  \textbf{Duração H:Min:Seg} & \textbf{Protocolo} & \textbf{Origem} & \textbf{Destino}
+ 			\\ \midrule
+ 			  08:12:42 & 00:00:05 & SMTP& 194.27.251.21 & 172.16.112.100    \\ \midrule
+			 08:49:17 & 00:00:06 & SMTP&  135.8.60.182 & 172.16.112.100    \\ \midrule
+			 08:55:10 & 00:01:05 & SMTP&  206.48.044.018 & 172.16.112.100    \\ \midrule
+			 09:44:17 & 00:00:40 & FTP&  172.16.113.204 & 172.16.112.100    \\ \midrule
+			 09:55:27 & 00:00:03 & SMTP&  153.107.252.061 & 72.16.112.100    \\ \midrule
+			 10:06:42 & 00:03:43 & TELNET&  172.016.118.070 & 172.16.112.100    \\ \midrule
+			 10:40:29 & 00:00:03 & FTP&  205.160.208.190 & 172.16.112.100    \\ \midrule
+ 			 10:52:28 & 000:02:56 & TELNET& 172.016.118.070 & 172.16.112.100  \\ \bottomrule
+ 		\end{tabular}
+ 		{Fonte: Elaborada pelo autor, baseada em \cite{DARPA}.}
+ 	\end{threeparttable}
+ \end{table}
+ 
+ Com base nas informações da documentação, cada ataque ocorre no período descrito conforme \tabref{Tab:RespostasDarpa}.  Ao abrir o \textit{dataset} no \textit{Wireshark} percebe-se também que existe a variação de fuso-horário que deve ser convertida, sendo no caso uma hora adiantado. Assim, aplica-se um filtro no \textit{Wireshark} conforme o exemplo abaixo.
+ 
+ \begin{equation}
+ 	(frame.time >= "Aug 07, 1999 09:12:42") \&\& (frame.time <= "Aug 07, 1999 09:12:48")
+ \end{equation} 
+ 
+ Desta forma, estamos filtrando os pacotes transmitidos entre o horário de $09:12:42$ e $09:12:47$, conforme primeiro elemento da \tabref{Tab:RespostasDarpa}. Assim, resultando nos pacotes filtrados conforme \figref{fig:wiresharkFilt}.
+
+ \begin{figure}[ht]
+ 	\centering
+ 	\caption{Resultado do filtro aplicado no \textit{Wireshark} }
+ 	\includegraphics[width=0.7\textwidth]{figs/filtWireshark1.png}\\
+ 	{Fonte: Elaborada pelo autor}
+ 	\label{fig:wiresharkFilt}
+ \end{figure} 
+ 
+Vale ressaltar que o ataque não consta em toda a janela de duração, podendo ser encontrado dentro de tal intervalo. Assim, para meios de detecção, o \textit{framework} irá buscar um ataque dentro do intervalo dado pelo arquivo de respostas. Se houver pelo menos um ataque dentro dessa duração, o módulo de detecção terá acertado.
+\subsection{\textit{DataMining}}
 Outra base de dados estudada no trabalho foi a desenvolvida por \cite{DataMining}, a qual consta em sua totalidade por ataques DDoS de quatro tipos:
 \begin{itemize}
 	\item SIDDoS
-	\item HTTP Flood
-	\item UDDP Flood
-	\item Smurf
+	\item HTTP \textit{Flood}
+	\item UDP \textit{Flood}
+	\item \textit{Smurf}
 \end{itemize}
-Esse \textit{dataset} foi gerado em um simulador de rede chamado NS2, um software que representa uma rede de computadores de forma realista. 
+
+Esse \textit{dataset} foi gerado em um simulador de rede chamado NS2, um \textit{software} que representa uma rede de computadores de forma realista. 
 A \tabref{Tab:DataMining} mostra os campos do \textit{dataset} avaliado. 
 
 \begin{table}[!b]
 	\centering
 	\begin{threeparttable}
-		\caption{Estrutura base de dados \cite{DataMining}}
+		\caption{Estrutura base de dados \textit{Data Mining}}
 		\label{Tab:DataMining}
 		%	\small
 		\begin{tabular}{c c }
@@ -170,11 +211,11 @@ A \tabref{Tab:DataMining} mostra os campos do \textit{dataset} avaliado.
 			5 &  Nó destino  \\ \midrule
 			6 &  Tipo de pacote  \\ \midrule
 			7 &  Tamanho do pacote  \\ \midrule
-			8 &  Flags  \\ \midrule
-			9 &   Id da flag  \\ \midrule
+			8 &  \textit{Flags}  \\ \midrule
+			9 &   Id da \textit{flag}  \\ \midrule
 			10 &  Número de sequência  \\ \midrule
 			11 &  Número de pacotes  \\ \midrule
-			12 &  Número de bytes  \\ \midrule
+			12 &  Número de \textit{bytes}  \\ \midrule
 			13 &  Nome do nó origem  \\ \midrule
 			14 &  Nome do nó destino  \\ \midrule
 			15 &  Entrada de pacote  \\ \midrule
@@ -182,7 +223,7 @@ A \tabref{Tab:DataMining} mostra os campos do \textit{dataset} avaliado.
 			17 &  Taxa de pacotes Recebidos \\ \midrule%%%%%%%%%%%%%%%%%%
 			18 &  Atraso de nó do pacote  \\ \midrule
 			19 &  Taxa de pacotes\\ \midrule
-			20 &  Taxa de bytes  \\ \midrule
+			20 &  Taxa de \textit{bytes}  \\ \midrule
 			21 &  Tamanho  médio do pacote  \\ \midrule
 			22 &  Utilização  \\ \midrule
 			23 &  Atraso de pacote  \\ \midrule
@@ -203,14 +244,16 @@ Algumas considerações foram tomadas para a análise dessa base de dados:
 	 \item  Atraso de pacote.
 	 \item Tempo de pacote reservado.
 	\end{itemize}
+	Essa consideração foi tomada devido a natureza do \textit{dataset}, o qual não tem outra abordagem para a recepção.
 	\item A média das taxas dos pacotes foi considerada dentro da janela de um segundo.
 	\item Por ser um \textit{dataset} composto apenas por ataques, a comparação com o limiar inverte-se para denotar o quanto dois pacotes são parecidos na correlação.
 \end{itemize}
 
-A base de dados é disponibilizada no formato \textit{Weka Attribute-relation}(extensão arff), o qual é utilizado geralmente para compactar grandes massas de dados e processá-las utilizando técnicas de \textit{machine learning}. Assim, para o processamento dos mesmos as ferramentas Weka e MATLAB foram utilizadas. Inicialmente, no módulo de Pré-Processamento, converteu-se o arquivo .arff para um .mat por meio de \textit{script} e em seguida, com o \textit{dataset} carregado, a janela de um segundo é aplicada, conforme as considerações já mencionadas. Em seguida, os pacotes da janela são agrupados para a extração dos IPs origem, a partir de onde serão calculadas a entropia e  variação, além da taxa de pacotes média. Posteriormente, a partir dos parâmetros da etapa anterior, o módulo de detecção calcula a correlação NaHiD entre o perfil normal e o tráfego em questão e compara com o limiar, retornando 0 caso seja um tráfego normal e 1 caso contrário. Após isso, no gerente \textit{offline}, as informações do tráfego analisado são salvas e caso o módulo de detecção tenha identificado o tráfego como normal, o perfil de comparação na correlação será atualizado.
+A base de dados é disponibilizada no formato \textit{Weka Attribute-relation}(extensão arff), o qual é utilizado geralmente para compactar grandes massas de dados e processá-las utilizando técnicas de \textit{machine learning}. Assim, para o processamento dos mesmos as ferramentas Weka e MATLAB foram utilizadas. Inicialmente, no módulo de Pré-Processamento, converteu-se o arquivo .arff para um .mat por meio de \textit{script} e em seguida, com o \textit{dataset} carregado, a janela de um segundo é aplicada, conforme as considerações já mencionadas. Em seguida, os pacotes da janela são agrupados para a extração dos IPs origem, a partir de onde serão calculadas a entropia e  variação, além da taxa de pacotes média. Posteriormente, a partir dos parâmetros da etapa anterior, o módulo de detecção calcula a correlação NaHiD entre o perfil ataque e o tráfego em questão e compara com o limiar, retornando 0 caso seja um tráfego normal e 1 caso contrário. Após isso, no gerente \textit{offline}, as informações do tráfego analisado são salvas e caso o módulo de detecção tenha identificado o tráfego como ataque, o perfil de comparação na correlação será atualizado.
+\newpage
 \section{Método de avaliação do \textit{framework}}
 Como forma de avaliação são consideradas as taxas de acertos, de falsos positivos e negativos. Em outras palavras, os \textit{datasets} avaliados possuem arquivos de respostas, onde os tráfegos normais e ataques são descriminados. Assim, a resposta do \textit{framework} estudado será comparada com esse arquivo e a taxa de acertos será calculada da seguinte forma
 \begin{equation}
 T_a = \left(1 - \frac{N_e}{N_t}\right)* 100,
 \end{equation}
-onde $T_a$ é a taxa de acertos, $N_e$ é o número tráfegos julgados erroneamente, $N_t$ é o número de tráfegos analisados pelo \textit{framework}. Além disso, as taxas de falsos positivos e negativos tem formulação semelhante.
+onde $T_a$ é a taxa de acertos, $N_e$ é o número tráfegos julgados erroneamente, $N_t$ é o número de tráfegos analisados pelo \textit{framework}. Além disso, define-se como métrica a taxa de falsos positivos, que denota a percentagem dos tráfegos normais que foram classificados como ataques e a taxa de falsos negativos, que expressa a percentagem dos tráfegos maliciosos que foram classificados como normais.

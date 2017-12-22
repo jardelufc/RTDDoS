@@ -9,10 +9,13 @@ tic;
 debug = 0;
 % DestIP = 3;
 % windownSize = 5;
-threshold = 0.6:0.01:0.95;
+% threshold = 0.6:0.5:0.95;
+threshold = 0.94;
+
 % [PktRate VarSourceIP EntropySourceIP]
-normalTraffic1 = [305.644 0.808 3.1 ];
-normalTraffic2 = [357663 12.7 0.94 ];
+ normalTraffic1 = [305.644 0.8889 3.1699 ];
+% normalTraffic1 = [848 0.5 1];
+% normalTraffic2 = [357663 12.7 0.94 ];
 % getting dataset Mtx
 % datasetMtx = getDatasetScript();
 load('dataset.mat');
@@ -78,19 +81,19 @@ for i = 1:length(datasetMtx(:,1))
             entropySourceIPs = entropy(sourceIPs);
             NaHidModule = NaHid([trafficPktRate VarSourceIPs entropySourceIPs],normalTraffic1);
             NaHiDResults(1,win) = NaHidModule;
-            
+%             keyboard;
             if(NaHidModule > threshold(1,idx))
-%                 disp('traffic');
-%                 disp(i);
-%                 disp('atack');
+                disp('traffic');
+                disp(i);
+                disp('atack');
 %                 keyboard
                 ataques(1,idx) = ataques(1,idx) + 1;
                 normalTraffic1 = [trafficPktRate VarSourceIPs entropySourceIPs];
             else
-%                 disp('traffic');
-%                 disp(i);
-%                 disp('normal');
-%                 keyboard
+                disp('traffic');
+                disp(i);
+                disp('normal');
+                 keyboard
                 normal(1,idx) = normal(1,idx) + 1;
             end
             step =  i + 1;

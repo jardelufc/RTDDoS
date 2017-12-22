@@ -1,5 +1,5 @@
-datasetTable = readtable('ataque196NT2000.csv');
-% keyboard;
+datasetTable = readtable('normaltretaNT2000.csv');
+keyboard;
 datasetTable = table2cell(datasetTable);
 packetID = datasetTable(:,1);
 timeCell = datasetTable(:,2);
@@ -12,9 +12,11 @@ sourceIPs = datasetTable(:,3);
 normalTraffic = [848 0.5 1];
 % numeroataques = 0;
 % numeronormal = 0;
-threshold = 0.5:0.02:0.95;
+threshold = 0.64:0.02:0.95;
 ataques = zeros(1,length(threshold));
 normal = zeros(1,length(threshold));
+numeroataques = zeros(1,length(threshold));
+numeronormal = zeros(1,length(threshold));
 % keyboard;
 for idxTH = 1:length(threshold)
     % Getting packet size in bps
@@ -55,20 +57,20 @@ for idxTH = 1:length(threshold)
     end
     % keyboard;
     janelas(length(time)) = janelas(length(time) - 1);
-    aux = 1;
+%     aux = 1;
     for idx = 1:janelas(length(time))
-        %     if idx == 19
-        %         keyboard;
-        %     end
-        %     if idx == 213
-        %     keyboard;
-        %     end
+            aux = 0;
+
         win = find(janelas == idx);
         IPsOrigemWin = sourceIPs(win);
         packetRate = mean(packetRateBps(win));
         %     keyboard
+        if win(1) == 1308
+        keyboard;
+        end
         for indices = 1:(length(IPsOrigemWin) - 1)
-            if strcmp(IPsOrigemWin(indices + 1),IPsOrigemWin(indices))
+            if ~strcmp(IPsOrigemWin(indices + 1),IPsOrigemWin(indices))
+%                 keyboard;
                 aux = aux + 1;
             end
         end
@@ -87,7 +89,7 @@ for idxTH = 1:length(threshold)
             disp('traffic');
             disp(idx);
             disp('atack');
-            %         numeroataques = numeroataques + 1;
+            numeroataques(1,idxTH) = numeroataques(1,idxTH) + 1;
             ataques(1,idxTH) = 1;
             
 %                      keyboard;
@@ -95,9 +97,10 @@ for idxTH = 1:length(threshold)
             disp('traffic');
             disp(idx);
             disp('normal');
+%                                 keyboard;
+
             normalTraffic = [packetRate VarSourceIPs entropySourceIPs];
-            %         numeronormal = numeronormal + 1;
-            %         keyboard;
+            numeronormal(1,idxTH) = numeronormal(1,idxTH) + 1;
             normal(1,idxTH) = 1;
             
             

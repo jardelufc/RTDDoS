@@ -4,16 +4,15 @@
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdu\IeC {\c c}\IeC {\~a}o}}{13}{chapter.1}
-\contentsline {section}{\numberline {1.1}Objetivos}{14}{section.1.1}
-\contentsline {section}{\numberline {1.2}Organiza\IeC {\c c}\IeC {\~a}o da monografia}{14}{section.1.2}
+\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdu\IeC {\c c}\IeC {\~a}o}}{12}{chapter.1}
+\contentsline {section}{\numberline {1.1}Objetivos}{13}{section.1.1}
+\contentsline {section}{\numberline {1.2}Organiza\IeC {\c c}\IeC {\~a}o da monografia}{13}{section.1.2}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Revis\IeC {\~a}o Bibliogr\IeC {\'a}fica}}{15}{chapter.2}
 \contentsline {section}{\numberline {2.1}Seguran\IeC {\c c}a da Informa\IeC {\c c}\IeC {\~a}o}{15}{section.2.1}
 \contentsline {section}{\numberline {2.2}Ataques DoS e DDoS}{15}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Smurf}{16}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.1}\textit {Smurf}}{16}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}HTTP \textit {flood}}{17}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}UDP \textit {flood}}{18}{subsection.2.2.3}
 \contentsline {subsection}{\numberline {2.2.4}SIDDoS}{18}{subsection.2.2.4}
@@ -21,23 +20,25 @@
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Metodologia}}{21}{chapter.3}
 \contentsline {section}{\numberline {3.1}Modelo de correla\IeC {\c c}\IeC {\~a}o NaHiD}{21}{section.3.1}
-\contentsline {section}{\numberline {3.2}Framework de detec\IeC {\c c}\IeC {\~a}o de ataques DDoS}{21}{section.3.2}
+\contentsline {section}{\numberline {3.2}\textit {Framework} de detec\IeC {\c c}\IeC {\~a}o de ataques DDoS}{21}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Pr\IeC {\'e}-Processamento}{22}{subsection.3.2.1}
 \contentsline {subsubsection}{\numberline {3.2.1.1}Entropia de IPs origem}{22}{subsubsection.3.2.1.1}
 \contentsline {subsubsection}{\numberline {3.2.1.2}Varia\IeC {\c c}\IeC {\~a}o de IPs Origem}{23}{subsubsection.3.2.1.2}
 \contentsline {subsection}{\numberline {3.2.2}M\IeC {\'o}dulo de Detec\IeC {\c c}\IeC {\~a}o}{23}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Gerenciador Offline}{24}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.3}Gerenciador de Seguran\IeC {\c c}a}{24}{subsection.3.2.3}
 \contentsline {section}{\numberline {3.3}Aplica\IeC {\c c}\IeC {\~a}o do \textit {framework} de detec\IeC {\c c}\IeC {\~a}o em bases de dados reais}{24}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}DARPA - MIT}{24}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}DataMining}{26}{subsection.3.3.2}
-\contentsline {section}{\numberline {3.4}M\IeC {\'e}todo de avalia\IeC {\c c}\IeC {\~a}o do \textit {framework}}{28}{section.3.4}
+\contentsline {subsection}{\numberline {3.3.1}DARPA 2000}{24}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}\textit {DataMining}}{27}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}M\IeC {\'e}todo de avalia\IeC {\c c}\IeC {\~a}o do \textit {framework}}{30}{section.3.4}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados}}{29}{chapter.4}
-\contentsline {section}{\numberline {4.1}An\IeC {\'a}lise \textit {dataset DataMining}}{29}{section.4.1}
-\contentsline {section}{\numberline {4.2}An\IeC {\'a}lise \textit {dataset} DARPA}{29}{section.4.2}
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados}}{31}{chapter.4}
+\contentsline {section}{\numberline {4.1}An\IeC {\'a}lise \textit {dataset DataMining}}{31}{section.4.1}
+\contentsline {section}{\numberline {4.2}An\IeC {\'a}lise \textit {dataset} DARPA 2000}{31}{section.4.2}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es e Trabalhos Futuros}}{34}{chapter.5}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es e Trabalhos Futuros}}{36}{chapter.5}
+\contentsline {section}{\numberline {5.1}Contribui\IeC {\c c}\IeC {\~o}es}{36}{section.5.1}
+\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{36}{section.5.2}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{35}{section*.15}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{38}{section*.13}
 \vspace {\cftbeforechapterskip }
