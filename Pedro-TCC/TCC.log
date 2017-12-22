@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.12.1)  15 DEC 2017 03:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.12.1)  22 DEC 2017 03:00
 entering extended mode
 **./TCC.tex
 (TCC.tex
@@ -1556,8 +1556,8 @@ LaTeX Warning: Unused global option(s):
 
 (TCC.aux (editaveis/folhadeaprovacao.aux) (editaveis/dedicatoria.aux)
 (editaveis/agradecimentos.aux) (editaveis/epigrafe.aux) (resumo/ptbr.aux)
-(resumo/us.aux) (editaveis/siglas.aux) (editaveis/simbolos.aux)
-(cap1/introducao.aux) (cap2/fundamentacaoteorica.aux) (cap3/metodologia.aux
+(resumo/us.aux) (editaveis/siglas.aux) (cap1/introducao.aux)
+(cap2/fundamentacaoteorica.aux) (cap3/metodologia.aux
 
 LaTeX Warning: Label `extend' multiply defined.
 
@@ -1837,228 +1837,219 @@ Package babel Warning: Unknown language `english'. Either you have
 
 
 
-])
-\openout2 = `editaveis/simbolos.aux'.
-
-
-(editaveis/simbolos.tex [11
-
-
-
-
 ]) (TCC.toc
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 11.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 10.
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <12> not available
 (Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 20.
- [12
+ [11
 
 
-]) [13]
+])
+[12]
 \openout2 = `cap1/introducao.aux'.
 
- (cap1/introducao.tex [14
+ (cap1/introducao.tex [13
 
 
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 28.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 30.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 28.
-) [15] [16]
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 30.
+) [14] [15]
 \openout2 = `cap2/fundamentacaoteorica.aux'.
 
 
-(cap2/fundamentacaoteorica.tex [17
+(cap2/fundamentacaoteorica.tex [16
 
 
 
-] [18]
+] [17]
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <17.28> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 29.
- [19]
-<figures/fp.jpg, id=322, 380.17032pt x 226.59656pt>
+ [18]
+<figures/fp.jpg, id=318, 380.17032pt x 226.59656pt>
 File: figures/fp.jpg Graphic file (type jpg)
 <use figures/fp.jpg>
-Package pdftex.def Info: figures/fp.jpg  used on input line 48. on input line 4
-8.
-Package pdftex.def Info: Requested size: 227.62204pt x 135.67545pt on input lin
-e 48.
- [20] [21 <./figures/fp.jpg>]
+Package pdftex.def Info: figures/fp.jpg  used on input line 49. on input line 4
+9.
+Package pdftex.def Info: Requested size: 341.43306pt x 203.51318pt on input lin
+e 49.
+ [19] [20 <./figures/fp.jpg>]
 
-Package hyperref Warning: Suppressing empty link on input line 76.
+Package hyperref Warning: Suppressing empty link on input line 78.
 
-<figures/xi-lite-01.png, id=341, 316.18124pt x 219.06844pt>
+[21]
+<figures/xi-lite-01.png, id=344, 316.18124pt x 219.06844pt>
 File: figures/xi-lite-01.png Graphic file (type png)
 <use figures/xi-lite-01.png>
-Package pdftex.def Info: figures/xi-lite-01.png  used on input line 80. on inpu
-t line 80.
-Package pdftex.def Info: Requested size: 227.62204pt x 157.71242pt on input lin
-e 80.
-) [22] [23 <./figures/xi-lite-01.png>]
+Package pdftex.def Info: figures/xi-lite-01.png  used on input line 83. on inpu
+t line 83.
+Package pdftex.def Info: Requested size: 341.43306pt x 236.58034pt on input lin
+e 83.
+) [22 <./figures/xi-lite-01.png>]
 \openout2 = `cap3/metodologia.aux'.
 
  (cap3/metodologia.tex
-<figures/Op1.jpg, id=353, 223.20558pt x 175.23875pt>
+<figures/Op1.jpg, id=354, 223.20558pt x 175.23875pt>
 File: figures/Op1.jpg Graphic file (type jpg)
 <use figures/Op1.jpg>
-Package pdftex.def Info: figures/Op1.jpg  used on input line 14. on input line 
-14.
-Package pdftex.def Info: Requested size: 181.20761pt x 142.26378pt on input lin
-e 14.
-<figures/Op2.jpg, id=354, 222.56602pt x 249.42743pt>
+Package pdftex.def Info: figures/Op1.jpg  used on input line 13. on input line 
+13.
+Package pdftex.def Info: Requested size: 217.44914pt x 170.71652pt on input lin
+e 13.
+<figures/Op2.jpg, id=355, 222.56602pt x 249.42743pt>
 File: figures/Op2.jpg Graphic file (type jpg)
 <use figures/Op2.jpg>
-Package pdftex.def Info: figures/Op2.jpg  used on input line 19. on input line 
-19.
-Package pdftex.def Info: Requested size: 126.94545pt x 142.26378pt on input lin
-e 19.
-
-Underfull \hbox (badness 3229) in paragraph at lines 19--19
-\T1/lmr/m/n/10 (+20) forma de ope-ra-ções em
- []
-
-<figures/NahidModule.png, id=356, 963.6pt x 542.025pt>
-File: figures/NahidModule.png Graphic file (type png)
-<use figures/NahidModule.png>
-Package pdftex.def Info: figures/NahidModule.png  used on input line 29. on inp
-ut line 29.
-Package pdftex.def Info: Requested size: 227.62204pt x 128.03754pt on input lin
-e 29.
-[24
-
-
-
-] [25 <./figures/Op1.jpg> <./figures/Op2.jpg> <./figures/NahidModule.png>]
-<figures/dp.jpg, id=369, 155.41248pt x 482.22636pt>
-File: figures/dp.jpg Graphic file (type jpg)
-<use figures/dp.jpg>
-Package pdftex.def Info: figures/dp.jpg  used on input line 40. on input line 4
-0.
-Package pdftex.def Info: Requested size: 170.71652pt x 529.72952pt on input lin
-e 40.
-
-[26 <./figures/dp.jpg>]
-<figures/Extend.pdf, id=380, pagebox=cropbox, 272.01625pt x 95.35625pt>
-File: figures/Extend.pdf Graphic file (type pdf)
-<use figures/Extend.pdf>
-Package pdftex.def Info: figures/Extend.pdf  used on input line 53. on input li
-ne 53.
-Package pdftex.def Info: Requested size: 170.71652pt x 59.84776pt on input line
- 53.
-<figures/Reduce.pdf, id=382, pagebox=cropbox, 292.09125pt x 95.35625pt>
-File: figures/Reduce.pdf Graphic file (type pdf)
-<use figures/Reduce.pdf>
-Package pdftex.def Info: figures/Reduce.pdf  used on input line 65. on input li
-ne 65.
-Package pdftex.def Info: Requested size: 170.71652pt x 55.73442pt on input line
- 65.
- [27 <./figures/Extend.pdf> <./figures/Reduce.pdf>]
-<figures/Mux2.pdf, id=428, pagebox=cropbox, 223.83624pt x 156.585pt>
-File: figures/Mux2.pdf Graphic file (type pdf)
-<use figures/Mux2.pdf>
-Package pdftex.def Info: figures/Mux2.pdf  used on input line 79. on input line
- 79.
-Package pdftex.def Info: Requested size: 162.69551pt x 113.81102pt on input lin
-e 79.
-<figures/Mux4.pdf, id=429, pagebox=cropbox, 223.83624pt x 156.585pt>
-File: figures/Mux4.pdf Graphic file (type pdf)
-<use figures/Mux4.pdf>
-Package pdftex.def Info: figures/Mux4.pdf  used on input line 84. on input line
- 84.
-Package pdftex.def Info: Requested size: 162.69551pt x 113.81102pt on input lin
-e 84.
-<figures/Mux6.pdf, id=430, pagebox=cropbox, 223.83624pt x 166.6225pt>
-File: figures/Mux6.pdf Graphic file (type pdf)
-<use figures/Mux6.pdf>
-Package pdftex.def Info: figures/Mux6.pdf  used on input line 89. on input line
- 89.
-Package pdftex.def Info: Requested size: 152.89313pt x 113.81102pt on input lin
-e 89.
-<figures/Mul.pdf, id=432, pagebox=cropbox, 224.84pt x 125.46875pt>
-File: figures/Mul.pdf Graphic file (type pdf)
-<use figures/Mul.pdf>
-Package pdftex.def Info: figures/Mul.pdf  used on input line 99. on input line 
-99.
-Package pdftex.def Info: Requested size: 170.71652pt x 95.26915pt on input line
- 99.
-
-[28 <./figures/Mux2.pdf> <./figures/Mux4.pdf> <./figures/Mux6.pdf>]
-<figures/Adder.pdf, id=633, pagebox=cropbox, 224.84pt x 176.66pt>
-File: figures/Adder.pdf Graphic file (type pdf)
-<use figures/Adder.pdf>
-Package pdftex.def Info: figures/Adder.pdf  used on input line 120. on input li
-ne 120.
-Package pdftex.def Info: Requested size: 170.71652pt x 134.13899pt on input lin
-e 120.
- [29 <./figures/Mul.pdf> <./figures/Adder.pdf>]
-<figures/Divider.pdf, id=718, pagebox=cropbox, 224.84pt x 125.46875pt>
-File: figures/Divider.pdf Graphic file (type pdf)
-<use figures/Divider.pdf>
-Package pdftex.def Info: figures/Divider.pdf  used on input line 137. on input 
-line 137.
-Package pdftex.def Info: Requested size: 170.71652pt x 95.26915pt on input line
- 137.
- [30 <./figures/Divider.pdf>]
-<figures/sqrt.pdf, id=760, pagebox=cropbox, 272.01625pt x 95.35625pt>
-File: figures/sqrt.pdf Graphic file (type pdf)
-<use figures/sqrt.pdf>
-Package pdftex.def Info: figures/sqrt.pdf  used on input line 152. on input lin
-e 152.
-Package pdftex.def Info: Requested size: 170.71652pt x 59.84776pt on input line
- 152.
-<figures/Register.pdf, id=762, pagebox=cropbox, 224.84pt x 175.65625pt>
-File: figures/Register.pdf Graphic file (type pdf)
-<use figures/Register.pdf>
-Package pdftex.def Info: figures/Register.pdf  used on input line 162. on input
- line 162.
-Package pdftex.def Info: Requested size: 170.71652pt x 133.37683pt on input lin
-e 162.
- [31 <./figures/sqrt.pdf>]
-<figures/controller.jpg, id=787, 580.41844pt x 459.96844pt>
-File: figures/controller.jpg Graphic file (type jpg)
-<use figures/controller.jpg>
-Package pdftex.def Info: figures/controller.jpg  used on input line 176. on inp
-ut line 176.
-Package pdftex.def Info: Requested size: 227.62204pt x 180.38359pt on input lin
-e 176.
- [32 <./figures/Register.pdf>]
-
-pdfTeX warning: pdflatex.exe (file ./figures/TabelaCiclos.pdf): PDF inclusion: 
-found PDF version <1.7>, but at most version <1.5> allowed
-<figures/TabelaCiclos.pdf, id=830, pagebox=cropbox, 845.07724pt x 1194.98447pt>
-
-File: figures/TabelaCiclos.pdf Graphic file (type pdf)
-<use figures/TabelaCiclos.pdf>
-Package pdftex.def Info: figures/TabelaCiclos.pdf  used on input line 183. on i
-nput line 183.
-Package pdftex.def Info: Requested size: 256.0748pt x 362.10843pt on input line
- 183.
-) [33 <./figures/controller.jpg> <./figures/TabelaCiclos.pdf>]
-\openout2 = `cap4/resultados.aux'.
-
-
-(cap4/resultados.tex [34
+Package pdftex.def Info: figures/Op2.jpg  used on input line 20. on input line 
+20.
+Package pdftex.def Info: Requested size: 152.33453pt x 170.71652pt on input lin
+e 20.
+ [23
 
 
 
 ]
-<figures/simu.jpg, id=930, 794.97pt x 197.23688pt>
+<figures/NahidModule.png, id=363, 963.6pt x 542.025pt>
+File: figures/NahidModule.png Graphic file (type png)
+<use figures/NahidModule.png>
+Package pdftex.def Info: figures/NahidModule.png  used on input line 32. on inp
+ut line 32.
+Package pdftex.def Info: Requested size: 341.43306pt x 192.05217pt on input lin
+e 32.
+ [24 <./figures/Op1.jpg> <./figures/Op2.jpg>]
+<figures/dp.jpg, id=377, 155.41248pt x 482.22636pt>
+File: figures/dp.jpg Graphic file (type jpg)
+<use figures/dp.jpg>
+Package pdftex.def Info: figures/dp.jpg  used on input line 44. on input line 4
+4.
+Package pdftex.def Info: Requested size: 227.62204pt x 706.30359pt on input lin
+e 44.
+ [25 <./figures/NahidModule.png>]
+Overfull \vbox (54.80357pt too high) has occurred while \output is active []
+
+
+[26 <./figures/dp.jpg>]
+<figures/Extend.pdf, id=389, pagebox=cropbox, 272.01625pt x 95.35625pt>
+File: figures/Extend.pdf Graphic file (type pdf)
+<use figures/Extend.pdf>
+Package pdftex.def Info: figures/Extend.pdf  used on input line 58. on input li
+ne 58.
+Package pdftex.def Info: Requested size: 170.71652pt x 59.84776pt on input line
+ 58.
+<figures/Reduce.pdf, id=391, pagebox=cropbox, 292.09125pt x 95.35625pt>
+File: figures/Reduce.pdf Graphic file (type pdf)
+<use figures/Reduce.pdf>
+Package pdftex.def Info: figures/Reduce.pdf  used on input line 72. on input li
+ne 72.
+Package pdftex.def Info: Requested size: 170.71652pt x 55.73442pt on input line
+ 72.
+ [27 <./figures/Extend.pdf> <./figures/Reduce.pdf>]
+<figures/Mux2.pdf, id=437, pagebox=cropbox, 223.83624pt x 156.585pt>
+File: figures/Mux2.pdf Graphic file (type pdf)
+<use figures/Mux2.pdf>
+Package pdftex.def Info: figures/Mux2.pdf  used on input line 88. on input line
+ 88.
+Package pdftex.def Info: Requested size: 162.69551pt x 113.81102pt on input lin
+e 88.
+<figures/Mux4.pdf, id=438, pagebox=cropbox, 223.83624pt x 156.585pt>
+File: figures/Mux4.pdf Graphic file (type pdf)
+<use figures/Mux4.pdf>
+Package pdftex.def Info: figures/Mux4.pdf  used on input line 93. on input line
+ 93.
+Package pdftex.def Info: Requested size: 162.69551pt x 113.81102pt on input lin
+e 93.
+<figures/Mux6.pdf, id=439, pagebox=cropbox, 223.83624pt x 166.6225pt>
+File: figures/Mux6.pdf Graphic file (type pdf)
+<use figures/Mux6.pdf>
+Package pdftex.def Info: figures/Mux6.pdf  used on input line 98. on input line
+ 98.
+Package pdftex.def Info: Requested size: 152.89313pt x 113.81102pt on input lin
+e 98.
+<figures/Mul.pdf, id=441, pagebox=cropbox, 224.84pt x 125.46875pt>
+File: figures/Mul.pdf Graphic file (type pdf)
+<use figures/Mul.pdf>
+Package pdftex.def Info: figures/Mul.pdf  used on input line 110. on input line
+ 110.
+Package pdftex.def Info: Requested size: 170.71652pt x 95.26915pt on input line
+ 110.
+
+[28 <./figures/Mux2.pdf> <./figures/Mux4.pdf> <./figures/Mux6.pdf>]
+<figures/Adder.pdf, id=641, pagebox=cropbox, 224.84pt x 176.66pt>
+File: figures/Adder.pdf Graphic file (type pdf)
+<use figures/Adder.pdf>
+Package pdftex.def Info: figures/Adder.pdf  used on input line 133. on input li
+ne 133.
+Package pdftex.def Info: Requested size: 170.71652pt x 134.13899pt on input lin
+e 133.
+ [29 <./figures/Mul.pdf> <./figures/Adder.pdf>]
+<figures/Divider.pdf, id=726, pagebox=cropbox, 224.84pt x 125.46875pt>
+File: figures/Divider.pdf Graphic file (type pdf)
+<use figures/Divider.pdf>
+Package pdftex.def Info: figures/Divider.pdf  used on input line 152. on input 
+line 152.
+Package pdftex.def Info: Requested size: 170.71652pt x 95.26915pt on input line
+ 152.
+ [30 <./figures/Divider.pdf>]
+<figures/sqrt.pdf, id=768, pagebox=cropbox, 272.01625pt x 95.35625pt>
+File: figures/sqrt.pdf Graphic file (type pdf)
+<use figures/sqrt.pdf>
+Package pdftex.def Info: figures/sqrt.pdf  used on input line 169. on input lin
+e 169.
+Package pdftex.def Info: Requested size: 170.71652pt x 59.84776pt on input line
+ 169.
+ [31 <./figures/sqrt.pdf>]
+<figures/Register.pdf, id=794, pagebox=cropbox, 224.84pt x 175.65625pt>
+File: figures/Register.pdf Graphic file (type pdf)
+<use figures/Register.pdf>
+Package pdftex.def Info: figures/Register.pdf  used on input line 182. on input
+ line 182.
+Package pdftex.def Info: Requested size: 170.71652pt x 133.37683pt on input lin
+e 182.
+<figures/controller.jpg, id=795, 580.41844pt x 459.96844pt>
+File: figures/controller.jpg Graphic file (type jpg)
+<use figures/controller.jpg>
+Package pdftex.def Info: figures/controller.jpg  used on input line 198. on inp
+ut line 198.
+Package pdftex.def Info: Requested size: 284.52756pt x 225.48476pt on input lin
+e 198.
+ [32 <./figures/Register.pdf>]
+
+pdfTeX warning: pdflatex.exe (file ./figures/TabelaCiclos.pdf): PDF inclusion: 
+found PDF version <1.7>, but at most version <1.5> allowed
+<figures/TabelaCiclos.pdf, id=840, pagebox=cropbox, 845.07724pt x 1194.98447pt>
+
+File: figures/TabelaCiclos.pdf Graphic file (type pdf)
+<use figures/TabelaCiclos.pdf>
+Package pdftex.def Info: figures/TabelaCiclos.pdf  used on input line 206. on i
+nput line 206.
+Package pdftex.def Info: Requested size: 341.43306pt x 482.79909pt on input lin
+e 206.
+[33 <./figures/controller.jpg>]) [34 <./figures/TabelaCiclos.pdf>]
+\openout2 = `cap4/resultados.aux'.
+
+
+(cap4/resultados.tex [35
+
+
+
+]
+<figures/simu.jpg, id=947, 794.97pt x 197.23688pt>
 File: figures/simu.jpg Graphic file (type jpg)
 <use figures/simu.jpg>
-Package pdftex.def Info: figures/simu.jpg  used on input line 66. on input line
- 66.
-Package pdftex.def Info: Requested size: 341.43306pt x 84.71388pt on input line
- 66.
-) [35 <./figures/simu.jpg>]
+Package pdftex.def Info: figures/simu.jpg  used on input line 67. on input line
+ 67.
+Package pdftex.def Info: Requested size: 398.33858pt x 98.83186pt on input line
+ 67.
+ [36]) [37 <./figures/simu.jpg>]
 \openout2 = `cap5/conclusoes.aux'.
 
- (cap5/conclusoes.tex)
-[36
+ (cap5/conclusoes.tex) [38
 
 
 
@@ -2072,10 +2063,10 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 3.
 
 bibitemlist
-[37
+[39
 
 
-]) [38]
+]) [40]
 \openout2 = `editaveis/appendices.aux'.
 
  (editaveis/appendices.tex
@@ -2143,7 +2134,7 @@ Overfull \hbox (0.30493pt too wide) in paragraph at lines 68--69
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[39
+[41
 
 
 ]
@@ -2172,7 +2163,7 @@ Overfull \hbox (0.30493pt too wide) in paragraph at lines 107--108
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[40]
+[42]
 Overfull \hbox (21.00061pt too wide) in paragraph at lines 144--145
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][] 
@@ -2202,7 +2193,7 @@ Overfull \hbox (48.59485pt too wide) in paragraph at lines 161--162
 ][][][][][][][][] 
  []
 
-[41]
+[43]
 Overfull \hbox (34.79773pt too wide) in paragraph at lines 166--167
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][] 
@@ -2220,7 +2211,7 @@ Overfull \hbox (21.00061pt too wide) in paragraph at lines 173--174
 ][][][][][][][][][][][][][] 
  []
 
-[42]
+[44]
 Overfull \hbox (0.30493pt too wide) in paragraph at lines 214--215
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][] 
@@ -2244,7 +2235,7 @@ Overfull \hbox (0.30493pt too wide) in paragraph at lines 221--222
 ][][][][][][][][][] 
  []
 
-[43]
+[45]
 Overfull \hbox (0.30493pt too wide) in paragraph at lines 282--283
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][] 
@@ -2256,7 +2247,7 @@ Overfull \hbox (14.10205pt too wide) in paragraph at lines 285--286
 ][][][][][] 
  []
 
-[44]
+[46]
 Overfull \hbox (14.10205pt too wide) in paragraph at lines 288--289
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][] 
@@ -2280,7 +2271,7 @@ Overfull \hbox (21.00061pt too wide) in paragraph at lines 318--320
 ][][] 
  []
 
-[45] [46] [47]
+[47] [48] [49]
 Overfull \hbox (1366.21973pt too wide) in paragraph at lines 473--474
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
@@ -2300,13 +2291,13 @@ Overfull \hbox (469.40698pt too wide) in paragraph at lines 475--476
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[48]
+[50]
 Overfull \hbox (76.18909pt too wide) in paragraph at lines 496--497
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][] 
  []
 
-[49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60]
+[51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62]
 Overfull \hbox (7.20349pt too wide) in paragraph at lines 1019--1020
 [][][][][][][][][][][][][][][][][] 
  []
@@ -2321,7 +2312,7 @@ Overfull \hbox (48.59485pt too wide) in paragraph at lines 1021--1022
 [][][][][][][][][][][][][][] 
  []
 
-[61]) [62]
+[63]) [64]
 No file TCC.ind.
 
 AED: lastpage setting LastPage
@@ -2338,13 +2329,13 @@ Package atveryend Info: Empty hook `BeforeClearDocument' on input line 121.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 121.
 (TCC.aux (editaveis/folhadeaprovacao.aux) (editaveis/dedicatoria.aux)
 (editaveis/agradecimentos.aux) (editaveis/epigrafe.aux) (resumo/ptbr.aux)
-(resumo/us.aux) (editaveis/siglas.aux) (editaveis/simbolos.aux)
-(cap1/introducao.aux) (cap2/fundamentacaoteorica.aux) (cap3/metodologia.aux)
-(cap4/resultados.aux) (cap5/conclusoes.aux) (editaveis/appendices.aux))
+(resumo/us.aux) (editaveis/siglas.aux) (cap1/introducao.aux)
+(cap2/fundamentacaoteorica.aux) (cap3/metodologia.aux) (cap4/resultados.aux)
+(cap5/conclusoes.aux) (editaveis/appendices.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 121.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 121.
 Package rerunfilecheck Info: File `TCC.brf' has not changed.
-(rerunfilecheck)             Checksum: A14F080FFA4C940A367E68CB4D540DE9;1181.
+(rerunfilecheck)             Checksum: 1420D46F59410F57F9023D6AE4A69458;1278.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -2352,13 +2343,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 121.
  ) 
 Here is how much of TeX's memory you used:
- 31114 strings out of 493312
- 543862 string characters out of 3138899
- 818918 words of memory out of 3000000
+ 31106 strings out of 493312
+ 543452 string characters out of 3138899
+ 817966 words of memory out of 3000000
  32673 multiletter control sequences out of 15000+200000
- 75017 words of font info for 131 fonts, out of 3000000 for 9000
+ 74934 words of font info for 130 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,13n,67p,1551b,2148s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 64i,13n,67p,1566b,2148s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
 iKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/d
 vips/lm/lm-mathex.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit
@@ -2377,9 +2368,9 @@ fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsso12.pfb><C:/Program F
 iles/MiKTeX 2.9/fonts/type1/public/lm/lmsso17.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 c/lm/lmtt10.pfb>
-Output written on TCC.pdf (63 pages, 2130285 bytes).
+Output written on TCC.pdf (65 pages, 2142975 bytes).
 PDF statistics:
- 2518 PDF objects out of 2984 (max. 8388607)
+ 2541 PDF objects out of 2984 (max. 8388607)
  1146 named destinations out of 1200 (max. 500000)
  24633 words of extra memory for PDF output out of 24883 (max. 10000000)
 

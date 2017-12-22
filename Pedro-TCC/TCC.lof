@@ -1,22 +1,22 @@
 \select@language {brazil}
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o de aritm\IeC {\'e}tica de ponto fixo\relax }}{21}{figure.caption.14}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Comparativo de pot\IeC {\^e}ncia e perfomance entre as fam\IeC {\'\i }lias da s\IeC {\'e}rie 7 da Xilinx\relax }}{23}{figure.caption.15}
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Opera\IeC {\c c}\IeC {\~o}es que o M\IeC {\'o}dulo em \textit {hardware} efetua\relax }}{25}{figure.caption.16}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Calculos da correla\IeC {\c c}\IeC {\~a}o na forma aritm\IeC {\'e}tica}}}{25}{subfigure.1.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Calculos da correla\IeC {\c c}\IeC {\~a}o na forma de opera\IeC {\c c}\IeC {\~o}es em \textit {hardware}}}}{25}{subfigure.1.2}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces M\IeC {\'o}dulo Nahid\relax }}{25}{figure.caption.17}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Design do Datapath desenvolvido por \cite {HOQUE201748}\relax }}{26}{figure.caption.18}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Componente extend\relax }}{27}{figure.caption.19}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Componente Reduce\relax }}{27}{figure.caption.20}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Tipos do componente Mux no m\IeC {\'o}dulo \relax }}{28}{figure.caption.21}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o de aritm\IeC {\'e}tica de ponto fixo\relax }}{20}{figure.caption.12}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Comparativo de pot\IeC {\^e}ncia e perfomance entre as fam\IeC {\'\i }lias da s\IeC {\'e}rie 7 da Xilinx\relax }}{22}{figure.caption.13}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Opera\IeC {\c c}\IeC {\~o}es que o M\IeC {\'o}dulo em \textit {hardware} efetua\relax }}{24}{figure.caption.14}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Calculos da correla\IeC {\c c}\IeC {\~a}o na forma aritm\IeC {\'e}tica}}}{24}{subfigure.1.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Calculos da correla\IeC {\c c}\IeC {\~a}o na forma de opera\IeC {\c c}\IeC {\~o}es em \textit {hardware}}}}{24}{subfigure.1.2}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces M\IeC {\'o}dulo Nahid\relax }}{25}{figure.caption.15}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Design do Datapath desenvolvido por \cite {HOQUE201748}\relax }}{26}{figure.caption.16}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Componente extend\relax }}{27}{figure.caption.17}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Componente Reduce\relax }}{27}{figure.caption.18}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Tipos do componente Mux no m\IeC {\'o}dulo \relax }}{28}{figure.caption.19}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Mux2}}}{28}{subfigure.6.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Mux4}}}{28}{subfigure.6.2}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Mux6}}}{28}{subfigure.6.3}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Componente Mul\relax }}{29}{figure.caption.22}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Componente Adder\relax }}{29}{figure.caption.23}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Componente Divider\relax }}{30}{figure.caption.24}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Componente Sqrt\relax }}{31}{figure.caption.25}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Componente Register\relax }}{32}{figure.caption.26}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Esquem\IeC {\'a}tico do controller,ciclos de entrada e sa\IeC {\'\i }das para as entradas do datapath num dado ciclo de \textit {clock}\relax }}{33}{figure.caption.27}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Ciclos do M\IeC {\'o}dulo Nahid \ref {Tab:Tb}\relax }}{33}{figure.caption.28}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Simula\IeC {\c c}\IeC {\~a}o 1 da tabela \ref {Tab:Tb}\relax }}{35}{figure.caption.32}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Componente Mul\relax }}{29}{figure.caption.20}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Componente Adder\relax }}{29}{figure.caption.21}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Componente Divider\relax }}{30}{figure.caption.22}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Componente Sqrt\relax }}{31}{figure.caption.23}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Componente Register\relax }}{32}{figure.caption.24}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Esquem\IeC {\'a}tico do controller,ciclos de entrada e sa\IeC {\'\i }das para as entradas do datapath num dado ciclo de \textit {clock}\relax }}{33}{figure.caption.25}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Ciclos do M\IeC {\'o}dulo Nahid \ref {Tab:Tb}\relax }}{34}{figure.caption.26}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Simula\IeC {\c c}\IeC {\~a}o 1 da tabela \ref {Tab:Tb}\relax }}{37}{figure.caption.30}

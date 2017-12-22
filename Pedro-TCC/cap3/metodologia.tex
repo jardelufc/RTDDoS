@@ -1,23 +1,24 @@
 \chapter{Módulo Nahid}
 \label{CAP3}
+Neste capítulo, detalha-se a implementação do módulo Nahid em linguagem de descrição de Hardware SystemVerilog. Este  módulo de detecção em hardware é basicamente a implementação da formulação dos passos da correlação proposta (Figura \ref{fig01}), utilizando uma \textit{FPGA}. Para isso, é necessário adequar  as operações para os componentes que estão disponíveis e foram escolhidos para realizar a computação de uma dada operação.  Além disso, para otimizar o tempo de resposta é necessário uma organização dessas operações em ciclos de \textit{clock}, para ter uma referência de tempo  para cada computação realizada e assim organizar a sequência das operações. Com isso , a arquitetura de detecção de ataques é proposta com o nome de Nahid. Essa arquitetura possui componentes de diversos níveis, nos quais estão dispostos dependendo da operação que esteja sendo feita no momento, vale ressaltar que essas operações são aritméticas, mudança no tamanho da palavra, registro e seleção. Segue abaixo as operações que o módulo em hardware realiza para efetuar a detecção de ataques.
 
-Para o módulo de correlação em \textit{hardware} receber as instâncias de tráfego no trabalho {6}, foi implementado  um módulo  chamado de pré-processador e ao final da computação, o módulo de hardware envia para outro módulo que irá realizar algum tratamento no sistema, chamado de gerenciador de segurança. Nota-se que os módulos do pré-processador e do gerenciador de segurança são implementados separadamente usando \textit|{software}. As máquinas que implementam esses módulos e o \textit{FPGA} podem comunicar-se usando as interfaces de E/S de alta velocidade suportadas pelos \textit{FPGAs} modernos, como \textit{PCI} e \textit{Ethernet}. O módulo de detecção de ataque recebe a instância de tráfego do módulo pré-processador. Além disso, ele recebe o perfil normal e um valor limiar do banco de dados do perfil criado pelo gerenciador de segurança. Cada uma das instâncias de tráfego e o perfil normal são vetores que consistem em três recursos de tráfego. O módulo de detecção de ataque calcula primeiro o NaHiD VERC entre a instância de tráfego de entrada e o perfil normal. O valor de correlação calculado é comparado com o limite para classificar a ocorrência de tráfego recebido como ataque ou normal. O resultado da classificação é armazenado no banco de dados \textit{log} para análise \textit{off-line} pelo gerenciador de segurança. Além disso, um alarme é gerado no caso de a instância ser classificada como um ataque.
+Para o módulo de correlação em \textit{hardware} receber as instâncias de tráfego no trabalho \cite{HOQUE201748}, foi implementado  um módulo  chamado de pré-processador e ao final da computação, o módulo de hardware envia para outro módulo que irá realizar algum tratamento no sistema, chamado de gerenciador de segurança. Nota-se que os módulos do pré-processador e do gerenciador de segurança são implementados separadamente usando \textit|{software}. As máquinas que implementam esses módulos e o \textit{FPGA} podem comunicar-se usando as interfaces de E/S de alta velocidade suportadas pelos \textit{FPGAs} modernos, como \textit{PCI} e \textit{Ethernet}. O módulo de detecção de ataque recebe a instância de tráfego do módulo pré-processador. Além disso, ele recebe o perfil normal e um valor limiar do banco de dados do perfil criado pelo gerenciador de segurança. Cada uma das instâncias de tráfego e o perfil normal são vetores que consistem em três recursos de tráfego. O módulo de detecção de ataque calcula primeiro o NaHiD VERC entre a instância de tráfego de entrada e o perfil normal. O valor de correlação calculado é comparado com o limite para classificar a ocorrência de tráfego recebido como ataque ou normal. O resultado da classificação é armazenado no banco de dados \textit{log} para análise \textit{off-line} pelo gerenciador de segurança. Além disso, um alarme é gerado no caso de a instância ser classificada como um ataque.
 
-O  módulo de detecção em hardware é basicamente a implementação da formulação dos passos da correlação proposta, utilizando uma \textit{FPGA}. Para isso, é necessário adequar  as operações para os componentes que são disponíveis e escolhidos para realizar a computação de uma dada operação.  Além disso, para otimizar o tempo de resposta é necessário uma organização dessas operações em ciclos de textit{clock}, para ter uma referência de tempo  para cada computação realizada e assim organizar a sequência das operações. Com isso , a arquitetura de detecção de ataques é proposta com o nome de Nahid. Essa arquitetura possui componentes de diversos níveis, nos quais estão dispostos dependendo da operação que esteja sendo feita no momento, vale ressaltar que essas operações são aritméticas, mudança no tamanho da palavra, registro e seleção. Segue abaixo as operações que o módulo em hardware realiza para efetuar a detecção de ataques.
-
-
-\begin{figure}[!htb]
+\begin{figure}[H]
 	\centering
+		\caption{Operações que o Módulo em \textit{hardware} efetua}
 	\subfloat[Calculos da correlação na forma aritmética]{
-		\includegraphics[height=5cm]{figures/Op1.jpg}
+		\includegraphics[height=6cm]{figures/Op1.jpg}
 		\label{figdroopy}
 	}
 	\quad %espaco separador
 	\subfloat[Calculos da correlação na forma de operações em \textit{hardware}]{
-		\includegraphics[height=5cm]{figures/Op2.jpg}
+		\includegraphics[height=6cm]{figures/Op2.jpg}
 		\label{figsnoop}
+		
+		
 	}
-	\caption{Operações que o Módulo em \textit{hardware} efetua}
+{Fonte:\url{http://www.sciencedirect.com/science/article/pii/S0140366416306442}}
 	\label{fig01}
 \end{figure}
 
@@ -25,9 +26,11 @@ O  módulo de detecção em hardware é basicamente a implementação da formula
 
 Nahid é o componente de mais alto nível, sendo ele quem recebe as entradas(perfil normal e instâncias de tráfego em análise) do módulo pré-processador e envia a saída (resultado da análise) para o gerenciador de segurança. O Nahid é composto basicamente por dois componentes  internos, são esses: Datapath e Controller.  Além dos vetores de entrada citados anteriormente, o componente  Nahid recebe os sinais de controle, \textit{clock} e \textit{start} (que são os sinais que indicaram o início da detecção e as mudanças de ciclos). Esse componente  abstrai toda a combinação lógica que foi implementado nos componentes  internos, sendo este de suma importância para realizar a junção de entradas e saídas entre componentes internos, módulos e  gerenciadores. O código do módulo Nahid está no apêndice \ref{nahidcode}.
 \begin{figure}[H]
+	\label{ops}
 	\centering
-	\includegraphics[width=8cm]{figures/NahidModule.png}\\
-	\caption{Módulo Nahid}
+		\caption{Módulo Nahid}
+	\includegraphics[width=12cm]{figures/NahidModule.png}\\
+	{Fonte: Elaborada pelo autor}
 \end{figure}
 
 \subsection{Datapath}
@@ -37,8 +40,9 @@ O componente responsável por alocar todos os componentes que realizam as opera�
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=6cm]{figures/dp.jpg}\\
-	\caption{Design do Datapath desenvolvido por \cite{HOQUE201748}}
+		\caption{Design do Datapath desenvolvido por \cite{HOQUE201748}}
+	\includegraphics[width=8cm]{figures/dp.jpg}\\
+{Fonte:\url{http://www.sciencedirect.com/science/article/pii/S0140366416306442}}
 	\label{extend}
 \end{figure}
 
@@ -50,8 +54,10 @@ Esse componente possui a função de estender o tamanho de uma palavra de bits d
 
 \begin{figure}[H]
 	\centering
+		\caption{Componente extend}
 	\includegraphics[width=6cm]{figures/Extend.pdf}\\
-	\caption{Componente extend}
+
+	{Fonte: Elaborada pelo autor}
 	\label{extend}
 \end{figure}
 
@@ -62,8 +68,10 @@ Esse componente possui a função de reduzir o tamanho de uma palavra de bits de
 
 \begin{figure}[H]
 	\centering
+		\caption{Componente Reduce}
 	\includegraphics[width=6cm]{figures/Reduce.pdf}\\
-	\caption{Componente Reduce}
+
+		{Fonte: Elaborada pelo autor}
 	\label{reduce}
 \end{figure}
 
@@ -72,6 +80,7 @@ Esse componente possui a função de reduzir o tamanho de uma palavra de bits de
 Esse componente possui a função de ter na entrada vários opções, porém a cada iteração, existe um seletor que indica que entrada será utilizada num dado momento, levando para saída do componente essa escolha. Esse componente é de suma importância para reutilização de componentes, deixando a arquitetura mais enxuta e coesa, sendo muito utilizado no Controller, pois para cada ciclo existem determinadas escolhas nesses multiplexadores. É importante ressaltar, que no Datapath existem mux de diversos tamanhos (2 entradas,4 entradas e 6 entradas), isso está diretamente relacionado com o componente que recebe a saída do mux, pois quanto mais ele pode ser utilizado por entradas diferentes, maior será o número de entradas no multiplexador combinado a esse componente. Devido aos multiplexadores terem grande importância na reutilização de componentes, existem duas principais frentes de alocação de mux no Datapath. Nas operações aritméticas(Multiplicadores e Somadores) e de registro(Registradores). Esse componente é do tipo de seleção de dados e em um ciclo ele completa sua computação. O código do componente mux está no apêndice \ref{codemux}.	
 
 \begin{figure}[H]
+		\caption{Tipos do componente Mux no módulo 	}
 	\centering
 	\subfloat[Mux2]{
 		\includegraphics[height=4cm]{figures/Mux2.pdf}
@@ -87,7 +96,8 @@ Esse componente possui a função de ter na entrada vários opções, porém a c
 		\includegraphics[height=4cm]{figures/Mux6.pdf}
 		\label{figsnoop}
 	}
-	\caption{Tipos do componente Mux no módulo 	}
+
+		{Fonte: Elaborada pelo autor}
 	\label{fig01}
 \end{figure}
 
@@ -96,8 +106,10 @@ Esse componente possui a função de receber duas entradas, e realizar a multipl
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=6cm]{figures/Mul.pdf}\\
 	\caption{Componente Mul}
+	\includegraphics[width=6cm]{figures/Mul.pdf}\\
+	
+{Fonte: Elaborada pelo autor}
 	\label{Mul}
 \end{figure}
 
@@ -117,8 +129,10 @@ Existem 5 somadores no Datapath, que no módulo realizam operações de adição
 
 \begin{figure}[H]
 	\centering
+		\caption{Componente Adder}
 	\includegraphics[width=6cm]{figures/Adder.pdf}\\
-	\caption{Componente Adder}
+
+	{Fonte: Elaborada pelo autor}
 	\label{adder}
 \end{figure}
 
@@ -134,8 +148,10 @@ Em outras palavras, temos 2 entradas de 12 bits e uma saída de 20 bits, porém 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=6cm]{figures/Divider.pdf}\\
 	\caption{Componente Divider}
+	\includegraphics[width=6cm]{figures/Divider.pdf}\\
+	
+		{Fonte: Elaborada pelo autor}
 	\label{divider}
 \end{figure}
 
@@ -149,8 +165,11 @@ Logo, temos 1 entrada de 22 bits e uma saída de 12 bits. Além dessas instânci
 
 \begin{figure}[H]
 	\centering
+		\caption{Componente Sqrt}
 	\includegraphics[width=6cm]{figures/sqrt.pdf}\\
-	\caption{Componente Sqrt}
+
+
+		{Fonte: Elaborada pelo autor}
 	\label{Sqrt}
 \end{figure}
 
@@ -159,8 +178,10 @@ Esse componente possui a função de receber uma entrada, e armazenar o valor re
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=6cm]{figures/Register.pdf}\\
 	\caption{Componente Register}
+	\includegraphics[width=6cm]{figures/Register.pdf}\\
+	
+		{Fonte: Elaborada pelo autor}
 	\label{register}
 \end{figure}
 
@@ -173,15 +194,18 @@ O componente responsável por organizar os ciclos das operações do Módulo Nah
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=8cm]{figures/controller.jpg}\\
-	\caption{Esquemático do controller,ciclos de entrada e saídas para as  entradas do datapath num dado  ciclo de \textit{clock}}
+		\caption{Esquemático do controller,ciclos de entrada e saídas para as  entradas do datapath num dado  ciclo de \textit{clock}}
+	\includegraphics[width=10cm]{figures/controller.jpg}\\
+	{Fonte: Elaborada pelo autor}	
 	\label{ciclos}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=9cm]{figures/TabelaCiclos.pdf}\\
-	\caption{Ciclos do Módulo Nahid  \ref{Tab:Tb}}
+		\caption{Ciclos do Módulo Nahid  \ref{Tab:Tb}}
+	\includegraphics[width=12cm]{figures/TabelaCiclos.pdf}\\
+
+		{Fonte: Elaborada pelo autor}
 	\label{ciclos}
 \end{figure}
 

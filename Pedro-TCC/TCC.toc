@@ -4,31 +4,31 @@
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdu\IeC {\c c}\IeC {\~a}o}}{14}{chapter.1}
-\contentsline {section}{\numberline {1.1}Objetivos}{15}{section.1.1}
-\contentsline {subsection}{\numberline {1.1.1}Objetivos Gerais}{15}{subsection.1.1.1}
-\contentsline {section}{\numberline {1.2}Organiza\IeC {\c c}\IeC {\~a}o da monografia}{15}{section.1.2}
+\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdu\IeC {\c c}\IeC {\~a}o}}{13}{chapter.1}
+\contentsline {section}{\numberline {1.1}Objetivos}{14}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Objetivos Gerais}{14}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Objetivos Espec\IeC {\'\i }ficos}{14}{subsection.1.1.2}
+\contentsline {section}{\numberline {1.2}Organiza\IeC {\c c}\IeC {\~a}o da monografia}{14}{section.1.2}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Referencial Te\IeC {\'o}rico}}{17}{chapter.2}
-\contentsline {section}{\numberline {2.1}Ataques}{17}{section.2.1}
-\contentsline {section}{\numberline {2.2}DoS}{17}{section.2.2}
-\contentsline {section}{\numberline {2.3}DDoS}{17}{section.2.3}
-\contentsline {section}{\numberline {2.4}Detec\IeC {\c c}\IeC {\~a}o}{18}{section.2.4}
-\contentsline {section}{\numberline {2.5}Correla\IeC {\c c}\IeC {\~a}o}{18}{section.2.5}
-\contentsline {section}{\numberline {2.6}Solu\IeC {\c c}\IeC {\~o}es em \textit {Hardware}}{19}{section.2.6}
-\contentsline {section}{\numberline {2.7}T\IeC {\'e}cnicas Utilizadas}{19}{section.2.7}
-\contentsline {subsection}{\numberline {2.7.1}Soma:}{19}{subsection.2.7.1}
-\contentsline {subsection}{\numberline {2.7.2}M\IeC {\'o}dulo:}{20}{subsection.2.7.2}
-\contentsline {subsection}{\numberline {2.7.3}Divis\IeC {\~a}o:}{20}{subsection.2.7.3}
-\contentsline {subsubsection}{\numberline {2.7.3.1}Aritm\IeC {\'e}tica de Ponto Fixo}{20}{subsubsection.2.7.3.1}
-\contentsline {subsection}{\numberline {2.7.4}M\IeC {\'e}dia aritm\IeC {\'e}tica:}{21}{subsection.2.7.4}
-\contentsline {subsection}{\numberline {2.7.5}Desvio padr\IeC {\~a}o:}{21}{subsection.2.7.5}
+\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Referencial Te\IeC {\'o}rico}}{16}{chapter.2}
+\contentsline {section}{\numberline {2.1}Ataques}{16}{section.2.1}
+\contentsline {section}{\numberline {2.2}DoS}{16}{section.2.2}
+\contentsline {section}{\numberline {2.3}DDoS}{16}{section.2.3}
+\contentsline {section}{\numberline {2.4}Detec\IeC {\c c}\IeC {\~a}o}{17}{section.2.4}
+\contentsline {section}{\numberline {2.5}Correla\IeC {\c c}\IeC {\~a}o}{17}{section.2.5}
+\contentsline {section}{\numberline {2.6}Solu\IeC {\c c}\IeC {\~o}es em \textit {Hardware}}{18}{section.2.6}
+\contentsline {section}{\numberline {2.7}T\IeC {\'e}cnicas Utilizadas}{18}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Soma:}{18}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.2}M\IeC {\'o}dulo:}{19}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {2.7.3}Divis\IeC {\~a}o:}{19}{subsection.2.7.3}
+\contentsline {subsubsection}{\numberline {2.7.3.1}Aritm\IeC {\'e}tica de Ponto Fixo}{19}{subsubsection.2.7.3.1}
+\contentsline {subsection}{\numberline {2.7.4}M\IeC {\'e}dia aritm\IeC {\'e}tica:}{20}{subsection.2.7.4}
+\contentsline {subsection}{\numberline {2.7.5}Desvio padr\IeC {\~a}o:}{20}{subsection.2.7.5}
 \contentsline {section}{\numberline {2.8}FPGA}{21}{section.2.8}
-\contentsline {section}{\numberline {2.9}FPGA'S Xinlix de s\IeC {\'e}rie 7}{22}{section.2.9}
+\contentsline {section}{\numberline {2.9}FPGA'S Xinlix de s\IeC {\'e}rie 7}{21}{section.2.9}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {M\IeC {\'o}dulo Nahid}}{24}{chapter.3}
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {M\IeC {\'o}dulo Nahid}}{23}{chapter.3}
 \contentsline {section}{\numberline {3.1}M\IeC {\'o}dulo Nahid}{24}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Datapath}{25}{subsection.3.1.1}
 \contentsline {subsubsection}{\numberline {3.1.1.1}Extend}{27}{subsubsection.3.1.1.1}
@@ -37,24 +37,24 @@
 \contentsline {subsubsection}{\numberline {3.1.1.4}Mul}{28}{subsubsection.3.1.1.4}
 \contentsline {subsubsection}{\numberline {3.1.1.5}Adder}{29}{subsubsection.3.1.1.5}
 \contentsline {subsubsection}{\numberline {3.1.1.6}Divider}{30}{subsubsection.3.1.1.6}
-\contentsline {subsubsection}{\numberline {3.1.1.7}Sqrt}{30}{subsubsection.3.1.1.7}
+\contentsline {subsubsection}{\numberline {3.1.1.7}Sqrt}{31}{subsubsection.3.1.1.7}
 \contentsline {subsubsection}{\numberline {3.1.1.8}Register}{31}{subsubsection.3.1.1.8}
 \contentsline {subsection}{\numberline {3.1.2}Controller}{32}{subsection.3.1.2}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados Experimentais}}{34}{chapter.4}
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados Experimentais}}{35}{chapter.4}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es e Trabalhos Futuros}}{36}{chapter.5}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es e Trabalhos Futuros}}{38}{chapter.5}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{37}{section*.36}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{39}{section*.34}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {C\IeC {\'o}digos do M\IeC {\'o}dulo}}{39}{chapter.6}
-\contentsline {section}{\numberline {6.1}C\IeC {\'o}digo Nahid}{39}{section.6.1}
-\contentsline {section}{\numberline {6.2}C\IeC {\'o}digo Datapath}{41}{section.6.2}
-\contentsline {section}{\numberline {6.3}C\IeC {\'o}digo Extend}{46}{section.6.3}
-\contentsline {section}{\numberline {6.4}C\IeC {\'o}digo Reduce}{47}{section.6.4}
-\contentsline {section}{\numberline {6.5}C\IeC {\'o}digo Mux}{47}{section.6.5}
-\contentsline {section}{\numberline {6.6}C\IeC {\'o}digo Mul}{47}{section.6.6}
-\contentsline {section}{\numberline {6.7}C\IeC {\'o}digo Adder}{47}{section.6.7}
-\contentsline {section}{\numberline {6.8}C\IeC {\'o}digo Register}{48}{section.6.8}
-\contentsline {section}{\numberline {6.9}C\IeC {\'o}digo Controller}{48}{section.6.9}
+\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {C\IeC {\'o}digos do M\IeC {\'o}dulo}}{41}{chapter.6}
+\contentsline {section}{\numberline {6.1}C\IeC {\'o}digo Nahid}{41}{section.6.1}
+\contentsline {section}{\numberline {6.2}C\IeC {\'o}digo Datapath}{43}{section.6.2}
+\contentsline {section}{\numberline {6.3}C\IeC {\'o}digo Extend}{48}{section.6.3}
+\contentsline {section}{\numberline {6.4}C\IeC {\'o}digo Reduce}{49}{section.6.4}
+\contentsline {section}{\numberline {6.5}C\IeC {\'o}digo Mux}{49}{section.6.5}
+\contentsline {section}{\numberline {6.6}C\IeC {\'o}digo Mul}{49}{section.6.6}
+\contentsline {section}{\numberline {6.7}C\IeC {\'o}digo Adder}{49}{section.6.7}
+\contentsline {section}{\numberline {6.8}C\IeC {\'o}digo Register}{50}{section.6.8}
+\contentsline {section}{\numberline {6.9}C\IeC {\'o}digo Controller}{50}{section.6.9}

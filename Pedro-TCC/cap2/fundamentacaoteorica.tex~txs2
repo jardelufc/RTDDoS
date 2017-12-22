@@ -47,7 +47,7 @@ Na figura \ref{fp} podemos ver um exemplo de um número fracionário representad
 	\centering
 		\caption{Representação de aritmética de ponto fixo}
 	\includegraphics[width=12cm]{figures/fp.jpg}
-	{Fonte:\url{www.linkedin.com/pulse/difference-between-floating-fixed-point-alvaro-pa}}
+	\caption{Representação de aritmética de ponto fixo}
 
 	\label{fp}
 \end{figure}
@@ -79,8 +79,7 @@ Todos os membros das famílias de série 7 tem o mesmo bloco \textit{RAM/FIFO(Fi
 
 \begin{figure}[H]
 	\centering
-	\caption{Comparativo de potência e perfomance entre as famílias da série 7 da Xilinx}
 	\includegraphics[width=12cm]{figures/xi-lite-01.png}
-	{Fonte:\url{https://www.eetimes.com/document.asp?doc_id=1278724}}
+	\caption{Comparativo de potência e perfomance entre as famílias da série 7 da Xilinx}
 	\label{comparative}
 \end{figure}
