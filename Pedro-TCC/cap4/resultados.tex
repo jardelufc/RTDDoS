@@ -1,6 +1,6 @@
 \chapter{Resultados Experimentais}\label{CAP4}
 
-O \textit{ip soft core} proposto possui duas grandes principais motivações: desempenho e precisão nas detecções de ataques \textit{DDoS}. Para isso foi feita a implementação do core a nível \textit{RTL(register-transfer level)}, seguido pela a síntese. Diante disso, é possível quantificar a utilização dos componentes do módulo dentro de uma \textit{FPGA} (descrição).As tabelas  mostram o relatório de utilização do artigo \cite{HOQUE201748} (um trabalho similar) e o trabalho proposto. 
+O \textit{ip soft core} proposto possui duas grandes principais motivações: desempenho e precisão nas detecções de ataques \textit{DDoS}. Para isso foi feita a implementação do core em nível \textit{RTL(register-transfer level)}, seguido pela síntese. Diante disso, é possível quantificar a utilização dos componentes do módulo dentro de uma \textit{FPGA}. Apresentamos nas duas tabelas a seguir, respectivamente, o relatório de utilização da implementação do módulo Nahid encontradas no  artigo \cite{HOQUE201748} e em seguida, os resultados deste trabalho. 
 \begin{table}[!htb]
 	\centering
 	\caption{Relatório de Utilização do artigo de comparação}
@@ -19,7 +19,7 @@ O \textit{ip soft core} proposto possui duas grandes principais motivações: de
 	\end{tabular}
 \end{table}
 
-A tabela \ref{Tab:RUP} traz o valores de alguns componentes da FPGA utilizada, mostrando estimativas de utilização, uma vez que é possível identificar através da síntese o que seria utilizado na placa escolhida, além de termos conhecimento  dos componentes disponíveis. Semelhantemente, A tabela \ref{Tab:RUAC} traz valores de utilização, porém para o módulo implementado nesse trabalho. Comparando as duas tabelas, podemos ver uma menor utilização dos componentes, no trabalho proposto. Além de uma maior frequência, o que garante uma detecção em um menor tempo.
+A Tabela \ref{Tab:RUP} traz os recursos diponíveis na FPGA, bem como o que foi utilizado e a taxa de utilização, uma vez que é possível identificar através da síntese física o que é utilizado no dispositivo escolhido, que no caso da implementação original do Nahid, é uma FPGA \textit{high end} Virtex LX50 da Série 5 da Xilinx. Semelhantemente, A tabela \ref{Tab:RUAC} traz valores de utilização, porém para o módulo implementado nesse trabalho, que utiliza uma FPGA \textit{low end} Artix 7 da Série 7 da Xilinx. Comparando as duas tabelas, podemos ver uma menor utilização dos componentes (coluna Usado), no trabalho proposto, além de uma maior frequência de operação, o que garante uma detecção em um menor tempo, visto que o número de ciclos é o mesmo, conforme explicado no capítulo anterior.
 
 
 \begin{table}[H]
@@ -41,7 +41,7 @@ A tabela \ref{Tab:RUP} traz o valores de alguns componentes da FPGA utilizada, m
 \end{table}
 
 
-Outro importante fator de validação do módulo seria o quão os valores se aproximam dos valores reais. Para isso, foi feito um \textit{TestBench} (um teste não sintetizável, no qual verifica o funcionamento, através de simulações) em \textit{systemverilog}. Foi comparado os valores adquiridos nos testes com valores calculados no \textit{Matlab}, com os devidos truncamentos das operações da figura ---.
+Outro importante fator de validação do módulo, é o quão os valores computados pela saída do módulo, se aproximam dos valores computados num computador de uso geral usando uma unidade de ponto flutuante. Para isso, foi feito um \textit{TestBench} (um teste não sintetizável, através do qual se verifica o funcionamento, pelo uso de simulações) em \textit{systemverilog}. Foi comparado os valores adquiridos nos testes com valores calculados no \textit{Matlab}, com os devidos truncamentos das operações da Figura \ref{fig01}.
 
 
 \begin{table}[H]
@@ -59,12 +59,15 @@ Outro importante fator de validação do módulo seria o quão os valores se apr
 	\end{tabular}
 \end{table}
 
-Na tabela \ref{Tab:Tb} as siglas P1,P2 e P3 são os vetores de perfil normal, já as siglas D1,D2 e D3, são os vetores que foram examinados. Podemos ver que mesmo que as taxas de erros são bem pequenas, o que mostra uma precisão considerável nos resultados do módulo. A figura \ref{simu}, mostra um exemplo de simulação nos seus últimos ciclos, vale a pena ressaltar, que com o \textit{threshold}, pode-se trazer a conclusão se existe um ataque ou não naquela para aqueles valores.
+Na Tabela \ref{Tab:Tb} apresentamos e comparamos os valores obtidos pelo hardware e pelo software (com ponto flutuante), de  três exemplos distintos. As siglas P1,P2 e P3 são os vetores de perfil normal, já as siglas D1,D2 e D3 (Coluna Detecção), são os vetores que foram examinados. Importante ressaltar que esses valores representam situações reais de detecção, de acordo com \citeonline{HOQUE201748} . Podemos ver que as taxas de erros são de aproximadamente um por cento, o que mostra uma precisão considerável nos resultados do módulo implementado com aritmética de ponto fixo, visto que esses valores calculados representam limiares a serem comparados para apontar se trata-se ou não de um ataque. A Figura \ref{simu}, mostra um exemplo de simulação dos últimos ciclos de computação. 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=12cm]{figures/simu.jpg}\\
-	\caption{Simulação 1 da tabela  \ref{Tab:Tb}}
+		\caption{Simulação 1 da tabela  \ref{Tab:Tb}}
+	\includegraphics[width=14cm]{figures/simu.jpg}\\
+
+		{Fonte: Elaborada pelo autor}
+	
 	\label{simu}
 \end{figure}
 
@@ -84,5 +87,5 @@ Na tabela \ref{Tab:Tb} as siglas P1,P2 e P3 são os vetores de perfil normal, j�
 	\end{tabular}
 \end{table}
 
-A tabela \ref{Tab:TD} mostra que existe um pequeno ganho, desse trabalho em relação ao artigo de comparação (também implementado em hardware), e um ganho significativo em relação ao detector em software.
+A Tabela \ref{Tab:TD} mostra que existe um pequeno ganho de desempenho de aceleração, desse trabalho em relação ao artigo de comparação (também implementado em hardware), e obviamente um ganho significativo em relação ao detector em software.
 

@@ -92,7 +92,7 @@ for idxTH = 1:length(threshold)
             numeroataques(1,idxTH) = numeroataques(1,idxTH) + 1;
             ataques(1,idxTH) = 1;
             
-                     keyboard;
+%                      keyboard;
         else
             disp('traffic');
             disp(idx);
