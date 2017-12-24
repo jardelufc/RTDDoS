@@ -1,0 +1,138 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.6 }
+
+\bibitem[Alkasassbeh \emph{et al.} 2016]{DataMining}
+\abntrefinfo{Alkasassbeh \emph{et al.}}{ALKASASSBEH \emph{et al.}}{2016}
+{ALKASASSBEH, M. \emph{et al.} Detecting {D}istributed {D}enial of {S}ervice
+  {A}ttacks {U}sing {D}ata {M}ining {T}echniques.
+v.~7, 01 2016.}
+
+\bibitem[Ashoor e Gore 2011]{ashoor2011importance}
+\abntrefinfo{Ashoor e Gore}{ASHOOR; GORE}{2011}
+{ASHOOR, A.~S.; GORE, S. Importance of intrusion detection system (ids).
+\textbf{International Journal of Scientific and Engineering Research}, v.~2,
+  n.~1, p.~1--4, 2011.}
+
+\bibitem[Badishi, Keidar e Sasson 2006]{badishi2006exposing}
+\abntrefinfo{Badishi, Keidar e Sasson}{BADISHI; KEIDAR; SASSON}{2006}
+{BADISHI, G. \emph{et al.} Exposing and eliminating vulnerabilities to denial
+  of service attacks in secure gossip-based multicast.
+\textbf{IEEE Transactions on Dependable and Secure Computing}, IEEE, v.~3,
+  n.~1, p. 45--61, 2006.}
+
+\bibitem[Barford \emph{et al.} 2002]{barford2002signal}
+\abntrefinfo{Barford \emph{et al.}}{BARFORD \emph{et al.}}{2002}
+{BARFORD, P. \emph{et al.} A signal analysis of network traffic anomalies. In:
+  ACM. \textbf{Proceedings of the 2nd ACM SIGCOMM Workshop on Internet
+  measurment}. [S.l.], 2002. p. 71--82.}
+
+\bibitem[Cabrera \emph{et al.} 2001]{cabrera2001proactive}
+\abntrefinfo{Cabrera \emph{et al.}}{CABRERA \emph{et al.}}{2001}
+{CABRERA, J.~B. \emph{et al.} Proactive detection of distributed denial of
+  service attacks using mib traffic variables-a feasibility study. In:  IEEE.
+  \textbf{Integrated Network Management Proceedings, 2001 IEEE/IFIP
+  International Symposium on}. [S.l.], 2001. p. 609--622.}
+
+\bibitem[Calce e Silverman 2008]{calce2008mafiaboy}
+\abntrefinfo{Calce e Silverman}{CALCE; SILVERMAN}{2008}
+{CALCE, M.; SILVERMAN, C. \textbf{Mafiaboy: How I Cracked the Internet and why
+  It's Still Broken}. [S.l.]: Penguin Group Canada, 2008.}
+
+\bibitem[Center 1998]{certSmurf}
+\abntrefinfo{Center}{CENTER}{1998}
+{CENTER, C.~C. \textbf{CERT advisory CA-1998-01 smurf IP denial-of-service
+  attacks}. [S.l.]: January, 1998.}
+
+\bibitem[Chen 2006]{1638123}
+\abntrefinfo{Chen}{CHEN}{2006}
+{CHEN, E.~Y. Detecting dos attacks on sip systems. In:  \textbf{1st IEEE
+  Workshop on VoIP Management and Security, 2006.} [S.l.: s.n.], 2006. p.
+  53--58.}
+
+\bibitem[Criscuolo 2000]{criscuolo2000distributed}
+\abntrefinfo{Criscuolo}{CRISCUOLO}{2000}
+{CRISCUOLO, P.~J. \textbf{Distributed denial of service: Trin00, tribe flood
+  network, tribe flood network 2000, and stacheldraht ciac-2319}.
+[S.l.], 2000.}
+
+\bibitem[Dittrich 2002]{dittrich2002projectos}
+\abntrefinfo{Dittrich}{DITTRICH}{2002}
+{DITTRICH, D. \textbf{The DoS Project{\~O}s ‘‘trinoo’’Distributed
+  Denial of Service attack tool, University of Washington, October 21, 1999}.
+  2002.}
+
+\bibitem[Douligeris e Mitrokotsa 2004]{ddosatacks}
+\abntrefinfo{Douligeris e Mitrokotsa}{DOULIGERIS; MITROKOTSA}{2004}
+{DOULIGERIS, C.; MITROKOTSA, A. Ddos attacks and defense mechanisms:
+  classification and state-of-the-art.
+\textbf{Computer Networks}, v.~44, n.~5, p. 643 -- 666, 2004.
+ISSN 1389-1286.
+Dispon{\'\i}vel em:
+  \url{http://www.sciencedirect.com/science/article/pii/S1389128603004250}.}
+
+\bibitem[Gil e Poletto 2001]{multops}
+\abntrefinfo{Gil e Poletto}{GIL; POLETTO}{2001}
+{GIL, T.~M.; POLETTO, M. Multops: A data-structure for bandwidth attack
+  detection. In:  \textbf{USENIX Security Symposium}. [S.l.: s.n.], 2001. p.
+  23--38.}
+
+\bibitem[Hoque, Kashyap e Bhattacharyya 2017]{HOQUE201748}
+\abntrefinfo{Hoque, Kashyap e Bhattacharyya}{HOQUE; KASHYAP;
+  BHATTACHARYYA}{2017}
+{HOQUE, N. \emph{et al.} Real-time {DDoS} {A}ttack {D}etection {U}sing {FPGA}.
+\textbf{Computer Communications}, v.~110, n. Supplement C, p. 48 -- 58, 2017.
+ISSN 0140-3664.
+Dispon{\'\i}vel em:
+  \url{http://www.sciencedirect.com/science/article/pii/S0140366416306442}.}
+
+\bibitem[Huang e Pullen 2001]{huang2001countering}
+\abntrefinfo{Huang e Pullen}{HUANG; PULLEN}{2001}
+{HUANG, Y.; PULLEN, J.~M. Countering denial-of-service attacks using congestion
+  triggered packet sampling and filtering. In:  IEEE. \textbf{Computer
+  Communications and Networks, 2001. Proceedings. Tenth International
+  Conference on}. [S.l.], 2001. p. 490--494.}
+
+\bibitem[Kurose e Ross 2010]{kurose}
+\abntrefinfo{Kurose e Ross}{KUROSE; ROSS}{2010}
+{KUROSE, J.~F.; ROSS, K.~W. \textbf{Redes de Computadores e a Internet: Uma
+  abordagem top-down}. Trad. 5 ed. São Paulo: Pearson, 2010.}
+
+\bibitem[Lippmann \emph{et al.} 2000]{siteDarpa}
+\abntrefinfo{Lippmann \emph{et al.}}{LIPPMANN \emph{et al.}}{2000a}
+{LIPPMANN, R. \emph{et al.} \textbf{DARPA INTRUSION DETECTION EVALUATION}.
+  2000. \url{https://www.ll.mit.edu/ideval/index.html}.
+Acessado em 18/08/2017.}
+
+\bibitem[Lippmann \emph{et al.} 2000]{DARPA}
+\abntrefinfo{Lippmann \emph{et al.}}{LIPPMANN \emph{et al.}}{2000b}
+{LIPPMANN, R.~P. \emph{et al.} Evaluating intrusion detection systems: the 1998
+  darpa off-line intrusion detection evaluation. In:  \textbf{DARPA Information
+  Survivability Conference and Exposition, 2000. DISCEX '00. Proceedings}.
+  [S.l.: s.n.], 2000. v.~2, p. 12--26 vol.2.}
+
+\bibitem[Srivastava \emph{et al.} 2011]{srivastava2011recent}
+\abntrefinfo{Srivastava \emph{et al.}}{SRIVASTAVA \emph{et al.}}{2011}
+{SRIVASTAVA, A. \emph{et al.} A recent survey on ddos attacks and defense
+  mechanisms.
+\textbf{Advances in Parallel Distributed Computing}, Springer, p. 570--580,
+  2011.}
+
+\bibitem[Wang \emph{et al.} 2015]{WANG2015308}
+\abntrefinfo{Wang \emph{et al.}}{WANG \emph{et al.}}{2015}
+{WANG, B. \emph{et al.} Ddos attack protection in the era of cloud computing
+  and software-defined networking.
+\textbf{Computer Networks}, v.~81, n. Supplement C, p. 308 -- 319, 2015.
+ISSN 1389-1286.
+Dispon{\'\i}vel em:
+  \url{http://www.sciencedirect.com/science/article/pii/S1389128615000742}.}
+
+\bibitem[Xiaoming, Sejdini e Chowdhury 2010]{xiaoming2010denial}
+\abntrefinfo{Xiaoming, Sejdini e Chowdhury}{XIAOMING; SEJDINI; CHOWDHURY}{2010}
+{XIAOMING, L. \emph{et al.} Denial of service (dos) attack with udp flood.
+\textbf{School of Computer Science, University of Windsor, Canada}, 2010.}
+
+\end{thebibliography}

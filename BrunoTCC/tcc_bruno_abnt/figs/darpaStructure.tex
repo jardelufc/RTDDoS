@@ -1,0 +1,37 @@
+\documentclass[border = {60pt 0pt 30pt 0pt},
+brazil]{standalone}
+\usepackage[landscape]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{mindmap}
+\usepackage{metalogo}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{dtklogos}
+	\begin{document}
+			\hspace*{-9.2em}
+	\begin{tikzpicture}
+
+	\path [
+	mindmap,
+	text = white,
+	level 1 concept/.append style =
+	{font=\small\bfseries, sibling angle=180},
+	level 2 concept/.append style =
+	{font=\tiny\bfseries},
+	level 3 concept/.append style =
+	{font=\tiny\bfseries},
+	tex/.style     = {concept, ball color=blue,
+		font=\small\bfseries},
+	engines/.style = {concept, ball color=green!50!black},
+	formats/.style = {concept, ball color=blue!50!black},
+	systems/.style = {concept, ball color=red!90!black},
+	]
+	node [tex] {Roteador} [clockwise from=180]
+	child[concept color=green!50!black, nodes={engines}] {
+		node {Base Aérea} [clockwise from=90]}
+	child [concept color=red, nodes={systems}] {
+		node {Internet} [clockwise from=90]};
+	\end{tikzpicture}
+	\end{document}
+	

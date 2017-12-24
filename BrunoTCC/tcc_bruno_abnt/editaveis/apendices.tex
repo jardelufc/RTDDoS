@@ -1,0 +1,365 @@
+% Apêndices
+% ---
+% Inicia os apêndices
+% ---
+\begin{apendicesenv}
+	
+% ----------------------------------------------------------
+\chapter{Optimization Formulation for Throughput-Based Services}
+\label{Ap:ThrBasedOpt}
+
+As explained in section \ref{subsec:cap03ThrBased}, the considered optimization problem for throughput-based services is the maximization of the total utility with respect to the users' throughput. Thus, the objective function is 
+%
+\begin{equation}
+\label{JSM:Eq:Util_Opt_Joint_NRT_App}
+\underset{\rho_{j,k},\;p_{k}}{\text{max}} \; \sum_{j \in \mathcal{J}} V\left[U_{\mathrm{thr}}\left(T_{j}\left[n\right]\right)\right],
+\end{equation} 
+%
+where $V\left(\cdot\right)$ is the service utility function and $U_{\mathrm{thr}}\left(\cdot\right)$ is the user utility function that is associated to the \ac{UE} $j$ that uses a throughput-based service.
+
+The throughput of user $j$ is calculated using an exponential smoothing filtering, as indicated below: 
+%
+\begin{equation}
+\label{JSM:Eq:Util_Thru_Calc}
+T_{j}\left[n\right] = \left(1 - f_{\mathrm{thru}}\right) \cdot T_{j}\left[n-1\right] + f_{\mathrm{thru}} \cdot R_j\left[n\right],
+\end{equation} 
+%
+where $R_j\left[n\right]$ is the instantaneous data rate of user $j$ and $f_{\mathrm{thru}}$ is a filtering constant.
+
+Evaluating the objective function in equation \eqref{JSM:Eq:Util_Opt_Joint_NRT_App} and the throughput expression in equation \eqref{JSM:Eq:Util_Thru_Calc}, the derivative of $V\left[U_{\mathrm{thr}}\left(T_{j}\right)\right]$ with respect to the transmission rate $R_j$ is given by:
+%
+%\begin{align}
+%\label{JSM:Eq:Utility_Derivative_NRT}
+%\frac{\partial V\left[U_{\mathrm{thr}}\left(T_j\right)\right]}{\partial R_j} & = \frac{\partial V}{\partial U_{\mathrm{thr}}} \cdot \frac{\partial U_{\mathrm{thr}}}{\partial T_j} \cdot \frac{\partial T_j}{\partial R_j} \notag\\
+%& = \left.\dfrac{\partial V}{\partial U_{\mathrm{thr}}}\right\vert_{U_{\mathrm{thr}} = U_{\mathrm{thr}}\left(T_{j}\right)} \notag\\
+%& \cdot \left.\dfrac{\partial U_{\mathrm{thr}}}{\partial T_j}\right\vert_{T_{j} = \left(1 - f_{\mathrm{thru}}\right) \cdot T_{j}\left[n-1\right] + f_{\mathrm{thru}} \cdot R_j\left[n\right]}
+%\notag\\ & \cdot 	f_{\mathrm{thru}}.
+%\end{align}
+\begin{align}
+\label{JSM:Eq:Utility_Derivative_NRT}
+\frac{\partial V\left[U_{\mathrm{thr}}\left(T_j\right)\right]}{\partial R_j} & = \frac{\partial V}{\partial U_{\mathrm{thr}}} \cdot \frac{\partial U_{\mathrm{thr}}}{\partial T_j} \cdot \frac{\partial T_j}{\partial R_j} \notag\\ & = \left.\dfrac{\partial V}{\partial U_{\mathrm{thr}}}\right\vert_{U_{\mathrm{thr}} = U_{\mathrm{thr}}\left(T_{j}\right)} \cdot \left.\dfrac{\partial U_{\mathrm{thr}}}{\partial T_j}\right\vert_{T_{j} = \left(1 - f_{\mathrm{thru}}\right) \cdot T_{j}\left[n-1\right] + f_{\mathrm{thru}} \cdot R_j\left[n\right]}
+\cdot f_{\mathrm{thru}}.
+\end{align}
+
+In the case that $f_{\mathrm{thru}}$ is sufficiently small, the expression above can be simplified as follows \cite{Art:Song2005_p2}:
+
+\begin{equation}
+\label{JSM:Eq:Utility_Derivative_NRT2}
+\frac{\partial V\left[U_{\mathrm{thr}}\left(T_j\right)\right]}{\partial R_{j}} \approx
+f_{\mathrm{thru}}
+\cdot
+\left.\dfrac{\partial V}{\partial U_{\mathrm{thr}}}\right\vert_{U_{\mathrm{thr}} = U_{\mathrm{thr}}\left(T_{j}\right)}
+\cdot
+\left.\dfrac{\partial U_{\mathrm{nrt}}}{\partial T_j}\right\vert_{T_j = T_{j}\left[n-1\right]},
+\end{equation}
+%
+where the previous resource allocation totally determines the current values of the marginal utilities. Using the one-order Taylor formula \cite{Art:Song2005_p2, Phd:Emanuel2011} and considering equation \eqref{JSM:Eq:Utility_Derivative_NRT2}, we have
+%
+%\begin{align}
+%\label{JSM:Eq:Taylor_NRT}
+%\sum_{j \in \mathcal{J}} V\left[U_{\mathrm{thr}}\left(T_{j}\left[n\right]\right)\right] \approx &
+%\sum_{j \in \mathcal{J}} V\left[U_{\mathrm{thr}}\left(T_{j}\left[n-1\right]\right)\right] \notag\\
+%& + \sum_{j \in \mathcal{J}} \left.\dfrac{\partial V}{\partial U_{\mathrm{thr}}}\right\vert_{U_{\mathrm{thr}} = U_{\mathrm{thr}}\left(T_{j}\right)} \notag\\ & \cdot \left.\dfrac{\partial U_{\mathrm{thr}}}{\partial T_j}\right\vert_{T_j = T_{j}\left[n-1\right]} \notag\\ & \cdot \left(f_{\mathrm{thru}} \cdot R_j\left[n\right] - f_{\mathrm{thru}} \cdot T_j\left[n-1\right]\right).
+%\end{align}
+\begin{align}
+\label{JSM:Eq:Taylor_NRT}
+\sum_{j \in \mathcal{J}} V\left[U_{\mathrm{thr}}\left(T_{j}\left[n\right]\right)\right] \approx &
+\sum_{j \in \mathcal{J}} V\left[U_{\mathrm{thr}}\left(T_{j}\left[n-1\right]\right)\right] \notag\\
+& + \sum_{j \in \mathcal{J}} \left.\dfrac{\partial V}{\partial U_{\mathrm{thr}}}\right\vert_{U_{\mathrm{thr}} = U_{\mathrm{thr}}\left(T_{j}\right)} \notag \\ & \cdot \left.\dfrac{\partial U_{\mathrm{thr}}}{\partial T_j}\right\vert_{T_j = T_{j}\left[n-1\right]} \notag \\ & \cdot \left(f_{\mathrm{thru}} \cdot R_j\left[n\right] - f_{\mathrm{thru}} \cdot T_j\left[n-1\right]\right).
+\end{align}
+
+Let us consider the maximization of equation \eqref{JSM:Eq:Taylor_NRT}. Notice that the maximization of the left side of equation \eqref{JSM:Eq:Taylor_NRT} is our original optimization problem given by equation \eqref{JSM:Eq:Util_Opt_Joint_NRT_App}. The maximization of the right side of equation \eqref{JSM:Eq:Taylor_NRT} is the new simplified optimization problem. Since $f_{\mathrm{thru}}$ is a constant and $T_j\left[n-1\right]$ is known and fixed before the resource allocation at the current \ac{TTI} $n$, the new simplified optimization problem becomes linear in terms of the instantaneous user's data rate, and is given by
+%
+\begin{equation}
+\label{JSM:Eq:Simple_Obj_Function_Thr_App}
+\underset{\rho_{j,k},\;p_{k}}{\text{max}} \; \sum_{j \in \mathcal{J}} V^{'}\left(U_{\mathrm{thr}}\left(T_{j}\left[n-1\right]\right)\right) \cdot U_{\mathrm{thr}}^{'}\left(T_{j}\left[n-1\right] \right) \cdot R_{j}\left[n\right].
+\end{equation}
+
+Notice that we started with an optimization formulation based on throughput given by equation \eqref{JSM:Eq:Util_Opt_Joint_NRT_App}, made some logical assumptions and mathematical simplifications, and ended up with a linear optimization formulation based on instantaneous rates given by equation \eqref{JSM:Eq:Simple_Obj_Function_Thr_App}. According to these arguments, we claim that the instantaneous optimization maximizing equation \eqref{JSM:Eq:Simple_Obj_Function_Thr_App} leads to a long-term optimization that maximizes equation \eqref{JSM:Eq:Util_Opt_Joint_NRT_App}.
+
+\chapter{Optimization Formulation for Delay-Based Services}
+\label{Ap:DelayBasedOpt}
+
+According to section \ref{subsec:cap03DelayBased}, the considered optimization problem for delay-based services is the maximization of the total utility with respect to the users' \ac{HOL} packet delays. The objective function is given by
+%
+\begin{equation}
+\label{JSM:Eq:Util_Opt_Joint_QUEUE_App}
+\underset{\rho_{j,k},\;p_{k}}{\text{max}} \; \sum_{j \in \mathcal{J}} V\left[U_{\mathrm{delay}}\left(d_{j}^\mathrm{hol}\left[n\right]\right)\right],
+\end{equation}
+%
+where $V\left(\cdot\right)$ is the service utility function and $U_{\mathrm{delay}}\left(\cdot\right)$ is the user utility function that is associated to the user $j$ that makes use of a delay-based service.
+
+In this work, we consider a recursive model for calculating an approximate value of the \ac{HOL} delay \cite{Rodrigues2014_Wiley}. The recursive equation is
+%
+\begin{equation}
+\label{JSM:Eq:HOL_Delay}
+d_{j}^\mathrm{hol}\left[n+1\right] = d_{j}^\mathrm{hol}\left[n\right] + t_{\mathrm{tti}} - \frac{1}{L} \cdot \left( \frac{R_j\left[n\right] \cdot t_{\mathrm{tti}}}{S_\mathrm{p}}\right),
+\end{equation}
+%
+where $t_{\mathrm{tti}}$ is the duration of the \ac{TTI} in seconds, $L$ is the packet arrival rate, $S_\mathrm{p}$ is the packet size, and $R_{j}\left[n\right]$ is the instantaneous achievable transmission rate on \ac{TTI} $n$. 
+
+Assessing the objective function in equation \eqref{JSM:Eq:Util_Opt_Joint_QUEUE_App} and the \ac{HOL} delay expression in equation \eqref{JSM:Eq:HOL_Delay}, we can see that the derivative of $V\left[U_{\mathrm{delay}}\left(d_{j}^\mathrm{hol}\right)\right]$ with respect to the transmission rate $R_j$ can be expressed as
+%
+%\begin{align}
+%\label{JSM:Eq:Utility_Derivative_QUEUE}
+%\frac{\partial V\left[U_{\mathrm{delay}}\left(d_{j}^\mathrm{hol}\right)\right]}{\partial R_j} & =
+%\frac{\partial V}{\partial U_{\mathrm{delay}}}
+%\cdot
+%\frac{\partial U_{\mathrm{delay}}}{\partial d_j^\mathrm{hol}}
+%\cdot
+%\frac{\partial d_j^\mathrm{hol}}{\partial R_j} \notag\\ & =
+%\left.\dfrac{\partial V}{\partial U_{\mathrm{delay}}}\right\vert_{U_{\mathrm{delay}} = U_{\mathrm{delay}}\left(d_j^\mathrm{hol}\right)}
+%\notag\\ & \cdot
+%\left.\dfrac{\partial U_{\mathrm{delay}}}{\partial d_j^\mathrm{hol}}\right\vert_{d_{j}^\mathrm{hol} = d_{j}^\mathrm{hol}\left[n\right]}
+%\notag\\ & \cdot
+%\left(-\frac{t_{\mathrm{tti}}}{L \cdot S_\mathrm{p}} \right).
+%\end{align}
+\begin{align}
+\label{JSM:Eq:Utility_Derivative_QUEUE}
+\frac{\partial V\left[U_{\mathrm{delay}}\left(d_{j}^\mathrm{hol}\right)\right]}{\partial R_j} & =
+\frac{\partial V}{\partial U_{\mathrm{delay}}}
+\cdot
+\frac{\partial U_{\mathrm{delay}}}{\partial d_j^\mathrm{hol}}
+\cdot
+\frac{\partial d_j^\mathrm{hol}}{\partial R_j} \notag\\ & =
+\left.\dfrac{\partial V}{\partial U_{\mathrm{delay}}}\right\vert_{U_{\mathrm{delay}} = U_{\mathrm{delay}}\left(d_j^\mathrm{hol}\right)}
+\cdot
+\left.\dfrac{\partial U_{\mathrm{delay}}}{\partial d_j^\mathrm{hol}}\right\vert_{d_{j}^\mathrm{hol} = d_{j}^\mathrm{hol}\left[n\right]}
+\cdot
+\left(-\frac{t_{\mathrm{tti}}}{L \cdot S_\mathrm{p}} \right).
+\end{align}
+
+Using the result above and assuming that the \ac{TTI} duration is sufficiently small, the Lagrange theorem of the mean can be used \cite{lei2007packet,Phd:Emanuel2011}, which says that 
+%
+\begin{align}
+\label{JSM:Eq:Mean_Theorem_RT}
+\sum_{j \in \mathcal{J}} V\left[U_{\mathrm{delay}}\left( d_{j}^{\mathrm{hol}}\left[n+1\right]\right)\right] & \approx \sum_{j \in \mathcal{J}} V\left[U_{\mathrm{delay}}\left(d_{j}^{\mathrm{hol}}\left[n\right]\right)\right] + \sum_{j \in \mathcal{J}} \left.\dfrac{\partial V}{\partial U_{\mathrm{delay}}}\right\vert_{U_{\mathrm{delay}} = U_{\mathrm{delay}}\left(d_j^\mathrm{hol}\right)}  \notag \\ & \cdot \left.\dfrac{\partial U_{\mathrm{delay}}}{\partial R_j}\right\vert_{R_j=R_j\left[n-1\right]} \cdot \left( R_j\left[n\right] - R_j\left[n-1\right]\right) \notag \\ & = 
+\sum_{j \in \mathcal{J}} V\left[U_{\mathrm{queue}}\left(d_{j}^{\mathrm{hol}}\left[n\right]\right)\right]  + \sum_{j \in \mathcal{J}} \left.\dfrac{\partial V}{\partial U_{\mathrm{delay}}}\right\vert_{U_{\mathrm{delay}} = U_{\mathrm{delay}}\left(d_j^\mathrm{hol}\right)} \notag \\ & \cdot \left.\dfrac{\partial U_{\mathrm{delay}}}{\partial d_{j}^\mathrm{hol}}\right\vert_{d_{j}^\mathrm{hol} = d_{j}^\mathrm{hol}\left[n\right]} \cdot \left(-\frac{t_{\mathrm{tti}}}{L \cdot S_\mathrm{p}}\right) \cdot \left( R_j\left[n\right] - R_j\left[n-1\right]\right) \notag \\ & = 
+\sum_{j \in \mathcal{J}} V\left[U_{\mathrm{delay}}\left(d_{j}^{\mathrm{hol}}\left[n\right]\right)\right] + \sum_{j \in \mathcal{J}} \left.\dfrac{\partial V}{\partial U_{\mathrm{delay}}}\right\vert_{U_{\mathrm{delay}} = U_{\mathrm{delay}}\left(d_j^\mathrm{hol}\right)} \notag \\ & \cdot \left.\left| \dfrac{\partial U_{\mathrm{delay}}}{\partial d_{j}^\mathrm{hol}} \right|\right\vert_{d_{j}^\mathrm{hol} = d_{j}^\mathrm{hol}\left[n\right]}  \cdot \frac{t_{\mathrm{tti}}}{L \cdot S_\mathrm{p}} \cdot \left( R_j\left[n\right] - R_j\left[n-1\right]\right).
+\end{align}
+
+The absolute value operator is used in equation~\eqref{JSM:Eq:Mean_Theorem_RT} because the utility function is assumed to be decreasing, which yields negative marginal utilities and cancels the negative sign in equation~\eqref{JSM:Eq:Mean_Theorem_RT}.
+
+On one hand, the maximization of the left side of equation~\eqref{JSM:Eq:Mean_Theorem_RT} is our original optimization problem given by equation~\eqref{JSM:Eq:Util_Opt_Joint_QUEUE_App}. On the other hand, the maximization of the right side of equation~\eqref{JSM:Eq:Mean_Theorem_RT} is the new simplified optimization problem. We have that $t_{\mathrm{tti}}$, $L$ and $S_\mathrm{p}$ are constants, and that $d_{j}^{\mathrm{hol}}\left[n\right]$ and $R_j\left[n-1\right]$ are known and fixed before the resource allocation at \ac{TTI} $n$. Therefore, the new simplified optimization problem becomes linear in terms of the instantaneous user's data rate, and is given by
+
+\begin{equation}
+\label{JSM:Eq:Simple_Obj_Function_RT_App}
+\underset{\rho_{j,k},\;p_{k}}{\text{max}} \sum_{j \in \mathcal{J}}
+V^{'}\left(U_{\mathrm{delay}}\left(d_j^{\mathrm{hol}}\left[n\right]\right)\right) \cdot
+\left|U_{\mathrm{delay}}^{'}\left( d_{j}^\mathrm{hol}\left[n\right]\right)\right| \cdot
+R_j\left[n\right].
+\end{equation}
+
+Taking into account equation~\eqref{JSM:Eq:Mean_Theorem_RT}, we are able to assume that the instantaneous optimization maximizing equation~\eqref{JSM:Eq:Simple_Obj_Function_RT_App} leads to a long-term optimization that maximizes equation~\eqref{JSM:Eq:Util_Opt_Joint_QUEUE_App}.
+
+\chapter{Optimization Formulation for Queue-Based Services}
+\label{Ap:QueueBasedOpt}
+
+As explained in section \ref{subsec:cap03QueueBased}, the considered optimization problem for queue-based services is the maximization of the total utility with respect to the predicted average queue size over a time window (in bits) of a user $j$.
+Thus, the objective function is 
+%
+\begin{equation}
+\label{JSM:Eq:Util_Opt_Joint_RT_App}
+\underset{\rho_{j,k},\;p_{k}}{\text{max}} \; \sum_{j \in \mathcal{J}} V\left[U_{\mathrm{queue}}\left(\overline{Q}_{j}\left[n+1\right]\right)\right],
+\end{equation} 
+%
+where $V\left(\cdot\right)$ is the service utility function and $U_{\mathrm{queue}}\left(\cdot\right)$ is the user utility function that is associated to the user $j$ that makes use of a throughout- and delay-based service, which is referred to as queue-based service.
+
+The average queue size over a time window of user $j$ is calculated using an exponential smoothing filtering, as indicated below: 
+%
+\begin{equation}
+\label{JSM:Eq:Util_Avg_Queue_Calc}
+\overline{Q}_{j}\left[n\right] = \left(1 - f_{\mathrm{queue}}\right) \cdot \overline{Q}_{j}\left[n-1\right] + f_{\mathrm{queue}} \cdot Q_{j}\left[n\right],
+\end{equation} 
+%
+where $Q_{j}\left[n\right]$ is the instantaneous queue size of user $j$ and $f_{\mathrm{queue}}$ is a filtering constant.
+
+The queue size of user $j$ at \ac{TTI} $n+1$ can be expressed as \cite{song2004joint} 
+% 
+\begin{equation}
+\label{JSM:Eq:Util_Queue_Calc}
+Q_{j}\left[n+1\right] = Q_{j}\left[n\right] - R_j\left[n\right] \cdot t_{\mathrm{tti}} + \alpha_j{\left[n\right]},
+\end{equation} 
+%
+where $\alpha_j{\left[n\right]}$ is the amount of arrival bits of \ac{UE} $j$ during \ac{TTI} $n$, $R_j\left[n\right]$ is the instantaneous data rate of user $j$ at \ac{TTI} $n$ and $t_{\mathrm{tti}}$ is the duration of a single \ac{TTI}.
+
+At the beginning of \ac{TTI} $n$, given the instantaneous data rate $R_j\left[n\right]$, the predicted average queue size at the end of \ac{TTI} $n$ (beginning of \ac{TTI} $n+1$) is obtained by $E_{\alpha_j{\left[n\right]}}\left\{\overline{Q}_{j}\left[n+1\right]\right\}$, which is the expectation with respect to $\alpha_j{\left[n\right]}$ \cite{song2004joint}. 
+According to equation~\eqref{JSM:Eq:Util_Avg_Queue_Calc} and equation~\eqref{JSM:Eq:Util_Queue_Calc}, we have 
+% 
+%\begin{align}
+%\label{JSM:Eq:Util_Expected_Queue_Calc}
+%E_{\alpha_j{\left[n\right]}}\left\{\overline{Q}_{j}\left[n+1\right]\right\} = & \left(1 - f_{\mathrm{queue}}\right) \cdot \overline{Q}_{j}\left[n\right] \notag \\ & + f_{\mathrm{queue}}  \cdot \left( Q_{j}\left[n\right] - R_j\left[n\right] \cdot t_{\mathrm{tti}} + E\left\{\alpha_j{\left[n\right]}\right\} \right),
+%\end{align}
+\begin{align}
+\label{JSM:Eq:Util_Expected_Queue_Calc}
+E_{\alpha_j{\left[n\right]}}\left\{\overline{Q}_{j}\left[n+1\right]\right\} = \left(1 - f_{\mathrm{queue}}\right) \cdot \overline{Q}_{j}\left[n\right] + f_{\mathrm{queue}}  \cdot \left( Q_{j}\left[n\right] - R_j\left[n\right] \cdot t_{\mathrm{tti}} + E\left\{\alpha_j{\left[n\right]}\right\} \right),
+\end{align}
+%
+where $E\left\{\alpha_j{\left[n\right]}\right\}=\omega_j \cdot t_{\mathrm{tti}}$, and $\omega_j$ is the source data rate of the service consumed by user $j$.
+
+Evaluating the objective function in equation~\eqref{JSM:Eq:Util_Opt_Joint_RT_App} and the expected queue size expression in equation~\eqref{JSM:Eq:Util_Expected_Queue_Calc}, the derivative of $V\left[U_{\mathrm{queue}}\left(\overline{Q}_{j}\right)\right]$ with respect to the transmission rate $R_j$ is given by:
+%
+%\begin{align}
+%\label{JSM:Eq:Utility_Derivative_RT}
+%\frac{\partial V\left[U_{\mathrm{queue}}\left(\overline{Q}_{j}\right)\right]}{\partial R_j}& =  \frac{\partial V}{\partial U_{\mathrm{queue}}} \cdot \frac{\partial U_{\mathrm{queue}}}{\partial \overline{Q}_{j}} \cdot \frac{\partial \overline{Q}_{j}}{\partial R_j} \notag \\
+%& = \left.\dfrac{\partial V}{\partial U_{\mathrm{queue}}}\right\vert_{U_{\mathrm{queue}} = U_{\mathrm{queue}}\left(\overline{Q}_{j}\right)} \notag \\
+%&\cdot
+%\left.\dfrac{\partial U_{\mathrm{queue}}}{\partial \overline{Q}_{j}}\right\vert_{\overline{Q}_{j} = \left(1 - f_{\mathrm{queue}}\right) \cdot \overline{Q}_{j}\left[n\right] + f_{\mathrm{queue}} \cdot \left( Q_{j}\left[n\right] - R_j\left[n\right] \cdot t_{\mathrm{tti}} + \omega_j \cdot t_{\mathrm{tti}} \right)}
+%\notag \\ & \cdot
+%f_{\mathrm{queue}} \cdot t_{\mathrm{tti}}.
+%\end{align}
+\begin{align}
+\label{JSM:Eq:Utility_Derivative_RT}
+\frac{\partial V\left[U_{\mathrm{queue}}\left(\overline{Q}_{j}\right)\right]}{\partial R_j}& =  \frac{\partial V}{\partial U_{\mathrm{queue}}} \cdot \frac{\partial U_{\mathrm{queue}}}{\partial \overline{Q}_{j}} \cdot \frac{\partial \overline{Q}_{j}}{\partial R_j} \notag \\ & = \left.\dfrac{\partial V}{\partial U_{\mathrm{queue}}}\right\vert_{U_{\mathrm{queue}} = U_{\mathrm{queue}}\left(\overline{Q}_{j}\right)} \notag \\ & \cdot \left.\dfrac{\partial U_{\mathrm{queue}}}{\partial \overline{Q}_{j}}\right\vert_{\overline{Q}_{j} = \left(1 - f_{\mathrm{queue}}\right) \cdot \overline{Q}_{j}\left[n\right] + f_{\mathrm{queue}} \cdot \left( Q_{j}\left[n\right] - R_j\left[n\right] \cdot t_{\mathrm{tti}} + \omega_j \cdot t_{\mathrm{tti}} \right)}
+\notag \\ & \cdot f_{\mathrm{queue}} \cdot t_{\mathrm{tti}}.
+\end{align}
+
+In the case that $f_{\mathrm{queue}}$ is sufficiently small, the expression above can be simplified as follows \cite{Art:Song2005_p2}:
+
+\begin{equation}
+\label{JSM:Eq:Utility_Derivative_RT2}
+\frac{\partial V\left[U_{\mathrm{queue}}\left(\overline{Q}_{j}\right)\right]}{\partial R_{j}} \approx
+f_{\mathrm{queue}}
+\cdot t_{\mathrm{tti}} \cdot
+\left.\dfrac{\partial V}{\partial U_{\mathrm{queue}}}\right\vert_{U_{\mathrm{queue}} = U_{\mathrm{queue}}\left(\overline{Q}_{j}\right)}
+\cdot
+\left.\dfrac{\partial U_{\mathrm{queue}}}{\partial \overline{Q}_{j}}\right\vert_{\overline{Q}_{j} = \overline{Q}_{j}\left[n\right]},
+\end{equation}
+%
+where the previous resource allocation totally determines the current values of the marginal utilities. 
+Using the one-order Taylor formula \cite{Art:Song2005_p2, Phd:Emanuel2011} and considering equation~\eqref{JSM:Eq:Utility_Derivative_RT2}, we have
+%
+%\begin{align}
+%\label{JSM:Eq:Taylor_RT}
+%\sum_{j \in \mathcal{J}} V\left[U_{\mathrm{queue}}\left(\overline{Q}_{j}\left[n+1\right]\right)\right] \approx & \sum_{j \in \mathcal{J}} V\left[U_{\mathrm{queue}}\left(\overline{Q}_{j}\left[n\right]\right)\right] \notag\\
+%& + \sum_{j \in \mathcal{J}} \left.\dfrac{\partial V}{\partial U_{\mathrm{queue}}}\right\vert_{U_{\mathrm{queue}} = U_{\mathrm{queue}}\left(\overline{Q}_{j}\right)}
+%\notag\\
+%& \cdot \left.\left|\dfrac{\partial U_{\mathrm{queue}}}{\partial \overline{Q}_{j}}\right|\right\vert_{\overline{Q}_{j} = \overline{Q}_{j}\left[n\right]} \notag \\ 
+%& \cdot \left\{f_{\mathrm{queue}} \cdot \left[ Q_{j}\left[n\right] + t_{\mathrm{tti}} \cdot \left( \omega_j - R_j\left[n\right] \right)\right] - f_{\mathrm{queue}} \cdot \overline{Q}_{j}\left[n\right]\right\}.
+%\end{align}
+\begin{align}
+\label{JSM:Eq:Taylor_RT}
+\sum_{j \in \mathcal{J}} V\left[U_{\mathrm{queue}}\left(\overline{Q}_{j}\left[n+1\right]\right)\right] \approx & \sum_{j \in \mathcal{J}} V\left[U_{\mathrm{queue}}\left(\overline{Q}_{j}\left[n\right]\right)\right] \notag\\
+& + \sum_{j \in \mathcal{J}} \left.\dfrac{\partial V}{\partial U_{\mathrm{queue}}}\right\vert_{U_{\mathrm{queue}} = U_{\mathrm{queue}}\left(\overline{Q}_{j}\right)} \notag\\
+& \cdot \left.\left|\dfrac{\partial U_{\mathrm{queue}}}{\partial \overline{Q}_{j}}\right|\right\vert_{\overline{Q}_{j} = \overline{Q}_{j}\left[n\right]} \notag\\ & \cdot \left\{f_{\mathrm{queue}} \cdot \left[ Q_{j}\left[n\right] + t_{\mathrm{tti}} \cdot \left( \omega_j - R_j\left[n\right] \right)\right] - f_{\mathrm{queue}} \cdot \overline{Q}_{j}\left[n\right]\right\}.
+\end{align}
+
+The absolute value operator is used in equation~\eqref{JSM:Eq:Taylor_RT} because the utility function is assumed to be decreasing, which yields negative marginal utilities and cancels the negative sign in equation~\eqref{JSM:Eq:Taylor_RT}.
+
+Considering the maximization of equation~\eqref{JSM:Eq:Taylor_RT}, one can see that the maximization of the left side of equation~\eqref{JSM:Eq:Taylor_RT} is our original optimization problem given by equation~\eqref{JSM:Eq:Util_Opt_Joint_RT_App}, while the maximization of the right side of equation~\eqref{JSM:Eq:Taylor_RT} is the new simplified optimization problem. 
+Since $f_{\mathrm{queue}}$, $\omega_j$ and $t_{\mathrm{tti}}$ are constant and $\overline{Q}_{j}\left[n\right]$ and $Q_{j}\left[n\right]$ are known and fixed before the resource allocation at the current \ac{TTI} $n$, the new simplified optimization problem becomes linear in terms of the instantaneous user's data rate, and is given by
+
+\begin{equation}
+\label{JSM:Eq:Simple_Obj_Function_NRT_App}
+\underset{\rho_{j,k},\;p_{k}}{\text{max}} \; \sum_{j \in \mathcal{J}} V^{'}\left(U_{\mathrm{queue}}\left(\overline{Q}_{j}\left[n\right]\right)\right) \cdot \left|U_{\mathrm{queue}}^{'}\left(\overline{Q}_{j}\left[n\right] \right)\right| \cdot R_{j}\left[n\right].
+\end{equation}
+
+Notice that we started with an optimization formulation based on the predicted average queue size given by equation~\eqref{JSM:Eq:Util_Opt_Joint_RT_App}, made some logical assumptions and mathematical simplifications, and ended up with a linear optimization formulation based on instantaneous rates given by equation~\eqref{JSM:Eq:Simple_Obj_Function_NRT_App}. 
+According to these arguments, we claim that the instantaneous optimization maximizing equation~\eqref{JSM:Eq:Simple_Obj_Function_NRT_App} leads to a long-term optimization that maximizes equation~\eqref{JSM:Eq:Util_Opt_Joint_RT_App}.
+
+% ----------------------------------------------------------
+\chapter{Optimization Formulation for Multiple Services}
+\label{JSM:Ap:Utility_Opt_Mix}
+
+As described in section \ref{subsec:cap03PartMultiServForm} and considering a scenario with throughput-based, delay-based and queue-based services, the optimization problem is the maximization of the total utility with respect to the users' \ac{QoS}, namely throughput, HOL packet delay and average queue size for throughput-based, delay-based and queue-based services, respectively. 
+
+Let us assume that the set $\mathcal{J}$ of the users in the system is separated in three subsets: $\mathcal{J}_{\mathrm{thr}}$, $\mathcal{J}_{\mathrm{delay}}$ and $\mathcal{J}_{\mathrm{queue}}$ for throughput-based, delay-based and queue-based users, respectively. 
+Therefore, the objective function of the general optimization problem can be re-written as
+%
+%\begin{align}
+%\label{JSM:Eq:Util_Opt_Joint_Mix2_App}
+%\underset{\rho_{j,k},\;p_{k}}{\text{max}} \; \Bigg\{ & \sum_{j \in \mathcal{J}_{\mathrm{thr}}} V\left[U_{\mathrm{thr}}\left(T_{j}\left[n\right]\right)\right] \notag \\ & + \sum_{k \in \mathcal{J}} V\left[U_{\mathrm{delay}}\left(d_{k}^\mathrm{hol}\left[n\right]\right)\right]
+%\notag \\ & + \sum_{i \in \mathcal{J}_{\mathrm{queue}}} V\left[U_{\mathrm{queue}}\left(\overline{Q}_{i}\left[n+1\right]\right)\right]  \Bigg\}.
+%\end{align}
+\small
+\begin{align}
+\label{JSM:Eq:Util_Opt_Joint_Mix2_App}
+\underset{\rho_{j,k},\;p_{k}}{\text{max}} \; \Bigg\{ \sum_{j \in \mathcal{J}_{\mathrm{thr}}} V\left[U_{\mathrm{thr}}\left(T_{j}\left[n\right]\right)\right] + \sum_{j \in \mathcal{J}_{\mathrm{delay}}} V\left[U_{\mathrm{delay}}\left(d_{j}^\mathrm{hol}\left[n\right]\right)\right] + \sum_{j \in \mathcal{J}_{\mathrm{queue}}} V\left[U_{\mathrm{queue}}\left(\overline{Q}_{j}\left[n+1\right]\right)\right]  \Bigg\}.
+\end{align}
+\normalsize
+
+The summation in equation~\eqref{JSM:Eq:Util_Opt_Joint_Mix2_App} regarding queue-based, delay-based and queue-based services were analyzed in appendices \ref{Ap:ThrBasedOpt}, \ref{Ap:DelayBasedOpt}, \ref{Ap:QueueBasedOpt}, respectively. Replacing the approximate expressions in equations~\eqref{JSM:Eq:Taylor_NRT}, \eqref{JSM:Eq:Mean_Theorem_RT} and \eqref{JSM:Eq:Taylor_RT} into equation~\eqref{JSM:Eq:Util_Opt_Joint_Mix2_App}, and taking into account that $f_{\mathrm{thru}}$, $L$, $S_\mathrm{p}$,  $f_{\mathrm{queue}}$, $\omega_j$ and $t_{\mathrm{tti}}$ are constant and $T_j\left[n-1\right]$, $d_{k}^{\mathrm{hol}}\left[n\right]$, $\overline{Q}_{i}\left[n\right]$ and $Q_{i}\left[n\right]$ are known and fixed before the resource allocation at the current \ac{TTI} $n$, we have that the objective function of the mixed services problem becomes
+%
+%\begin{align}
+%\label{JSM:Eq:Util_Opt_Joint_Mix3}
+%\underset{\rho_{j,k},\;p_{k}}{\text{max}} \; \Bigg\{ & \sum_{j \in \mathcal{J}_{\mathrm{thr}}} V^{'}\left(U_{\mathrm{thr}}\left(T_{j}\left[n-1\right]\right)\right) \cdot U_{\mathrm{thr}}^{'}\left(T_{j}\left[n-1\right] \right) \cdot R_{j}\left[n\right] \notag\\ & + \sum_{k \in \mathcal{J}}
+%V^{'}\left(U_{\mathrm{delay}}\left(d_k^{\mathrm{hol}}\left[n\right]\right)\right) \cdot
+%\left|U_{\mathrm{delay}}^{'}\left( d_{k}^\mathrm{hol}\left[n\right]\right)\right| \cdot
+%R_k\left[n\right] \notag\\ & +  \sum_{i \in \mathcal{J}_{\mathrm{queue}}} V^{'}\left(U_{\mathrm{queue}}\left(\overline{Q}_{i}\left[n\right]\right)\right) \cdot \left|U_{\mathrm{queue}}^{'}\left( \overline{Q}_{i}\left[n\right]\right)\right| \cdot R_i\left[n\right]\Bigg\}.
+%\end{align}
+\begin{align}
+\label{JSM:Eq:Util_Opt_Joint_Mix3}
+\underset{\rho_{j,k},\;p_{k}}{\text{max}} \; \Bigg\{ & \sum_{j \in \mathcal{J}_{\mathrm{thr}}} V^{'}\left(U_{\mathrm{thr}}\left(T_{j}\left[n-1\right]\right)\right) \cdot U_{\mathrm{thr}}^{'}\left(T_{j}\left[n-1\right] \right) \cdot R_{j}\left[n\right] \notag\\ & + \sum_{j \in \mathcal{J}_{\mathrm{delay}}}
+V^{'}\left(U_{\mathrm{delay}}\left(d_j^{\mathrm{hol}}\left[n\right]\right)\right) \cdot
+\left|U_{\mathrm{delay}}^{'}\left( d_{j}^\mathrm{hol}\left[n\right]\right)\right| \cdot
+R_j\left[n\right] \notag\\ & +  \sum_{j \in \mathcal{J}_{\mathrm{queue}}} V^{'}\left(U_{\mathrm{queue}}\left(\overline{Q}_{j}\left[n\right]\right)\right) \cdot \left|U_{\mathrm{queue}}^{'}\left( \overline{Q}_{j}\left[n\right]\right)\right| \cdot R_j\left[n\right]\Bigg\}.
+\end{align}
+
+Notice that the new simplified optimization problem given by equation~\eqref{JSM:Eq:Util_Opt_Joint_Mix3} is linear in terms of the instantaneous user's data rate. Based on the arguments and assumptions made in appendices \ref{Ap:ThrBasedOpt}, \ref{Ap:DelayBasedOpt} and \ref{Ap:QueueBasedOpt}, we claim that the instantaneous optimization maximizing equation~\eqref{JSM:Eq:Util_Opt_Joint_Mix3} leads to a long-term optimization that maximizes equation~\eqref{JSM:Eq:Util_Opt_Joint_Mix2_App}. 
+
+% ----------------------------------------------------------
+
+\chapter{Look-up Table of JSM Algorithm}
+\label{JSM:Ap:LookupTable}
+
+\thispagestyle{empty}
+
+As explained in section~\ref{subsec:cap03ServicePrio}, a cubic interpolant function was employed in a curve fitting tool to obtain a look-up table comprised of 41 non-linear spaced values of $\lambda$ (shape parameter) of the service utility function. In table~\ref{Tab:LookupTable}, all the $\lambda$ values calculated are illustrated. The value -0.1088 is located in position 1 of the look-up table, the value -5.4529 is in position 20, 5000 is in the position 21, the value 5.4529 is in position 22 and the last value in the look-up table (position 41) is 0.1088.
+
+The algorithm starts with the $\lambda$ value equals to 5000, i.e., both services have the same priority. Then, every \acs{TTI}, the algorithm checks the satisfaction of service 1. If it is above the target, the position in the look-up table is incremented by one, so that the priority of service 2 increases. Otherwise, the position in the look-up table is decremented by one, so that the priority of service 1 increases.   
+
+\begin{table}[!ht]
+	\centering
+	\begin{threeparttable}[t]
+		\begin{tabular}[t]{c|c|c}
+			\toprule
+			\multicolumn{1}{c}{\textbf{\pbox{20cm}{Higher priority \\ for service 1}}} & \multicolumn{1}{c}{\textbf{\pbox{20cm}{Equal priority \\for both services}}} & \multicolumn{1}{c}{\textbf{\pbox{20cm}{Higher priority \\ for service 2}}}\\
+			\midrule
+			-0.1088 &  & 5.4529\\
+			
+			-0.1502 &  & 2.6241\\
+			
+			-0.1808 &  & 1.7221 \\
+			
+			-0.2091 &  & 1.2771\\
+			
+			-0.2371 &  & 1.0107\\
+			
+			-0.2667 &  & 0.8324\\
+			
+			-0.2981 &  & 0.7041\\
+			
+			-0.3329 &  & 0.6071\\
+			
+			-0.3717 &  & 0.5306\\
+			
+			-0.4163 & 5000 & 0.4683 \\
+			
+			-0.4683 &  & 0.4163 \\
+			
+			-0.5306 &  & 0.3717\\
+			
+			-0.6071 &  & 0.3329\\
+			
+			-0.7041 &  & 0.2981\\
+			
+			-0.8324 &  & 0.2667\\
+			
+			-1.0107 &  & 0.2371\\
+			
+			-1.2771 &  & 0.2091\\
+			
+			-1.7221 &  & 0.1808\\
+			
+			-2.6241 &  & 0.1502\\
+			
+			-5.4529 &  & 0.1088\\
+			\bottomrule
+		\end{tabular}		
+	\end{threeparttable}	
+	\caption{Look-up table employed in the JSM algorithm.}	
+	\label{Tab:LookupTable}	
+\end{table}
+
+\end{apendicesenv}
+% ---

@@ -1,0 +1,120 @@
+\include{fixos/pacoteseclass}
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+
+% Informações de dados para CAPA e FOLHA DE ROSTO
+\titulo{IMPLEMENTAÇÃO E ANÁLISE DE UM FRAMEWORK DE DETECÇÃO DE ATAQUES DISTRIBUÍDOS DE NEGAÇÃO DE SERVIÇO}
+\autor{BRUNO RICCELLI DOS SANTOS SILVA}
+\local{Fortaleza}
+\data{2017}
+\orientador{Prof. Msc. Ricardo Jardel Nunes da Silveira}
+\coorientador{Prof. Msc. Marcelo Araújo Lima}
+
+\include{fixos/instituicao/ufc_teleinfo}
+
+\begin{document}
+	
+\frenchspacing 
+\captionsenglish
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+% \pretextual
+% Capa
+\imprimircapa
+% Folha de rosto (* indica que haverá a ficha bibliográfica)
+\imprimirfolhaderosto
+
+% Ficha Bibliográfica
+\include{fixos/fichabibliografica}
+
+% Errata
+%\include{editaveis/errata}
+
+% Folha de Aprovação
+% DEVE ser modificada para adicionar os membros da banca
+\include{editaveis/folhadeaprovacao}
+%\imprimirfolhadeaprovacao
+
+% Dedicatória
+\include{editaveis/dedicatoria}
+
+% Agradecimentos
+\include{editaveis/agradecimentos}
+
+% Epígrafe
+\include{editaveis/epigrafe}
+
+% RESUMOS
+\include{resumo/ptbr}
+\include{resumo/us}
+
+
+% Lista de ilustrações
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+
+% Lista de tabelas
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+
+% Abreviaturas e Siglas
+%\setlist[description]{leftmargin=!, labelwidth=7ex} %
+\include{editaveis/siglas}	
+%\setlist[description]{style=standard} % reset settings
+
+% Símbolos
+%\include{editaveis/simbolos}
+
+% Sumário
+%\pdfbookmark[0]{\contentsname}{toc}
+%% ---- Change font shape in the ToC (according to current rules)
+%\renewcommand{\cftchapterfont}{\bfseries\MakeUppercase}
+%\renewcommand{\cftsectionfont}{\bfseries}
+%\renewcommand{\cftsubsectionfont}{\bfseries\itshape}
+%\renewcommand{\cftsubsubsectionfont}{\itshape}
+%\renewcommand{\cftpartfont}{\bfseries\large} 
+
+% ---------
+\tableofcontents*
+\cleardoublepage
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+%\textual
+
+% ----------------------------------------------------------
+% Introdução (exemplo de capítulo sem numeração, mas presente no Sumário)
+% ----------------------------------------------------------
+\begin{otherlanguage*}{english}
+\include{cap1/introducao}
+%
+\include{cap2/fundamentacaoteorica}
+%
+\include{cap3/metodologia}
+%
+\include{cap4/resultados}
+%
+\include{cap5/conclusoes}
+%
+%\include{cap6/conclusions}
+
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
+%\postextual
+
+% Referências bibliográficas
+%\printbibliography
+\bibliography{bibtex/referencias}
+
+% Apêndices
+%\include{editaveis/apendices}
+\end{otherlanguage*}
+
+
+\end{document}
