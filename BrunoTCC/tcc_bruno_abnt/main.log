@@ -1,4 +1,4 @@
-This is LuaTeX, Version beta-0.80.0 (TeX Live 2015/Debian) (rev 5238)  (format=lualatex 2017.8.23)  24 DEC 2017 02:44
+This is LuaTeX, Version beta-0.80.0 (TeX Live 2015/Debian) (rev 5238)  (format=lualatex 2017.8.23)  25 DEC 2017 22:07
  restricted \write18 enabled.
 **main.tex
 (./main.tex
@@ -2139,7 +2139,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.055 seconds)
+luaotfload | main : initialization completed in 0.050 seconds)
 Lua module: fontspec 2016/02/01 2.5a Advanced font selection for LuaLaTeX.
 (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
 Package: fontspec-luatex 2016/02/01 v2.5a Font selection for XeLaTeX and LuaLaTe
@@ -2789,7 +2789,7 @@ Package pdftex.def Info: figs/loic.pdf used on input line 45.
  [17<./figs/loic.pdf>] [18] [19]) [20]
 \openout2 = cap3/metodologia.aux
  (./cap3/metodologia.tex
-<figs/fluxoFramework.pdf, id=359, 214.4522pt x 248.0216pt>
+<figs/fluxoFramework.pdf, id=360, 214.4522pt x 248.0216pt>
 File: figs/fluxoFramework.pdf Graphic file (type pdf)
 
 <use figs/fluxoFramework.pdf>
@@ -2805,14 +2805,14 @@ Overfull \hbox (10.1203pt too wide) in paragraph at lines 48--63
  []
 
 [22<./figs/fluxoFramework.pdf>] [23]
-<figs/darpaStructure.pdf, id=416, 381.10078pt x 235.011pt>
+<figs/darpaStructure.pdf, id=417, 381.10078pt x 235.011pt>
 File: figs/darpaStructure.pdf Graphic file (type pdf)
 
 <use figs/darpaStructure.pdf>
 Package pdftex.def Info: figs/darpaStructure.pdf used on input line 99.
 (pdftex.def)             Requested size: 364.00139pt x 224.46765pt.
  [24]
-<figs/analiseDarpa.pdf, id=429, 231.3714pt x 167.19464pt>
+<figs/analiseDarpa.pdf, id=430, 231.3714pt x 167.19464pt>
 File: figs/analiseDarpa.pdf Graphic file (type pdf)
 
 <use figs/analiseDarpa.pdf>
@@ -2827,35 +2827,35 @@ Overfull \hbox (11.60364pt too wide) detected at line 172
  []
 
 [25<./figs/darpaStructure.pdf>] [26<./figs/analiseDarpa.pdf>]
-<figs/filtWireshark1.png, id=490, 602.25pt x 346.29375pt>
+<figs/filtWireshark1.png, id=491, 602.25pt x 346.29375pt>
 File: figs/filtWireshark1.png Graphic file (type png)
 
 <use figs/filtWireshark1.png>
 Package pdftex.def Info: figs/filtWireshark1.png used on input line 179.
 (pdftex.def)             Requested size: 318.49861pt x 183.14378pt.
- [27<./figs/filtWireshark1.png>] [28] [29])
-[30]
+ [27<./figs/filtWireshark1.png>] [28]) [29]
 \openout2 = cap4/resultados.aux
- (./cap4/resultados.tex
-<figs/results80-95Mining.pdf, id=525, 279.77724pt x 226.94888pt>
+
+(./cap4/resultados.tex
+<figs/results80-95Mining.pdf, id=521, 279.77724pt x 226.94888pt>
 File: figs/results80-95Mining.pdf Graphic file (type pdf)
 
 <use figs/results80-95Mining.pdf>
 Package pdftex.def Info: figs/results80-95Mining.pdf used on input line 11.
 (pdftex.def)             Requested size: 409.49722pt x 332.20488pt.
 
-<figs/resultsDarpa.pdf, id=530, 279.77724pt x 226.95189pt>
+<figs/resultsDarpa.pdf, id=526, 279.77724pt x 226.95189pt>
 File: figs/resultsDarpa.pdf Graphic file (type pdf)
 
 <use figs/resultsDarpa.pdf>
 Package pdftex.def Info: figs/resultsDarpa.pdf used on input line 56.
 (pdftex.def)             Requested size: 386.75278pt x 313.75839pt.
- [31
+ [30
 
 
 
 ]
-<figs/resultNHOQUE.jpg, id=541, 250.48782pt x 165.06468pt>
+<figs/resultNHOQUE.jpg, id=537, 250.48782pt x 165.06468pt>
 File: figs/resultNHOQUE.jpg Graphic file (type jpg)
 
 <use figs/resultNHOQUE.jpg>
@@ -2867,15 +2867,15 @@ Overfull \hbox (5.15363pt too wide) in paragraph at lines 100--101
 bti-dos por ([][]HOQUE; KASHYAP; BHAT-TACHARYYA[][],
  []
 
-) [32<./figs/results80-95Mining.pdf>] [33] [34<./figs/resultsDarpa.pdf><./figs/r
-esultNHOQUE.jpg>] [35]
+) [31<./figs/results80-95Mining.pdf>] [32] [33<./figs/resultsDarpa.pdf><./figs/r
+esultNHOQUE.jpg>] [34]
 \openout2 = cap5/conclusoes.aux
  (./cap5/conclusoes.tex
-luaotfload | load : Lookup/name: "TimesNewRoman" -> "Times_New_Roman.ttf" [36
+luaotfload | load : Lookup/name: "TimesNewRoman" -> "Times_New_Roman.ttf" [35
 
 
 
-]) [37] (./main.bbl
+]) [36] (./main.bbl
 (./main.brf)
 \tf@brf=\write6
 
@@ -2886,12 +2886,12 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 3.
 
 bibitemlist
-[38
+[37
 
 
 ]) 
 AED: lastpage setting LastPage
-[39]
+[38]
 
 Package glossaries Warning: No \printnoidxglossary or \printnoidxglossaries
  found. (Remove \makenoidxglossaries if you don't want any glossaries.)
@@ -2917,7 +2917,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 120.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 120.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 120.
 Package rerunfilecheck Info: File `main.brf' has not changed.
-(rerunfilecheck)             Checksum: B6EA9A84957BD02D991BF28B5F920312;2014.
+(rerunfilecheck)             Checksum: 695FCBC579C2AB012B46F24246D4F5D5;2014.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
@@ -2926,13 +2926,13 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 120.
 )
 
 Here is how much of LuaTeX's memory you used:
- 70400 strings out of 495004
+ 70399 strings out of 495004
  100000,1977958 words of node,token memory allocated
  1177 words of node memory still in use:
    14 hlist, 2 vlist, 2 rule, 2 glue, 6 kern, 11 attribute, 138 glue_spec, 11 at
 tribute_list, 11 action, 3 write, 16 pdf_literal, 8 pdf_refxform, 16 pdf_colorst
 ack nodes
-   avail lists: 1:1,2:1250,3:252,4:1830,5:115,6:4678,7:305,8:57,9:321,10:444
+   avail lists: 1:1,2:1286,3:252,4:1854,5:115,6:4918,7:300,8:57,9:324,10:465
  71218 multiletter control sequences out of 65536+600000
  65 fonts using 5378127 bytes
  64i,18n,80p,2737b,1166s stack positions out of 5000i,500n,10000p,200000b,100000s
@@ -2946,10 +2946,10 @@ f></usr/share/fonts/truetype/msttcorefonts/Times_New_Roman_Bold.ttf><</usr/share
 /lmmi12.pfb><</usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb><</usr/share/texm
 f/fonts/type1/public/lm/lmr12.pfb><</usr/share/texmf/fonts/type1/public/lm/lmr8.
 pfb><</usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on main.pdf (40 pages, 1123055 bytes).
+Output written on main.pdf (39 pages, 1122676 bytes).
 
-PDF statistics: 845 PDF objects out of 1000 (max. 8388607)
- 716 compressed objects within 8 object streams
- 136 named destinations out of 1000 (max. 131072)
+PDF statistics: 842 PDF objects out of 1000 (max. 8388607)
+ 714 compressed objects within 8 object streams
+ 135 named destinations out of 1000 (max. 131072)
  424 words of extra memory for PDF output out of 10000 (max. 10000000)
 
