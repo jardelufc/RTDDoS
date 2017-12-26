@@ -26,7 +26,7 @@ As provas de simetria e identidade da correlação podem ser encontradas em \cit
 	\centering
 	\caption{Estrutura do \textit{framework} analisado }
 	\includegraphics[width=0.6\textwidth]{figs/fluxoFramework.pdf}\\
-	{Fonte: Elaborada pelo autor.}
+	\flushleft{Fonte: Elaborada pelo autor.}
 	\label{fig:Fluxo_Framework}
 \end{figure}
 
@@ -96,8 +96,8 @@ Para a avaliação do trabalho, duas bases de tráfegos de rede foram escolhidas
  \begin{figure}[ht]
  	\centering
 	\caption{Estrutura de rede Base Aérea dos EUA }
-		\includegraphics[width=0.8\textwidth]{figs/darpaStructure.pdf}\\
-	{Fonte: Elaborada pelo autor.}
+		\includegraphics[width=0.8\textwidth]{figs/darpaStructure.pdf}
+	\flushleft{Fonte: Elaborada pelo autor.}
 	\label{fig:DARPA_Estrututra}
 \end{figure}
 \\
@@ -137,7 +137,7 @@ Note que de acordo com a estrutura do \textit{dataset} mostrada na \tabref{Tab:W
  	\centering
  	\caption{Diagrama descritivo análise e aplicação do \textit{framework} na base de dados DARPA  }
  	\includegraphics[width=0.9\textwidth]{figs/analiseDarpa.pdf}\\
- 	{Fonte: Elaborada pelo autor.}
+ 	\flushleft{Fonte: Elaborada pelo autor.}
  	\label{fig:analiseDarpa}
 \end{figure}
 
@@ -177,7 +177,7 @@ A documentação da base de dados DARPA, fornece informações de quais fluxos c
  	\centering
  	\caption{Resultado do filtro aplicado no \textit{Wireshark} }
  	\includegraphics[width=0.7\textwidth]{figs/filtWireshark1.png}\\
- 	{Fonte: Elaborada pelo autor}
+ 	\flushleft{Fonte: Elaborada pelo autor}
  	\label{fig:wiresharkFilt}
  \end{figure} 
  
@@ -232,7 +232,8 @@ A \tabref{Tab:DataMining} mostra os campos do \textit{dataset} avaliado.
 			26 &  Primeiro pacote enviado  \\ \midrule
 			27 &  Último pacote reservado \\ \bottomrule
 		\end{tabular}
-		{Fonte: Elaborada pelo autor, baseada em \cite{DataMining}.}
+		
+		\flushleft{Fonte: Elaborada pelo autor, baseada em \cite{DataMining}.}
 	\end{threeparttable}
 \end{table}
 
@@ -250,7 +251,7 @@ Algumas considerações foram tomadas para a análise dessa base de dados:
 \end{itemize}
 
 A base de dados é disponibilizada no formato \textit{Weka Attribute-relation}(extensão arff), o qual é utilizado geralmente para compactar grandes massas de dados e processá-las utilizando técnicas de \textit{machine learning}. Assim, para o processamento dos mesmos as ferramentas Weka e MATLAB foram utilizadas. Inicialmente, no módulo de Pré-Processamento, converteu-se o arquivo .arff para um .mat por meio de \textit{script} e em seguida, com o \textit{dataset} carregado, a janela de um segundo é aplicada, conforme as considerações já mencionadas. Em seguida, os pacotes da janela são agrupados para a extração dos IPs origem, a partir de onde serão calculadas a entropia e  variação, além da taxa de pacotes média. Posteriormente, a partir dos parâmetros da etapa anterior, o módulo de detecção calcula a correlação NaHiD entre o perfil ataque e o tráfego em questão e compara com o limiar, retornando 0 caso seja um tráfego normal e 1 caso contrário. Após isso, no gerente \textit{offline}, as informações do tráfego analisado são salvas e caso o módulo de detecção tenha identificado o tráfego como ataque, o perfil de comparação na correlação será atualizado.
-\newpage
+
 \section{Método de avaliação do \textit{framework}}
 Como forma de avaliação são consideradas as taxas de acertos, de falsos positivos e negativos. Em outras palavras, os \textit{datasets} avaliados possuem arquivos de respostas, onde os tráfegos normais e ataques são descriminados. Assim, a resposta do \textit{framework} estudado será comparada com esse arquivo e a taxa de acertos será calculada da seguinte forma
 \begin{equation}

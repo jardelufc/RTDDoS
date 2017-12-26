@@ -1,0 +1,599 @@
+This is LuaTeX, Version beta-0.80.0 (TeX Live 2015/Debian) (rev 5238)  (format=lualatex 2017.8.23)  24 DEC 2017 12:51
+ restricted \write18 enabled.
+**introducao.tex
+(./introducao.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 1 language(s) loaded.
+! Undefined control sequence.
+l.1 \chapter
+          [Introdução]{Introdução}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \chapter[
+           Introdução]{Introdução}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--5
+[][][Introdução]Introdução
+ []
+
+
+Overfull \hbox (12.26659pt too wide) in paragraph at lines 1--5
+\OT1/cmr/m/it/10 in-
+ []
+
+
+Overfull \hbox (15.71652pt too wide) in paragraph at lines 1--5
+\OT1/cmr/m/it/10 ter-
+ []
+
+
+Overfull \hbox (13.54434pt too wide) in paragraph at lines 1--5
+\OT1/cmr/m/it/10 net
+ []
+
+
+Overfull \hbox (27.0887pt too wide) in paragraph at lines 1--5
+\OT1/cmr/m/it/10 touch-
+ []
+
+
+Overfull \hbox (26.70532pt too wide) in paragraph at lines 1--5
+\OT1/cmr/m/it/10 screen
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 E
+   m paralelo com as melhorias dos dispositivos, também foi ampliada a abra...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 6--7
+[][]Em
+ []
+
+
+Overfull \hbox (12.26659pt too wide) in paragraph at lines 6--7
+\OT1/cmr/m/it/10 in-
+ []
+
+
+Overfull \hbox (15.71652pt too wide) in paragraph at lines 6--7
+\OT1/cmr/m/it/10 ter-
+ []
+
+
+Overfull \hbox (13.54434pt too wide) in paragraph at lines 6--7
+\OT1/cmr/m/it/10 net\nullfont ,
+ []
+
+
+Overfull \hbox (28.13315pt too wide) in paragraph at lines 6--7
+(\OT1/cmr/m/it/10 Asym-
+ []
+
+
+Overfull \hbox (19.67763pt too wide) in paragraph at lines 6--7
+\OT1/cmr/m/it/10 met-
+ []
+
+
+Overfull \hbox (11.88324pt too wide) in paragraph at lines 6--7
+\OT1/cmr/m/it/10 ric
+ []
+
+
+Overfull \hbox (18.7943pt too wide) in paragraph at lines 6--7
+\OT1/cmr/m/it/10 Dig-
+ []
+
+
+Overfull \hbox (6.6444pt too wide) in paragraph at lines 6--7
+\OT1/cmr/m/it/10 i-
+ []
+
+
+Overfull \hbox (10.98882pt too wide) in paragraph at lines 6--7
+\OT1/cmr/m/it/10 tal
+ []
+
+
+Overfull \hbox (19.16653pt too wide) in paragraph at lines 6--7
+\OT1/cmr/m/it/10 Sub-
+ []
+
+
+Overfull \hbox (28.87753pt too wide) in paragraph at lines 6--7
+\OT1/cmr/m/it/10 scriber
+ []
+
+
+Overfull \hbox (20.31236pt too wide) in paragraph at lines 6--7
+\OT1/cmr/m/it/10 Line\nullfont ),
+ []
+
+
+Overfull \hbox (12.26659pt too wide) in paragraph at lines 6--7
+\OT1/cmr/m/it/10 in-
+ []
+
+
+Overfull \hbox (15.71652pt too wide) in paragraph at lines 6--7
+\OT1/cmr/m/it/10 ter-
+ []
+
+
+Overfull \hbox (13.54434pt too wide) in paragraph at lines 6--7
+\OT1/cmr/m/it/10 net
+ []
+
+
+Overfull \hbox (12.26659pt too wide) in paragraph at lines 6--7
+\OT1/cmr/m/it/10 in-
+ []
+
+
+Overfull \hbox (15.71652pt too wide) in paragraph at lines 6--7
+\OT1/cmr/m/it/10 ter-
+ []
+
+
+Overfull \hbox (13.54434pt too wide) in paragraph at lines 6--7
+\OT1/cmr/m/it/10 net
+ []
+
+
+Overfull \hbox (14.31102pt too wide) in paragraph at lines 6--7
+\OT1/cmr/m/it/10 on-
+ []
+
+
+Overfull \hbox (15.84435pt too wide) in paragraph at lines 6--7
+\OT1/cmr/m/it/10 line\nullfont ,
+ []
+
+
+Overfull \hbox (15.84433pt too wide) in paragraph at lines 6--7
+\OT1/cmr/m/it/10 web\nullfont ,
+ []
+
+
+Overfull \hbox (13.05547pt too wide) in paragraph at lines 6--7
+(\OT1/cmr/m/it/10 In-
+ []
+
+
+Overfull \hbox (15.71652pt too wide) in paragraph at lines 6--7
+\OT1/cmr/m/it/10 ter-
+ []
+
+
+Overfull \hbox (13.54434pt too wide) in paragraph at lines 6--7
+\OT1/cmr/m/it/10 net
+ []
+
+
+Overfull \hbox (8.17773pt too wide) in paragraph at lines 6--7
+\OT1/cmr/m/it/10 of
+ []
+
+
+Overfull \hbox (30.46507pt too wide) in paragraph at lines 6--7
+\OT1/cmr/m/it/10 Things\nullfont ).
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 D
+   e acordo com \citeonline{barford2002signal}, redes que não possuem nenhu...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+l.8 De acordo com \citeonline
+                           {barford2002signal}, redes que não possuem nenhu...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 8--9
+[][]De
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 U
+    m ataque consiste de uma atividade maliciosa que explora uma vulnerabili...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+\citation{badishi2006exposing}
+! Undefined control sequence.
+<write> ... Warning: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.10 ... serviço da rede \cite{badishi2006exposing}
+                                                  . Um ataque DoS tenta torn...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `badishi2006exposing' on page  undefined on input line 1
+0.
+
+\citation{1638123}
+! Undefined control sequence.
+<write> ... Warning: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.10 ... seus recursos computacionais \cite{1638123}
+                                                  . Uma evolução deste tip...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `1638123' on page  undefined on input line 10.
+
+\citation{srivastava2011recent}
+! Undefined control sequence.
+<write> ... Warning: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.10 ...is que dois dias \cite{srivastava2011recent}
+                                                  . No ano seguinte, um ataq...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `srivastava2011recent' on page  undefined on input line 
+10.
+
+\citation{calce2008mafiaboy}
+! Undefined control sequence.
+<write> ... Warning: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.10 ...ques dessa natureza \cite{calce2008mafiaboy}
+                                                  .
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `calce2008mafiaboy' on page  undefined on input line 10.
+
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 10--11
+[][]Um
+ []
+
+
+Overfull \hbox (15.72765pt too wide) in paragraph at lines 10--11
+(\OT1/cmr/m/it/10 De-
+ []
+
+
+Overfull \hbox (16.35547pt too wide) in paragraph at lines 10--11
+\OT1/cmr/m/it/10 nial
+ []
+
+
+Overfull \hbox (8.17773pt too wide) in paragraph at lines 10--11
+\OT1/cmr/m/it/10 of
+ []
+
+
+Overfull \hbox (18.01653pt too wide) in paragraph at lines 10--11
+\OT1/cmr/m/it/10 Ser-
+ []
+
+
+Overfull \hbox (17.1068pt too wide) in paragraph at lines 10--11
+\OT1/cmr/m/it/10 vice\nullfont )
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 10--11
+[[]].
+ []
+
+
+Overfull \hbox (16.47556pt too wide) in paragraph at lines 10--11
+\OT1/cmr/m/it/10 web\nullfont )
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 10--11
+[[]].
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 10--11
+[[]].
+ []
+
+
+Overfull \hbox (15.35545pt too wide) in paragraph at lines 10--11
+\OT1/cmr/m/it/10 Ya-
+ []
+
+
+Overfull \hbox (17.88878pt too wide) in paragraph at lines 10--11
+\OT1/cmr/m/it/10 hoo,
+ []
+
+
+Overfull \hbox (26.8554pt too wide) in paragraph at lines 10--11
+\OT1/cmr/m/it/10 EBay,
+ []
+
+
+Overfull \hbox (24.04428pt too wide) in paragraph at lines 10--11
+\OT1/cmr/m/it/10 Ama-
+ []
+
+
+Overfull \hbox (14.82214pt too wide) in paragraph at lines 10--11
+\OT1/cmr/m/it/10 zon
+ []
+
+
+Overfull \hbox (4.59996pt too wide) in paragraph at lines 10--11
+\OT1/cmr/m/it/10 e
+ []
+
+
+Overfull \hbox (22.02208pt too wide) in paragraph at lines 10--11
+\OT1/cmr/m/it/10 CNN
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 10--11
+[[]]. 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 A
+    ssim, sistemas de detecção de intrusão (IDS) são necessários para m...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 12--13
+[][]Assim,
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 O
+     presente trabalho faz o estudo, implementação e validação de um \te...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+\citation{HOQUE201748}
+! Undefined control sequence.
+<write> ... Warning: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.14 ...al pode ser encontrado em \cite{HOQUE201748}
+                                                  . Tal arcabouço é capaz ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `HOQUE201748' on page  undefined on input line 14.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 14--15
+[][]O
+ []
+
+
+Overfull \hbox (28.23868pt too wide) in paragraph at lines 14--15
+\OT1/cmr/m/it/10 frame-
+ []
+
+
+Overfull \hbox (20.57208pt too wide) in paragraph at lines 14--15
+\OT1/cmr/m/it/10 work
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 14--15
+[[]].
+ []
+
+
+Overfull \hbox (28.23868pt too wide) in paragraph at lines 14--15
+\OT1/cmr/m/it/10 frame-
+ []
+
+
+Overfull \hbox (20.57208pt too wide) in paragraph at lines 14--15
+\OT1/cmr/m/it/10 work
+ []
+
+
+Overfull \hbox (28.23868pt too wide) in paragraph at lines 14--15
+\OT1/cmr/m/it/10 frame-
+ []
+
+
+Overfull \hbox (20.57208pt too wide) in paragraph at lines 14--15
+\OT1/cmr/m/it/10 work\nullfont . 
+ []
+
+! Undefined control sequence.
+l.16 \section
+           {Objetivos}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 \section{O
+             bjetivos}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 16--18
+[][]Objetivos
+ []
+
+
+Overfull \hbox (28.23868pt too wide) in paragraph at lines 16--18
+\OT1/cmr/m/it/10 frame-
+ []
+
+
+Overfull \hbox (20.57208pt too wide) in paragraph at lines 16--18
+\OT1/cmr/m/it/10 work
+ []
+
+
+Overfull \hbox (28.23868pt too wide) in paragraph at lines 19--20
+\OT1/cmr/m/it/10 frame-
+ []
+
+
+Overfull \hbox (20.57208pt too wide) in paragraph at lines 19--20
+\OT1/cmr/m/it/10 work
+ []
+
+
+Overfull \hbox (28.23868pt too wide) in paragraph at lines 20--21
+\OT1/cmr/m/it/10 frame-
+ []
+
+
+Overfull \hbox (20.57208pt too wide) in paragraph at lines 20--21
+\OT1/cmr/m/it/10 work
+ []
+
+
+Overfull \hbox (28.23868pt too wide) in paragraph at lines 21--22
+\OT1/cmr/m/it/10 frame-
+ []
+
+
+Overfull \hbox (20.57208pt too wide) in paragraph at lines 21--22
+\OT1/cmr/m/it/10 work
+ []
+
+! Undefined control sequence.
+l.23 \section
+           {Organização da monografia}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.24 ...�o organizados da seguinte forma: No \capref
+                                                  {fundamentacao} é apresen...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.24 ...tit{Intrusion Detection System}). No \capref
+                                                  {metodologia}, mostramos a...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.24 ...izado neste trabalho é descrita. No \capref
+                                                  {resultados}, apresentamos...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+)
+! Emergency stop.
+<*> introducao.tex
+               
+*** (job aborted, no legal \end found)
+
+
+
+Here is how much of LuaTeX's memory you used:
+ 20 strings out of 495004
+ 100000,89155 words of node,token memory allocated 32215 words of node memory still in use:
+   123 hlist, 28 disc, 952 glue, 31 kern, 62 penalty, 4315 glyph, 162 glue_spec,
+ 1 temp, 1 write, 11 local_par, 1 dir nodes
+   avail lists: 1:1,2:11,7:196,9:1,10:67
+ 3705 multiletter control sequences out of 65536+600000
+ 17 fonts using 680479 bytes
+ 20i,2n,26p,1271b,103s stack positions out of 5000i,500n,10000p,200000b,100000s
+!  ==> Fatal error occurred, no output PDF file produced!

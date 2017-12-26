@@ -28,14 +28,14 @@
 \contentsline {section}{\numberline {3.3}Aplicação do \textit {framework} de detecção em bases de dados reais}{24}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}DARPA 2000}{24}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}\textit {DataMining}}{27}{subsection.3.3.2}
-\contentsline {section}{\numberline {3.4}Método de avaliação do \textit {framework}}{30}{section.3.4}
+\contentsline {section}{\numberline {3.4}Método de avaliação do \textit {framework}}{29}{section.3.4}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados}}{31}{chapter.4}
-\contentsline {section}{\numberline {4.1}Análise \textit {dataset DataMining}}{31}{section.4.1}
-\contentsline {section}{\numberline {4.2}Análise \textit {dataset} DARPA 2000}{31}{section.4.2}
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados}}{30}{chapter.4}
+\contentsline {section}{\numberline {4.1}Análise \textit {dataset DataMining}}{30}{section.4.1}
+\contentsline {section}{\numberline {4.2}Análise \textit {dataset} DARPA 2000}{30}{section.4.2}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclusões e Trabalhos Futuros}}{36}{chapter.5}
-\contentsline {section}{\numberline {5.1}Contribuições}{36}{section.5.1}
-\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{36}{section.5.2}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclusões e Trabalhos Futuros}}{35}{chapter.5}
+\contentsline {section}{\numberline {5.1}Contribuições}{35}{section.5.1}
+\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{35}{section.5.2}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {BIBLIOGRAFIA}}{38}{section*.32}
+\contentsline {chapter}{\uppercase {BIBLIOGRAFIA}}{37}{section*.32}
