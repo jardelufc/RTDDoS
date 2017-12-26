@@ -1,0 +1,106 @@
+\begin{tikzpicture}
+[
+	thick,
+	scale=1,
+%	transform shape,
+	text centered,
+	text width=5cm,
+	font=\Large,
+	node distance=0.5cm,
+	%>=stealth',
+	table gray/.style = {rectangle, draw=black!80, thick, fill=gray!80, minimum width = 10mm, minimum height = 25mm, text width = 6mm},
+	table white/.style = {rectangle, draw=black!100, thick, fill=white!100, minimum width = 10mm, minimum height = 25mm, text width = 6mm},
+	table blue/.style = {rectangle, draw=black!100, thick, fill=blue!30, minimum width = 10mm, minimum height = 25mm, text width = 6mm},
+	cmdbegin/.style={draw=red!50,fill=red!20,rounded rectangle},
+	cmdconnect/.style={draw=Orange!60,fill=Orange!30,circle},
+	cmdend/.style={draw=Black!50,fill=Black!20,rounded rectangle},
+	cmd/.style={draw=blue!50,fill=blue!20,rectangle},
+	cmdif/.style={draw=green!50,fill=green!20,rectangle},
+	cmdwhile/.style={draw=green!50,fill=green!20,signal,signal to=east and west},
+	cmdio/.style={draw=green!50,fill=green!20,tape},
+	point/.style={coordinate}
+]
+%\selectcolormodel{gray}
+
+% Nodes
+\node (Init) [cmdbegin,text width=3cm] {Start RRA at current TTI};
+
+\node (Initialization) [cmd,below=of Init] {1. Initialize set $\mathcal{J}$ with all UEs in the system.};	
+
+%\node (Splitting) [cmd,below=of Initialization] {2. Divide users from $\mathcal{J}$ into two groups according to their service, $\mathcal{J}_{\mathrm{nrt}}$ and $\mathcal{J}_{\mathrm{rt}}$.};
+
+\node (Splitting) [cmd,below=of Initialization] {2. Divide users from $\mathcal{J}$ into two groups according to their service.};
+
+\node (EstimationSat) [cmd,below=of Splitting] {3. Estimate the satisfaction percentage of users from service 1 (protected) according to the QoS metric of each user.};
+
+\node (TestSat) [cmdwhile,right=of EstimationSat] {4. Is this satisfaction percentage greater than, lower than or equal to the satisfaction target?};
+
+\node (EqualTo) [cmd,right= 1cm of TestSat] {5. Keep value of $\lambda$, i.e., do not change position in the look-up table.};
+
+\node (LowerThan) [cmd,below=of EqualTo] {5. Move one position in the look-up table towards a $\lambda$ value that results in more priority for the service 1.};
+
+\node (GreaterThan) [cmd,above=of EqualTo] {5. Move one position in the look-up table towards a $\lambda$ value that results in more priority for the service 2.};
+
+\node (EstThoughputDelay) [cmd,right=of EqualTo] {6. Estimate the QoS metrics for users according to their services.};
+
+\node (CalculateWeights) [cmd,right=of EstThoughputDelay] {7. Calculate $w_j^s$ and $w_j$ as in equations \ref{JSM:Eq:MargUtilLogistic} and \ref{JSM:Eq:UtilServiceWeight} for all users.};
+
+\node (Allocation) [cmd,below=of CalculateWeights] {8. Allocate RBs according to \eqref{JSM:Eq:DSA_NRT_RT}.};
+
+\node (Power) [cmd,below=of Allocation] {9. Perform EPA among all RBs.};
+
+\node (Finish) [cmdbegin,text width=2cm, below=of Power] {Go to the next TTI};
+
+Look-up Tables small font size
+\node [table white, above=3cm of GreaterThan] (RT) [minimum height=15mm,minimum width=5 mm] { };
+\node [above] at (RT.north) {Look-up Table};
+\node [right=2ex of RT] {Service 1 Prioritized};
+\node [table blue, below=0cm of RT] (Equal) [minimum height=5mm,minimum width=5 mm] { };
+\node [right=-2ex of Equal] {Equal Priority};
+\node [table gray, below=0cm of Equal] (NRT) [minimum height=15mm,minimum width=5 mm] { };
+\node [right=2ex of NRT] {Service 2 Prioritized};
+\node (arrowInit) [point, left=5ex of RT.north] {};
+\node (arrowEnd) [point, left=5ex of NRT.south] {};
+\draw[->] (arrowInit) -- node[left=2ex, draw=none, text width=1.5em] {+1} (arrowEnd);
+
+Look-up Tables small font size
+\node [table gray, below=1.5cm of LowerThan] (RT) [minimum height=15mm,minimum width=5 mm] { };
+\node [above] at (RT.north) {Look-up Table};
+\node [right=2ex of RT] {Service 1 Prioritized};
+\node [table blue, below=0cm of RT] (Equal) [minimum height=5mm,minimum width=5 mm] { };
+\node [right=-2ex of Equal] {Equal Priority};
+\node [table white, below=0cm of Equal] (NRT) [minimum height=15mm,minimum width=5 mm] { };
+\node [right=2ex of NRT] {Service 2 Prioritized};
+\node (arrowInit) [point, left=5ex of NRT.south] {};
+\node (arrowEnd) [point, left=5ex of RT.north] {};
+\draw[->] (arrowInit) -- node[left=2ex, draw=none, text width=1.5em] {+1} (arrowEnd);
+
+% Paths
+\path (Init.south) edge[->] (Initialization.north);
+\path (Initialization.south) edge[->] (Splitting.north);
+\path (Splitting.south) edge[->] (EstimationSat.north);
+\path (EstimationSat.east) edge[->] (TestSat.west);
+
+%\path (TestSat.south) edge[->] (EqualTo.north);
+\draw[->] (TestSat.east) -- node[above=0.5ex,draw=none,xshift=-2ex] {Equal\\to} (EqualTo.west);
+
+%\path (TestSat.west) edge[->] (GreaterThan.north);
+\draw[->] (TestSat.north) |- node[above right=0 and -0.1cm, draw=none] {Greater\\than} (GreaterThan.west);
+
+%\path (TestSat.east) edge[->] (LowerThan.north); 
+\draw[->] (TestSat.south) |- node[above right=0 and -0.1cm, draw=none] {Lower\\than} (LowerThan.west); 	
+
+\path (EqualTo.east) edge[->] (EstThoughputDelay.west); 	
+
+%\path (GreaterThan.south) edge[->] (EstThoughputDelay.west);
+\draw[->] (GreaterThan.east) -| (EstThoughputDelay.north); 
+
+%\path (LowerThan.south) edge[->] (EstThoughputDelay.east);
+\draw[->] (LowerThan.east) -| (EstThoughputDelay.south);
+
+\path (EstThoughputDelay.east) edge[->] (CalculateWeights.west);
+\path (CalculateWeights.south) edge[->] (Allocation.north);
+\path (Allocation.south) edge[->] (Power.north);
+\path (Power.south) edge[->] (Finish.north);
+
+\end{tikzpicture}

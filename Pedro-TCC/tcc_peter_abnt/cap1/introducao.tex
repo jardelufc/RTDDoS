@@ -1,0 +1,47 @@
+\chapter[Introdução]{Introdução}
+\label{introducao}
+% ---------------------------------------------------------
+Com a crescente difusão da \textit{internet} e sistemas \textit{web} na
+atualidade, cada  vez mais serviços são disponibilizados por meio da rede mundial de computadores. Serviços tais como armazenamento, transações financeiras e plataformas de dados cadastrais são cada vez mais comuns. Por isso, é necessário que tais serviços cumpram os requisitos de disponibilidade e segurança. Assim, sistemas de detecção de intrusão (IDS), são comumente usados para garantir a segurança por meio de análise e detecção de tráfegos maliciosos,bem como tomar medidas corretivas em caso de tráfegos maliciosos.
+
+Mediante a esse crescimento de usuários e serviços na \textit{internet}, ameaças na rede vem desenvolvendo-se cada vez mais. Por isso, nota-se uma maior complexidade nessas ameaças. De acordo com \citeonline{mandia2001hackers} são considerados ataques a segurança quaisquer eventos que interrompam os procedimentos normais causando algum nível de crise, tais como invasões de computador, ataques de negação de serviço, furto de informações por pessoal interno. Ataques podem ser do tipo de negação de serviços.
+
+Os ataques \textit{DoS} (sigla para Denial of Service), que podem ser interpretados como "Ataques de Negação de Serviços", consistem em tentativas de fazer com que computadores - servidores \textit{Web}, por exemplo tenham dificuldade ou mesmo sejam impedidos de executar suas tarefas. Para isso, em vez de "invadir" o computador ou mesmo infectá-lo com \textit{malwares}, o autor do ataque faz com que a máquina receba tantas requisições que esta chega ao ponto de não conseguir dar conta delas. Em outras palavras, o computador fica tão sobrecarregado que nega o serviço \cite{HOQUE201748}. Ataques do tipo \textit{DoS} distribuidos são chamados de ataques \textit{DDoS}.
+
+ \textit{DDoS}, sigla para \textit{Distributed Denial of Service}, é um tipo de ataque  \textit{DoS} de grandes dimensões, ou seja, que utiliza até milhares de computadores para atacar uma determinada máquina, distribuindo a ação entre elas. Trata-se de uma forma que aparece constantemente no noticiário, já que é o tipo de ataque mais comum na \textit{internet} \cite{alecrim2008ataques}.
+	
+Para detectar ataques  \textit{DDoS} em tempo real, o mecanismo de detecção deve ser capaz de detectar ataques de forma eficiente de um pequeno conjunto de características relevantes.
+Portanto, é necessária uma medida efetiva  para classificar um  tráfego em tempo real. 
+
+Essa detecção passa, por uma série de análises de dados, por isso é necessário a utilização de medidas estatísticas, consequentemente cálculos computacionalmente complexos. O alto rendimento é essencial para a escalabilidade da detecção , o que é necessário no caso de ataques \textit{DDoS}.
+
+Diante disso, soluções baseadas em software são ineficientes para aplicações de tempo real, uma vez que eles exigem grande quantidade de ciclos de \textit{CPU} de propósitos gerais. Logo, é necessário que soluções em \textit{hardware} estejam presentes nas detecções de ataques \textit{DDoS} . Podendo assim, ser gerados sistemas híbridos (\textit{hardware} e \textit{software}) que possuem alto desempenho e precisão.
+
+Os tipos de Hardware que possuem características para acomodar grandes lógicas e possuem alto desempenho são as \textit{FPGAs} e \textit{ASICs}, porém as \textit{FPGAs} oferecem adaptabilidade dinâmica, que é importante para aplicações que requerem mudanças frequentes em suas configurações, como a detecção de ataques \textit{DDoS} que evoluem com frequência. 
+
+Por isso foi proposto um módulo de detecção , afim de garantir desempenho e precisão de ataques, utilizando \textit{FPGA}, que junto a sistemas de  \textit{softwares} consigam detectar ataques  \textit{DDoS}.
+
+\section{Objetivos}
+
+   Este trabalho tem os seguintes objetivos gerais e específicos.
+\subsection{Objetivos Gerais}
+\begin{itemize}
+
+\item  A implementação de um módulo em hardware capaz de detectar de ataques em tempo real.
+
+\item  A implementação de um módulo em hardware que possua um ganho de desempenho e possua precisão satisfatória em relação a módulos em softwares.
+
+\item Ganhos de desempenho em relação a trabalhos similares.	
+
+\end{itemize}
+
+\subsection{Objetivos Específicos}
+\begin{itemize}
+	
+	\item  Estudo de métodos que utilizam aproximação aos resultados de cálculos em softwares de maneira otimizada.
+	
+	\item A Utilização de IP cores no desenvolvimento, para uma maior agilidade e confiabilidade na construção do código. 
+	
+\end{itemize}
+\section{Organização da monografia}
+Este documento está organizado da seguinte forma: No \capref{fundamentacao} é apresentado um estudo bibliográfico sobre ameaças de rede e ataques \textit{DDoS},detecção e solução em \textit{hardware}. No \capref{metodologia}, a modelagem do módulo Nahid é descrita e no \capref{resultados}, apresentamos os resultados  do módulo implementado por meio da taxa de correlação calculada na detecção e tempo de computação de detecção. Por fim, o último capítulo deste trabalho apresenta as conclusões realizadas a partir dos resultados obtidos, além de algumas perspectivas para a continuação deste trabalho.

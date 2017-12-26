@@ -1,0 +1,58 @@
+\select@language {brazil}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdução}}{14}{chapter.1}
+\contentsline {section}{\numberline {1.1}Objetivos}{15}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Objetivos Gerais}{15}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Objetivos Específicos}{15}{subsection.1.1.2}
+\contentsline {section}{\numberline {1.2}Organização da monografia}{15}{section.1.2}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Revisão Bibliográfica}}{16}{chapter.2}
+\contentsline {section}{\numberline {2.1}Ataques}{16}{section.2.1}
+\contentsline {section}{\numberline {2.2}DoS}{16}{section.2.2}
+\contentsline {section}{\numberline {2.3}DDoS}{16}{section.2.3}
+\contentsline {section}{\numberline {2.4}Detecção}{17}{section.2.4}
+\contentsline {section}{\numberline {2.5}Correlação}{17}{section.2.5}
+\contentsline {section}{\numberline {2.6}Soluções em \textit {Hardware}}{18}{section.2.6}
+\contentsline {section}{\numberline {2.7}Técnicas Utilizadas}{18}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Soma:}{18}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.2}Módulo:}{18}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {2.7.3}Divisão:}{18}{subsection.2.7.3}
+\contentsline {subsubsection}{\numberline {2.7.3.1}Aritmética de Ponto Fixo}{19}{subsubsection.2.7.3.1}
+\contentsline {subsection}{\numberline {2.7.4}Média aritmética:}{20}{subsection.2.7.4}
+\contentsline {subsection}{\numberline {2.7.5}Desvio padrão:}{20}{subsection.2.7.5}
+\contentsline {section}{\numberline {2.8}FPGA}{20}{section.2.8}
+\contentsline {section}{\numberline {2.9}FPGA'S Xinlix de série 7}{21}{section.2.9}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Metodologia}}{23}{chapter.3}
+\contentsline {section}{\numberline {3.1}Módulo Nahid}{23}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Datapath}{24}{subsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.1.1}Extend}{27}{subsubsection.3.1.1.1}
+\contentsline {subsubsection}{\numberline {3.1.1.2}Reduce}{27}{subsubsection.3.1.1.2}
+\contentsline {subsubsection}{\numberline {3.1.1.3}Mux}{27}{subsubsection.3.1.1.3}
+\contentsline {subsubsection}{\numberline {3.1.1.4}Mul}{28}{subsubsection.3.1.1.4}
+\contentsline {subsubsection}{\numberline {3.1.1.5}Adder}{29}{subsubsection.3.1.1.5}
+\contentsline {subsubsection}{\numberline {3.1.1.6}Divider}{30}{subsubsection.3.1.1.6}
+\contentsline {subsubsection}{\numberline {3.1.1.7}Sqrt}{30}{subsubsection.3.1.1.7}
+\contentsline {subsubsection}{\numberline {3.1.1.8}Register}{31}{subsubsection.3.1.1.8}
+\contentsline {subsection}{\numberline {3.1.2}Controller}{32}{subsection.3.1.2}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados}}{35}{chapter.4}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclusões e Trabalhos Futuros}}{38}{chapter.5}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\contentsline {chapter}{\uppercase {BIBLIOGRAFIA}}{39}{section*.31}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {Códigos do Módulo}}{40}{chapter.6}
+\contentsline {section}{\numberline {6.1}Código Nahid}{40}{section.6.1}
+\contentsline {section}{\numberline {6.2}Código Datapath}{42}{section.6.2}
+\contentsline {section}{\numberline {6.3}Código Extend}{47}{section.6.3}
+\contentsline {section}{\numberline {6.4}Código Reduce}{48}{section.6.4}
+\contentsline {section}{\numberline {6.5}Código Mux}{48}{section.6.5}
+\contentsline {section}{\numberline {6.6}Código Mul}{48}{section.6.6}
+\contentsline {section}{\numberline {6.7}Código Adder}{48}{section.6.7}
+\contentsline {section}{\numberline {6.8}Código Register}{49}{section.6.8}
+\contentsline {section}{\numberline {6.9}Código Controller}{49}{section.6.9}

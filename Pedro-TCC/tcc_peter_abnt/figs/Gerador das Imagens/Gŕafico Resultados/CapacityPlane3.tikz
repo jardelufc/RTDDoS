@@ -1,0 +1,74 @@
+ \begin{tikzpicture}
+ \begin{axis}[%
+ enlargelimits=false,
+ width = 1.0\textwidth,
+ height = 0.6\textheight,
+ cycle list shift=0,
+ grid = major,
+ grid style = {dashed, gray!30},
+ xmin = 0,
+ xmax = 26,
+ ymin = 0,
+ ymax = 300,
+ xtick={0,2,4,...,26},
+ ytick={0,50,100,150,...,300},
+ xlabel = {N\'{u}mero de usu\'{a}rios CBR por c\'{e}lula},
+ ylabel = {N\'{u}mero de usu\'{a}rios VoIP por c\'{e}lula},
+ legend style = {%
+  %%  text width=2em,
+%  text height=1ex,
+  %  text depth=.5ex,
+  legend pos=north east,
+  font=\Large,
+ },
+     ticklabel style = {font=\Large},
+     label style = {font=\Large},
+ ]
+
+ \definecolor{colorQHMLWDF}{RGB}{255,0,0}
+ \definecolor{colorEXPPF}{RGB}{0,255,0}
+ \definecolor{colorMDU}{RGB}{0,0,255}
+ \definecolor{colorLEI}{RGB}{153,63,0}
+
+ \tikzset{plot common style/.append style={line width=0.8pt, mark options={scale=1pt, solid}}}
+ \tikzset{QHMLWDF style/.append style={plot common style, solid, mark=square, color=colorQHMLWDF}}
+ \tikzset{MDU style/.append style={plot common style,solid, mark=triangle, color=colorMDU}}
+ \tikzset{EXPPF style/.append style={plot common style,solid,mark=diamond, color=colorEXPPF}}
+ \tikzset{LEI style/.append style={plot common style,solid,mark=diamond*, color=Turquoise}}
+
+ \def\tablename{CapacityPlane1.dat}
+
+ \addplot[QHMLWDF style,error bars/.cd, x dir=both,x explicit]
+ table[x=x_QHMLWDF,y=QHMLWDF, x error minus = QHMLWDFDOWN, x error plus = QHMLWDFUP]
+ {\tablename};
+ \addlegendentry{QHMLWDF};
+
+ \addplot[EXPPF style,error bars/.cd, x dir=both,x explicit]
+ table[x=x_EXPPF,y=EXPPF, x error minus = EXPPFDOWN, x error plus = EXPPFUP] {\tablename};
+ \addlegendentry{EXP/PF};
+
+ \addplot[MDU style,error bars/.cd, x dir=both,x explicit]
+ table[x=x_Song,y=Song, x error minus = SongDOWN, x error plus = SongUP] {\tablename};
+ \addlegendentry{MDU};
+
+ \addplot[LEI style,error bars/.cd, x dir=both,x explicit]
+ table[x=x_LEI,y=LEI, x error minus = LEIDOWN, x error plus = LEIUP] {\tablename};
+ \addlegendentry{Utility Lei};
+
+ %Gains
+ \draw[-, densely dashed, black, line width=0.8pt](axis cs:7, 100)--(axis cs:7, 120);
+ \draw[-, densely dashed, black, line width=0.8pt](axis cs:13, 100)--(axis cs:13, 120);
+ \draw[<->, black, line width=0.8pt](axis cs:7, 120)--(axis cs:13, 120) node[above, pos=0.5, font=\Large] {86\%};
+
+ %Gains
+ \draw[-, densely dashed, black, line width=0.8pt](axis cs:5, 150)--(axis cs:5, 190);
+ \draw[-, densely dashed, black, line width=0.8pt](axis cs:8, 150)--(axis cs:8, 190);
+ \draw[<->, black, line width=0.8pt](axis cs:5, 190)--(axis cs:8, 190) node[above, pos=0.5, font=\Large] {60\%};
+
+ %Gains
+ \draw[-, densely dashed, black, line width=0.8pt](axis cs:13, 100)--(axis cs:15, 100);
+ \draw[-, densely dashed, black, line width=0.8pt](axis cs:13, 50)--(axis cs:15, 50);
+ \draw[<->, black, line width=0.8pt](axis cs:15, 100)--(axis cs:15, 50) node[left, pos=0.5, font=\Large] {100\%};
+
+ \end{axis}
+ \end{tikzpicture}

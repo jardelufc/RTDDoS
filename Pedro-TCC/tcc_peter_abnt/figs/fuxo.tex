@@ -1,0 +1,45 @@
+\documentclass[border=10pt,
+% -- opções do pacote babel --
+english,			% idioma adicional para hifenização
+brazil				]{standalone}
+%\usepackage[latin1]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\begin{document}
+\pagestyle{empty}
+% Define block styles
+\tikzstyle{decision} = [diamond, draw, fill=blue!20, 
+    text width=6.5em, text badly centered, node distance=3cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+    text width=6.3em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=3cm,
+    minimum height=2em]
+    
+\begin{tikzpicture}[node distance = 2cm, auto]
+    % Place nodes
+    \node [block] (init) {Dados Brutos wireshark};
+%    \node [cloud, left of=init] (expert) {expert};
+%    \node [cloud, right of=init] (system) {system};
+    \node [block, below of=init] (identify) {Processamento};
+    \node [block, below of=identify] (evaluate) {NahiD};
+    \node [block, left of=evaluate, node distance=3cm] (update) {Tráfego normal};
+    \node [decision, below of=evaluate] (decide) {Tráfego normal?};
+    \node [block, below of=decide, node distance=3cm] (stop) {Gerenciador Offline@};
+    % Draw edges
+    \path [line] (init) -- (identify);
+    \path [line] (identify) -- (evaluate);
+    \path [line] (evaluate) -- (decide);
+    \path [line] (decide) -| node [near start] {yes} (update);
+    \path [line] (update) |- (evaluate);
+    \path [line] (decide) -- node {}(stop);
+%    \path [line,dashed] (expert) -- (init);
+%    \path [line,dashed] (system) -- (init);
+%    \path [line,dashed] (system) |- (evaluate);
+\end{tikzpicture}
+
+
+\end{document}

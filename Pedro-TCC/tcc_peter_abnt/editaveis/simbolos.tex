@@ -1,0 +1,110 @@
+%Lista de símbolos
+% ---
+\begin{simbolos} \setlength{\itemsep}{0.0001\baselineskip} \addtolength{\labelwidth}{1ex}
+	\item[$ \mathcal{J} $] Set of all UEs
+	\item[$ J $] Total number of UEs
+	\item[$ j $] Index representing an UE from $\mathcal{J}$
+	\item[$ \mathcal{K} $] Set of all RBs
+	\item[$ K $] Total number of RBs
+	\item[$ k $] Index representing a RB from $\mathcal{K}$
+	\item[$ P_{t} $] Total transmit power of a BS
+	\item[$ p_{k} $] Power allocated for RB $k$
+	\item[$ h_{j, k} $] Channel coefficient of link between BS and UE $j$ on RB $k$
+	\item[$ PL(d) $] Distance-dependent path loss
+	\item[$ d $] Distance between BS and UE
+	\item[$\sigma_{\mathrm{sh}}$] Log-normal shadowing standard deviation
+	\item[$ G_h(\theta) $] Horizontal antenna gain component
+	\item[$ \theta $] Horizontal angle relative to the main beam positioning direction
+	\item[$ G_v(\phi) $] Vertical antenna gain component
+	\item[$ \phi $] Negative angle elevation to the horizontal plane
+	\item[$ \phi^\text{tilt} $] Downtilt angle
+	\item[$ G(\theta, \phi) $] Total antenna gain
+	\item[$ \gamma_{j, k} $] SNR of UE $j$ on RB $k$
+	\item[$ \sigma^2 $] Average AWGN power
+	\item[$ r_{j, k} $] Maximum achievable rate of UE $j$ on RB $k$
+	\item[$f(\cdot)$] Link adaptation function
+	\item[$ R_j $] Total rate allocated to UE $j$
+	\item[$ \mathcal{K}_{j} $] Subset of RBs allocated to UE $j$
+	\item[$ \hat{h}_{j, k} $] Estimated channel coefficient of link between BS and UE $j$ on RB $k$
+	\item[$ \psi $] Degradation of channel estimation
+	\item[$ \eta $] Channel estimation error
+	\item[$ n $] Index of a given TTI
+	\item[$ \mean{\cdot} $] Expected value
+	\item[$\Delta n$] CSI reporting delay
+	\item[$ T_{j} $] Throughput of UE $j$
+	\item[$ \Phi_{\text{req}}^{\text{thr}} $] Throughput requirement
+	\item[$ \mathrm{FER}_j $] FER of UE $j$
+	\item[$ \kappa^\mathrm{desc}_j $] Number of discarded packets of UE $j$
+	\item[$ \kappa^\mathrm{sucesso}_j $] Number of successfully transmitted packets of UE $j$
+	\item[$ \text{FER}_{\text{req}} $] FER requirement
+	\item[$ \Phi_{\text{req}}^{\text{delay}} $] HOL packet delay requirement
+	\item[$ \Upsilon $] Percentage of satisfied UEs
+	\item[$ J^{\text{sat}} $] Number of satisfied UEs
+	\item[$ \mathbf{x} $] Vector of a generic QoS metric
+	\item[$ x_j $] Generic QoS metric
+	\item[$ F(\mathbf{x}) $] Jain's fairness index of a generic QoS metric
+	\item[$\rho_{j,k}$ ] Assignment variable indicating UE $j$ allocated on RB $k$
+	\item[$ U\left( \cdot \right) $ ] General user utility function
+	\item[$ V\left(\cdot\right) $ ] Service utility function
+	\item[$ S $ ] Total number of services
+	\item[$ s $ ] Index representing one service
+	\item[$ \mathcal{J}_{s} $ ] Set of UEs from service $s$
+	\item[$ U_{s}\left( \cdot \right) $ ] User utility function from service $s$
+	\item[$ x_j^s $] QoS metric of UE $j$ from service $s$
+	\item[$ U_{\mathrm{thr}}\left( \cdot \right) $ ] Utility function of throughput-based services
+	\item[$ T_j \nTTI $] Throughput of UE $j$ at TTI $n$ 
+	\item[$ R_j \nTTI $] Total rate allocated to UE $j$ at TTI $n$
+	\item[$ U_{\mathrm{thr}}^{'}\left( \cdot \right) $] First derivative of $ U_{\mathrm{thr}}\left( \cdot \right) $
+	\item[$ w_j $ ] General user marginal utility
+	\item[$ w^{\mathrm{thr}}_j $ ] User marginal utility of throughput-based services
+	\item[$ f_{\mathrm{thru}} $ ] Filtering constant for throughput calculation
+	\item[$ U_{\mathrm{delay}}\left( \cdot \right) $ ] Utility function of delay-based services
+	\item[$ d_{j}^\mathrm{hol}\nTTI  $ ] HOL packet delay of UE $j$ at TTI $n$
+	\item[$ U_{\mathrm{delay}}^{'}\left( \cdot \right) $] First derivative of $ U_{\mathrm{delay}}\left( \cdot \right) $
+	\item[$ w^{\mathrm{delay}}_j $ ] User marginal utility of delay-based services
+	\item[$ |\cdot| $] Absolute value
+	\item[$ f_{\mathrm{thru}} $ ] Filtering constant for throughput calculation
+	\item[$ t_{\mathrm{tti}} $] TTI duration
+	\item[$ L $] Packet arrival rate
+	\item[$ S_\mathrm{p} $] Packet size
+	\item[$ U_{\mathrm{queue}}\left( \cdot \right) $ ] Utility function of queue-based services
+	\item[$ \overline{Q}_{j}\nTTI  $ ] Average queue size of UE $j$ at TTI $n$
+	\item[$ U_{\mathrm{queue}}^{'}\left( \cdot \right) $] First derivative of $ U_{\mathrm{queue}}\left( \cdot \right) $
+	\item[$ w^{\mathrm{queue}}_j $ ] User marginal utility of queue-based services
+	\item[$ f_{\mathrm{queue}} $ ] Filtering constant for queue size calculation
+	\item[$ Q_{j}\nTTI  $] Queue size of UE $j$ at TTI $n$
+	\item[$ \alpha{\nTTI } $] Amount of arrival bits of UE $j$ at TTI $n$
+	\item[$ \omega_j $] Source data rate of UE $j$
+	\item[$ \mathcal{J}_{\mathrm{thr}} $] Set of UEs from throughput-based service
+	\item[$ \mathcal{J}_{\mathrm{delay}} $] Set of UEs from delay-based service
+	\item[$ \mathcal{J}_{\mathrm{queue}} $] Set of UEs from queue-based service
+	\item[$ w^{s}_j $ ] Service marginal utility of UE $j$ using service $s$
+	\item[$ j^{\star} $] UE selected on RB $k$ at TTI $n$
+	\item[$ \text{arg max}\{\cdot\} $] Function that returns the maximum element from the input elements
+	\item[$ \sigma $] Value that determines shape of user utility functions
+	\item[$ \mu $] Value that defines if logistic utility function is decreasing or increasing
+	\item[$ x_{j}^{\text{req}} $] General QoS requirement of UEs
+	\item[$ \rho $] Proportion of general QoS metric
+	\item[$ \delta $] Value of user logistic function for a given value of QoS metric
+	\item[$ \sigma_{\text{thr}} $] Shape value for throughput-based user utility function
+	\item[$ \sigma_{\text{delay}} $] Shape value for delay-based user utility function
+	\item[$ \sigma_{\text{queue}} $] Shape value for queue-based user utility function
+	\item[$ z_{j}\nTTI  $] General values of a given user marginal utility
+	\item[$ \lambda $] Value that determines shape of service utility function
+	\item[$ \Upsilon^{1} $] Satisfaction target for service 1
+	\item[$ w_j \nTTI$] Average waiting time of UE $j$ at TTI $n$
+	\item[$ \lambda_j $] Satisfaction target for service 1
+	\item[$ U_V(\text{w}) $] Utility function for VoIP services
+	\item[$ U_S(\text{w}) $] Utility function for streaming services
+	\item[$ U_B(\text{w}) $] Utility function for best effort services	
+	\item[$ U_{\text{RT}}( \cdot ) $] Utility function for RT services
+	\item[$ U_{\text{NRT}}( \cdot ) $] Utility function for NRT services
+	\item[$ \beta $] Value that determines $U_{\text{RT}}( \cdot )$ slope
+	\item[$ a $] Value that determines $U_{\text{NRT}}( \cdot )$ slope
+	\item[$ b $] Value that determines $U_{\text{NRT}}( \cdot )$ amplitude
+	\item[$ c $] Value that determines $U_{\text{NRT}}( \cdot )$ QoS requirement
+	\item[$ \alpha $] Maximum allowed probability for packet exceeding delay requirement
+	\item[$ \overline{ d_{j}^{ \text{hol} } }\nTTI $] Mean HOL packet delay of all RT UEs at TTI $n$	
+%	
+\end{simbolos}
+% ---
