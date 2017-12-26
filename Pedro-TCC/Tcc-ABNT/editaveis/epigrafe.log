@@ -1,0 +1,156 @@
+This is LuaTeX, Version 1.0.4 (TeX Live 2018/dev/Debian)  (format=lualatex 2017.12.25)  25 DEC 2017 17:40
+ restricted system commands enabled.
+**epigrafe.tex
+(./epigrafe.tex
+LaTeX2e <2017-04-15>
+Lua module: luaotfload-main 2017/01/29 2.80001 OpenType layout system.
+Lua module: lualibs 2017-02-01 2.5 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2017-02-01 2.5 ConTeXt Lua libraries -- extended co
+llection.(using write cache: /home/pedro/.texlive2017/texmf-var/luatex-cache/gen
+eric)(using read cache: /var/lib/texmf/luatex-cache/generic /home/pedro/.texlive
+2017/texmf-var/luatex-cache/generic)
+luaotfload | conf : Root cache directory is /home/pedro/.texlive2017/texmf-var/l
+uatex-cache/generic/names.
+luaotfload | init : Loading fontloader “fontloader-2017-02-11.lua” from kpse
+-resolved path “/usr/share/texlive/texmf-dist/tex/luatex/luaotfload/fontloader
+-2017-02-11.lua”.
+Lua-only attribute luaotfload@state = 1
+Lua-only attribute luaotfload@noligature = 2
+Lua-only attribute luaotfload@syllabe = 3
+luaotfload | init : Context OpenType loader version “3.027”
+Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
+Inserting `luaotfload.define_font' at position 1 in `define_font'.
+Lua-only attribute luaotfload_color_attribute = 4
+luaotfload | conf : Root cache directory is /home/pedro/.texlive2017/texmf-var/l
+uatex-cache/generic/names.
+Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_
+font'.
+Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
+_font'.
+Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_fon
+t_unsafe'.
+Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
+'.
+Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
+.
+luaotfload | main : initialization completed in 0.147 seconds
+Babel <3.15> and hyphenation patterns for 1 language(s) loaded.
+
+! LaTeX Error: Environment epigrafe undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 \begin{epigrafe}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 	\begin{flushright}
+                     
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 6--6
+[] 
+ []
+
+luaotfload | db : Font names database loaded from /home/pedro/.texlive2017/texmf
+-var/luatex-cache/generic/names/luaotfload-names.luc(load luc: /home/pedro/.texl
+ive2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-italic.luc)
+Overfull \hbox (11.68pt too wide) in paragraph at lines 8--8
+ \TU/lmr/m/it/10 ”É
+ []
+
+
+Overfull \hbox (44.09003pt too wide) in paragraph at lines 8--8
+ \TU/lmr/m/it/10 necessário
+ []
+
+
+Overfull \hbox (14.57pt too wide) in paragraph at lines 8--8
+ \TU/lmr/m/it/10 que
+ []
+
+
+Overfull \hbox (13.94pt too wide) in paragraph at lines 8--8
+ \TU/lmr/m/it/10 Ele
+ []
+
+
+Overfull \hbox (26.20003pt too wide) in paragraph at lines 8--8
+ \TU/lmr/m/it/10 cresça
+ []
+
+
+Overfull \hbox (4.6pt too wide) in paragraph at lines 8--8
+ \TU/lmr/m/it/10 e
+ []
+
+
+Overfull \hbox (14.57pt too wide) in paragraph at lines 8--8
+ \TU/lmr/m/it/10 que
+ []
+
+
+Overfull \hbox (9.97pt too wide) in paragraph at lines 8--8
+ \TU/lmr/m/it/10 eu
+ []
+
+
+Overfull \hbox (42.22pt too wide) in paragraph at lines 8--8
+ \TU/lmr/m/it/10 diminua.”
+ []
+
+
+Overfull \hbox (24.16pt too wide) in paragraph at lines 8--9
+ []\TU/lmr/m/it/10 (João
+ []
+
+
+Overfull \hbox (22.49pt too wide) in paragraph at lines 8--9
+ \TU/lmr/m/it/10 3:30)
+ []
+
+
+! LaTeX Error: \begin{document} ended by \end{epigrafe}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 \end{epigrafe}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+)
+! Emergency stop.
+<*> epigrafe.tex
+             
+*** (job aborted, no legal \end found)
+
+
+
+Here is how much of LuaTeX's memory you used:
+ 13 strings out of 494483
+ 100000,89155 words of node,token memory allocated 1200 words of node memory still in use:
+   17 hlist, 1 rule, 3 local_par, 1 dir, 54 glue, 7 kern, 10 penalty, 49 glyph, 
+10 attribute, 35 glue_spec, 10 attribute_list nodes
+   avail lists: 1:1,2:5,3:1,4:2,5:9,7:2,8:1,10:1
+ 4257 multiletter control sequences out of 65536+600000
+ 15 fonts using 723367 bytes
+ 13i,1n,8p,76b,130s stack positions out of 5000i,500n,10000p,200000b,100000s
+!  ==> Fatal error occurred, no output PDF file produced!

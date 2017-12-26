@@ -1,0 +1,21 @@
+% Definitions and libraries for the Tikz package
+
+% xxxxx Libraries xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc,arrows}
+\usetikzlibrary{matrix}
+\usetikzlibrary{fit}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{shapes}
+\usetikzlibrary{shadows}
+\usetikzlibrary{patterns}
+\usetikzlibrary{chains}
+%\usetikzlibrary{external}
+%\tikzexternalize[prefix=Figures/PDFtikz/]
+
+% xxxxx Layers xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+\pgfdeclarelayer{below background}
+\pgfdeclarelayer{background layer}
+\pgfdeclarelayer{foreground layer}
+\pgfsetlayers{below background,background layer,main,foreground layer}
+% xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
