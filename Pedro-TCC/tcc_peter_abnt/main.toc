@@ -36,23 +36,23 @@
 \contentsline {subsubsection}{\numberline {3.1.1.4}Mul}{28}{subsubsection.3.1.1.4}
 \contentsline {subsubsection}{\numberline {3.1.1.5}Adder}{29}{subsubsection.3.1.1.5}
 \contentsline {subsubsection}{\numberline {3.1.1.6}Divider}{30}{subsubsection.3.1.1.6}
-\contentsline {subsubsection}{\numberline {3.1.1.7}Sqrt}{30}{subsubsection.3.1.1.7}
-\contentsline {subsubsection}{\numberline {3.1.1.8}Register}{31}{subsubsection.3.1.1.8}
+\contentsline {subsubsection}{\numberline {3.1.1.7}Sqrt}{31}{subsubsection.3.1.1.7}
+\contentsline {subsubsection}{\numberline {3.1.1.8}Register}{32}{subsubsection.3.1.1.8}
 \contentsline {subsection}{\numberline {3.1.2}Controller}{32}{subsection.3.1.2}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados}}{35}{chapter.4}
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados}}{36}{chapter.4}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclusões e Trabalhos Futuros}}{38}{chapter.5}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclusões e Trabalhos Futuros}}{39}{chapter.5}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {BIBLIOGRAFIA}}{39}{section*.31}
+\contentsline {chapter}{\uppercase {BIBLIOGRAFIA}}{40}{section*.31}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {Códigos do Módulo}}{40}{chapter.6}
-\contentsline {section}{\numberline {6.1}Código Nahid}{40}{section.6.1}
-\contentsline {section}{\numberline {6.2}Código Datapath}{42}{section.6.2}
-\contentsline {section}{\numberline {6.3}Código Extend}{47}{section.6.3}
-\contentsline {section}{\numberline {6.4}Código Reduce}{48}{section.6.4}
-\contentsline {section}{\numberline {6.5}Código Mux}{48}{section.6.5}
-\contentsline {section}{\numberline {6.6}Código Mul}{48}{section.6.6}
-\contentsline {section}{\numberline {6.7}Código Adder}{48}{section.6.7}
-\contentsline {section}{\numberline {6.8}Código Register}{49}{section.6.8}
-\contentsline {section}{\numberline {6.9}Código Controller}{49}{section.6.9}
+\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {Códigos do Módulo}}{41}{chapter.6}
+\contentsline {section}{\numberline {6.1}Código Nahid}{41}{section.6.1}
+\contentsline {section}{\numberline {6.2}Código Datapath}{43}{section.6.2}
+\contentsline {section}{\numberline {6.3}Código Extend}{48}{section.6.3}
+\contentsline {section}{\numberline {6.4}Código Reduce}{49}{section.6.4}
+\contentsline {section}{\numberline {6.5}Código Mux}{49}{section.6.5}
+\contentsline {section}{\numberline {6.6}Código Mul}{49}{section.6.6}
+\contentsline {section}{\numberline {6.7}Código Adder}{49}{section.6.7}
+\contentsline {section}{\numberline {6.8}Código Register}{50}{section.6.8}
+\contentsline {section}{\numberline {6.9}Código Controller}{50}{section.6.9}

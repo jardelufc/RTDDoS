@@ -43,7 +43,7 @@ Nota-se que a correlação proposta por \cite{HOQUE201748}, necessita de uma cer
 
 Para a representação de números fracionários, tem-se duas abordagens mais conhecidas: Ponto fixo e Ponto Flutuante. A representação em ponto flutuante trás consigo grande flexibilidade e precisão, porém a um custo muito elevado em termos de \textit{hardware}, adotando uma representação baseada em mantissa e expoente, requer circuitos de hardware com complexidade que vão muito além dos somadores aritméticos comuns de números naturais, que são os mesmos utilizados para aritmética de ponto fixo. A representação em ponto fixo divide a palavra binária em duas partes com quantidades de bits pré-determinadas(parte que representa o número inteiro e parte que representa em decimal), deixando portanto a precisão de ambas as partes sempre constante. A vantagem da representação em ponto fixo é facilidade e custo da implementação em \textit{hardware} frente a representação em ponto flutuante, gerando um excelente desempenho e uma certa precisão nos resultados \cite{woods2008reconfigurable}, desde de que se faça uma boa escolha da quantidade de bits a atribuir para cada uma das duas partes, o que requer um conhecimento prévio da faixa numérica a ser representada em cada parte (inteira e fracionária).
 
-Na figura \ref{fp} podemos ver um exemplo de um número fracionário representado em ponto 4.4, ou seja, 4 bits representando a parte inteira e 4 bits representado a parte decimal. 
+Na Figura \ref{fp} podemos ver um exemplo de um número fracionário representado em ponto 4.4, ou seja, 4 bits representando a parte inteira e 4 bits representado a parte decimal. 
 
 \begin{figure}[H]
 	\centering
@@ -73,7 +73,7 @@ Quanto mais se conhece a respeito do problema a ser resolvido, mais acertada ser
 As FPGAs da série Xilinx 7 compreendem quatro famílias de FPGA que abordam uma gama completa de requisitos nos sistemas como: baixo custo, pequenos tamanhos, sensíveis ao custo, aplicações de alto volume de largura para altas conectividades, capacidade lógica e capacidade de processamento de sinal para aplicações de alto desempenho \cite{przybus2010xilinx}.
 
 Artix (Baixo custo) , Kintex (Balanço de alta performance com baixo custo), Virtex (Sistemas de alta performance) e ZYNQ (Aplicações em sistemas embarcados em geral).
-A diferença entre essas famílias está basicamente em sua performance e baixo consumo , consequentemente para qual finalidade elas deverão ser usadas, vale ressaltar que custo e energia está diretamente ligado a baixo consumo de potência como podemos ver na Figura \ref{comparative}. Pra corroborar com isso nota-se que cada família tem variações em relação máxima capacidade dos recursos que ambas possuem, como Células Lógicas, Blocos de RAM , pinos E/S e etc .
+A diferença entre essas famílias está basicamente em sua performance e baixo consumo , consequentemente para qual finalidade elas deverão ser usadas, vale ressaltar que custo e energia está diretamente ligado a baixo consumo de potência como podemos ver na Figura \ref{comparative}. Para corroborar com isso nota-se que cada família tem variações em relação máxima capacidade dos recursos que ambas possuem, como Células Lógicas, Blocos de RAM , pinos E/S e etc .
 Cada bloco lógico configurável (CLB) é composto por dois \textit{Slices} que podem ser do tipo M (SLICEM) , podem ser utilizados para memória e lógica, ou do tipo L (SLICEL), podem ser utilizados apenas para lógica e aritmética. 
 Cada \textit{Slice} pode ter como recursos gerenciáveis 4 LUTs(Look-up Tables) de 6 entradas , multiplexadores , \textit{carry chains} e 4 flip-flops/latches.
 As interfaces E/S, em geral, trabalham pra proporcionar altas velocidades de resposta sem tentar perder integridade no sinal. Além de serem projetadas para diferentes padrões (Voltagens, larguras e protocolos). Nas famílias da 7 series elas podem ser caracterizados por dois tipos : High Range (HR), suportando padrões I/O de tensões de ate 3.3 V,  e High Performance (HP), suportando somente padrões I/O de tensões de até 1.8V e projetado para alta performance, por isso dependente da família.
@@ -82,7 +82,7 @@ Todos os membros das famílias de série 7 tem o mesmo bloco \textit{RAM/FIFO(Fi
 \begin{figure}[H]
 	\centering
 	\caption{Comparativo de potência e perfomance entre as famílias da série 7 da Xilinx}
-	\includegraphics[width=12cm]{figures/xi-lite-01.png}
+	\includegraphics[width=13cm]{figures/xi-lite-01.png}
 	{Fonte:\url{https://www.eetimes.com/document.asp?doc_id=1278724}}
 	\label{comparative}
 \end{figure}

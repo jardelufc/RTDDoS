@@ -470,9 +470,14 @@ module register #(parameter WIDTH=24) (input [WIDTH-1:0] in
 \label{codecontroller}
 \begin{lstlisting}[style={verilog-style}]
 
-module controller(clk,reset,valid,valid2,selmul3_1,selmul3_2,seladd5_2,seladd5_1,selr7,selsqrt,clr1,clr2,clr3,clr4,clr5,clr6,clr7,clr8,clr9,clr10,clr11,enable1,enable2,enable3,enable4,enable5,enable6,enable7,enable8,enable9,enable10,enable11,insqrt,inbottom,intop,
-clrx1,clrx2,clrx3,clry1,clry2,clry3,enablex1,enablex2,enablex3,enabley1,enabley2,enabley3,
-selmul2_2,selmul2_1,selmul1_2,selmul1_1,seladd2_2,seladd1_1,seldiv_2,seldiv_1,selr11,selr10,selr9,selr8,selr6,selr4,selr3,selr2,selr1,
+module controller(clk,reset,valid,valid2,selmul3_1,selmul3_2,seladd5_2,
+seladd5_1,selr7,selsqrt,clr1,clr2,clr3,clr4,clr5,clr6,clr7,clr8,clr9,
+clr10,clr11,enable1,enable2,enable3,enable4,enable5,enable6,enable7,
+enable8,enable9,enable10,enable11,insqrt,inbottom,intop,
+clrx1,clrx2,clrx3,clry1,clry2,clry3,enablex1,enablex2,enablex3,enabley1,
+enabley2,enabley3,
+selmul2_2,selmul2_1,selmul1_2,selmul1_1,seladd2_2,seladd1_1,seldiv_2,
+seldiv_1,selr11,selr10,selr9,selr8,selr6,selr4,selr3,selr2,selr1,
 seladd4_2,seladd4_1,seladd3_2,seladd3_1,seladd2_1,seladd1_2,
 opadd1,opadd2,opadd3,opadd4,opadd5,
 finish
@@ -493,7 +498,8 @@ enablex2,enablex3,enabley1,enabley2,enabley3;
 output reg [1:0] selmul2_2,selmul2_1,selmul1_2,selmul1_1,
 seladd2_2,seladd1_1,seldiv_2,seldiv_1,selr11,selr10,
 selr9,selr8,selr6,selr4,selr3,selr2,selr1;
-output reg [2:0] seladd4_2,seladd4_1,seladd3_2,seladd3_1,seladd2_1,seladd1_2;
+output reg [2:0] seladd4_2,seladd4_1,seladd3_2,seladd3_1,
+eladd2_1,seladd1_2;
 output reg [1:0] opadd1,opadd2,opadd3,opadd4,opadd5;
 
 
