@@ -1,0 +1,235 @@
+\documentclass[
+	% -- opções do pacote babel --
+	english,		% idioma adicional para hifenização
+	portuguese,			% o último idioma é o principal do documento
+	% -- opções da classe memoir --
+	12pt,				% tamanho da fonte
+	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	oneside,			% para impressão em verso e anverso. Oposto a oneside
+	a4paper,			% tamanho do papel. 
+	% -- opções da classe abntex2 --
+	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+	%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
+	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+	% -- opções de sumário -- %
+	sumario=abnt-6027-2012 % sumário conforme as recomendações da ABNT NBR 6027:2012 (padrão)
+%	sumario=tradicional, % usa o estilo tradicional de sumários do memoir
+	%	.	
+	]{abntex2}
+
+% Modificacoes pessoais de acordo com a norma da UFC (?)
+\renewcommand{\ABNTEXchapterfontsize}{\bfseries\normalsize}
+\renewcommand{\ABNTEXchapterfont}{\normalfont}
+\setboolean{ABNTEXupperchapter}{true}
+\renewcommand{\ABNTEXsectionfontsize}{\bfseries\normalsize}
+\renewcommand{\ABNTEXsubsectionfontsize}{\bfseries\itshape\normalsize}
+\renewcommand{\ABNTEXsubsubsectionfontsize}{\itshape\normalsize}
+\renewcommand{\ABNTEXsubsubsubsectionfontsize}{\normalsize}
+
+\renewcommand{\cftfigurename}{Figura\space}
+\renewcommand{\cfttablename}{Tabela\space}
+
+\setlength{\cftbeforechapterskip}{0em}
+
+% --- 
+% CONFIGURAÇÕES DE PACOTES
+% --- 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% I had to include this package here because there was an
+%%% incompatibility with another package
+\usepackage[svgnames]{xcolor}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{pdfpages}
+
+\usepackage{pbox}
+% ---
+% Pacotes básicos 
+% ---
+
+\usepackage{babel}
+\usepackage{lmodern}			% Usa a fonte Latin Modern			
+\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+\usepackage{lastpage}			% Usado pela Ficha catalográfica
+\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
+\usepackage{color}				% Controle das cores
+\newcommand{\ownership}{\flushleft\footnotesize Fonte: Elaborada pelo autor.}
+\newcommand{\source}{\flushleft\footnotesize Fonte: }
+\usepackage{microtype} 			% para melhorias de justificação
+\usepackage{ufc-abntex2}
+\usepackage{subfig}
+\usepackage{ltxtable}
+\usepackage{longtable}
+\usepackage{supertabular}
+\usepackage{indentfirst}
+\usepackage{color}
+\usepackage{icomma}
+\usepackage{threeparttable}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{amsmath}   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Para incluir gráficos -- Formato .eps
+\graphicspath{{.}{./Figures/}}
+\DeclareGraphicsExtensions{.pdf,.eps}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Incluir pacote para gerenciar espaço entre valores e unidades
+\usepackage{siunitx}
+\sisetup{%
+	binary-units,
+	per-mode = symbol,
+	detect-all,
+	list-units = single,
+	list-final-separator = { and },
+	%range-phrase={--},
+	range-units = single,
+	round-mode = places,
+	round-precision = 2,
+	product-units = single,
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Maths
+\usepackage{amsthm}
+\usepackage{amsmath,dsfont,xfrac,bm}            
+% Organizar numeração das figuras por capítulo 
+\numberwithin{figure}{chapter}
+% Organizar numeração das tabelas por capítulo
+\numberwithin{table}{chapter}
+
+\usepackage{subcaption}
+
+\usepackage{multirow}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Package algorithm -- pacote para manipulação de pseudo-código.
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Package enumerare -- Extensão do ambiente "enumerate".
+\usepackage{enumerate}
+		
+% ---
+% Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
+% ---
+
+% Acronyms
+%\usepackage[nomain,acronym,toc,shortcuts]{glossaries}
+\usepackage[nogroupskip,acronym,shortcuts]{glossaries}
+\newglossary{symbols}{sym}{sbl}{\symbname} % glossary for symbols
+\makenoidxglossaries
+
+% Style witlonder length for description https://tex.stackexchange.com/questions/21666/glossary-term-list-width
+\newglossarystyle{clong}{%
+	\renewenvironment{theglossary}%
+	{\begin{longtable}{lp{1.5\glsdescwidth}}}%
+		{\end{longtable}}%
+	\renewcommand*{\glossaryheader}{}%
+	\renewcommand*{\glsgroupheading}[1]{}%
+	\renewcommand*{\glossaryentryfield}[5]{%
+		\glstarget{##1}{##2} & ##3\glspostdescription\space ##5\\}%
+	\renewcommand*{\glossarysubentryfield}[6]{%
+		& \glstarget{##2}{\strut}##4\glspostdescription\space ##6\\}%
+	%\renewcommand*{\glsgroupskip}{ & \\}%
+}
+\input{TeX/acronyms.tex}
+
+% ---
+% Pacotes de citações
+%\usepackage[num,abnt-etal-list=3,abnt-doi=link]{abntex2cite}
+%\citebrackets[]
+\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+\usepackage[alf,abnt-and-type=e,abnt-full-initials=no,abnt-last-names=abnt,abnt-etal-list=2,abnt-etal-text = emph,abnt-emphasize=bf]{abntex2cite}
+
+% ---
+% Configurações de aparência do PDF final
+
+\renewcommand{\cftsubsectionfont}{\itshape}
+\renewcommand{\cftsubsubsectionfont}{\itshape}
+\renewcommand{\cftsubsubsectionfont}{\cftsubsectionfont}
+
+
+% alterando o aspecto da cor azul
+\definecolor{blue}{RGB}{41,5,195}
+
+% informações do PDF
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+	    pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=black,          	% color of internal links
+    	citecolor=black,        		% color of links to bibliography
+    	filecolor=black,      		% color of file links
+		urlcolor=black,
+		bookmarksdepth=4
+}
+\makeatother
+% --- 
+
+\usepackage{lipsum}				% para geração de dummy text
+
+% Definições matemáticas
+\newcommand{\EqRef}[2][]{eq.#1~\eqref{#2}}
+\newcommand{\AlgRef}[2][]{Alg.#1~\ref{#2}}
+\newcommand{\mean}[1]{\mathbb{E}\left\{ #1 \right\}}
+\newcommand{\Abs}[1]{\left\vert #1 \right\vert}
+\newcommand\figref{Figura~\ref}
+\newcommand\capref{Capítulo~\ref}
+\newcommand\tabref{Tabela~\ref}
+\newcommand\secref{Seção~\ref}
+\def\nTTI{[n]}
+\newcommand{\stK}{\Set{K}}
+\usepackage{mathtools}
+\usepackage{amssymb,amstext,amsfonts}
+
+\addto\captionsenglish{%
+	\renewcommand{\listfigurename}{LISTA DE FIGURAS}%
+	\renewcommand{\listtablename}{LISTA DE TABELAS}%
+	\renewcommand{\bibname}{BIBLIOGRAFIA}%
+	\renewcommand{\figurename}{Figura}%
+	\renewcommand{\tablename}{Tabela}%		
+}
+
+
+% Pacote para tabela
+\usepackage{threeparttable}
+
+% Cross reference
+\usepackage{xr}
+% --- 
+% Espaçamentos entre linhas e parágrafos 
+% --- 
+
+\usepackage{tocloft}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Para incluir figuras usando tikz/pdfplots
+\RequirePackage{tikz}% Create graphics in Latex
+\input{tikz_defs} % Load libraries and styles for the Tikz Package
+
+\RequirePackage{pgfplots}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+% ---
+% compila o indice
+% ---
+\makeindex
+% ---

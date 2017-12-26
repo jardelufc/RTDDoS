@@ -1,0 +1,13 @@
+\chapter[Conclusões e Trabalhos Futuros]{Conclusões e Trabalhos Futuros}
+% ----------------------------------------------------------
+Foi construído um módulo em hardware que se mostrou capaz de detectar ataques do tipo DDoS em tempo real, uma vez que foi comparado com um trabalho já validado, tendo obtido inclusive ganhos em tempo de execução e de utilização de recursos. Como podemos ver na Tabela \ref{Tab:TD}, temos um ganho de tempo, significativo do módulo em hardware em relação a solução em \textit{software}. Além disso temos uma precisão com erros pequenos, como podemos ver na Tabela \ref{Tab:Tb}. Vale ressaltar que o core desenvolvido é de código aberto, disponível sobre a licença GPLV3, disponível em: \textbf{\url{https://github.com/jardelufc/RTDDoS/tree/master/Detection/Hardware}}.
+
+Como podemos ver nas tabelas \ref{Tab:RUP}, \ref{Tab:RUAC}, \ref{Tab:Tb} e \ref{Tab:TD} temos um ganho, tanto de utilização minima de componentes como no tempo de detecção. Vale ressaltar que a \textit{FPGA} que esse trabalho utiliza é a \textit{Artix Série 7} , como vimos no Capítulo \ref{CAP2}, trata-se de uma FPGA de baixo custo. Já o artigo de comparação usa uma \textit{Virtex Série 5}, que possui alta performance e custo muito mais elevado do que aquela utilizada neste trabalho. Mesmo assim, os resultados desse trabalho foram melhores.
+
+Esses resultados foram alcançados devido a estudos prévios de aritmética de ponto fixo,  e a implementação dos mesmos, conforme também feito pelo artigo de comparação. Conforme mostrado da metologia, buscou-se otimizar o tempo de execução, através da redução e consequente  minimização da latência de execução de circuitos combinacionais.
+
+Ressaltamos ainda a utilização de componentes, da IDE vivado da Xilinx, que foram essenciais para a realização de detecção, pois as operações que esses ip's implementam, são complexas e custosas. Também, existe uma maior confiabilidade nos resultados, mediante a credibilidade da ferramenta utilizada.
+
+Vislumbramos uma continuação desse trabalho, com a implementação de Um sistema completo de verificação funcional do módulo implementado, bem como a realização de testes do mesmo em uma FPGA inserida em um ambiente de rede real, submetido um ataque DDoS intencional. Mais ainda, visualizamos oportunidade de redução do número de ciclos, através de uma paralelização ainda mais massiva das operações de cálculo do Nahid. 
+
+
