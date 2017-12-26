@@ -1,4 +1,4 @@
-This is LuaTeX, Version beta-0.80.0 (TeX Live 2015/Debian) (rev 5238)  (format=lualatex 2017.8.23)  25 DEC 2017 22:07
+This is LuaTeX, Version beta-0.80.0 (TeX Live 2015/Debian) (rev 5238)  (format=lualatex 2017.8.23)  26 DEC 2017 01:32
  restricted \write18 enabled.
 **main.tex
 (./main.tex
@@ -2139,7 +2139,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.050 seconds)
+luaotfload | main : initialization completed in 0.057 seconds)
 Lua module: fontspec 2016/02/01 2.5a Advanced font selection for LuaLaTeX.
 (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
 Package: fontspec-luatex 2016/02/01 v2.5a Font selection for XeLaTeX and LuaLaTe
@@ -2764,11 +2764,18 @@ luaotfload | load : Lookup/name: "TimesNewRoman" -> "Times_New_Roman_Bold_Italic
 
 
 
-]) [14]
+])
+LaTeX Font Info:    Font shape `EU2/TimesNewRoman(0)/m/sl' in size <12> not avai
+lable
+(Font)              Font shape `EU2/TimesNewRoman(0)/m/it' tried instead on inpu
+t line 96.
+luaotfload | load : Lookup/name: "TimesNewRoman" -> "Times_New_Roman_Italic.ttf"
+luaotfload | load : Lookup/name: "TimesNewRoman" -> "Times_New_Roman_Italic.ttf"
+ [14]
 \openout2 = cap2/fundamentacaoteorica.aux
 
 (./cap2/fundamentacaoteorica.tex
-<figs/ameacas.pdf, id=255, 328.1289pt x 49.253pt>
+<figs/ameacas.pdf, id=256, 328.1289pt x 49.253pt>
 File: figs/ameacas.pdf Graphic file (type pdf)
  <use figs/ameacas.pdf>
 Package pdftex.def Info: figs/ameacas.pdf used on input line 12.
@@ -2781,7 +2788,7 @@ Package pdftex.def Info: figs/ameacas.pdf used on input line 12.
 <./figs/ameacas.pdf>] [16]
 LuaTeX warning (file figs/loic.pdf): PDF inclusion: found PDF version <1.7>, but
  at most version <1.5> allowed
-<figs/loic.pdf, id=299, 1854.93pt x 773.89125pt>
+<figs/loic.pdf, id=300, 1854.93pt x 773.89125pt>
 File: figs/loic.pdf Graphic file (type pdf)
  <use figs/loic.pdf>
 Package pdftex.def Info: figs/loic.pdf used on input line 45.
@@ -2789,37 +2796,37 @@ Package pdftex.def Info: figs/loic.pdf used on input line 45.
  [17<./figs/loic.pdf>] [18] [19]) [20]
 \openout2 = cap3/metodologia.aux
  (./cap3/metodologia.tex
-<figs/fluxoFramework.pdf, id=360, 214.4522pt x 248.0216pt>
+<figs/fluxoFramework.pdf, id=361, 214.4522pt x 248.0216pt>
 File: figs/fluxoFramework.pdf Graphic file (type pdf)
 
 <use figs/fluxoFramework.pdf>
-Package pdftex.def Info: figs/fluxoFramework.pdf used on input line 28.
+Package pdftex.def Info: figs/fluxoFramework.pdf used on input line 29.
 (pdftex.def)             Requested size: 273.00278pt x 315.75595pt.
  [21
 
 
 
 ]
-Overfull \hbox (10.1203pt too wide) in paragraph at lines 48--63
+Overfull \hbox (10.1203pt too wide) in paragraph at lines 49--64
  [][] 
  []
 
 [22<./figs/fluxoFramework.pdf>] [23]
-<figs/darpaStructure.pdf, id=417, 381.10078pt x 235.011pt>
+<figs/darpaStructure.pdf, id=418, 381.10078pt x 235.011pt>
 File: figs/darpaStructure.pdf Graphic file (type pdf)
 
 <use figs/darpaStructure.pdf>
-Package pdftex.def Info: figs/darpaStructure.pdf used on input line 99.
+Package pdftex.def Info: figs/darpaStructure.pdf used on input line 100.
 (pdftex.def)             Requested size: 364.00139pt x 224.46765pt.
  [24]
-<figs/analiseDarpa.pdf, id=430, 231.3714pt x 167.19464pt>
+<figs/analiseDarpa.pdf, id=431, 231.3714pt x 167.19464pt>
 File: figs/analiseDarpa.pdf Graphic file (type pdf)
 
 <use figs/analiseDarpa.pdf>
-Package pdftex.def Info: figs/analiseDarpa.pdf used on input line 139.
+Package pdftex.def Info: figs/analiseDarpa.pdf used on input line 140.
 (pdftex.def)             Requested size: 409.49722pt x 295.94725pt.
 
-Overfull \hbox (11.60364pt too wide) detected at line 172
+Overfull \hbox (11.60364pt too wide) detected at line 173
 \OT1/lmr/m/n/12 (\OML/lmm/m/it/12 frame:time >\OT1/lmr/m/n/12 = "\OML/lmm/m/it/
 12 Aug\OT1/lmr/m/n/12 07\OML/lmm/m/it/12 ; \OT1/lmr/m/n/12 199909 : 12 : 42")&&
 (\OML/lmm/m/it/12 frame:time <\OT1/lmr/m/n/12 = "\OML/lmm/m/it/12 Aug\OT1/lmr/m
@@ -2827,24 +2834,24 @@ Overfull \hbox (11.60364pt too wide) detected at line 172
  []
 
 [25<./figs/darpaStructure.pdf>] [26<./figs/analiseDarpa.pdf>]
-<figs/filtWireshark1.png, id=491, 602.25pt x 346.29375pt>
+<figs/filtWireshark1.png, id=492, 602.25pt x 346.29375pt>
 File: figs/filtWireshark1.png Graphic file (type png)
 
 <use figs/filtWireshark1.png>
-Package pdftex.def Info: figs/filtWireshark1.png used on input line 179.
+Package pdftex.def Info: figs/filtWireshark1.png used on input line 180.
 (pdftex.def)             Requested size: 318.49861pt x 183.14378pt.
  [27<./figs/filtWireshark1.png>] [28]) [29]
 \openout2 = cap4/resultados.aux
 
 (./cap4/resultados.tex
-<figs/results80-95Mining.pdf, id=521, 279.77724pt x 226.94888pt>
+<figs/results80-95Mining.pdf, id=522, 279.77724pt x 226.94888pt>
 File: figs/results80-95Mining.pdf Graphic file (type pdf)
 
 <use figs/results80-95Mining.pdf>
 Package pdftex.def Info: figs/results80-95Mining.pdf used on input line 11.
 (pdftex.def)             Requested size: 409.49722pt x 332.20488pt.
 
-<figs/resultsDarpa.pdf, id=526, 279.77724pt x 226.95189pt>
+<figs/resultsDarpa.pdf, id=527, 279.77724pt x 226.95189pt>
 File: figs/resultsDarpa.pdf Graphic file (type pdf)
 
 <use figs/resultsDarpa.pdf>
@@ -2855,7 +2862,7 @@ Package pdftex.def Info: figs/resultsDarpa.pdf used on input line 56.
 
 
 ]
-<figs/resultNHOQUE.jpg, id=537, 250.48782pt x 165.06468pt>
+<figs/resultNHOQUE.jpg, id=538, 250.48782pt x 165.06468pt>
 File: figs/resultNHOQUE.jpg Graphic file (type jpg)
 
 <use figs/resultNHOQUE.jpg>
@@ -2906,36 +2913,36 @@ This document will not have a glossary.
 \tf@toc=\write9
 
 \openout9 = main.toc
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 120.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 120.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 122.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 122.
 (./main.aux (./fixos/fichabibliografica.aux) (./editaveis/folhadeaprovacao.aux)
 (./editaveis/dedicatoria.aux) (./editaveis/agradecimentos.aux)
 (./editaveis/epigrafe.aux) (./resumo/ptbr.aux) (./resumo/us.aux)
 (./editaveis/siglas.aux) (./cap1/introducao.aux)
 (./cap2/fundamentacaoteorica.aux) (./cap3/metodologia.aux)
 (./cap4/resultados.aux) (./cap5/conclusoes.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 120.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 120.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 122.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 122.
 Package rerunfilecheck Info: File `main.brf' has not changed.
 (rerunfilecheck)             Checksum: 695FCBC579C2AB012B46F24246D4F5D5;2014.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 120.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 122.
 )
 
 Here is how much of LuaTeX's memory you used:
- 70399 strings out of 495004
+ 70413 strings out of 495004
  100000,1977958 words of node,token memory allocated
  1177 words of node memory still in use:
    14 hlist, 2 vlist, 2 rule, 2 glue, 6 kern, 11 attribute, 138 glue_spec, 11 at
 tribute_list, 11 action, 3 write, 16 pdf_literal, 8 pdf_refxform, 16 pdf_colorst
 ack nodes
-   avail lists: 1:1,2:1286,3:252,4:1854,5:115,6:4918,7:300,8:57,9:324,10:465
- 71218 multiletter control sequences out of 65536+600000
- 65 fonts using 5378127 bytes
- 64i,18n,80p,2737b,1166s stack positions out of 5000i,500n,10000p,200000b,100000s
+   avail lists: 1:1,2:1314,3:252,4:1878,5:115,6:4926,7:300,8:57,9:336,10:465
+ 71225 multiletter control sequences out of 65536+600000
+ 65 fonts using 5378735 bytes
+ 64i,18n,80p,2737b,1139s stack positions out of 5000i,500n,10000p,200000b,100000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips
 /lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share
 /texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/fonts/truetype/msttcorefonts
@@ -2946,10 +2953,10 @@ f></usr/share/fonts/truetype/msttcorefonts/Times_New_Roman_Bold.ttf><</usr/share
 /lmmi12.pfb><</usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb><</usr/share/texm
 f/fonts/type1/public/lm/lmr12.pfb><</usr/share/texmf/fonts/type1/public/lm/lmr8.
 pfb><</usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on main.pdf (39 pages, 1122676 bytes).
+Output written on main.pdf (39 pages, 1121541 bytes).
 
-PDF statistics: 842 PDF objects out of 1000 (max. 8388607)
- 714 compressed objects within 8 object streams
- 135 named destinations out of 1000 (max. 131072)
- 424 words of extra memory for PDF output out of 10000 (max. 10000000)
+PDF statistics: 846 PDF objects out of 1000 (max. 8388607)
+ 718 compressed objects within 8 object streams
+ 136 named destinations out of 1000 (max. 131072)
+ 432 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -70,13 +70,13 @@
 %\include{editaveis/simbolos}
 
 % Sumário
-%\pdfbookmark[0]{\contentsname}{toc}
-%% ---- Change font shape in the ToC (according to current rules)
+\pdfbookmark[0]{\contentsname}{toc}
+% ---- Change font shape in the ToC (according to current rules)
 %\renewcommand{\cftchapterfont}{\bfseries\MakeUppercase}
-%\renewcommand{\cftsectionfont}{\bfseries}
-%\renewcommand{\cftsubsectionfont}{\bfseries\itshape}
-%\renewcommand{\cftsubsubsectionfont}{\itshape}
-%\renewcommand{\cftpartfont}{\bfseries\large} 
+\renewcommand{\cftsectionfont}{\bfseries}
+\renewcommand{\cftsubsectionfont}{\bfseries\itshape}
+\renewcommand{\cftsubsubsectionfont}{\itshape}
+\renewcommand{\cftpartfont}{\bfseries\large} 
 
 % ---------
 \tableofcontents*
@@ -86,6 +86,8 @@
 % ELEMENTOS TEXTUAIS
 % ----------------------------------------------------------
 %\textual
+\pagestyle{myheadings}
+\markboth{\thepage}{\chaptername}
 
 % ----------------------------------------------------------
 % Introdução (exemplo de capítulo sem numeração, mas presente no Sumário)
