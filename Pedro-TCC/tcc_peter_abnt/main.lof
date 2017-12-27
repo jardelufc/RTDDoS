@@ -1,17 +1,17 @@
 \select@language {brazil}
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Representação de aritmética de ponto fixo\relax }}{19}{figure.caption.10}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Comparativo de potência e perfomance entre as famílias da série 7 da Xilinx\relax }}{22}{figure.caption.11}
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Operações que o Módulo em \textit {hardware} efetua\relax }}{24}{figure.caption.12}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Módulo Nahid\relax }}{24}{figure.caption.13}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Design do Datapath desenvolvido por \cite {HOQUE201748}\relax }}{26}{figure.caption.14}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Componente extend\relax }}{27}{figure.caption.15}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Componente Reduce\relax }}{27}{figure.caption.16}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Tipos do componente Mux no módulo \relax }}{28}{figure.caption.17}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Componente Mul\relax }}{29}{figure.caption.18}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Componente Adder\relax }}{30}{figure.caption.19}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Componente Divider\relax }}{31}{figure.caption.20}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Componente Sqrt\relax }}{31}{figure.caption.21}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Componente Register\relax }}{32}{figure.caption.22}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Esquemático do controller,ciclos de entrada e saídas para as entradas do datapath num dado ciclo de \textit {clock}\relax }}{33}{figure.caption.23}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Ciclos do Módulo Nahid \ref {Tab:Tb}\relax }}{34}{figure.caption.24}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Simulação 1 da tabela \ref {Tab:Tb}\relax }}{38}{figure.caption.28}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Representação de aritmética de ponto fixo\relax }}{18}{figure.caption.10}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Comparativo de potência e perfomance entre as famílias da série 7 da Xilinx\relax }}{20}{figure.caption.11}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Operações que o Módulo em \textit {hardware} efetua\relax }}{22}{figure.caption.12}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Módulo Nahid\relax }}{22}{figure.caption.13}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Design do Datapath desenvolvido por \cite {HOQUE201748}\relax }}{24}{figure.caption.14}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Componente extend\relax }}{25}{figure.caption.15}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Componente Reduce\relax }}{25}{figure.caption.16}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Tipos do componente Mux no módulo \relax }}{26}{figure.caption.17}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Componente Mul\relax }}{27}{figure.caption.18}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Componente Adder\relax }}{28}{figure.caption.19}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Componente Divider\relax }}{29}{figure.caption.20}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Componente Sqrt\relax }}{30}{figure.caption.21}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Componente Register\relax }}{31}{figure.caption.22}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Esquemático do controller,ciclos de entrada e saídas para as entradas do datapath num dado ciclo de \textit {clock}\relax }}{32}{figure.caption.23}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Ciclos do Módulo Nahid \ref {Tab:Tb}\relax }}{33}{figure.caption.24}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Simulação 1 da tabela \ref {Tab:Tb}\relax }}{37}{figure.caption.28}
