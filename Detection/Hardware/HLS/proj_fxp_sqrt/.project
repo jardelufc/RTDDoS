@@ -29,42 +29,42 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>/home/jardel/projetos/fxpnahid/fxp_sqrt/proj_fxp_sqrt/.apc/.src</location>
+			<location>C:/RTDDoS/Detection/Hardware/HLS/proj_fxp_sqrt/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>/home/jardel/projetos/fxpnahid/fxp_sqrt/proj_fxp_sqrt/.apc/.tb</location>
+			<location>C:/RTDDoS/Detection/Hardware/HLS/proj_fxp_sqrt/.apc/.tb</location>
 		</link>
 		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
-			<location>/home/jardel/projetos/fxpnahid/fxp_sqrt/proj_fxp_sqrt/solution1/.tcls</location>
+			<location>C:/RTDDoS/Detection/Hardware/HLS/proj_fxp_sqrt/solution1/.tcls</location>
 		</link>
 		<link>
 			<name>source/fxp_sqrt_top.cpp</name>
 			<type>1</type>
-			<location>/home/jardel/projetos/fxpnahid/fxp_sqrt/fxp_sqrt_top.cpp</location>
+			<location>C:/RTDDoS/Detection/Hardware/HLS/fxp_sqrt_top.cpp</location>
 		</link>
 		<link>
 			<name>testbench/fxp_sqrt_test.cpp</name>
 			<type>1</type>
-			<location>/home/jardel/projetos/fxpnahid/fxp_sqrt/fxp_sqrt_test.cpp</location>
+			<location>C:/RTDDoS/Detection/Hardware/HLS/fxp_sqrt_test.cpp</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>/home/jardel/projetos/fxpnahid/fxp_sqrt/proj_fxp_sqrt/solution1/solution1.directive</location>
+			<location>C:/RTDDoS/Detection/Hardware/HLS/proj_fxp_sqrt/solution1/solution1.directive</location>
 		</link>
 		<link>
 			<name>solution1/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/home/jardel/projetos/fxpnahid/fxp_sqrt/proj_fxp_sqrt/solution1/directives.tcl</location>
+			<location>C:/RTDDoS/Detection/Hardware/HLS/proj_fxp_sqrt/solution1/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/home/jardel/projetos/fxpnahid/fxp_sqrt/proj_fxp_sqrt/solution1/script.tcl</location>
+			<location>C:/RTDDoS/Detection/Hardware/HLS/proj_fxp_sqrt/solution1/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>
