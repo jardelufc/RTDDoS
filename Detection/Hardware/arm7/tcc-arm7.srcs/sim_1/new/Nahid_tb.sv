@@ -30,12 +30,12 @@ initial
     begin
     clk=1;
     reset=0;
-    Rx1=365;
-    Rx2=252;
-    Rx3=953;
-    Ry1=140;
-    Ry2=200;
-    Ry3=970;
+    Rx1=348;
+    Rx2=1301;
+    Rx3=94;
+    Ry1=164;
+    Ry2=126;
+    Ry3=98;
     threshold=20'b00000000000011011010;
     #10
     reset=1;

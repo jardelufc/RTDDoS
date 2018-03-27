@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="fxp_sqrt_top.cpp" path="/home/jardel/projetos/fxpnahid/fxp_sqrt/fxp_sqrt_top.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="fxp_sqrt_test.cpp" path="/home/jardel/projetos/fxpnahid/fxp_sqrt/fxp_sqrt_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

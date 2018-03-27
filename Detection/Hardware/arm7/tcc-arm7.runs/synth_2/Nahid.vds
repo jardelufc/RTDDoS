@@ -1,0 +1,916 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Tue Mar 27 09:54:00 2018
+# Process ID: 9780
+# Current directory: C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.runs/synth_2
+# Command line: vivado.exe -log Nahid.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Nahid.tcl
+# Log file: C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.runs/synth_2/Nahid.vds
+# Journal file: C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.runs/synth_2\vivado.jou
+#-----------------------------------------------------------
+source Nahid.tcl -notrace
+Command: synth_design -top Nahid -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 1956 
+WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/extend.sv:28]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 433.926 ; gain = 112.078
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Nahid' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/Nahid.sv:21]
+INFO: [Synth 8-638] synthesizing module 'Datapath' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:22]
+INFO: [Synth 8-638] synthesizing module 'extend' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/extend.sv:23]
+	Parameter WIDTH bound to: 11 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'extend' (1#1) [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/extend.sv:23]
+WARNING: [Synth 8-689] width (23) of port connection 'y' does not match port width (24) of module 'extend' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:49]
+WARNING: [Synth 8-689] width (23) of port connection 'y' does not match port width (24) of module 'extend' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:50]
+WARNING: [Synth 8-689] width (23) of port connection 'y' does not match port width (24) of module 'extend' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:51]
+WARNING: [Synth 8-689] width (23) of port connection 'y' does not match port width (24) of module 'extend' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:52]
+WARNING: [Synth 8-689] width (23) of port connection 'y' does not match port width (24) of module 'extend' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:53]
+WARNING: [Synth 8-689] width (23) of port connection 'y' does not match port width (24) of module 'extend' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:54]
+INFO: [Synth 8-638] synthesizing module 'extend__parameterized0' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/extend.sv:23]
+	Parameter WIDTH bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'extend__parameterized0' (1#1) [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/extend.sv:23]
+WARNING: [Synth 8-689] width (24) of port connection 'a' does not match port width (12) of module 'extend__parameterized0' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:55]
+WARNING: [Synth 8-689] width (23) of port connection 'y' does not match port width (24) of module 'extend__parameterized0' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:55]
+INFO: [Synth 8-638] synthesizing module 'extend__parameterized1' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/extend.sv:23]
+	Parameter WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'extend__parameterized1' (1#1) [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/extend.sv:23]
+WARNING: [Synth 8-689] width (24) of port connection 'a' does not match port width (16) of module 'extend__parameterized1' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:56]
+WARNING: [Synth 8-689] width (24) of port connection 'a' does not match port width (11) of module 'extend' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:57]
+WARNING: [Synth 8-689] width (23) of port connection 'y' does not match port width (24) of module 'extend' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:57]
+WARNING: [Synth 8-689] width (24) of port connection 'a' does not match port width (11) of module 'extend' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:58]
+WARNING: [Synth 8-689] width (1) of port connection 'y' does not match port width (24) of module 'extend' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:58]
+INFO: [Synth 8-638] synthesizing module 'extend__parameterized2' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/extend.sv:23]
+	Parameter WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'extend__parameterized2' (1#1) [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/extend.sv:23]
+WARNING: [Synth 8-689] width (23) of port connection 'y' does not match port width (24) of module 'extend__parameterized2' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:59]
+WARNING: [Synth 8-689] width (23) of port connection 'y' does not match port width (24) of module 'extend__parameterized2' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:60]
+INFO: [Synth 8-638] synthesizing module 'reduce' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/reduce.sv:21]
+INFO: [Synth 8-256] done synthesizing module 'reduce' (2#1) [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/reduce.sv:21]
+WARNING: [Synth 8-689] width (12) of port connection 'y' does not match port width (11) of module 'reduce' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:67]
+WARNING: [Synth 8-689] width (12) of port connection 'y' does not match port width (11) of module 'reduce' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:68]
+INFO: [Synth 8-638] synthesizing module 'mux2' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/mux.sv:22]
+INFO: [Synth 8-226] default block is never used [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/mux.sv:27]
+INFO: [Synth 8-256] done synthesizing module 'mux2' (3#1) [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/mux.sv:22]
+WARNING: [Synth 8-689] width (11) of port connection 'a' does not match port width (23) of module 'mux2' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:80]
+WARNING: [Synth 8-689] width (11) of port connection 'b' does not match port width (23) of module 'mux2' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:80]
+WARNING: [Synth 8-689] width (11) of port connection 'y' does not match port width (23) of module 'mux2' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:80]
+WARNING: [Synth 8-689] width (11) of port connection 'a' does not match port width (23) of module 'mux2' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:81]
+WARNING: [Synth 8-689] width (11) of port connection 'b' does not match port width (23) of module 'mux2' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:81]
+WARNING: [Synth 8-689] width (11) of port connection 'y' does not match port width (23) of module 'mux2' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:81]
+INFO: [Synth 8-638] synthesizing module 'mux4' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/mux4.sv:23]
+INFO: [Synth 8-226] default block is never used [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/mux4.sv:29]
+INFO: [Synth 8-256] done synthesizing module 'mux4' (4#1) [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/mux4.sv:23]
+WARNING: [Synth 8-689] width (11) of port connection 'a' does not match port width (23) of module 'mux4' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:83]
+WARNING: [Synth 8-689] width (11) of port connection 'b' does not match port width (23) of module 'mux4' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:83]
+WARNING: [Synth 8-689] width (11) of port connection 'c' does not match port width (23) of module 'mux4' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:83]
+WARNING: [Synth 8-689] width (11) of port connection 'y' does not match port width (23) of module 'mux4' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:83]
+WARNING: [Synth 8-350] instance 'mux2mul2' of module 'mux4' requires 7 connections, but only 6 given [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:83]
+WARNING: [Synth 8-689] width (11) of port connection 'a' does not match port width (23) of module 'mux4' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:84]
+WARNING: [Synth 8-689] width (11) of port connection 'b' does not match port width (23) of module 'mux4' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:84]
+WARNING: [Synth 8-689] width (11) of port connection 'c' does not match port width (23) of module 'mux4' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:84]
+WARNING: [Synth 8-689] width (11) of port connection 'y' does not match port width (23) of module 'mux4' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:84]
+WARNING: [Synth 8-350] instance 'mux1mul2' of module 'mux4' requires 7 connections, but only 6 given [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:84]
+WARNING: [Synth 8-689] width (11) of port connection 'a' does not match port width (23) of module 'mux4' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:86]
+WARNING: [Synth 8-689] width (11) of port connection 'b' does not match port width (23) of module 'mux4' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:86]
+WARNING: [Synth 8-689] width (11) of port connection 'c' does not match port width (23) of module 'mux4' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:86]
+WARNING: [Synth 8-689] width (11) of port connection 'y' does not match port width (23) of module 'mux4' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:86]
+WARNING: [Synth 8-350] instance 'mux2mul1' of module 'mux4' requires 7 connections, but only 6 given [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:86]
+WARNING: [Synth 8-689] width (11) of port connection 'a' does not match port width (23) of module 'mux4' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:87]
+WARNING: [Synth 8-689] width (11) of port connection 'b' does not match port width (23) of module 'mux4' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:87]
+WARNING: [Synth 8-689] width (11) of port connection 'c' does not match port width (23) of module 'mux4' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:87]
+WARNING: [Synth 8-689] width (11) of port connection 'y' does not match port width (23) of module 'mux4' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:87]
+WARNING: [Synth 8-350] instance 'mux1mul1' of module 'mux4' requires 7 connections, but only 6 given [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:87]
+WARNING: [Synth 8-689] width (24) of port connection 'y' does not match port width (23) of module 'mux2' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:94]
+WARNING: [Synth 8-689] width (24) of port connection 'y' does not match port width (23) of module 'mux2' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:95]
+INFO: [Synth 8-638] synthesizing module 'mux6' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/mux6.sv:23]
+INFO: [Synth 8-226] default block is never used [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/mux6.sv:29]
+INFO: [Synth 8-256] done synthesizing module 'mux6' (5#1) [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/mux6.sv:23]
+WARNING: [Synth 8-689] width (24) of port connection 'a' does not match port width (23) of module 'mux6' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:97]
+WARNING: [Synth 8-689] width (24) of port connection 'b' does not match port width (23) of module 'mux6' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:97]
+WARNING: [Synth 8-689] width (24) of port connection 'y' does not match port width (23) of module 'mux6' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:97]
+WARNING: [Synth 8-350] instance 'mux2add4' of module 'mux6' requires 11 connections, but only 10 given [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:97]
+WARNING: [Synth 8-689] width (24) of port connection 'a' does not match port width (23) of module 'mux4' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:98]
+WARNING: [Synth 8-689] width (24) of port connection 'y' does not match port width (23) of module 'mux4' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:98]
+WARNING: [Synth 8-350] instance 'mux1add4' of module 'mux4' requires 7 connections, but only 6 given [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:98]
+WARNING: [Synth 8-689] width (24) of port connection 'a' does not match port width (23) of module 'mux6' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:100]
+WARNING: [Synth 8-689] width (24) of port connection 'd' does not match port width (23) of module 'mux6' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:100]
+WARNING: [Synth 8-689] width (24) of port connection 'e' does not match port width (23) of module 'mux6' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:100]
+WARNING: [Synth 8-689] width (24) of port connection 'y' does not match port width (23) of module 'mux6' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:100]
+WARNING: [Synth 8-350] instance 'mux2add3' of module 'mux6' requires 11 connections, but only 10 given [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:100]
+WARNING: [Synth 8-689] width (24) of port connection 'a' does not match port width (23) of module 'mux6' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:101]
+WARNING: [Synth 8-689] width (24) of port connection 'b' does not match port width (23) of module 'mux6' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:101]
+WARNING: [Synth 8-689] width (24) of port connection 'c' does not match port width (23) of module 'mux6' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:101]
+WARNING: [Synth 8-689] width (24) of port connection 'd' does not match port width (23) of module 'mux6' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:101]
+WARNING: [Synth 8-689] width (24) of port connection 'y' does not match port width (23) of module 'mux6' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:101]
+WARNING: [Synth 8-350] instance 'mux1add3' of module 'mux6' requires 11 connections, but only 10 given [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:101]
+WARNING: [Synth 8-689] width (24) of port connection 'a' does not match port width (23) of module 'mux4' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:103]
+WARNING: [Synth 8-689] width (24) of port connection 'b' does not match port width (23) of module 'mux4' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:103]
+WARNING: [Synth 8-689] width (24) of port connection 'c' does not match port width (23) of module 'mux4' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:103]
+WARNING: [Synth 8-689] width (24) of port connection 'y' does not match port width (23) of module 'mux4' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:103]
+WARNING: [Synth 8-350] instance 'mux2add2' of module 'mux4' requires 7 connections, but only 6 given [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:103]
+WARNING: [Synth 8-689] width (24) of port connection 'b' does not match port width (23) of module 'mux6' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:104]
+WARNING: [Synth 8-689] width (24) of port connection 'c' does not match port width (23) of module 'mux6' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:104]
+WARNING: [Synth 8-689] width (24) of port connection 'd' does not match port width (23) of module 'mux6' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:104]
+WARNING: [Synth 8-689] width (24) of port connection 'y' does not match port width (23) of module 'mux6' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:104]
+WARNING: [Synth 8-350] instance 'mux1add2' of module 'mux6' requires 11 connections, but only 10 given [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:104]
+WARNING: [Synth 8-689] width (24) of port connection 'b' does not match port width (23) of module 'mux6' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:106]
+WARNING: [Synth 8-689] width (24) of port connection 'c' does not match port width (23) of module 'mux6' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:106]
+WARNING: [Synth 8-689] width (24) of port connection 'y' does not match port width (23) of module 'mux6' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:106]
+WARNING: [Synth 8-350] instance 'mux2add1' of module 'mux6' requires 11 connections, but only 10 given [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:106]
+WARNING: [Synth 8-689] width (24) of port connection 'a' does not match port width (23) of module 'mux4' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:107]
+WARNING: [Synth 8-689] width (24) of port connection 'b' does not match port width (23) of module 'mux4' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:107]
+WARNING: [Synth 8-689] width (24) of port connection 'c' does not match port width (23) of module 'mux4' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:107]
+WARNING: [Synth 8-689] width (24) of port connection 'y' does not match port width (23) of module 'mux4' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:107]
+WARNING: [Synth 8-350] instance 'mux1add1' of module 'mux4' requires 7 connections, but only 6 given [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:107]
+INFO: [Synth 8-638] synthesizing module 'mul' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/mult.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'mul' (6#1) [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/mult.sv:23]
+INFO: [Synth 8-638] synthesizing module 'adder' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/adder.sv:22]
+	Parameter WIDTH bound to: 23 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/adder.sv:28]
+INFO: [Synth 8-256] done synthesizing module 'adder' (7#1) [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/adder.sv:22]
+WARNING: [Synth 8-689] width (24) of port connection 'a' does not match port width (23) of module 'adder' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:118]
+WARNING: [Synth 8-689] width (24) of port connection 'b' does not match port width (23) of module 'adder' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:118]
+WARNING: [Synth 8-689] width (24) of port connection 'a' does not match port width (23) of module 'adder' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:119]
+WARNING: [Synth 8-689] width (24) of port connection 'b' does not match port width (23) of module 'adder' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:119]
+WARNING: [Synth 8-689] width (24) of port connection 'a' does not match port width (23) of module 'adder' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:120]
+WARNING: [Synth 8-689] width (24) of port connection 'b' does not match port width (23) of module 'adder' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:120]
+WARNING: [Synth 8-689] width (24) of port connection 'a' does not match port width (23) of module 'adder' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:121]
+WARNING: [Synth 8-689] width (24) of port connection 'b' does not match port width (23) of module 'adder' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:121]
+WARNING: [Synth 8-689] width (24) of port connection 'a' does not match port width (23) of module 'adder' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:122]
+WARNING: [Synth 8-689] width (24) of port connection 'b' does not match port width (23) of module 'adder' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:122]
+INFO: [Synth 8-638] synthesizing module 'mux2r' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/mux2r.sv:23]
+INFO: [Synth 8-226] default block is never used [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/mux2r.sv:28]
+INFO: [Synth 8-256] done synthesizing module 'mux2r' (8#1) [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/mux2r.sv:23]
+INFO: [Synth 8-638] synthesizing module 'mux4r' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/mux4r.sv:23]
+INFO: [Synth 8-226] default block is never used [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/mux4r.sv:28]
+INFO: [Synth 8-256] done synthesizing module 'mux4r' (9#1) [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/mux4r.sv:23]
+WARNING: [Synth 8-350] instance 'mux2div' of module 'mux4r' requires 6 connections, but only 5 given [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:133]
+WARNING: [Synth 8-689] width (23) of port connection 'c' does not match port width (24) of module 'mux4r' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:134]
+WARNING: [Synth 8-350] instance 'mux1div' of module 'mux4r' requires 6 connections, but only 5 given [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:134]
+WARNING: [Synth 8-689] width (20) of port connection 'c' does not match port width (24) of module 'mux4r' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:136]
+WARNING: [Synth 8-350] instance 'muxr11' of module 'mux4r' requires 6 connections, but only 5 given [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:136]
+WARNING: [Synth 8-350] instance 'muxr9' of module 'mux4r' requires 6 connections, but only 5 given [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:140]
+WARNING: [Synth 8-350] instance 'muxr8' of module 'mux4r' requires 6 connections, but only 5 given [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:142]
+WARNING: [Synth 8-350] instance 'muxr4' of module 'mux4r' requires 6 connections, but only 5 given [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:148]
+WARNING: [Synth 8-350] instance 'muxr2' of module 'mux4r' requires 6 connections, but only 5 given [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:152]
+WARNING: [Synth 8-350] instance 'muxr1' of module 'mux4r' requires 6 connections, but only 5 given [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:154]
+INFO: [Synth 8-638] synthesizing module 'div_gen_0' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.runs/synth_2/.Xil/Vivado-9780-DESKTOP-7T25CID/realtime/div_gen_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'div_gen_0' (10#1) [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.runs/synth_2/.Xil/Vivado-9780-DESKTOP-7T25CID/realtime/div_gen_0_stub.v:6]
+WARNING: [Synth 8-689] width (24) of port connection 's_axis_divisor_tdata' does not match port width (16) of module 'div_gen_0' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:163]
+WARNING: [Synth 8-689] width (24) of port connection 's_axis_dividend_tdata' does not match port width (16) of module 'div_gen_0' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:163]
+WARNING: [Synth 8-689] width (20) of port connection 'm_axis_dout_tdata' does not match port width (24) of module 'div_gen_0' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:163]
+INFO: [Synth 8-638] synthesizing module 'cordic_0' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.runs/synth_2/.Xil/Vivado-9780-DESKTOP-7T25CID/realtime/cordic_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'cordic_0' (11#1) [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.runs/synth_2/.Xil/Vivado-9780-DESKTOP-7T25CID/realtime/cordic_0_stub.v:6]
+WARNING: [Synth 8-689] width (24) of port connection 'm_axis_dout_tdata' does not match port width (16) of module 'cordic_0' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:167]
+INFO: [Synth 8-638] synthesizing module 'register' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/register.sv:23]
+	Parameter WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register' (12#1) [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/register.sv:23]
+INFO: [Synth 8-638] synthesizing module 'register__parameterized0' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/register.sv:23]
+	Parameter WIDTH bound to: 11 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register__parameterized0' (12#1) [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/register.sv:23]
+WARNING: [Synth 8-689] width (24) of port connection 'in' does not match port width (11) of module 'register__parameterized0' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:174]
+WARNING: [Synth 8-689] width (24) of port connection 'o' does not match port width (11) of module 'register__parameterized0' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:174]
+INFO: [Synth 8-638] synthesizing module 'register__parameterized1' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/register.sv:23]
+	Parameter WIDTH bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register__parameterized1' (12#1) [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/register.sv:23]
+WARNING: [Synth 8-689] width (24) of port connection 'in' does not match port width (12) of module 'register__parameterized1' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:176]
+WARNING: [Synth 8-689] width (24) of port connection 'o' does not match port width (12) of module 'register__parameterized1' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:176]
+INFO: [Synth 8-638] synthesizing module 'register__parameterized2' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/register.sv:23]
+	Parameter WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register__parameterized2' (12#1) [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/register.sv:23]
+WARNING: [Synth 8-689] width (24) of port connection 'in' does not match port width (20) of module 'register__parameterized2' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:180]
+WARNING: [Synth 8-3848] Net add1shifted in module/entity Datapath does not have driver. [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:35]
+INFO: [Synth 8-256] done synthesizing module 'Datapath' (13#1) [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:22]
+WARNING: [Synth 8-689] width (3) of port connection 'seladd4_1' does not match port width (2) of module 'Datapath' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/Nahid.sv:35]
+WARNING: [Synth 8-350] instance 'data1' of module 'Datapath' requires 94 connections, but only 81 given [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/Nahid.sv:35]
+INFO: [Synth 8-638] synthesizing module 'controller' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:45]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:546]
+WARNING: [Synth 8-3848] Net clrx1 in module/entity controller does not have driver. [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:37]
+WARNING: [Synth 8-3848] Net clrx2 in module/entity controller does not have driver. [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:37]
+WARNING: [Synth 8-3848] Net clrx3 in module/entity controller does not have driver. [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:37]
+WARNING: [Synth 8-3848] Net clry1 in module/entity controller does not have driver. [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:37]
+WARNING: [Synth 8-3848] Net clry2 in module/entity controller does not have driver. [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:37]
+WARNING: [Synth 8-3848] Net clry3 in module/entity controller does not have driver. [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:37]
+INFO: [Synth 8-256] done synthesizing module 'controller' (14#1) [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'Nahid' (15#1) [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/Nahid.sv:21]
+WARNING: [Synth 8-3331] design controller has unconnected port clrx1
+WARNING: [Synth 8-3331] design controller has unconnected port clrx2
+WARNING: [Synth 8-3331] design controller has unconnected port clrx3
+WARNING: [Synth 8-3331] design controller has unconnected port clry1
+WARNING: [Synth 8-3331] design controller has unconnected port clry2
+WARNING: [Synth 8-3331] design controller has unconnected port clry3
+WARNING: [Synth 8-3331] design mux4 has unconnected port clk
+WARNING: [Synth 8-3331] design mux6 has unconnected port clk
+WARNING: [Synth 8-3331] design reduce has unconnected port a[23]
+WARNING: [Synth 8-3331] design reduce has unconnected port a[22]
+WARNING: [Synth 8-3331] design reduce has unconnected port a[21]
+WARNING: [Synth 8-3331] design reduce has unconnected port a[20]
+WARNING: [Synth 8-3331] design reduce has unconnected port a[19]
+WARNING: [Synth 8-3331] design reduce has unconnected port a[18]
+WARNING: [Synth 8-3331] design reduce has unconnected port a[17]
+WARNING: [Synth 8-3331] design reduce has unconnected port a[16]
+WARNING: [Synth 8-3331] design reduce has unconnected port a[15]
+WARNING: [Synth 8-3331] design reduce has unconnected port a[14]
+WARNING: [Synth 8-3331] design reduce has unconnected port a[13]
+WARNING: [Synth 8-3331] design reduce has unconnected port a[12]
+WARNING: [Synth 8-3331] design reduce has unconnected port a[11]
+WARNING: [Synth 8-3331] design Datapath has unconnected port datasqrt
+WARNING: [Synth 8-3331] design Datapath has unconnected port datadiv
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar11
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar10
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar9
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar8
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar7
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar6
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar5
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar4
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar3
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar2
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar1
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[19]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[18]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[17]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[16]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[15]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[14]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[13]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[12]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[11]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[10]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[9]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[8]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[7]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[6]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[5]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[4]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[3]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[2]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[1]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 472.789 ; gain = 150.941
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[23] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:133]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[22] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:133]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[21] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:133]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[20] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:133]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[19] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:133]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[18] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:133]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[17] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:133]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[16] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:133]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[15] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:133]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[14] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:133]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[13] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:133]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[12] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:133]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[11] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:133]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[10] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:133]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[9] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:133]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[8] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:133]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[7] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:133]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[6] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:133]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[5] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:133]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[4] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:133]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[3] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:133]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[2] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:133]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[1] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:133]
+WARNING: [Synth 8-3295] tying undriven pin mux2div:d[0] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:133]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[23] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:134]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[22] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:134]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[21] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:134]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[20] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:134]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[19] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:134]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[18] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:134]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[17] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:134]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[16] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:134]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[15] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:134]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[14] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:134]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[13] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:134]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[12] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:134]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[11] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:134]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[10] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:134]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[9] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:134]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[8] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:134]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[7] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:134]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[6] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:134]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[5] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:134]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[4] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:134]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[3] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:134]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[2] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:134]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[1] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:134]
+WARNING: [Synth 8-3295] tying undriven pin mux1div:d[0] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:134]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:d[23] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:136]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:d[22] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:136]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:d[21] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:136]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:d[20] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:136]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:d[19] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:136]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:d[18] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:136]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:d[17] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:136]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:d[16] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:136]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:d[15] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:136]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:d[14] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:136]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:d[13] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:136]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:d[12] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:136]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:d[11] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:136]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:d[10] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:136]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:d[9] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:136]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:d[8] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:136]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:d[7] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:136]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:d[6] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:136]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:d[5] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:136]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:d[4] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:136]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:d[3] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:136]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:d[2] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:136]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:d[1] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:136]
+WARNING: [Synth 8-3295] tying undriven pin muxr11:d[0] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:136]
+WARNING: [Synth 8-3295] tying undriven pin muxr9:d[23] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:140]
+WARNING: [Synth 8-3295] tying undriven pin muxr9:d[22] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:140]
+WARNING: [Synth 8-3295] tying undriven pin muxr9:d[21] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:140]
+WARNING: [Synth 8-3295] tying undriven pin muxr9:d[20] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:140]
+WARNING: [Synth 8-3295] tying undriven pin muxr9:d[19] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:140]
+WARNING: [Synth 8-3295] tying undriven pin muxr9:d[18] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:140]
+WARNING: [Synth 8-3295] tying undriven pin muxr9:d[17] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:140]
+WARNING: [Synth 8-3295] tying undriven pin muxr9:d[16] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:140]
+WARNING: [Synth 8-3295] tying undriven pin muxr9:d[15] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:140]
+WARNING: [Synth 8-3295] tying undriven pin muxr9:d[14] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:140]
+WARNING: [Synth 8-3295] tying undriven pin muxr9:d[13] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:140]
+WARNING: [Synth 8-3295] tying undriven pin muxr9:d[12] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:140]
+WARNING: [Synth 8-3295] tying undriven pin muxr9:d[11] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:140]
+WARNING: [Synth 8-3295] tying undriven pin muxr9:d[10] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:140]
+WARNING: [Synth 8-3295] tying undriven pin muxr9:d[9] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:140]
+WARNING: [Synth 8-3295] tying undriven pin muxr9:d[8] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:140]
+WARNING: [Synth 8-3295] tying undriven pin muxr9:d[7] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:140]
+WARNING: [Synth 8-3295] tying undriven pin muxr9:d[6] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:140]
+WARNING: [Synth 8-3295] tying undriven pin muxr9:d[5] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:140]
+WARNING: [Synth 8-3295] tying undriven pin muxr9:d[4] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:140]
+WARNING: [Synth 8-3295] tying undriven pin muxr9:d[3] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:140]
+WARNING: [Synth 8-3295] tying undriven pin muxr9:d[2] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:140]
+WARNING: [Synth 8-3295] tying undriven pin muxr9:d[1] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:140]
+WARNING: [Synth 8-3295] tying undriven pin muxr9:d[0] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:140]
+WARNING: [Synth 8-3295] tying undriven pin muxr8:d[23] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:142]
+WARNING: [Synth 8-3295] tying undriven pin muxr8:d[22] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:142]
+WARNING: [Synth 8-3295] tying undriven pin muxr8:d[21] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:142]
+WARNING: [Synth 8-3295] tying undriven pin muxr8:d[20] to constant 0 [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/datapath.sv:142]
+INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 472.789 ; gain = 150.941
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.runs/synth_2/.Xil/Vivado-9780-DESKTOP-7T25CID/dcp2/div_gen_0_in_context.xdc] for cell 'data1/divider'
+Finished Parsing XDC File [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.runs/synth_2/.Xil/Vivado-9780-DESKTOP-7T25CID/dcp2/div_gen_0_in_context.xdc] for cell 'data1/divider'
+Parsing XDC File [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.runs/synth_2/.Xil/Vivado-9780-DESKTOP-7T25CID/dcp3/cordic_0_in_context.xdc] for cell 'data1/sqrtcalc'
+Finished Parsing XDC File [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.runs/synth_2/.Xil/Vivado-9780-DESKTOP-7T25CID/dcp3/cordic_0_in_context.xdc] for cell 'data1/sqrtcalc'
+Parsing XDC File [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/constrs_2/Nexys-4-DDR-Master.xdc]
+WARNING: [Vivado 12-508] No pins matched 'c1/FSM_sequential_cycle_reg[0]/Q'. [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/constrs_2/Nexys-4-DDR-Master.xdc:2]
+WARNING: [Vivado 12-508] No pins matched 'c1/FSM_sequential_cycle_reg[1]/Q'. [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/constrs_2/Nexys-4-DDR-Master.xdc:3]
+WARNING: [Vivado 12-508] No pins matched 'c1/FSM_sequential_cycle_reg[2]/Q'. [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/constrs_2/Nexys-4-DDR-Master.xdc:4]
+WARNING: [Vivado 12-508] No pins matched 'c1/FSM_sequential_cycle_reg[3]/Q'. [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/constrs_2/Nexys-4-DDR-Master.xdc:5]
+WARNING: [Vivado 12-508] No pins matched 'c1/FSM_sequential_cycle_reg[4]/Q'. [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/constrs_2/Nexys-4-DDR-Master.xdc:6]
+Finished Parsing XDC File [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/constrs_2/Nexys-4-DDR-Master.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/constrs_2/Nexys-4-DDR-Master.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/Nahid_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 837.602 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '1000.000' specified during out-of-context synthesis of instance 'data1/divider' at clock pin 'aclk' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '1000.000' specified during out-of-context synthesis of instance 'data1/sqrtcalc' at clock pin 'aclk' is different from the actual clock period '10.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 837.602 ; gain = 515.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 837.602 ; gain = 515.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for data1/divider. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for data1/sqrtcalc. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 837.602 ; gain = 515.754
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/adder.sv:31]
+INFO: [Synth 8-802] inferred FSM for state register 'cycle_reg' in module 'controller'
+INFO: [Synth 8-5546] ROM "enablex1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "finish" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "enable5" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "enable6" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "enable9" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "enable10" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "enable11" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "seladd1_2" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "selr1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "clr1" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "seladd2_2" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "selr7" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "clr7" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "enable7" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "selmul1_1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "selr2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "clr2" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "selr3" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "clr3" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "selr4" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "clr4" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "seladd3_2" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "clr8" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "selr8" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "clr9" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "selr9" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "clr10" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "selr10" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "seladd4_2" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "clr5" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "selr6" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "clr6" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "selsqrt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inbottom" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "selr11" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "clr11" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "seladd5_2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-327] inferring latch for variable 'selr7_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:80]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                            00000 |                           000000
+                 iSTATE0 |                            00001 |                           000001
+                 iSTATE1 |                            00010 |                           000010
+                 iSTATE2 |                            00011 |                           000011
+                 iSTATE3 |                            00100 |                           000100
+                 iSTATE4 |                            00101 |                           000101
+                 iSTATE5 |                            00110 |                           000110
+                 iSTATE6 |                            00111 |                           001101
+                 iSTATE7 |                            01000 |                           001110
+                 iSTATE8 |                            01001 |                           001111
+                 iSTATE9 |                            01010 |                           010000
+                iSTATE10 |                            01011 |                           010001
+                iSTATE11 |                            01100 |                           010010
+                iSTATE12 |                            01101 |                           010011
+                iSTATE13 |                            01110 |                           100111
+                iSTATE14 |                            01111 |                           101000
+                iSTATE15 |                            10000 |                           101001
+                iSTATE16 |                            10001 |                           101010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'cycle_reg' using encoding 'sequential' in module 'controller'
+WARNING: [Synth 8-327] inferring latch for variable 'seladd5_2_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:494]
+WARNING: [Synth 8-327] inferring latch for variable 'selsqrt_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:268]
+WARNING: [Synth 8-327] inferring latch for variable 'clr1_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:72]
+WARNING: [Synth 8-327] inferring latch for variable 'clr2_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:89]
+WARNING: [Synth 8-327] inferring latch for variable 'clr3_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:97]
+WARNING: [Synth 8-327] inferring latch for variable 'clr4_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:105]
+WARNING: [Synth 8-327] inferring latch for variable 'clr5_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:199]
+WARNING: [Synth 8-327] inferring latch for variable 'clr6_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:208]
+WARNING: [Synth 8-327] inferring latch for variable 'clr7_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:81]
+WARNING: [Synth 8-327] inferring latch for variable 'clr8_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:148]
+WARNING: [Synth 8-327] inferring latch for variable 'clr9_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:156]
+WARNING: [Synth 8-327] inferring latch for variable 'clr10_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:164]
+WARNING: [Synth 8-327] inferring latch for variable 'clr11_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:469]
+WARNING: [Synth 8-327] inferring latch for variable 'enable1_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:73]
+WARNING: [Synth 8-327] inferring latch for variable 'enable2_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:90]
+WARNING: [Synth 8-327] inferring latch for variable 'enable3_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:98]
+WARNING: [Synth 8-327] inferring latch for variable 'enable4_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:106]
+WARNING: [Synth 8-327] inferring latch for variable 'enable5_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:59]
+WARNING: [Synth 8-327] inferring latch for variable 'enable6_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:60]
+WARNING: [Synth 8-327] inferring latch for variable 'enable7_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:82]
+WARNING: [Synth 8-327] inferring latch for variable 'enable8_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:61]
+WARNING: [Synth 8-327] inferring latch for variable 'enable9_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:62]
+WARNING: [Synth 8-327] inferring latch for variable 'enable10_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:63]
+WARNING: [Synth 8-327] inferring latch for variable 'enable11_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:64]
+WARNING: [Synth 8-327] inferring latch for variable 'insqrt_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:269]
+WARNING: [Synth 8-327] inferring latch for variable 'inbottom_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:462]
+WARNING: [Synth 8-327] inferring latch for variable 'enablex1_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:48]
+WARNING: [Synth 8-327] inferring latch for variable 'selmul1_1_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:85]
+WARNING: [Synth 8-327] inferring latch for variable 'seladd2_2_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:76]
+WARNING: [Synth 8-327] inferring latch for variable 'seladd1_1_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:68]
+WARNING: [Synth 8-327] inferring latch for variable 'seldiv_2_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:465]
+WARNING: [Synth 8-327] inferring latch for variable 'selr11_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:468]
+WARNING: [Synth 8-327] inferring latch for variable 'selr10_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:166]
+WARNING: [Synth 8-327] inferring latch for variable 'selr9_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:158]
+WARNING: [Synth 8-327] inferring latch for variable 'selr8_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:150]
+WARNING: [Synth 8-327] inferring latch for variable 'selr6_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:207]
+WARNING: [Synth 8-327] inferring latch for variable 'selr4_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:104]
+WARNING: [Synth 8-327] inferring latch for variable 'selr3_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:96]
+WARNING: [Synth 8-327] inferring latch for variable 'selr2_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:88]
+WARNING: [Synth 8-327] inferring latch for variable 'selr1_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:71]
+WARNING: [Synth 8-327] inferring latch for variable 'seladd4_2_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:195]
+WARNING: [Synth 8-327] inferring latch for variable 'seladd4_1_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:196]
+WARNING: [Synth 8-327] inferring latch for variable 'seladd3_2_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:127]
+WARNING: [Synth 8-327] inferring latch for variable 'seladd3_1_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:128]
+WARNING: [Synth 8-327] inferring latch for variable 'seladd2_1_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:77]
+WARNING: [Synth 8-327] inferring latch for variable 'seladd1_2_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:67]
+WARNING: [Synth 8-327] inferring latch for variable 'opadd1_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:69]
+WARNING: [Synth 8-327] inferring latch for variable 'opadd2_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:78]
+WARNING: [Synth 8-327] inferring latch for variable 'opadd3_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:129]
+WARNING: [Synth 8-327] inferring latch for variable 'opadd4_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:197]
+WARNING: [Synth 8-327] inferring latch for variable 'opadd5_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:496]
+WARNING: [Synth 8-327] inferring latch for variable 'finish_reg' [C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.srcs/sources_1/new/controller.sv:54]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 837.602 ; gain = 515.754
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     24 Bit       Adders := 5     
+	   2 Input     24 Bit       Adders := 5     
+	   3 Input     23 Bit       Adders := 5     
++---Registers : 
+	               24 Bit    Registers := 8     
+	               20 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 7     
+	   4 Input     24 Bit        Muxes := 16    
+	   2 Input     23 Bit        Muxes := 9     
+	   4 Input     23 Bit        Muxes := 7     
+	  18 Input      5 Bit        Muxes := 1     
+	  18 Input      3 Bit        Muxes := 6     
+	  18 Input      2 Bit        Muxes := 18    
+	  18 Input      1 Bit        Muxes := 64    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module mux2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     23 Bit        Muxes := 1     
+Module mux4 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     23 Bit        Muxes := 1     
+Module adder 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     24 Bit       Adders := 1     
+	   2 Input     24 Bit       Adders := 1     
+	   3 Input     23 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   4 Input     24 Bit        Muxes := 1     
+	   2 Input     23 Bit        Muxes := 1     
+Module mux2r 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+Module mux4r 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     24 Bit        Muxes := 1     
+Module register 
+Detailed RTL Component Info : 
++---Registers : 
+	               24 Bit    Registers := 1     
+Module register__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	               11 Bit    Registers := 1     
+Module register__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 1     
+Module register__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	               20 Bit    Registers := 1     
+Module controller 
+Detailed RTL Component Info : 
++---Muxes : 
+	  18 Input      5 Bit        Muxes := 1     
+	  18 Input      3 Bit        Muxes := 6     
+	  18 Input      2 Bit        Muxes := 18    
+	  18 Input      1 Bit        Muxes := 64    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP mul3/mul, operation Mode is: A*B.
+DSP Report: operator mul3/mul is absorbed into DSP mul3/mul.
+DSP Report: Generating DSP mul2/mul, operation Mode is: A*B.
+DSP Report: operator mul2/mul is absorbed into DSP mul2/mul.
+DSP Report: Generating DSP mul1/mul, operation Mode is: A*B.
+DSP Report: operator mul1/mul is absorbed into DSP mul1/mul.
+WARNING: [Synth 8-3331] design mux4 has unconnected port clk
+WARNING: [Synth 8-3331] design mux6 has unconnected port clk
+WARNING: [Synth 8-3331] design Datapath has unconnected port datasqrt
+WARNING: [Synth 8-3331] design Datapath has unconnected port datadiv
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar11
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar10
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar9
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar8
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar7
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar6
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar5
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar4
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar3
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar2
+WARNING: [Synth 8-3331] design Datapath has unconnected port datar1
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[19]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[18]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[17]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[16]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[15]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[14]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[13]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[12]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[11]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[10]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[9]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[8]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[7]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[6]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[5]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[4]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[3]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[2]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[1]
+WARNING: [Synth 8-3331] design Nahid has unconnected port threshold[0]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\c1/enablex1_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\c1/opadd2_reg[0] )
+INFO: [Synth 8-3886] merging instance 'c1/seladd4_1_reg[2]' (LD) to 'c1/opadd4_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\c1/opadd4_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\c1/selr1_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\c1/insqrt_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\c1/inbottom_reg )
+WARNING: [Synth 8-3332] Sequential element (r2/o_reg[23]) is unused and will be removed from module Datapath.
+WARNING: [Synth 8-3332] Sequential element (r8/o_reg[23]) is unused and will be removed from module Datapath.
+WARNING: [Synth 8-3332] Sequential element (c1/insqrt_reg) is unused and will be removed from module Nahid.
+WARNING: [Synth 8-3332] Sequential element (c1/inbottom_reg) is unused and will be removed from module Nahid.
+WARNING: [Synth 8-3332] Sequential element (c1/enablex1_reg) is unused and will be removed from module Nahid.
+WARNING: [Synth 8-3332] Sequential element (c1/selr1_reg[0]) is unused and will be removed from module Nahid.
+WARNING: [Synth 8-3332] Sequential element (c1/opadd2_reg[0]) is unused and will be removed from module Nahid.
+WARNING: [Synth 8-3332] Sequential element (c1/finish_reg) is unused and will be removed from module Nahid.
+WARNING: [Synth 8-3332] Sequential element (c1/opadd4_reg[0]) is unused and will be removed from module Nahid.
+INFO: [Synth 8-3886] merging instance 'c1/seladd3_1_reg[2]' (LD) to 'c1/opadd3_reg[0]'
+WARNING: [Synth 8-3332] Sequential element (r1/o_reg[23]) is unused and will be removed from module Datapath.
+WARNING: [Synth 8-3332] Sequential element (r4/o_reg[23]) is unused and will be removed from module Datapath.
+WARNING: [Synth 8-3332] Sequential element (r6/o_reg[23]) is unused and will be removed from module Datapath.
+WARNING: [Synth 8-3332] Sequential element (r10/o_reg[23]) is unused and will be removed from module Datapath.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 837.602 ; gain = 515.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|mul         | A*B         | 11     | 11     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mul         | A*B         | 11     | 11     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mul         | A*B         | 11     | 11     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 872.148 ; gain = 550.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 876.738 ; gain = 554.891
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 907.113 ; gain = 585.266
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 907.113 ; gain = 585.266
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 907.113 ; gain = 585.266
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 907.113 ; gain = 585.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 907.113 ; gain = 585.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 907.113 ; gain = 585.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 907.113 ; gain = 585.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |div_gen_0     |         1|
+|2     |cordic_0      |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |cordic_0  |     1|
+|2     |div_gen_0 |     1|
+|3     |BUFG      |     1|
+|4     |CARRY4    |    92|
+|5     |DSP48E1   |     3|
+|6     |LUT1      |     3|
+|7     |LUT2      |   183|
+|8     |LUT3      |   302|
+|9     |LUT4      |   147|
+|10    |LUT5      |   391|
+|11    |LUT6      |   322|
+|12    |FDCE      |     5|
+|13    |FDRE      |   295|
+|14    |LD        |    74|
+|15    |IBUF      |    68|
+|16    |OBUF      |    20|
++------+----------+------+
+
+Report Instance Areas: 
++------+-------------+----------------------------+------+
+|      |Instance     |Module                      |Cells |
++------+-------------+----------------------------+------+
+|1     |top          |                            |  1948|
+|2     |  c1         |controller                  |   536|
+|3     |  data1      |Datapath                    |  1323|
+|4     |    mux2add5 |mux2                        |    20|
+|5     |    mul1     |mul                         |     1|
+|6     |    mul2     |mul_0                       |     1|
+|7     |    mul3     |mul_1                       |     1|
+|8     |    mux1add1 |mux4                        |    23|
+|9     |    mux1add2 |mux6                        |    23|
+|10    |    mux1add3 |mux6_2                      |    34|
+|11    |    mux1add4 |mux4_3                      |    23|
+|12    |    mux1div  |mux4r                       |    16|
+|13    |    mux1mul1 |mux4_4                      |    11|
+|14    |    mux2add1 |mux6_5                      |    22|
+|15    |    mux2add2 |mux4_6                      |    22|
+|16    |    mux2add3 |mux6_7                      |    35|
+|17    |    mux2add4 |mux6_8                      |    22|
+|18    |    mux2div  |mux4r_9                     |    16|
+|19    |    mux2mul1 |mux4_10                     |    11|
+|20    |    muxr1    |mux4r_11                    |    23|
+|21    |    muxr10   |mux4r_12                    |    23|
+|22    |    muxr11   |mux4r_13                    |    20|
+|23    |    muxr2    |mux4r_14                    |    23|
+|24    |    muxr3    |mux4r_15                    |    24|
+|25    |    muxr4    |mux4r_16                    |    23|
+|26    |    muxr6    |mux4r_17                    |    23|
+|27    |    muxr8    |mux4r_18                    |    23|
+|28    |    muxr9    |mux4r_19                    |    24|
+|29    |    muxsqrt  |mux2r                       |    24|
+|30    |    r1       |register                    |    81|
+|31    |    r10      |register_20                 |    24|
+|32    |    r11      |register__parameterized2    |   138|
+|33    |    r2       |register_21                 |   113|
+|34    |    r3       |register_22                 |    28|
+|35    |    r4       |register_23                 |    56|
+|36    |    r5       |register__parameterized0    |    11|
+|37    |    r6       |register_24                 |   104|
+|38    |    r7       |register__parameterized1    |    12|
+|39    |    r8       |register_25                 |    23|
+|40    |    r9       |register_26                 |    67|
+|41    |    x1       |register__parameterized0_27 |    11|
+|42    |    x2       |register__parameterized0_28 |    11|
+|43    |    x3       |register__parameterized0_29 |    47|
+|44    |    y1       |register__parameterized0_30 |    11|
+|45    |    y2       |register__parameterized0_31 |    22|
+|46    |    y3       |register__parameterized0_32 |    11|
++------+-------------+----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 907.113 ; gain = 585.266
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 101 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:44 . Memory (MB): peak = 907.113 ; gain = 220.453
+Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 907.113 ; gain = 585.266
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 237 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 74 instances were transformed.
+  LD => LDCE: 74 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+110 Infos, 384 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:53 ; elapsed = 00:00:58 . Memory (MB): peak = 907.113 ; gain = 596.738
+INFO: [Common 17-1381] The checkpoint 'C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.runs/synth_2/Nahid.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Nahid_utilization_synth.rpt -pb Nahid_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 907.113 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 27 09:55:11 2018...

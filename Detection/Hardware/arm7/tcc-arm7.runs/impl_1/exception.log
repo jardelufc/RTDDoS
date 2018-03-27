@@ -1,4 +1,0 @@
-ERROR: Exception caught trying to open file C:\Users\pedro\Documents\arm7\tcc-arm7.runs\impl_1/runme.log
-	Exception name: Error
-	Exception error code: 70
-	Exception message: Permissão negada

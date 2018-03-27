@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="cordic_0_synth_1" LaunchDir="C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.runs/cordic_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_2" LaunchDir="C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.runs/synth_2" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="cordic_0_synth_1"/>
+	</Run>
+</Runs>
+

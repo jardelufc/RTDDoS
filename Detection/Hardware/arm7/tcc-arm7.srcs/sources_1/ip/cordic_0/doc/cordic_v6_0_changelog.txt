@@ -1,3 +1,12 @@
+2017.4:
+ * Version 6.0 (Rev. 13)
+ * General: Add cstdlib include to run_bitacc_cmodel to allow correct compilation with later versions of GCC. No change to functionality.
+
+2017.3:
+ * Version 6.0 (Rev. 12)
+ * General: Comment change in C model. No change to functionality
+ * Revision change in one or more subcores
+
 2017.2:
  * Version 6.0 (Rev. 11)
  * No changes

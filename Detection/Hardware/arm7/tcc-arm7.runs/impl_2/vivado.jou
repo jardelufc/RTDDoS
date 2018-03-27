@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Tue Mar 27 09:59:05 2018
+# Process ID: 6664
+# Current directory: C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.runs/impl_2
+# Command line: vivado.exe -log Nahid.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Nahid.tcl -notrace
+# Log file: C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.runs/impl_2/Nahid.vdi
+# Journal file: C:/RTDDoS/Detection/Hardware/arm7/tcc-arm7.runs/impl_2\vivado.jou
+#-----------------------------------------------------------
+source Nahid.tcl -notrace

@@ -1,12 +1,12 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version      : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date              : Mon Nov 13 11:14:52 2017
-| Host              : DESKTOP-BV4C82J running 64-bit major release  (build 9200)
-| Command           : report_timing_summary -warn_on_violation -max_paths 10 -file Nahid_timing_summary_routed.rpt -rpx Nahid_timing_summary_routed.rpx
+| Tool Version      : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date              : Mon Mar 26 23:49:04 2018
+| Host              : DESKTOP-7T25CID running 64-bit major release  (build 9200)
+| Command           : report_timing_summary -max_paths 10 -file Nahid_timing_summary_routed.rpt -rpx Nahid_timing_summary_routed.rpx -warn_on_violation
 | Design            : Nahid
 | Device            : xcku5p-ffvb676
-| Speed File        : -2  PRODUCTION 1.12 06-10-2017
+| Speed File        : -2  PRODUCTION 1.17 11-09-2017
 | Temperature Grade : E
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -53,7 +53,17 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 0 register/latch pins with no clock.
+ There are 1234 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+
+ There are 72 register/latch pins with no clock driven by root clock pin: c1/FSM_sequential_cycle_reg[0]/Q (HIGH)
+
+ There are 74 register/latch pins with no clock driven by root clock pin: c1/FSM_sequential_cycle_reg[1]/Q (HIGH)
+
+ There are 74 register/latch pins with no clock driven by root clock pin: c1/FSM_sequential_cycle_reg[2]/Q (HIGH)
+
+ There are 74 register/latch pins with no clock driven by root clock pin: c1/FSM_sequential_cycle_reg[3]/Q (HIGH)
+
+ There are 73 register/latch pins with no clock driven by root clock pin: c1/FSM_sequential_cycle_reg[4]/Q (HIGH)
 
 
 2. checking constant_clock
@@ -68,21 +78,21 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 0 pins that are not constrained for maximum delay.
+ There are 1820 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
 
 5. checking no_input_delay
 --------------------------
- There are 0 input ports with no input delay specified.
+ There are 67 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
 6. checking no_output_delay
 ---------------------------
- There are 0 ports with no output delay specified.
+ There are 20 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 

@@ -1,0 +1,79 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Tue Mar 27 00:03:20 2018
+| Host         : DESKTOP-7T25CID running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'div_gen_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of div_gen_0 (xilinx.com:ip:div_gen:5.1 (Rev. 12)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Tue Mar 27 00:03:19 2018
+| Host         : DESKTOP-7T25CID running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'cordic_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of cordic_0 (xilinx.com:ip:cordic:6.0 (Rev. 13)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Mon Mar 26 23:22:39 2018
+| Host         : DESKTOP-7T25CID running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcku5p-ffvb676-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'div_gen_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of div_gen_0 (xilinx.com:ip:div_gen:5.1) from (Rev. 11) to (Rev. 12)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Mon Mar 26 23:22:38 2018
+| Host         : DESKTOP-7T25CID running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcku5p-ffvb676-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'cordic_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of cordic_0 (xilinx.com:ip:cordic:6.0) from (Rev. 11) to (Rev. 13)
+

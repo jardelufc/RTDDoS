@@ -1,3 +1,12 @@
+2017.4:
+ * Version 5.1 (Rev. 12)
+ * No changes
+
+2017.3:
+ * Version 5.1 (Rev. 12)
+ * General: Comment change in C model. No change to functionality
+ * Revision change in one or more subcores
+
 2017.2:
  * Version 5.1 (Rev. 11)
  * No changes

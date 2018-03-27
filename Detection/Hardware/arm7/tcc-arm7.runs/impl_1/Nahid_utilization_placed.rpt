@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Mon Nov 13 11:12:27 2017
-| Host         : DESKTOP-BV4C82J running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Mon Mar 26 23:37:56 2018
+| Host         : DESKTOP-7T25CID running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Nahid_utilization_placed.rpt -pb Nahid_utilization_placed.pb
 | Design       : Nahid
 | Device       : xcku5pffvb676-2
@@ -29,20 +29,22 @@ Table of Contents
 1. CLB Logic
 ------------
 
-+-------------------------+------+-------+-----------+-------+
-|        Site Type        | Used | Fixed | Available | Util% |
-+-------------------------+------+-------+-----------+-------+
-| CLB LUTs                |    0 |     0 |    216960 |  0.00 |
-|   LUT as Logic          |    0 |     0 |    216960 |  0.00 |
-|   LUT as Memory         |    0 |     0 |     99840 |  0.00 |
-| CLB Registers           |    0 |     0 |    433920 |  0.00 |
-|   Register as Flip Flop |    0 |     0 |    433920 |  0.00 |
-|   Register as Latch     |    0 |     0 |    433920 |  0.00 |
-| CARRY8                  |    0 |     0 |     27120 |  0.00 |
-| F7 Muxes                |    0 |     0 |    108480 |  0.00 |
-| F8 Muxes                |    0 |     0 |     54240 |  0.00 |
-| F9 Muxes                |    0 |     0 |     27120 |  0.00 |
-+-------------------------+------+-------+-----------+-------+
++----------------------------+------+-------+-----------+-------+
+|          Site Type         | Used | Fixed | Available | Util% |
++----------------------------+------+-------+-----------+-------+
+| CLB LUTs                   | 1551 |     0 |    216960 |  0.71 |
+|   LUT as Logic             | 1539 |     0 |    216960 |  0.71 |
+|   LUT as Memory            |   12 |     0 |     99840 |  0.01 |
+|     LUT as Distributed RAM |    0 |     0 |           |       |
+|     LUT as Shift Register  |   12 |     0 |           |       |
+| CLB Registers              | 1296 |     0 |    433920 |  0.30 |
+|   Register as Flip Flop    | 1222 |     0 |    433920 |  0.28 |
+|   Register as Latch        |   74 |     0 |    433920 |  0.02 |
+| CARRY8                     |  106 |     0 |     27120 |  0.39 |
+| F7 Muxes                   |    0 |     0 |    108480 |  0.00 |
+| F8 Muxes                   |    0 |     0 |     54240 |  0.00 |
+| F9 Muxes                   |    0 |     0 |     27120 |  0.00 |
++----------------------------+------+-------+-----------+-------+
 
 
 1.1 Summary of Registers by Type
@@ -58,28 +60,37 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 0     |          Yes |           - |        Reset |
+| 79    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 0     |          Yes |       Reset |            - |
+| 1217  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
 2. CLB Logic Distribution
 -------------------------
 
-+--------------------------+------+-------+-----------+-------+
-|         Site Type        | Used | Fixed | Available | Util% |
-+--------------------------+------+-------+-----------+-------+
-| CLB                      |    0 |     0 |     27120 |  0.00 |
-|   CLBL                   |    0 |     0 |           |       |
-|   CLBM                   |    0 |     0 |           |       |
-| LUT as Logic             |    0 |     0 |    216960 |  0.00 |
-| LUT as Memory            |    0 |     0 |     99840 |  0.00 |
-|   LUT as Distributed RAM |    0 |     0 |           |       |
-|   LUT as Shift Register  |    0 |     0 |           |       |
-| LUT Flip Flop Pairs      |    0 |     0 |    216960 |  0.00 |
-| Unique Control Sets      |    0 |       |           |       |
-+--------------------------+------+-------+-----------+-------+
++-------------------------------------------+------+-------+-----------+-------+
+|                 Site Type                 | Used | Fixed | Available | Util% |
++-------------------------------------------+------+-------+-----------+-------+
+| CLB                                       |  308 |     0 |     27120 |  1.14 |
+|   CLBL                                    |  202 |     0 |           |       |
+|   CLBM                                    |  106 |     0 |           |       |
+| LUT as Logic                              | 1539 |     0 |    216960 |  0.71 |
+|   using O5 output only                    |   17 |       |           |       |
+|   using O6 output only                    | 1259 |       |           |       |
+|   using O5 and O6                         |  263 |       |           |       |
+| LUT as Memory                             |   12 |     0 |     99840 |  0.01 |
+|   LUT as Distributed RAM                  |    0 |     0 |           |       |
+|   LUT as Shift Register                   |   12 |     0 |           |       |
+|     using O5 output only                  |    0 |       |           |       |
+|     using O6 output only                  |   12 |       |           |       |
+|     using O5 and O6                       |    0 |       |           |       |
+| LUT Flip Flop Pairs                       |  577 |     0 |    216960 |  0.27 |
+|   fully used LUT-FF pairs                 |   15 |       |           |       |
+|   LUT-FF pairs with one unused LUT output |  561 |       |           |       |
+|   LUT-FF pairs with one unused Flip Flop  |  492 |       |           |       |
+| Unique Control Sets                       |   49 |       |           |       |
++-------------------------------------------+------+-------+-----------+-------+
 * Note: Review the Control Sets Report for more information regarding control sets.
 
 
@@ -100,11 +111,12 @@ Table of Contents
 4. ARITHMETIC
 -------------
 
-+-----------+------+-------+-----------+-------+
-| Site Type | Used | Fixed | Available | Util% |
-+-----------+------+-------+-----------+-------+
-| DSPs      |    0 |     0 |      1824 |  0.00 |
-+-----------+------+-------+-----------+-------+
++----------------+------+-------+-----------+-------+
+|    Site Type   | Used | Fixed | Available | Util% |
++----------------+------+-------+-----------+-------+
+| DSPs           |    3 |     0 |      1824 |  0.16 |
+|   DSP48E2 only |    3 |       |           |       |
++----------------+------+-------+-----------+-------+
 
 
 5. I/O
@@ -113,14 +125,23 @@ Table of Contents
 +------------------+------+-------+-----------+-------+
 |     Site Type    | Used | Fixed | Available | Util% |
 +------------------+------+-------+-----------+-------+
-| Bonded IOB       |    1 |     0 |       280 |  0.36 |
-| HPIOB_M          |    0 |     0 |        96 |  0.00 |
-| HPIOB_S          |    0 |     0 |        96 |  0.00 |
-| HDIOB_M          |    1 |     0 |        36 |  2.78 |
+| Bonded IOB       |   88 |     0 |       280 | 31.43 |
+| HPIOB_M          |   10 |     0 |        96 | 10.42 |
 |   INPUT          |    0 |       |           |       |
-|   OUTPUT         |    1 |       |           |       |
+|   OUTPUT         |   10 |       |           |       |
 |   BIDIR          |    0 |       |           |       |
-| HDIOB_S          |    0 |     0 |        36 |  0.00 |
+| HPIOB_S          |   10 |     0 |        96 | 10.42 |
+|   INPUT          |    0 |       |           |       |
+|   OUTPUT         |   10 |       |           |       |
+|   BIDIR          |    0 |       |           |       |
+| HDIOB_M          |   34 |     0 |        36 | 94.44 |
+|   INPUT          |   34 |       |           |       |
+|   OUTPUT         |    0 |       |           |       |
+|   BIDIR          |    0 |       |           |       |
+| HDIOB_S          |   34 |     0 |        36 | 94.44 |
+|   INPUT          |   34 |       |           |       |
+|   OUTPUT         |    0 |       |           |       |
+|   BIDIR          |    0 |       |           |       |
 | HPIOB_SNGL       |    0 |     0 |        16 |  0.00 |
 | HPIOBDIFFINBUF   |    0 |     0 |        96 |  0.00 |
 | HPIOBDIFFOUTBUF  |    0 |     0 |        96 |  0.00 |
@@ -138,8 +159,8 @@ Table of Contents
 +----------------------+------+-------+-----------+-------+
 |       Site Type      | Used | Fixed | Available | Util% |
 +----------------------+------+-------+-----------+-------+
-| GLOBAL CLOCK BUFFERs |    0 |     0 |       256 |  0.00 |
-|   BUFGCE             |    0 |     0 |       112 |  0.00 |
+| GLOBAL CLOCK BUFFERs |    1 |     0 |       256 |  0.39 |
+|   BUFGCE             |    1 |     0 |       112 |  0.89 |
 |   BUFGCE_DIV         |    0 |     0 |        16 |  0.00 |
 |   BUFG_GT            |    0 |     0 |        96 |  0.00 |
 |   BUFGCTRL*          |    0 |     0 |        32 |  0.00 |
@@ -187,7 +208,23 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUFT    |    1 |                 I/O |
+| FDRE     | 1217 |            Register |
+| LUT3     |  562 |                 CLB |
+| LUT5     |  404 |                 CLB |
+| LUT6     |  320 |                 CLB |
+| LUT2     |  278 |                 CLB |
+| LUT4     |  144 |                 CLB |
+| CARRY8   |  106 |                 CLB |
+| LUT1     |   94 |                 CLB |
+| LDCE     |   74 |            Register |
+| INBUF    |   68 |                 I/O |
+| IBUFCTRL |   68 |              Others |
+| OBUF     |   20 |                 I/O |
+| SRL16E   |   11 |                 CLB |
+| FDCE     |    5 |            Register |
+| DSP48E2  |    3 |          Arithmetic |
+| SRLC32E  |    1 |                 CLB |
+| BUFGCE   |    1 |               Clock |
 +----------+------+---------------------+
 
 
@@ -204,6 +241,8 @@ Table of Contents
 
 +----------+------+
 | Ref Name | Used |
++----------+------+
+| cordic_0 |    1 |
 +----------+------+
 
 

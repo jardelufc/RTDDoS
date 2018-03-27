@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_2" LaunchPart="xc7a100tcsg324-1" LaunchTime="1522155537">
+  <File Type="PWROPT-DCP" Name="Nahid_pwropt.dcp"/>
+  <File Type="ROUTE-PWR" Name="Nahid_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="Nahid.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="Nahid_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="Nahid_reports.tcl"/>
+  <File Type="BG-DRC" Name="Nahid.drc"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="Nahid_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="Nahid_timing_summary_init.rpt"/>
+  <File Type="OPT-HWDEF" Name="Nahid.hwdef"/>
+  <File Type="OPT-DCP" Name="Nahid_opt.dcp"/>
+  <File Type="OPT-DRC" Name="Nahid_drc_opted.rpt"/>
+  <File Type="OPT-TIMING" Name="Nahid_timing_summary_opted.rpt"/>
+  <File Type="PWROPT-DRC" Name="Nahid_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="Nahid_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="Nahid_placed.dcp"/>
+  <File Type="PLACE-IO" Name="Nahid_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="Nahid_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="Nahid_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="Nahid_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="Nahid_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="Nahid_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="Nahid_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="Nahid_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="Nahid_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="Nahid_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="Nahid_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="Nahid_drc_physopted.rpt"/>
+  <File Type="BG-BIT" Name="Nahid.bit"/>
+  <File Type="PHYSOPT-TIMING" Name="Nahid_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="Nahid_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="Nahid_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="Nahid_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="Nahid_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="Nahid_drc_routed.pb"/>
+  <File Type="BITSTR-MSK" Name="Nahid.msk"/>
+  <File Type="ROUTE-DRC-RPX" Name="Nahid_drc_routed.rpx"/>
+  <File Type="BG-BGN" Name="Nahid.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="Nahid_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-RBT" Name="Nahid.rbt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Nahid_methodology_drc_routed.rpx"/>
+  <File Type="BG-BIN" Name="Nahid.bin"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Nahid_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="Nahid_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="Nahid_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="Nahid_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="Nahid_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="Nahid_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="Nahid_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="Nahid_incremental_reuse_routed.rpt"/>
+  <File Type="RDI-RDI" Name="Nahid.vdi"/>
+  <File Type="ROUTE-CLK" Name="Nahid_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Nahid_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Nahid_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="Nahid_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Nahid_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="Nahid_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="Nahid.nky"/>
+  <File Type="BITSTR-BMM" Name="Nahid_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="Nahid.mmi"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="Nahid.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="Nahid.sysdef"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/adder.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/controller.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/datapath.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/extend.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/mult.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/mux.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/mux2r.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/mux4.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/mux4r.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/mux6.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/reduce.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/register.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Nahid.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/square_root.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/qdiv.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/top.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/adderfp.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/div.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/shifted.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/sqrt.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/statemachine.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/datapah.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Nahid"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_2">
+    <File Path="$PSRCDIR/constrs_2/Nexys-4-DDR-Master.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_2/Nexys-4-DDR-Master.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="div_gen_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="cordic_0"/>
+</GenRun>

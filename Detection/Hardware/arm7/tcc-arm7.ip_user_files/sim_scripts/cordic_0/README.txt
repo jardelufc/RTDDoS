@@ -1,5 +1,5 @@
 ################################################################################
-# Vivado (TM) v2017.2 (64-bit)
+# Vivado (TM) v2017.4 (64-bit)
 #
 # README.txt: Please read the sections below to understand the steps required
 #             to simulate the design for a simulator, the directory structure

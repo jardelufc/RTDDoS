@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Mon Nov 13 11:11:16 2017
-| Host         : DESKTOP-BV4C82J running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Mon Mar 26 23:30:03 2018
+| Host         : DESKTOP-7T25CID running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Nahid_utilization_synth.rpt -pb Nahid_utilization_synth.pb
 | Design       : Nahid
 | Device       : xcku5pffvb676-2
@@ -31,15 +31,15 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| CLB LUTs*                  | 1302 |     0 |    216960 |  0.60 |
-|   LUT as Logic             | 1301 |     0 |    216960 |  0.60 |
+| CLB LUTs*                  | 1402 |     0 |    216960 |  0.65 |
+|   LUT as Logic             | 1401 |     0 |    216960 |  0.65 |
 |   LUT as Memory            |    1 |     0 |     99840 | <0.01 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
 |     LUT as Shift Register  |    1 |     0 |           |       |
-| CLB Registers              | 1180 |     0 |    433920 |  0.27 |
-|   Register as Flip Flop    | 1122 |     0 |    433920 |  0.26 |
-|   Register as Latch        |   58 |     0 |    433920 |  0.01 |
-| CARRY8                     |   78 |     0 |     27120 |  0.29 |
+| CLB Registers              | 1216 |     0 |    433920 |  0.28 |
+|   Register as Flip Flop    | 1142 |     0 |    433920 |  0.26 |
+|   Register as Latch        |   74 |     0 |    433920 |  0.02 |
+| CARRY8                     |   89 |     0 |     27120 |  0.33 |
 | F7 Muxes                   |    0 |     0 |    108480 |  0.00 |
 | F8 Muxes                   |    0 |     0 |     54240 |  0.00 |
 | F9 Muxes                   |    0 |     0 |     27120 |  0.00 |
@@ -60,9 +60,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 63    |          Yes |           - |        Reset |
+| 79    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 1117  |          Yes |       Reset |            - |
+| 1137  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -97,7 +97,7 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| Bonded IOB |   69 |     0 |       280 | 24.64 |
+| Bonded IOB |   88 |     0 |       280 | 31.43 |
 +------------+------+-------+-----------+-------+
 
 
@@ -156,21 +156,21 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     | 1117 |            Register |
-| LUT3     |  448 |                 CLB |
-| LUT5     |  366 |                 CLB |
-| LUT6     |  291 |                 CLB |
-| LUT2     |  210 |                 CLB |
-| LUT4     |  119 |                 CLB |
-| CARRY8   |   78 |                 CLB |
+| FDRE     | 1137 |            Register |
+| LUT3     |  522 |                 CLB |
+| LUT5     |  380 |                 CLB |
+| LUT6     |  322 |                 CLB |
+| LUT2     |  232 |                 CLB |
+| LUT4     |  147 |                 CLB |
+| CARRY8   |   89 |                 CLB |
+| LDCE     |   74 |            Register |
 | INBUF    |   68 |                 I/O |
 | IBUFCTRL |   68 |              Others |
-| LDCE     |   58 |            Register |
-| LUT1     |   52 |                 CLB |
+| LUT1     |   53 |                 CLB |
+| OBUF     |   20 |                 I/O |
 | FDCE     |    5 |            Register |
 | DSP48E2  |    3 |          Arithmetic |
 | SRLC32E  |    1 |                 CLB |
-| OBUFT    |    1 |                 I/O |
 | BUFGCE   |    1 |               Clock |
 +----------+------+---------------------+
 
