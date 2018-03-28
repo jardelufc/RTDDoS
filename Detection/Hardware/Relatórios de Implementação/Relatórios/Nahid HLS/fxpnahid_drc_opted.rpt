@@ -1,0 +1,112 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
+| Date         : Wed Mar 28 16:01:29 2018
+| Host         : pedro-H170-Gaming-3 running 64-bit Ubuntu 16.04.3 LTS
+| Command      : report_drc -file fxpnahid_drc_opted.rpt
+| Design       : fxpnahid
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Synthesized
+------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 13
++-----------+----------+-----------------------------------------------------+------------+
+| Rule      | Severity | Description                                         | Violations |
++-----------+----------+-----------------------------------------------------+------------+
+| CFGBVS-1  | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
+| DPIP-1    | Warning  | Input pipelining                                    | 4          |
+| DPOP-1    | Warning  | PREG Output pipelining                              | 4          |
+| REQP-1745 | Advisory | connects_CI_VCC_connects_CYINIT_GND                 | 4          |
++-----------+----------+-----------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+CFGBVS-1#1 Warning
+Missing CFGBVS and CONFIG_VOLTAGE Design Properties  
+Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+Related violations: <none>
+
+DPIP-1#1 Warning
+Input pipelining  
+DSP Block_ZNK13ap_fixed_U0/fxpnahid_mac_mul_eOg_U7/fxpnahid_mac_mul_eOg_DSP48_3_U/p input Block_ZNK13ap_fixed_U0/fxpnahid_mac_mul_eOg_U7/fxpnahid_mac_mul_eOg_DSP48_3_U/p/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#2 Warning
+Input pipelining  
+DSP Block_ZNK13ap_fixed_U0/fxpnahid_mac_mul_eOg_U8/fxpnahid_mac_mul_eOg_DSP48_3_U/p input Block_ZNK13ap_fixed_U0/fxpnahid_mac_mul_eOg_U8/fxpnahid_mac_mul_eOg_DSP48_3_U/p/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#3 Warning
+Input pipelining  
+DSP Block_ZNK13ap_fixed_U0/tmp_15_i_reg_464_reg input Block_ZNK13ap_fixed_U0/tmp_15_i_reg_464_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#4 Warning
+Input pipelining  
+DSP Block_ZNK13ap_fixed_U0/tmp_16_i_reg_469_reg input Block_ZNK13ap_fixed_U0/tmp_16_i_reg_469_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-1#1 Warning
+PREG Output pipelining  
+DSP Block_ZNK13ap_fixed_U0/fxpnahid_mac_mul_eOg_U7/fxpnahid_mac_mul_eOg_DSP48_3_U/p output Block_ZNK13ap_fixed_U0/fxpnahid_mac_mul_eOg_U7/fxpnahid_mac_mul_eOg_DSP48_3_U/p/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#2 Warning
+PREG Output pipelining  
+DSP Block_ZNK13ap_fixed_U0/fxpnahid_mac_mul_eOg_U8/fxpnahid_mac_mul_eOg_DSP48_3_U/p output Block_ZNK13ap_fixed_U0/fxpnahid_mac_mul_eOg_U8/fxpnahid_mac_mul_eOg_DSP48_3_U/p/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#3 Warning
+PREG Output pipelining  
+DSP Block_ZNK13ap_fixed_U0/fxpnahid_mul_mul_bkb_U1/fxpnahid_mul_mul_bkb_DSP48_0_U/p_reg_reg output Block_ZNK13ap_fixed_U0/fxpnahid_mul_mul_bkb_U1/fxpnahid_mul_mul_bkb_DSP48_0_U/p_reg_reg/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#4 Warning
+PREG Output pipelining  
+DSP Block_ZNK13ap_fixed_U0/fxpnahid_mul_mul_bkb_U2/fxpnahid_mul_mul_bkb_DSP48_0_U/p_reg_reg output Block_ZNK13ap_fixed_U0/fxpnahid_mul_mul_bkb_U2/fxpnahid_mul_mul_bkb_DSP48_0_U/p_reg_reg/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+REQP-1745#1 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell abs_long_39_U0/fxpnahid_sitodp_6fYi_U23/fxpnahid_ap_sitodp_7_no_dsp_64_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/LZE/ZERO_DET_CC_1/CHAIN_GEN[4].C_MUX.CARRY_MUX_CARRY4 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#2 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell abs_long_39_U0/fxpnahid_sitodp_6fYi_U23/fxpnahid_ap_sitodp_7_no_dsp_64_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/NEED_Z_DET.Z_DET/ZERO_DET[4].mc_CARRY4 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#3 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell abs_long_U0/fxpnahid_sitodp_6fYi_x_U28/fxpnahid_ap_sitodp_7_no_dsp_64_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/LZE/ZERO_DET_CC_1/CHAIN_GEN[4].C_MUX.CARRY_MUX_CARRY4 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#4 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell abs_long_U0/fxpnahid_sitodp_6fYi_x_U28/fxpnahid_ap_sitodp_7_no_dsp_64_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/NEED_Z_DET.Z_DET/ZERO_DET[4].mc_CARRY4 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+

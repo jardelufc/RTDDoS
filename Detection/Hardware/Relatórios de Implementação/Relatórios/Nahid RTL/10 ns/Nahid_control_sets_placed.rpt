@@ -1,0 +1,117 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
+| Date         : Wed Mar 28 14:28:15 2018
+| Host         : pedro-H170-Gaming-3 running 64-bit Ubuntu 16.04.3 LTS
+| Command      : report_control_sets -verbose -file Nahid_control_sets_placed.rpt
+| Design       : Nahid
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    49 |
+| Unused register locations in slices containing registers |   232 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |            1032 |          317 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              12 |            4 |
+| Yes          | No                    | Yes                    |               5 |            3 |
+| Yes          | Yes                   | No                     |             247 |          133 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++------------------------------+----------------------------------------------------------------------------+------------------------------------+------------------+----------------+
+|         Clock Signal         |                                Enable Signal                               |          Set/Reset Signal          | Slice Load Count | Bel Load Count |
++------------------------------+----------------------------------------------------------------------------+------------------------------------+------------------+----------------+
+|  c1/clr7_reg_i_1_n_0         |                                                                            |                                    |                1 |              1 |
+|  c1/enable6_reg_i_2_n_0      |                                                                            |                                    |                1 |              1 |
+|  c1/enable7_reg_i_1_n_0      |                                                                            |                                    |                1 |              1 |
+|  c1/enable11_reg_i_2_n_0     |                                                                            |                                    |                1 |              1 |
+|  c1/clr9_reg_i_1_n_0         |                                                                            |                                    |                1 |              1 |
+|  c1/clr8_reg_i_1_n_0         |                                                                            |                                    |                1 |              1 |
+|  c1/clr6_reg_i_1_n_0         |                                                                            |                                    |                1 |              1 |
+|  c1/clr3_reg_i_1_n_0         |                                                                            |                                    |                1 |              1 |
+|  c1/clr11_reg_i_1_n_0        |                                                                            |                                    |                1 |              1 |
+|  c1/selr7_reg_i_2_n_0        |                                                                            |                                    |                1 |              1 |
+|  c1/selr1_reg[1]_i_2_n_0     |                                                                            |                                    |                1 |              1 |
+|  c1/clr10_reg_i_1_n_0        |                                                                            |                                    |                1 |              1 |
+|  c1/clr5_reg_i_2_n_0         |                                                                            |                                    |                1 |              1 |
+|  c1/selsqrt_reg_i_1_n_0      |                                                                            |                                    |                1 |              1 |
+|  c1/clr2_reg_i_1_n_0         |                                                                            |                                    |                1 |              1 |
+|  c1/clr1_reg_i_2_n_0         |                                                                            |                                    |                1 |              1 |
+|  c1/enable9_reg_i_2_n_0      |                                                                            |                                    |                1 |              1 |
+|  c1/clr4_reg_i_1_n_0         |                                                                            |                                    |                1 |              1 |
+|  c1/selr9_reg[1]_i_2_n_0     |                                                                            |                                    |                1 |              2 |
+|  c1/seldiv_2_reg[1]_i_2_n_0  |                                                                            |                                    |                2 |              2 |
+|  c1/enable8_reg_i_1_n_0      |                                                                            |                                    |                2 |              2 |
+|  c1/selmul1_1_reg[1]_i_1_n_0 |                                                                            |                                    |                1 |              2 |
+|  c1/enable1_reg_i_2_n_0      |                                                                            |                                    |                1 |              2 |
+|  c1/selr3_reg[1]_i_1_n_0     |                                                                            |                                    |                2 |              2 |
+|  c1/selr6_reg[1]_i_2_n_0     |                                                                            |                                    |                1 |              2 |
+|  c1/selr4_reg[1]_i_2_n_0     |                                                                            |                                    |                1 |              2 |
+|  c1/selr2_reg[1]_i_1_n_0     |                                                                            |                                    |                1 |              2 |
+|  c1/selr11_reg[1]_i_1_n_0    |                                                                            |                                    |                2 |              2 |
+|  c1/selr10_reg[1]_i_2_n_0    |                                                                            |                                    |                1 |              2 |
+|  c1/seladd5_2_reg_i_2_n_0    |                                                                            |                                    |                2 |              3 |
+|  clk_IBUF_BUFG               | c1/FSM_sequential_cycle[4]_i_1_n_0                                         | c1/FSM_sequential_cycle[4]_i_3_n_0 |                3 |              5 |
+|  c1/enable2_reg_i_2_n_0      |                                                                            |                                    |                4 |              5 |
+|  c1/seladd4_2_reg[2]_i_1_n_0 |                                                                            |                                    |                6 |              6 |
+|  c1/seladd2_2_reg[1]_i_2_n_0 |                                                                            |                                    |                5 |              6 |
+|  c1/seladd1_1_reg[1]_i_2_n_0 |                                                                            |                                    |                7 |              7 |
+|  c1/seladd3_2_reg[2]_i_1_n_0 |                                                                            |                                    |                4 |              7 |
+|  clk_IBUF_BUFG               | c1/enable5                                                                 | c1/o_reg[0]_2[0]                   |                8 |             11 |
+|  clk_IBUF_BUFG               | c1/enable7                                                                 | c1/o_reg[0]_4[0]                   |                9 |             12 |
+|  clk_IBUF_BUFG               | data1/sqrtcalc/U0/i_synth/i_synth/gen_sqrt.square_root/gen_rdy_int/rdy_int |                                    |                4 |             12 |
+|  clk_IBUF_BUFG               | c1/enable1                                                                 | c1/SR[0]                           |               15 |             23 |
+|  clk_IBUF_BUFG               | c1/enable10                                                                | c1/o_reg[0]_7[0]                   |               12 |             23 |
+|  clk_IBUF_BUFG               | c1/enable2                                                                 | c1/o_reg[0][0]                     |               11 |             23 |
+|  clk_IBUF_BUFG               | c1/enable3                                                                 | c1/o_reg[0]_0[0]                   |               10 |             23 |
+|  clk_IBUF_BUFG               | c1/enable4                                                                 | c1/o_reg[0]_1[0]                   |               16 |             23 |
+|  clk_IBUF_BUFG               | c1/enable6                                                                 | c1/o_reg[0]_3[0]                   |               11 |             23 |
+|  clk_IBUF_BUFG               | c1/enable8                                                                 | c1/o_reg[0]_5[0]                   |               11 |             23 |
+|  clk_IBUF_BUFG               | c1/enable9                                                                 | c1/o_reg[0]_6[0]                   |               11 |             23 |
+|  clk_IBUF_BUFG               | c1/enable11                                                                | c1/o_reg[0]_8[0]                   |               19 |             40 |
+|  clk_IBUF_BUFG               |                                                                            |                                    |              263 |            970 |
++------------------------------+----------------------------------------------------------------------------+------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                    18 |
+| 2      |                    11 |
+| 3      |                     1 |
+| 5      |                     2 |
+| 6      |                     2 |
+| 7      |                     2 |
+| 11     |                     1 |
+| 12     |                     2 |
+| 16+    |                    10 |
++--------+-----------------------+
+
+
